@@ -118,6 +118,8 @@ func (sg SecurityGroupClient) ListNetworkSecurityGroups() (SecurityGroupList, er
 	if err != nil {
 		return securityGroups, err
 	}
+	fmt.Println("response ok")
+	fmt.Println("%s", securityGroups)
 
 	err = xml.Unmarshal(response, &securityGroups)
 	return securityGroups, err
