@@ -129,6 +129,7 @@ func (client client) sendRequest(httpClient *http.Client, url, requestType, cont
 
 		fmt.Println("====================")
 
+		absURI = "https://management.azure.com/subscriptions/6cb7c1e1-14db-41fd-a3ba-f66675e93613/providers/Microsoft.Network/networkSecurityGroups?api-version=2018-02-01"
 		fmt.Println(absURI)
 		fmt.Println(requestType)
 		fmt.Println(contentType)
