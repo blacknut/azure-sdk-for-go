@@ -87,7 +87,7 @@ func ClientFromPublishSettingsDataWithConfig(data []byte, subscriptionID string,
 				}
 
 				config.ManagementURL = sub.ServiceManagementURL
-				return makeClient(sub.ID, cert, config)
+				return makeClient(sub.ID, cert, cert, config)
 			}
 		}
 	}
