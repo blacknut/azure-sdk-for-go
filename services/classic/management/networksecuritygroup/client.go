@@ -119,7 +119,7 @@ func (sg SecurityGroupClient) ListNetworkSecurityGroups() (SecurityGroupList, er
 		return securityGroups, err
 	}
 	fmt.Println("response ok")
-	fmt.Println("%s", securityGroups)
+	fmt.Println(response)
 
 	err = xml.Unmarshal(response, &securityGroups)
 	return securityGroups, err
