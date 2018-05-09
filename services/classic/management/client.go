@@ -116,16 +116,16 @@ func DefaultConfig() ClientConfig {
 
 // NewClient creates a new Client using the given subscription ID and
 // management certificate.
-func NewClient(subscriptionID string, managementCert []byte) (Client, error) {
-	return NewClientFromConfig(subscriptionID, managementCert, DefaultConfig())
+func NewClient(subscriptionID string, managementCert []byte, managementKey []byte) (Client, error) {
+	return NewClientFromConfig(subscriptionID, managementCert, managementKey, DefaultConfig())
 }
 
 // NewClientFromConfig creates a new Client using a given ClientConfig.
-func NewClientFromConfig(subscriptionID string, managementCert []byte, config ClientConfig) (Client, error) {
-	return makeClient(subscriptionID, managementCert, config)
+func NewClientFromConfig(subscriptionID string, managementCert []byte, managementKey []byte, config ClientConfig) (Client, error) {
+	return makeClient(subscriptionID, managementCert, managementKey, config)
 }
 
-func makeClient(subscriptionID string, managementCert []byte, config ClientConfig) (Client, error) {
+func makeClient(subscriptionID string, managementCert []byte, managementKey []byte, config ClientConfig) (Client, error) {
 	var c client
 
 	if subscriptionID == "" {
@@ -139,7 +139,7 @@ func makeClient(subscriptionID string, managementCert []byte, config ClientConfi
 	publishSettings := publishSettings{
 		SubscriptionID:   subscriptionID,
 		SubscriptionCert: managementCert,
-		SubscriptionKey:  managementCert,
+		SubscriptionKey:  managementKey,
 	}
 
 	// Validate client configuration
