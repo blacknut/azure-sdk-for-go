@@ -19,31 +19,32 @@ package network
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRulesClient is the network Client
 type SecurityRulesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewSecurityRulesClient creates an instance of the SecurityRulesClient client.
 func NewSecurityRulesClient(subscriptionID string) SecurityRulesClient {
 	return NewSecurityRulesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewSecurityRulesClientWithBaseURI creates an instance of the SecurityRulesClient client.
 func NewSecurityRulesClientWithBaseURI(baseURI string, subscriptionID string) SecurityRulesClient {
 	return SecurityRulesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdate the Put network security rule operation creates/updates a security rule in the specified network
 // security group
 //
@@ -75,7 +76,7 @@ func (client SecurityRulesClient) CreateOrUpdate(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client SecurityRulesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string, securityRuleName string, securityRuleParameters SecurityRule) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -100,7 +101,7 @@ func (client SecurityRulesClient) CreateOrUpdatePreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityRulesClient) CreateOrUpdateSender(req *http.Request) (future SecurityRulesCreateOrUpdateFuture, err error) {
@@ -116,7 +117,7 @@ func (client SecurityRulesClient) CreateOrUpdateSender(req *http.Request) (futur
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client SecurityRulesClient) CreateOrUpdateResponder(resp *http.Response) (result SecurityRule, err error) {
@@ -130,7 +131,7 @@ func (client SecurityRulesClient) CreateOrUpdateResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Delete the delete network security rule operation deletes the specified network security rule.
 //
 // resourceGroupName is the name of the resource group. networkSecurityGroupName is the name of the network
@@ -151,7 +152,7 @@ func (client SecurityRulesClient) Delete(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeletePreparer prepares the Delete request.
 func (client SecurityRulesClient) DeletePreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string, securityRuleName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -174,7 +175,7 @@ func (client SecurityRulesClient) DeletePreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityRulesClient) DeleteSender(req *http.Request) (future SecurityRulesDeleteFuture, err error) {
@@ -190,7 +191,7 @@ func (client SecurityRulesClient) DeleteSender(req *http.Request) (future Securi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client SecurityRulesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -203,7 +204,7 @@ func (client SecurityRulesClient) DeleteResponder(resp *http.Response) (result a
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Get the Get NetworkSecurityRule operation retreives information about the specified network security rule.
 //
 // resourceGroupName is the name of the resource group. networkSecurityGroupName is the name of the network
@@ -230,7 +231,7 @@ func (client SecurityRulesClient) Get(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetPreparer prepares the Get request.
 func (client SecurityRulesClient) GetPreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string, securityRuleName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -253,7 +254,7 @@ func (client SecurityRulesClient) GetPreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityRulesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -261,7 +262,7 @@ func (client SecurityRulesClient) GetSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client SecurityRulesClient) GetResponder(resp *http.Response) (result SecurityRule, err error) {
@@ -275,7 +276,7 @@ func (client SecurityRulesClient) GetResponder(resp *http.Response) (result Secu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // List the List network security rule opertion retrieves all the security rules in a network security group.
 //
 // resourceGroupName is the name of the resource group. networkSecurityGroupName is the name of the network
@@ -303,7 +304,7 @@ func (client SecurityRulesClient) List(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListPreparer prepares the List request.
 func (client SecurityRulesClient) ListPreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -325,7 +326,7 @@ func (client SecurityRulesClient) ListPreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityRulesClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -333,7 +334,7 @@ func (client SecurityRulesClient) ListSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client SecurityRulesClient) ListResponder(resp *http.Response) (result SecurityRuleListResult, err error) {
@@ -368,7 +369,7 @@ func (client SecurityRulesClient) listNextResults(lastResults SecurityRuleListRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SecurityRulesClient) ListComplete(ctx context.Context, resourceGroupName string, networkSecurityGroupName string) (result SecurityRuleListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName, networkSecurityGroupName)

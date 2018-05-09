@@ -19,32 +19,33 @@ package experimentation
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // ProjectsClient is the these APIs allow end users to operate on Azure Machine Learning Team Account resources. They
 // support CRUD operations for Azure Machine Learning Team Accounts.
 type ProjectsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // NewProjectsClient creates an instance of the ProjectsClient client.
 func NewProjectsClient(subscriptionID string) ProjectsClient {
 	return NewProjectsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // NewProjectsClientWithBaseURI creates an instance of the ProjectsClient client.
 func NewProjectsClientWithBaseURI(baseURI string, subscriptionID string) ProjectsClient {
 	return ProjectsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // CreateOrUpdate creates or updates a project with the specified parameters.
 //
 // resourceGroupName is the name of the resource group to which the machine learning team account belongs.
@@ -92,7 +93,7 @@ func (client ProjectsClient) CreateOrUpdate(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client ProjectsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, accountName string, workspaceName string, projectName string, parameters Project) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -118,7 +119,7 @@ func (client ProjectsClient) CreateOrUpdatePreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client ProjectsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -126,7 +127,7 @@ func (client ProjectsClient) CreateOrUpdateSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client ProjectsClient) CreateOrUpdateResponder(resp *http.Response) (result Project, err error) {
@@ -140,7 +141,7 @@ func (client ProjectsClient) CreateOrUpdateResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // Delete deletes a project.
 //
 // resourceGroupName is the name of the resource group to which the machine learning team account belongs.
@@ -184,7 +185,7 @@ func (client ProjectsClient) Delete(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // DeletePreparer prepares the Delete request.
 func (client ProjectsClient) DeletePreparer(ctx context.Context, resourceGroupName string, accountName string, workspaceName string, projectName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -208,7 +209,7 @@ func (client ProjectsClient) DeletePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client ProjectsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -216,7 +217,7 @@ func (client ProjectsClient) DeleteSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client ProjectsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -229,7 +230,7 @@ func (client ProjectsClient) DeleteResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // Get gets the properties of the specified machine learning project.
 //
 // resourceGroupName is the name of the resource group to which the machine learning team account belongs.
@@ -273,7 +274,7 @@ func (client ProjectsClient) Get(ctx context.Context, resourceGroupName string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // GetPreparer prepares the Get request.
 func (client ProjectsClient) GetPreparer(ctx context.Context, resourceGroupName string, accountName string, workspaceName string, projectName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -297,7 +298,7 @@ func (client ProjectsClient) GetPreparer(ctx context.Context, resourceGroupName 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ProjectsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -305,7 +306,7 @@ func (client ProjectsClient) GetSender(req *http.Request) (*http.Response, error
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ProjectsClient) GetResponder(resp *http.Response) (result Project, err error) {
@@ -319,7 +320,7 @@ func (client ProjectsClient) GetResponder(resp *http.Response) (result Project, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // ListByWorkspace lists all the available machine learning projects under the specified workspace.
 //
 // accountName is the name of the machine learning team account. workspaceName is the name of the machine learning
@@ -360,7 +361,7 @@ func (client ProjectsClient) ListByWorkspace(ctx context.Context, accountName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // ListByWorkspacePreparer prepares the ListByWorkspace request.
 func (client ProjectsClient) ListByWorkspacePreparer(ctx context.Context, accountName string, workspaceName string, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -383,7 +384,7 @@ func (client ProjectsClient) ListByWorkspacePreparer(ctx context.Context, accoun
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // ListByWorkspaceSender sends the ListByWorkspace request. The method will close the
 // http.Response Body if it receives an error.
 func (client ProjectsClient) ListByWorkspaceSender(req *http.Request) (*http.Response, error) {
@@ -391,7 +392,7 @@ func (client ProjectsClient) ListByWorkspaceSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // ListByWorkspaceResponder handles the response to the ListByWorkspace request. The method always
 // closes the http.Response Body.
 func (client ProjectsClient) ListByWorkspaceResponder(resp *http.Response) (result ProjectListResult, err error) {
@@ -426,14 +427,14 @@ func (client ProjectsClient) listByWorkspaceNextResults(lastResults ProjectListR
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // ListByWorkspaceComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ProjectsClient) ListByWorkspaceComplete(ctx context.Context, accountName string, workspaceName string, resourceGroupName string) (result ProjectListResultIterator, err error) {
 	result.page, err = client.ListByWorkspace(ctx, accountName, workspaceName, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // Update updates a project with the specified parameters.
 //
 // resourceGroupName is the name of the resource group to which the machine learning team account belongs.
@@ -478,7 +479,7 @@ func (client ProjectsClient) Update(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // UpdatePreparer prepares the Update request.
 func (client ProjectsClient) UpdatePreparer(ctx context.Context, resourceGroupName string, accountName string, workspaceName string, projectName string, parameters ProjectUpdateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -504,7 +505,7 @@ func (client ProjectsClient) UpdatePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client ProjectsClient) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -512,7 +513,7 @@ func (client ProjectsClient) UpdateSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2017-05-01-preview/experimentation instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client ProjectsClient) UpdateResponder(resp *http.Response) (result Project, err error) {

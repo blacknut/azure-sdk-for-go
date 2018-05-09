@@ -19,31 +19,31 @@ package advisor
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"github.com/satori/go.uuid"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // RecommendationsClient is the REST APIs for Azure Advisor
 type RecommendationsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // NewRecommendationsClient creates an instance of the RecommendationsClient client.
 func NewRecommendationsClient(subscriptionID string) RecommendationsClient {
 	return NewRecommendationsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // NewRecommendationsClientWithBaseURI creates an instance of the RecommendationsClient client.
 func NewRecommendationsClientWithBaseURI(baseURI string, subscriptionID string) RecommendationsClient {
 	return RecommendationsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // Generate initiates the recommendation generation or computation process for a subscription. This operation is
 // asynchronous. The generated recommendations are stored in a cache in the Advisor service.
 func (client RecommendationsClient) Generate(ctx context.Context) (result autorest.Response, err error) {
@@ -68,7 +68,7 @@ func (client RecommendationsClient) Generate(ctx context.Context) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GeneratePreparer prepares the Generate request.
 func (client RecommendationsClient) GeneratePreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -88,7 +88,7 @@ func (client RecommendationsClient) GeneratePreparer(ctx context.Context) (*http
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GenerateSender sends the Generate request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecommendationsClient) GenerateSender(req *http.Request) (*http.Response, error) {
@@ -96,7 +96,7 @@ func (client RecommendationsClient) GenerateSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GenerateResponder handles the response to the Generate request. The method always
 // closes the http.Response Body.
 func (client RecommendationsClient) GenerateResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -109,7 +109,7 @@ func (client RecommendationsClient) GenerateResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // Get obtains details of a cached recommendation.
 //
 // resourceURI is the fully qualified Azure Resource Manager identifier of the resource to which the recommendation
@@ -136,7 +136,7 @@ func (client RecommendationsClient) Get(ctx context.Context, resourceURI string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetPreparer prepares the Get request.
 func (client RecommendationsClient) GetPreparer(ctx context.Context, resourceURI string, recommendationID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -157,7 +157,7 @@ func (client RecommendationsClient) GetPreparer(ctx context.Context, resourceURI
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecommendationsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -165,7 +165,7 @@ func (client RecommendationsClient) GetSender(req *http.Request) (*http.Response
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client RecommendationsClient) GetResponder(resp *http.Response) (result ResourceRecommendationBase, err error) {
@@ -179,7 +179,7 @@ func (client RecommendationsClient) GetResponder(resp *http.Response) (result Re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetGenerateRecommendationsStatus retrieves the status of the recommendation computation or generation process.
 // Invoke this API after calling the generation recommendation. The URI of this API is returned in the Location field
 // of the response header.
@@ -208,7 +208,7 @@ func (client RecommendationsClient) GetGenerateRecommendationsStatus(ctx context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetGenerateRecommendationsStatusPreparer prepares the GetGenerateRecommendationsStatus request.
 func (client RecommendationsClient) GetGenerateRecommendationsStatusPreparer(ctx context.Context, operationID uuid.UUID) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -229,7 +229,7 @@ func (client RecommendationsClient) GetGenerateRecommendationsStatusPreparer(ctx
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetGenerateRecommendationsStatusSender sends the GetGenerateRecommendationsStatus request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecommendationsClient) GetGenerateRecommendationsStatusSender(req *http.Request) (*http.Response, error) {
@@ -237,7 +237,7 @@ func (client RecommendationsClient) GetGenerateRecommendationsStatusSender(req *
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // GetGenerateRecommendationsStatusResponder handles the response to the GetGenerateRecommendationsStatus request. The method always
 // closes the http.Response Body.
 func (client RecommendationsClient) GetGenerateRecommendationsStatusResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -250,7 +250,7 @@ func (client RecommendationsClient) GetGenerateRecommendationsStatusResponder(re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // List obtains cached recommendations for a subscription. The recommendations are generated or computed by invoking
 // generateRecommendations.
 //
@@ -280,7 +280,7 @@ func (client RecommendationsClient) List(ctx context.Context, filter string, top
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // ListPreparer prepares the List request.
 func (client RecommendationsClient) ListPreparer(ctx context.Context, filter string, top *int32, skipToken string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -309,7 +309,7 @@ func (client RecommendationsClient) ListPreparer(ctx context.Context, filter str
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecommendationsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -317,7 +317,7 @@ func (client RecommendationsClient) ListSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client RecommendationsClient) ListResponder(resp *http.Response) (result ResourceRecommendationBaseListResult, err error) {
@@ -352,7 +352,7 @@ func (client RecommendationsClient) listNextResults(lastResults ResourceRecommen
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/advisor/mgmt/2016-07-12-preview/advisor instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client RecommendationsClient) ListComplete(ctx context.Context, filter string, top *int32, skipToken string) (result ResourceRecommendationBaseListResultIterator, err error) {
 	result.page, err = client.List(ctx, filter, top, skipToken)

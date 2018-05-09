@@ -19,13 +19,14 @@ package sql
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DatabasesClient is the the Azure SQL Database management API provides a RESTful set of web services that interact
 // with Azure SQL Database services to manage your databases. The API enables you to create, retrieve, update, and
 // delete databases.
@@ -33,19 +34,19 @@ type DatabasesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // NewDatabasesClient creates an instance of the DatabasesClient client.
 func NewDatabasesClient(subscriptionID string) DatabasesClient {
 	return NewDatabasesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // NewDatabasesClientWithBaseURI creates an instance of the DatabasesClient client.
 func NewDatabasesClientWithBaseURI(baseURI string, subscriptionID string) DatabasesClient {
 	return DatabasesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateImportOperation creates an import operation that imports a bacpac into an existing database. The existing
 // database must be empty.
 //
@@ -75,7 +76,7 @@ func (client DatabasesClient) CreateImportOperation(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateImportOperationPreparer prepares the CreateImportOperation request.
 func (client DatabasesClient) CreateImportOperationPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, parameters ImportExtensionRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -101,7 +102,7 @@ func (client DatabasesClient) CreateImportOperationPreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateImportOperationSender sends the CreateImportOperation request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) CreateImportOperationSender(req *http.Request) (future DatabasesCreateImportOperationFuture, err error) {
@@ -117,7 +118,7 @@ func (client DatabasesClient) CreateImportOperationSender(req *http.Request) (fu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateImportOperationResponder handles the response to the CreateImportOperation request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) CreateImportOperationResponder(resp *http.Response) (result ImportExportResponse, err error) {
@@ -131,7 +132,7 @@ func (client DatabasesClient) CreateImportOperationResponder(resp *http.Response
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdate creates a new database or updates an existing database.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -154,7 +155,7 @@ func (client DatabasesClient) CreateOrUpdate(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client DatabasesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, parameters Database) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -179,7 +180,7 @@ func (client DatabasesClient) CreateOrUpdatePreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) CreateOrUpdateSender(req *http.Request) (future DatabasesCreateOrUpdateFuture, err error) {
@@ -195,7 +196,7 @@ func (client DatabasesClient) CreateOrUpdateSender(req *http.Request) (future Da
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) CreateOrUpdateResponder(resp *http.Response) (result Database, err error) {
@@ -209,7 +210,7 @@ func (client DatabasesClient) CreateOrUpdateResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Delete deletes a database.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -237,7 +238,7 @@ func (client DatabasesClient) Delete(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeletePreparer prepares the Delete request.
 func (client DatabasesClient) DeletePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -260,7 +261,7 @@ func (client DatabasesClient) DeletePreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -268,7 +269,7 @@ func (client DatabasesClient) DeleteSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -281,7 +282,7 @@ func (client DatabasesClient) DeleteResponder(resp *http.Response) (result autor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Export exports a database to a bacpac.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -312,7 +313,7 @@ func (client DatabasesClient) Export(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ExportPreparer prepares the Export request.
 func (client DatabasesClient) ExportPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, parameters ExportRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -337,7 +338,7 @@ func (client DatabasesClient) ExportPreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ExportSender sends the Export request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ExportSender(req *http.Request) (future DatabasesExportFuture, err error) {
@@ -353,7 +354,7 @@ func (client DatabasesClient) ExportSender(req *http.Request) (future DatabasesE
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ExportResponder handles the response to the Export request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ExportResponder(resp *http.Response) (result ImportExportResponse, err error) {
@@ -367,7 +368,7 @@ func (client DatabasesClient) ExportResponder(resp *http.Response) (result Impor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Get gets a database.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -396,7 +397,7 @@ func (client DatabasesClient) Get(ctx context.Context, resourceGroupName string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetPreparer prepares the Get request.
 func (client DatabasesClient) GetPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, expand string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -422,7 +423,7 @@ func (client DatabasesClient) GetPreparer(ctx context.Context, resourceGroupName
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -430,7 +431,7 @@ func (client DatabasesClient) GetSender(req *http.Request) (*http.Response, erro
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) GetResponder(resp *http.Response) (result Database, err error) {
@@ -444,7 +445,7 @@ func (client DatabasesClient) GetResponder(resp *http.Response) (result Database
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByElasticPool gets a database inside of an elastic pool.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -472,7 +473,7 @@ func (client DatabasesClient) GetByElasticPool(ctx context.Context, resourceGrou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByElasticPoolPreparer prepares the GetByElasticPool request.
 func (client DatabasesClient) GetByElasticPoolPreparer(ctx context.Context, resourceGroupName string, serverName string, elasticPoolName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -496,7 +497,7 @@ func (client DatabasesClient) GetByElasticPoolPreparer(ctx context.Context, reso
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByElasticPoolSender sends the GetByElasticPool request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) GetByElasticPoolSender(req *http.Request) (*http.Response, error) {
@@ -504,7 +505,7 @@ func (client DatabasesClient) GetByElasticPoolSender(req *http.Request) (*http.R
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByElasticPoolResponder handles the response to the GetByElasticPool request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) GetByElasticPoolResponder(resp *http.Response) (result Database, err error) {
@@ -518,7 +519,7 @@ func (client DatabasesClient) GetByElasticPoolResponder(resp *http.Response) (re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByRecommendedElasticPool gets a database inside of a recommented elastic pool.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -546,7 +547,7 @@ func (client DatabasesClient) GetByRecommendedElasticPool(ctx context.Context, r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByRecommendedElasticPoolPreparer prepares the GetByRecommendedElasticPool request.
 func (client DatabasesClient) GetByRecommendedElasticPoolPreparer(ctx context.Context, resourceGroupName string, serverName string, recommendedElasticPoolName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -570,7 +571,7 @@ func (client DatabasesClient) GetByRecommendedElasticPoolPreparer(ctx context.Co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByRecommendedElasticPoolSender sends the GetByRecommendedElasticPool request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) GetByRecommendedElasticPoolSender(req *http.Request) (*http.Response, error) {
@@ -578,7 +579,7 @@ func (client DatabasesClient) GetByRecommendedElasticPoolSender(req *http.Reques
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetByRecommendedElasticPoolResponder handles the response to the GetByRecommendedElasticPool request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) GetByRecommendedElasticPoolResponder(resp *http.Response) (result Database, err error) {
@@ -592,7 +593,7 @@ func (client DatabasesClient) GetByRecommendedElasticPoolResponder(resp *http.Re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Import imports a bacpac into a new database.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -621,7 +622,7 @@ func (client DatabasesClient) Import(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ImportPreparer prepares the Import request.
 func (client DatabasesClient) ImportPreparer(ctx context.Context, resourceGroupName string, serverName string, parameters ImportRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -645,7 +646,7 @@ func (client DatabasesClient) ImportPreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ImportSender sends the Import request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ImportSender(req *http.Request) (future DatabasesImportFuture, err error) {
@@ -661,7 +662,7 @@ func (client DatabasesClient) ImportSender(req *http.Request) (future DatabasesI
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ImportResponder handles the response to the Import request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ImportResponder(resp *http.Response) (result ImportExportResponse, err error) {
@@ -675,7 +676,7 @@ func (client DatabasesClient) ImportResponder(resp *http.Response) (result Impor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByElasticPool returns a list of databases in an elastic pool.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -703,7 +704,7 @@ func (client DatabasesClient) ListByElasticPool(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByElasticPoolPreparer prepares the ListByElasticPool request.
 func (client DatabasesClient) ListByElasticPoolPreparer(ctx context.Context, resourceGroupName string, serverName string, elasticPoolName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -726,7 +727,7 @@ func (client DatabasesClient) ListByElasticPoolPreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByElasticPoolSender sends the ListByElasticPool request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ListByElasticPoolSender(req *http.Request) (*http.Response, error) {
@@ -734,7 +735,7 @@ func (client DatabasesClient) ListByElasticPoolSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByElasticPoolResponder handles the response to the ListByElasticPool request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ListByElasticPoolResponder(resp *http.Response) (result DatabaseListResult, err error) {
@@ -748,7 +749,7 @@ func (client DatabasesClient) ListByElasticPoolResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByRecommendedElasticPool returns a list of databases inside a recommented elastic pool.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -776,7 +777,7 @@ func (client DatabasesClient) ListByRecommendedElasticPool(ctx context.Context, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByRecommendedElasticPoolPreparer prepares the ListByRecommendedElasticPool request.
 func (client DatabasesClient) ListByRecommendedElasticPoolPreparer(ctx context.Context, resourceGroupName string, serverName string, recommendedElasticPoolName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -799,7 +800,7 @@ func (client DatabasesClient) ListByRecommendedElasticPoolPreparer(ctx context.C
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByRecommendedElasticPoolSender sends the ListByRecommendedElasticPool request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ListByRecommendedElasticPoolSender(req *http.Request) (*http.Response, error) {
@@ -807,7 +808,7 @@ func (client DatabasesClient) ListByRecommendedElasticPoolSender(req *http.Reque
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByRecommendedElasticPoolResponder handles the response to the ListByRecommendedElasticPool request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ListByRecommendedElasticPoolResponder(resp *http.Response) (result DatabaseListResult, err error) {
@@ -821,7 +822,7 @@ func (client DatabasesClient) ListByRecommendedElasticPoolResponder(resp *http.R
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServer returns a list of databases in a server.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -850,7 +851,7 @@ func (client DatabasesClient) ListByServer(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServerPreparer prepares the ListByServer request.
 func (client DatabasesClient) ListByServerPreparer(ctx context.Context, resourceGroupName string, serverName string, expand string, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -878,7 +879,7 @@ func (client DatabasesClient) ListByServerPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServerSender sends the ListByServer request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ListByServerSender(req *http.Request) (*http.Response, error) {
@@ -886,7 +887,7 @@ func (client DatabasesClient) ListByServerSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServerResponder handles the response to the ListByServer request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ListByServerResponder(resp *http.Response) (result DatabaseListResult, err error) {
@@ -900,7 +901,7 @@ func (client DatabasesClient) ListByServerResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricDefinitions returns database metric definitions.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -928,7 +929,7 @@ func (client DatabasesClient) ListMetricDefinitions(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricDefinitionsPreparer prepares the ListMetricDefinitions request.
 func (client DatabasesClient) ListMetricDefinitionsPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -951,7 +952,7 @@ func (client DatabasesClient) ListMetricDefinitionsPreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricDefinitionsSender sends the ListMetricDefinitions request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ListMetricDefinitionsSender(req *http.Request) (*http.Response, error) {
@@ -959,7 +960,7 @@ func (client DatabasesClient) ListMetricDefinitionsSender(req *http.Request) (*h
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricDefinitionsResponder handles the response to the ListMetricDefinitions request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ListMetricDefinitionsResponder(resp *http.Response) (result MetricDefinitionListResult, err error) {
@@ -973,7 +974,7 @@ func (client DatabasesClient) ListMetricDefinitionsResponder(resp *http.Response
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetrics returns database metrics.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -1001,7 +1002,7 @@ func (client DatabasesClient) ListMetrics(ctx context.Context, resourceGroupName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricsPreparer prepares the ListMetrics request.
 func (client DatabasesClient) ListMetricsPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1025,7 +1026,7 @@ func (client DatabasesClient) ListMetricsPreparer(ctx context.Context, resourceG
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricsSender sends the ListMetrics request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ListMetricsSender(req *http.Request) (*http.Response, error) {
@@ -1033,7 +1034,7 @@ func (client DatabasesClient) ListMetricsSender(req *http.Request) (*http.Respon
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListMetricsResponder handles the response to the ListMetrics request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ListMetricsResponder(resp *http.Response) (result MetricListResult, err error) {
@@ -1047,7 +1048,7 @@ func (client DatabasesClient) ListMetricsResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Pause pauses a data warehouse.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -1069,7 +1070,7 @@ func (client DatabasesClient) Pause(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // PausePreparer prepares the Pause request.
 func (client DatabasesClient) PausePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1092,7 +1093,7 @@ func (client DatabasesClient) PausePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // PauseSender sends the Pause request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) PauseSender(req *http.Request) (future DatabasesPauseFuture, err error) {
@@ -1108,7 +1109,7 @@ func (client DatabasesClient) PauseSender(req *http.Request) (future DatabasesPa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // PauseResponder handles the response to the Pause request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) PauseResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -1121,7 +1122,7 @@ func (client DatabasesClient) PauseResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Resume resumes a data warehouse.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -1143,7 +1144,7 @@ func (client DatabasesClient) Resume(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ResumePreparer prepares the Resume request.
 func (client DatabasesClient) ResumePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1166,7 +1167,7 @@ func (client DatabasesClient) ResumePreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ResumeSender sends the Resume request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) ResumeSender(req *http.Request) (future DatabasesResumeFuture, err error) {
@@ -1182,7 +1183,7 @@ func (client DatabasesClient) ResumeSender(req *http.Request) (future DatabasesR
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ResumeResponder handles the response to the Resume request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) ResumeResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -1195,7 +1196,7 @@ func (client DatabasesClient) ResumeResponder(resp *http.Response) (result autor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Update updates an existing database.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -1217,7 +1218,7 @@ func (client DatabasesClient) Update(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // UpdatePreparer prepares the Update request.
 func (client DatabasesClient) UpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, parameters DatabaseUpdate) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1242,7 +1243,7 @@ func (client DatabasesClient) UpdatePreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client DatabasesClient) UpdateSender(req *http.Request) (future DatabasesUpdateFuture, err error) {
@@ -1258,7 +1259,7 @@ func (client DatabasesClient) UpdateSender(req *http.Request) (future DatabasesU
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client DatabasesClient) UpdateResponder(resp *http.Response) (result Database, err error) {

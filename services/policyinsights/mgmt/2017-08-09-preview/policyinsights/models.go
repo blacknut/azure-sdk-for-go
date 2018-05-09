@@ -19,10 +19,11 @@ package policyinsights
 
 import (
 	"encoding/json"
+
 	"github.com/Azure/go-autorest/autorest"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyStatesResource enumerates the values for policy states resource.
 type PolicyStatesResource string
 
@@ -33,13 +34,13 @@ const (
 	Latest PolicyStatesResource = "latest"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PossiblePolicyStatesResourceValues returns an array of possible values for the PolicyStatesResource const type.
 func PossiblePolicyStatesResourceValues() []PolicyStatesResource {
 	return []PolicyStatesResource{Default, Latest}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // Column column definition.
 type Column struct {
 	// Ordinal - Ordinal value of the column in a record.
@@ -50,7 +51,7 @@ type Column struct {
 	DataType *string `json:"dataType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // Operation operation definition.
 type Operation struct {
 	// Name - Operation name.
@@ -59,7 +60,7 @@ type Operation struct {
 	Display *OperationDisplay `json:"display,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // OperationDisplay display metadata associated with the operation.
 type OperationDisplay struct {
 	// Provider - Resource provider name.
@@ -72,7 +73,7 @@ type OperationDisplay struct {
 	Description *string `json:"description,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // OperationsListResults list of available operations.
 type OperationsListResults struct {
 	autorest.Response `json:"-"`
@@ -80,7 +81,7 @@ type OperationsListResults struct {
 	Value *[]Operation `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyEventsQueryResults query results.
 type PolicyEventsQueryResults struct {
 	autorest.Response `json:"-"`
@@ -88,7 +89,7 @@ type PolicyEventsQueryResults struct {
 	Value *[]PolicyEventsQueryResultsTable `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyEventsQueryResultsTable query results table.
 type PolicyEventsQueryResultsTable struct {
 	// Metadata - Metadata about the query results.
@@ -99,7 +100,7 @@ type PolicyEventsQueryResultsTable struct {
 	Rows *[][]interface{} `json:"rows,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyEventsQueryResultsTableColumns list of columns included in query results.
 type PolicyEventsQueryResultsTableColumns struct {
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
@@ -160,7 +161,7 @@ type PolicyEventsQueryResultsTableColumns struct {
 	PrincipalOid *Column `json:"PrincipalOid,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // MarshalJSON is the custom marshaler for PolicyEventsQueryResultsTableColumns.
 func (peqrt PolicyEventsQueryResultsTableColumns) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -251,14 +252,14 @@ func (peqrt PolicyEventsQueryResultsTableColumns) MarshalJSON() ([]byte, error) 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyEventsQueryResultsTableMetadata metadata about the query results.
 type PolicyEventsQueryResultsTableMetadata struct {
 	// GeneratedQuery - Internal query generated. Used for diagnostics purposes.
 	GeneratedQuery *string `json:"generatedQuery,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyStatesQueryResults query results.
 type PolicyStatesQueryResults struct {
 	autorest.Response `json:"-"`
@@ -266,7 +267,7 @@ type PolicyStatesQueryResults struct {
 	Value *[]PolicyStatesQueryResultsTable `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyStatesQueryResultsTable query results table.
 type PolicyStatesQueryResultsTable struct {
 	// Metadata - Metadata about the query results.
@@ -277,7 +278,7 @@ type PolicyStatesQueryResultsTable struct {
 	Rows *[][]interface{} `json:"rows,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyStatesQueryResultsTableColumns list of columns included in query results.
 type PolicyStatesQueryResultsTableColumns struct {
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
@@ -334,7 +335,7 @@ type PolicyStatesQueryResultsTableColumns struct {
 	PolicyDefinitionReferenceID *Column `json:"PolicyDefinitionReferenceId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // MarshalJSON is the custom marshaler for PolicyStatesQueryResultsTableColumns.
 func (psqrt PolicyStatesQueryResultsTableColumns) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -419,21 +420,21 @@ func (psqrt PolicyStatesQueryResultsTableColumns) MarshalJSON() ([]byte, error) 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // PolicyStatesQueryResultsTableMetadata metadata about the query results.
 type PolicyStatesQueryResultsTableMetadata struct {
 	// GeneratedQuery - Internal query generated. Used for diagnostics purposes.
 	GeneratedQuery *string `json:"generatedQuery,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // QueryFailure error response.
 type QueryFailure struct {
 	// Error - Error definition.
 	Error *QueryFailureError `json:"error,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-08-09-preview/policyinsights instead.
 // QueryFailureError error definition.
 type QueryFailureError struct {
 	// Code - Service specific error code which serves as the substatus for the HTTP error code.

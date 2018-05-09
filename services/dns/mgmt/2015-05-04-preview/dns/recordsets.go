@@ -19,30 +19,31 @@ package dns
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // RecordSetsClient is the client for managing DNS zones and record.
 type RecordSetsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // NewRecordSetsClient creates an instance of the RecordSetsClient client.
 func NewRecordSetsClient(subscriptionID string) RecordSetsClient {
 	return NewRecordSetsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // NewRecordSetsClientWithBaseURI creates an instance of the RecordSetsClient client.
 func NewRecordSetsClientWithBaseURI(baseURI string, subscriptionID string) RecordSetsClient {
 	return RecordSetsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // CreateOrUpdate creates a RecordSet within a DNS zone.
 //
 // resourceGroupName is the name of the resource group. zoneName is the name of the zone without a terminating dot.
@@ -72,7 +73,7 @@ func (client RecordSetsClient) CreateOrUpdate(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client RecordSetsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, zoneName string, recordType RecordType, relativeRecordSetName string, parameters RecordSet, ifMatch string, ifNoneMatch string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -106,7 +107,7 @@ func (client RecordSetsClient) CreateOrUpdatePreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecordSetsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -114,7 +115,7 @@ func (client RecordSetsClient) CreateOrUpdateSender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client RecordSetsClient) CreateOrUpdateResponder(resp *http.Response) (result RecordSet, err error) {
@@ -128,7 +129,7 @@ func (client RecordSetsClient) CreateOrUpdateResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // Delete removes a RecordSet from a DNS zone.
 //
 // resourceGroupName is the name of the resource group. zoneName is the name of the zone without a terminating dot.
@@ -157,7 +158,7 @@ func (client RecordSetsClient) Delete(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // DeletePreparer prepares the Delete request.
 func (client RecordSetsClient) DeletePreparer(ctx context.Context, resourceGroupName string, zoneName string, recordType RecordType, relativeRecordSetName string, ifMatch string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -185,7 +186,7 @@ func (client RecordSetsClient) DeletePreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecordSetsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -193,7 +194,7 @@ func (client RecordSetsClient) DeleteSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client RecordSetsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -206,7 +207,7 @@ func (client RecordSetsClient) DeleteResponder(resp *http.Response) (result auto
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // Get gets a RecordSet.
 //
 // resourceGroupName is the name of the resource group. zoneName is the name of the zone without a terminating dot.
@@ -234,7 +235,7 @@ func (client RecordSetsClient) Get(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // GetPreparer prepares the Get request.
 func (client RecordSetsClient) GetPreparer(ctx context.Context, resourceGroupName string, zoneName string, recordType RecordType, relativeRecordSetName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -258,7 +259,7 @@ func (client RecordSetsClient) GetPreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecordSetsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -266,7 +267,7 @@ func (client RecordSetsClient) GetSender(req *http.Request) (*http.Response, err
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client RecordSetsClient) GetResponder(resp *http.Response) (result RecordSet, err error) {
@@ -280,7 +281,7 @@ func (client RecordSetsClient) GetResponder(resp *http.Response) (result RecordS
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // List lists the RecordSets of a specified type in a DNS zone.
 //
 // resourceGroupName is the name of the resource group that contains the zone. zoneName is the name of the zone
@@ -310,7 +311,7 @@ func (client RecordSetsClient) List(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListPreparer prepares the List request.
 func (client RecordSetsClient) ListPreparer(ctx context.Context, resourceGroupName string, zoneName string, recordType RecordType, top string, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -339,7 +340,7 @@ func (client RecordSetsClient) ListPreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecordSetsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -347,7 +348,7 @@ func (client RecordSetsClient) ListSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client RecordSetsClient) ListResponder(resp *http.Response) (result RecordSetListResult, err error) {
@@ -382,14 +383,14 @@ func (client RecordSetsClient) listNextResults(lastResults RecordSetListResult) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client RecordSetsClient) ListComplete(ctx context.Context, resourceGroupName string, zoneName string, recordType RecordType, top string, filter string) (result RecordSetListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName, zoneName, recordType, top, filter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListAll lists all RecordSets in a DNS zone.
 //
 // resourceGroupName is the name of the resource group that contains the zone. zoneName is the name of the zone
@@ -418,7 +419,7 @@ func (client RecordSetsClient) ListAll(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListAllPreparer prepares the ListAll request.
 func (client RecordSetsClient) ListAllPreparer(ctx context.Context, resourceGroupName string, zoneName string, top string, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -446,7 +447,7 @@ func (client RecordSetsClient) ListAllPreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListAllSender sends the ListAll request. The method will close the
 // http.Response Body if it receives an error.
 func (client RecordSetsClient) ListAllSender(req *http.Request) (*http.Response, error) {
@@ -454,7 +455,7 @@ func (client RecordSetsClient) ListAllSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListAllResponder handles the response to the ListAll request. The method always
 // closes the http.Response Body.
 func (client RecordSetsClient) ListAllResponder(resp *http.Response) (result RecordSetListResult, err error) {
@@ -489,7 +490,7 @@ func (client RecordSetsClient) listAllNextResults(lastResults RecordSetListResul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/dns/mgmt/2015-05-04-preview/dns instead.
 // ListAllComplete enumerates all values, automatically crossing page boundaries as required.
 func (client RecordSetsClient) ListAllComplete(ctx context.Context, resourceGroupName string, zoneName string, top string, filter string) (result RecordSetListResultIterator, err error) {
 	result.page, err = client.ListAll(ctx, resourceGroupName, zoneName, top, filter)

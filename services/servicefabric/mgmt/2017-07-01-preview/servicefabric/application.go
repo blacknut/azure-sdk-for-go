@@ -19,30 +19,31 @@ package servicefabric
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ApplicationClient is the azure Service Fabric Resource Provider API Client
 type ApplicationClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // NewApplicationClient creates an instance of the ApplicationClient client.
 func NewApplicationClient() ApplicationClient {
 	return NewApplicationClientWithBaseURI(DefaultBaseURI)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // NewApplicationClientWithBaseURI creates an instance of the ApplicationClient client.
 func NewApplicationClientWithBaseURI(baseURI string) ApplicationClient {
 	return ApplicationClient{NewWithBaseURI(baseURI)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // Delete deletes an application resource with the specified name.
 //
 // subscriptionID is the customer subscription identifier resourceGroupName is the name of the resource group.
@@ -63,7 +64,7 @@ func (client ApplicationClient) Delete(ctx context.Context, subscriptionID strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // DeletePreparer prepares the Delete request.
 func (client ApplicationClient) DeletePreparer(ctx context.Context, subscriptionID string, resourceGroupName string, clusterName string, applicationName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -86,7 +87,7 @@ func (client ApplicationClient) DeletePreparer(ctx context.Context, subscription
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client ApplicationClient) DeleteSender(req *http.Request) (future ApplicationDeleteFuture, err error) {
@@ -102,7 +103,7 @@ func (client ApplicationClient) DeleteSender(req *http.Request) (future Applicat
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client ApplicationClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -115,7 +116,7 @@ func (client ApplicationClient) DeleteResponder(resp *http.Response) (result aut
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // Get returns an application resource with the specified name.
 //
 // subscriptionID is the customer subscription identifier resourceGroupName is the name of the resource group.
@@ -142,7 +143,7 @@ func (client ApplicationClient) Get(ctx context.Context, subscriptionID string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetPreparer prepares the Get request.
 func (client ApplicationClient) GetPreparer(ctx context.Context, subscriptionID string, resourceGroupName string, clusterName string, applicationName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -165,7 +166,7 @@ func (client ApplicationClient) GetPreparer(ctx context.Context, subscriptionID 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ApplicationClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -173,7 +174,7 @@ func (client ApplicationClient) GetSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ApplicationClient) GetResponder(resp *http.Response) (result ApplicationResource, err error) {
@@ -187,7 +188,7 @@ func (client ApplicationClient) GetResponder(resp *http.Response) (result Applic
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // List returns all application resources in the specified cluster.
 //
 // subscriptionID is the customer subscription identifier resourceGroupName is the name of the resource group.
@@ -214,7 +215,7 @@ func (client ApplicationClient) List(ctx context.Context, subscriptionID string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListPreparer prepares the List request.
 func (client ApplicationClient) ListPreparer(ctx context.Context, subscriptionID string, resourceGroupName string, clusterName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -236,7 +237,7 @@ func (client ApplicationClient) ListPreparer(ctx context.Context, subscriptionID
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client ApplicationClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -244,7 +245,7 @@ func (client ApplicationClient) ListSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client ApplicationClient) ListResponder(resp *http.Response) (result ApplicationResourceList, err error) {
@@ -258,7 +259,7 @@ func (client ApplicationClient) ListResponder(resp *http.Response) (result Appli
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // Patch updates an application resource with the specified name.
 //
 // subscriptionID is the customer subscription identifier resourceGroupName is the name of the resource group.
@@ -280,7 +281,7 @@ func (client ApplicationClient) Patch(ctx context.Context, subscriptionID string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // PatchPreparer prepares the Patch request.
 func (client ApplicationClient) PatchPreparer(ctx context.Context, subscriptionID string, resourceGroupName string, clusterName string, applicationName string, parameters ApplicationResourceUpdate) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -305,7 +306,7 @@ func (client ApplicationClient) PatchPreparer(ctx context.Context, subscriptionI
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // PatchSender sends the Patch request. The method will close the
 // http.Response Body if it receives an error.
 func (client ApplicationClient) PatchSender(req *http.Request) (future ApplicationPatchFuture, err error) {
@@ -321,7 +322,7 @@ func (client ApplicationClient) PatchSender(req *http.Request) (future Applicati
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // PatchResponder handles the response to the Patch request. The method always
 // closes the http.Response Body.
 func (client ApplicationClient) PatchResponder(resp *http.Response) (result ApplicationResourceUpdate, err error) {
@@ -335,7 +336,7 @@ func (client ApplicationClient) PatchResponder(resp *http.Response) (result Appl
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // Put creates or updates an application resource with the specified name.
 //
 // subscriptionID is the customer subscription identifier resourceGroupName is the name of the resource group.
@@ -357,7 +358,7 @@ func (client ApplicationClient) Put(ctx context.Context, subscriptionID string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // PutPreparer prepares the Put request.
 func (client ApplicationClient) PutPreparer(ctx context.Context, subscriptionID string, resourceGroupName string, clusterName string, applicationName string, parameters ApplicationResource) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -382,7 +383,7 @@ func (client ApplicationClient) PutPreparer(ctx context.Context, subscriptionID 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // PutSender sends the Put request. The method will close the
 // http.Response Body if it receives an error.
 func (client ApplicationClient) PutSender(req *http.Request) (future ApplicationPutFuture, err error) {
@@ -398,7 +399,7 @@ func (client ApplicationClient) PutSender(req *http.Request) (future Application
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // PutResponder handles the response to the Put request. The method always
 // closes the http.Response Body.
 func (client ApplicationClient) PutResponder(resp *http.Response) (result ApplicationResource, err error) {

@@ -19,13 +19,14 @@ package network
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/to"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayCookieBasedAffinity enumerates the values for application gateway cookie based affinity.
 type ApplicationGatewayCookieBasedAffinity string
 
@@ -36,13 +37,13 @@ const (
 	Enabled ApplicationGatewayCookieBasedAffinity = "Enabled"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleApplicationGatewayCookieBasedAffinityValues returns an array of possible values for the ApplicationGatewayCookieBasedAffinity const type.
 func PossibleApplicationGatewayCookieBasedAffinityValues() []ApplicationGatewayCookieBasedAffinity {
 	return []ApplicationGatewayCookieBasedAffinity{Disabled, Enabled}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayOperationalState enumerates the values for application gateway operational state.
 type ApplicationGatewayOperationalState string
 
@@ -57,13 +58,13 @@ const (
 	Stopping ApplicationGatewayOperationalState = "Stopping"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleApplicationGatewayOperationalStateValues returns an array of possible values for the ApplicationGatewayOperationalState const type.
 func PossibleApplicationGatewayOperationalStateValues() []ApplicationGatewayOperationalState {
 	return []ApplicationGatewayOperationalState{Running, Starting, Stopped, Stopping}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayProtocol enumerates the values for application gateway protocol.
 type ApplicationGatewayProtocol string
 
@@ -74,13 +75,13 @@ const (
 	HTTPS ApplicationGatewayProtocol = "Https"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleApplicationGatewayProtocolValues returns an array of possible values for the ApplicationGatewayProtocol const type.
 func PossibleApplicationGatewayProtocolValues() []ApplicationGatewayProtocol {
 	return []ApplicationGatewayProtocol{HTTP, HTTPS}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayRequestRoutingRuleType enumerates the values for application gateway request routing rule
 // type.
 type ApplicationGatewayRequestRoutingRuleType string
@@ -90,13 +91,13 @@ const (
 	Basic ApplicationGatewayRequestRoutingRuleType = "Basic"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleApplicationGatewayRequestRoutingRuleTypeValues returns an array of possible values for the ApplicationGatewayRequestRoutingRuleType const type.
 func PossibleApplicationGatewayRequestRoutingRuleTypeValues() []ApplicationGatewayRequestRoutingRuleType {
 	return []ApplicationGatewayRequestRoutingRuleType{Basic}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaySkuName enumerates the values for application gateway sku name.
 type ApplicationGatewaySkuName string
 
@@ -109,13 +110,13 @@ const (
 	StandardSmall ApplicationGatewaySkuName = "Standard_Small"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleApplicationGatewaySkuNameValues returns an array of possible values for the ApplicationGatewaySkuName const type.
 func PossibleApplicationGatewaySkuNameValues() []ApplicationGatewaySkuName {
 	return []ApplicationGatewaySkuName{StandardLarge, StandardMedium, StandardSmall}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayTier enumerates the values for application gateway tier.
 type ApplicationGatewayTier string
 
@@ -124,13 +125,13 @@ const (
 	Standard ApplicationGatewayTier = "Standard"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleApplicationGatewayTierValues returns an array of possible values for the ApplicationGatewayTier const type.
 func PossibleApplicationGatewayTierValues() []ApplicationGatewayTier {
 	return []ApplicationGatewayTier{Standard}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AuthorizationUseStatus enumerates the values for authorization use status.
 type AuthorizationUseStatus string
 
@@ -141,13 +142,13 @@ const (
 	InUse AuthorizationUseStatus = "InUse"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleAuthorizationUseStatusValues returns an array of possible values for the AuthorizationUseStatus const type.
 func PossibleAuthorizationUseStatusValues() []AuthorizationUseStatus {
 	return []AuthorizationUseStatus{Available, InUse}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringAdvertisedPublicPrefixState enumerates the values for express route circuit
 // peering advertised public prefix state.
 type ExpressRouteCircuitPeeringAdvertisedPublicPrefixState string
@@ -163,13 +164,13 @@ const (
 	ValidationNeeded ExpressRouteCircuitPeeringAdvertisedPublicPrefixState = "ValidationNeeded"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleExpressRouteCircuitPeeringAdvertisedPublicPrefixStateValues returns an array of possible values for the ExpressRouteCircuitPeeringAdvertisedPublicPrefixState const type.
 func PossibleExpressRouteCircuitPeeringAdvertisedPublicPrefixStateValues() []ExpressRouteCircuitPeeringAdvertisedPublicPrefixState {
 	return []ExpressRouteCircuitPeeringAdvertisedPublicPrefixState{Configured, Configuring, NotConfigured, ValidationNeeded}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringState enumerates the values for express route circuit peering state.
 type ExpressRouteCircuitPeeringState string
 
@@ -180,13 +181,13 @@ const (
 	ExpressRouteCircuitPeeringStateEnabled ExpressRouteCircuitPeeringState = "Enabled"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleExpressRouteCircuitPeeringStateValues returns an array of possible values for the ExpressRouteCircuitPeeringState const type.
 func PossibleExpressRouteCircuitPeeringStateValues() []ExpressRouteCircuitPeeringState {
 	return []ExpressRouteCircuitPeeringState{ExpressRouteCircuitPeeringStateDisabled, ExpressRouteCircuitPeeringStateEnabled}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringType enumerates the values for express route circuit peering type.
 type ExpressRouteCircuitPeeringType string
 
@@ -199,13 +200,13 @@ const (
 	MicrosoftPeering ExpressRouteCircuitPeeringType = "MicrosoftPeering"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleExpressRouteCircuitPeeringTypeValues returns an array of possible values for the ExpressRouteCircuitPeeringType const type.
 func PossibleExpressRouteCircuitPeeringTypeValues() []ExpressRouteCircuitPeeringType {
 	return []ExpressRouteCircuitPeeringType{AzurePrivatePeering, AzurePublicPeering, MicrosoftPeering}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitSkuFamily enumerates the values for express route circuit sku family.
 type ExpressRouteCircuitSkuFamily string
 
@@ -216,13 +217,13 @@ const (
 	UnlimitedData ExpressRouteCircuitSkuFamily = "UnlimitedData"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleExpressRouteCircuitSkuFamilyValues returns an array of possible values for the ExpressRouteCircuitSkuFamily const type.
 func PossibleExpressRouteCircuitSkuFamilyValues() []ExpressRouteCircuitSkuFamily {
 	return []ExpressRouteCircuitSkuFamily{MeteredData, UnlimitedData}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitSkuTier enumerates the values for express route circuit sku tier.
 type ExpressRouteCircuitSkuTier string
 
@@ -233,13 +234,13 @@ const (
 	ExpressRouteCircuitSkuTierStandard ExpressRouteCircuitSkuTier = "Standard"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleExpressRouteCircuitSkuTierValues returns an array of possible values for the ExpressRouteCircuitSkuTier const type.
 func PossibleExpressRouteCircuitSkuTierValues() []ExpressRouteCircuitSkuTier {
 	return []ExpressRouteCircuitSkuTier{ExpressRouteCircuitSkuTierPremium, ExpressRouteCircuitSkuTierStandard}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IPAllocationMethod enumerates the values for ip allocation method.
 type IPAllocationMethod string
 
@@ -250,13 +251,13 @@ const (
 	Static IPAllocationMethod = "Static"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleIPAllocationMethodValues returns an array of possible values for the IPAllocationMethod const type.
 func PossibleIPAllocationMethodValues() []IPAllocationMethod {
 	return []IPAllocationMethod{Dynamic, Static}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadDistribution enumerates the values for load distribution.
 type LoadDistribution string
 
@@ -269,13 +270,13 @@ const (
 	SourceIPProtocol LoadDistribution = "SourceIPProtocol"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleLoadDistributionValues returns an array of possible values for the LoadDistribution const type.
 func PossibleLoadDistributionValues() []LoadDistribution {
 	return []LoadDistribution{Default, SourceIP, SourceIPProtocol}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // OperationStatus enumerates the values for operation status.
 type OperationStatus string
 
@@ -288,13 +289,13 @@ const (
 	Succeeded OperationStatus = "Succeeded"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleOperationStatusValues returns an array of possible values for the OperationStatus const type.
 func PossibleOperationStatusValues() []OperationStatus {
 	return []OperationStatus{Failed, InProgress, Succeeded}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ProbeProtocol enumerates the values for probe protocol.
 type ProbeProtocol string
 
@@ -305,13 +306,13 @@ const (
 	ProbeProtocolTCP ProbeProtocol = "Tcp"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleProbeProtocolValues returns an array of possible values for the ProbeProtocol const type.
 func PossibleProbeProtocolValues() []ProbeProtocol {
 	return []ProbeProtocol{ProbeProtocolHTTP, ProbeProtocolTCP}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteNextHopType enumerates the values for route next hop type.
 type RouteNextHopType string
 
@@ -328,13 +329,13 @@ const (
 	RouteNextHopTypeVnetLocal RouteNextHopType = "VnetLocal"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleRouteNextHopTypeValues returns an array of possible values for the RouteNextHopType const type.
 func PossibleRouteNextHopTypeValues() []RouteNextHopType {
 	return []RouteNextHopType{RouteNextHopTypeInternet, RouteNextHopTypeNone, RouteNextHopTypeVirtualAppliance, RouteNextHopTypeVirtualNetworkGateway, RouteNextHopTypeVnetLocal}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRuleAccess enumerates the values for security rule access.
 type SecurityRuleAccess string
 
@@ -345,13 +346,13 @@ const (
 	Deny SecurityRuleAccess = "Deny"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleSecurityRuleAccessValues returns an array of possible values for the SecurityRuleAccess const type.
 func PossibleSecurityRuleAccessValues() []SecurityRuleAccess {
 	return []SecurityRuleAccess{Allow, Deny}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRuleDirection enumerates the values for security rule direction.
 type SecurityRuleDirection string
 
@@ -362,13 +363,13 @@ const (
 	Outbound SecurityRuleDirection = "Outbound"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleSecurityRuleDirectionValues returns an array of possible values for the SecurityRuleDirection const type.
 func PossibleSecurityRuleDirectionValues() []SecurityRuleDirection {
 	return []SecurityRuleDirection{Inbound, Outbound}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRuleProtocol enumerates the values for security rule protocol.
 type SecurityRuleProtocol string
 
@@ -381,13 +382,13 @@ const (
 	UDP SecurityRuleProtocol = "Udp"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleSecurityRuleProtocolValues returns an array of possible values for the SecurityRuleProtocol const type.
 func PossibleSecurityRuleProtocolValues() []SecurityRuleProtocol {
 	return []SecurityRuleProtocol{Asterisk, TCP, UDP}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ServiceProviderProvisioningState enumerates the values for service provider provisioning state.
 type ServiceProviderProvisioningState string
 
@@ -402,13 +403,13 @@ const (
 	Provisioning ServiceProviderProvisioningState = "Provisioning"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleServiceProviderProvisioningStateValues returns an array of possible values for the ServiceProviderProvisioningState const type.
 func PossibleServiceProviderProvisioningStateValues() []ServiceProviderProvisioningState {
 	return []ServiceProviderProvisioningState{Deprovisioning, NotProvisioned, Provisioned, Provisioning}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // TransportProtocol enumerates the values for transport protocol.
 type TransportProtocol string
 
@@ -419,13 +420,13 @@ const (
 	TransportProtocolUDP TransportProtocol = "Udp"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleTransportProtocolValues returns an array of possible values for the TransportProtocol const type.
 func PossibleTransportProtocolValues() []TransportProtocol {
 	return []TransportProtocol{TransportProtocolTCP, TransportProtocolUDP}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionStatus enumerates the values for virtual network gateway connection status.
 type VirtualNetworkGatewayConnectionStatus string
 
@@ -440,13 +441,13 @@ const (
 	Unknown VirtualNetworkGatewayConnectionStatus = "Unknown"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleVirtualNetworkGatewayConnectionStatusValues returns an array of possible values for the VirtualNetworkGatewayConnectionStatus const type.
 func PossibleVirtualNetworkGatewayConnectionStatusValues() []VirtualNetworkGatewayConnectionStatus {
 	return []VirtualNetworkGatewayConnectionStatus{Connected, Connecting, NotConnected, Unknown}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionType enumerates the values for virtual network gateway connection type.
 type VirtualNetworkGatewayConnectionType string
 
@@ -461,13 +462,13 @@ const (
 	VPNClient VirtualNetworkGatewayConnectionType = "VPNClient"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleVirtualNetworkGatewayConnectionTypeValues returns an array of possible values for the VirtualNetworkGatewayConnectionType const type.
 func PossibleVirtualNetworkGatewayConnectionTypeValues() []VirtualNetworkGatewayConnectionType {
 	return []VirtualNetworkGatewayConnectionType{ExpressRoute, IPsec, Vnet2Vnet, VPNClient}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayType enumerates the values for virtual network gateway type.
 type VirtualNetworkGatewayType string
 
@@ -478,13 +479,13 @@ const (
 	VirtualNetworkGatewayTypeVpn VirtualNetworkGatewayType = "Vpn"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleVirtualNetworkGatewayTypeValues returns an array of possible values for the VirtualNetworkGatewayType const type.
 func PossibleVirtualNetworkGatewayTypeValues() []VirtualNetworkGatewayType {
 	return []VirtualNetworkGatewayType{VirtualNetworkGatewayTypeExpressRoute, VirtualNetworkGatewayTypeVpn}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VpnType enumerates the values for vpn type.
 type VpnType string
 
@@ -495,20 +496,20 @@ const (
 	RouteBased VpnType = "RouteBased"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PossibleVpnTypeValues returns an array of possible values for the VpnType const type.
 func PossibleVpnTypeValues() []VpnType {
 	return []VpnType{PolicyBased, RouteBased}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AddressSpace addressSpace contains an array of IP address ranges that can be used by subnets
 type AddressSpace struct {
 	// AddressPrefixes - Gets or sets List of address blocks reserved for this virtual network in CIDR notation
 	AddressPrefixes *[]string `json:"addressPrefixes,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGateway applicationGateways resource
 type ApplicationGateway struct {
 	autorest.Response                   `json:"-"`
@@ -527,7 +528,7 @@ type ApplicationGateway struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGateway.
 func (ag ApplicationGateway) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -555,7 +556,7 @@ func (ag ApplicationGateway) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGateway struct.
 func (ag *ApplicationGateway) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -634,7 +635,7 @@ func (ag *ApplicationGateway) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayBackendAddress backend Address of application gateway
 type ApplicationGatewayBackendAddress struct {
 	// Fqdn - Gets or sets the dns name
@@ -643,7 +644,7 @@ type ApplicationGatewayBackendAddress struct {
 	IPAddress *string `json:"ipAddress,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayBackendAddressPool backend Address Pool of application gateway
 type ApplicationGatewayBackendAddressPool struct {
 	*ApplicationGatewayBackendAddressPoolPropertiesFormat `json:"properties,omitempty"`
@@ -655,7 +656,7 @@ type ApplicationGatewayBackendAddressPool struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayBackendAddressPool.
 func (agbap ApplicationGatewayBackendAddressPool) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -674,7 +675,7 @@ func (agbap ApplicationGatewayBackendAddressPool) MarshalJSON() ([]byte, error) 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayBackendAddressPool struct.
 func (agbap *ApplicationGatewayBackendAddressPool) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -726,7 +727,7 @@ func (agbap *ApplicationGatewayBackendAddressPool) UnmarshalJSON(body []byte) er
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayBackendAddressPoolPropertiesFormat properties of Backend Address Pool of application gateway
 type ApplicationGatewayBackendAddressPoolPropertiesFormat struct {
 	// BackendIPConfigurations - Gets or sets backendIPConfiguration of application gateway
@@ -737,7 +738,7 @@ type ApplicationGatewayBackendAddressPoolPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayBackendHTTPSettings backend address pool settings of application gateway
 type ApplicationGatewayBackendHTTPSettings struct {
 	*ApplicationGatewayBackendHTTPSettingsPropertiesFormat `json:"properties,omitempty"`
@@ -749,7 +750,7 @@ type ApplicationGatewayBackendHTTPSettings struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayBackendHTTPSettings.
 func (agbhs ApplicationGatewayBackendHTTPSettings) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -768,7 +769,7 @@ func (agbhs ApplicationGatewayBackendHTTPSettings) MarshalJSON() ([]byte, error)
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayBackendHTTPSettings struct.
 func (agbhs *ApplicationGatewayBackendHTTPSettings) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -820,7 +821,7 @@ func (agbhs *ApplicationGatewayBackendHTTPSettings) UnmarshalJSON(body []byte) e
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayBackendHTTPSettingsPropertiesFormat properties of Backend address pool settings of application
 // gateway
 type ApplicationGatewayBackendHTTPSettingsPropertiesFormat struct {
@@ -834,7 +835,7 @@ type ApplicationGatewayBackendHTTPSettingsPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayFrontendIPConfiguration frontend IP configuration of application gateway
 type ApplicationGatewayFrontendIPConfiguration struct {
 	*ApplicationGatewayFrontendIPConfigurationPropertiesFormat `json:"properties,omitempty"`
@@ -846,7 +847,7 @@ type ApplicationGatewayFrontendIPConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayFrontendIPConfiguration.
 func (agfic ApplicationGatewayFrontendIPConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -865,7 +866,7 @@ func (agfic ApplicationGatewayFrontendIPConfiguration) MarshalJSON() ([]byte, er
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayFrontendIPConfiguration struct.
 func (agfic *ApplicationGatewayFrontendIPConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -917,7 +918,7 @@ func (agfic *ApplicationGatewayFrontendIPConfiguration) UnmarshalJSON(body []byt
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayFrontendIPConfigurationPropertiesFormat properties of Frontend IP configuration of application
 // gateway
 type ApplicationGatewayFrontendIPConfigurationPropertiesFormat struct {
@@ -933,7 +934,7 @@ type ApplicationGatewayFrontendIPConfigurationPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayFrontendPort frontend Port of application gateway
 type ApplicationGatewayFrontendPort struct {
 	*ApplicationGatewayFrontendPortPropertiesFormat `json:"properties,omitempty"`
@@ -945,7 +946,7 @@ type ApplicationGatewayFrontendPort struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayFrontendPort.
 func (agfp ApplicationGatewayFrontendPort) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -964,7 +965,7 @@ func (agfp ApplicationGatewayFrontendPort) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayFrontendPort struct.
 func (agfp *ApplicationGatewayFrontendPort) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1016,7 +1017,7 @@ func (agfp *ApplicationGatewayFrontendPort) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayFrontendPortPropertiesFormat properties of Frontend Port of application gateway
 type ApplicationGatewayFrontendPortPropertiesFormat struct {
 	// Port - Gets or sets the frontend port
@@ -1025,7 +1026,7 @@ type ApplicationGatewayFrontendPortPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayHTTPListener http listener of application gateway
 type ApplicationGatewayHTTPListener struct {
 	*ApplicationGatewayHTTPListenerPropertiesFormat `json:"properties,omitempty"`
@@ -1037,7 +1038,7 @@ type ApplicationGatewayHTTPListener struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayHTTPListener.
 func (aghl ApplicationGatewayHTTPListener) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1056,7 +1057,7 @@ func (aghl ApplicationGatewayHTTPListener) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayHTTPListener struct.
 func (aghl *ApplicationGatewayHTTPListener) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1108,7 +1109,7 @@ func (aghl *ApplicationGatewayHTTPListener) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayHTTPListenerPropertiesFormat properties of Http listener of application gateway
 type ApplicationGatewayHTTPListenerPropertiesFormat struct {
 	// FrontendIPConfiguration - Gets or sets frontend IP configuration resource of application gateway
@@ -1123,7 +1124,7 @@ type ApplicationGatewayHTTPListenerPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayIPConfiguration IP configuration of application gateway
 type ApplicationGatewayIPConfiguration struct {
 	*ApplicationGatewayIPConfigurationPropertiesFormat `json:"properties,omitempty"`
@@ -1135,7 +1136,7 @@ type ApplicationGatewayIPConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayIPConfiguration.
 func (agic ApplicationGatewayIPConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1154,7 +1155,7 @@ func (agic ApplicationGatewayIPConfiguration) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayIPConfiguration struct.
 func (agic *ApplicationGatewayIPConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1206,7 +1207,7 @@ func (agic *ApplicationGatewayIPConfiguration) UnmarshalJSON(body []byte) error 
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayIPConfigurationPropertiesFormat properties of IP configuration of application gateway
 type ApplicationGatewayIPConfigurationPropertiesFormat struct {
 	// Subnet - Gets or sets the reference of the subnet resource.A subnet from where appliation gateway gets its private address
@@ -1215,7 +1216,7 @@ type ApplicationGatewayIPConfigurationPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayListResult response for ListLoadBalancers Api service call
 type ApplicationGatewayListResult struct {
 	autorest.Response `json:"-"`
@@ -1225,14 +1226,14 @@ type ApplicationGatewayListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayListResultIterator provides access to a complete listing of ApplicationGateway values.
 type ApplicationGatewayListResultIterator struct {
 	i    int
 	page ApplicationGatewayListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ApplicationGatewayListResultIterator) Next() error {
@@ -1249,19 +1250,19 @@ func (iter *ApplicationGatewayListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ApplicationGatewayListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ApplicationGatewayListResultIterator) Response() ApplicationGatewayListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ApplicationGatewayListResultIterator) Value() ApplicationGateway {
@@ -1271,7 +1272,7 @@ func (iter ApplicationGatewayListResultIterator) Value() ApplicationGateway {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (aglr ApplicationGatewayListResult) IsEmpty() bool {
 	return aglr.Value == nil || len(*aglr.Value) == 0
@@ -1289,14 +1290,14 @@ func (aglr ApplicationGatewayListResult) applicationGatewayListResultPreparer() 
 		autorest.WithBaseURL(to.String(aglr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayListResultPage contains a page of ApplicationGateway values.
 type ApplicationGatewayListResultPage struct {
 	fn   func(ApplicationGatewayListResult) (ApplicationGatewayListResult, error)
 	aglr ApplicationGatewayListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ApplicationGatewayListResultPage) Next() error {
@@ -1308,19 +1309,19 @@ func (page *ApplicationGatewayListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ApplicationGatewayListResultPage) NotDone() bool {
 	return !page.aglr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ApplicationGatewayListResultPage) Response() ApplicationGatewayListResult {
 	return page.aglr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ApplicationGatewayListResultPage) Values() []ApplicationGateway {
 	if page.aglr.IsEmpty() {
@@ -1329,7 +1330,7 @@ func (page ApplicationGatewayListResultPage) Values() []ApplicationGateway {
 	return *page.aglr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayPropertiesFormat properties of Application Gateway
 type ApplicationGatewayPropertiesFormat struct {
 	// Sku - Gets or sets sku of application gateway resource
@@ -1358,7 +1359,7 @@ type ApplicationGatewayPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayRequestRoutingRule request routing rule of application gateway
 type ApplicationGatewayRequestRoutingRule struct {
 	*ApplicationGatewayRequestRoutingRulePropertiesFormat `json:"properties,omitempty"`
@@ -1370,7 +1371,7 @@ type ApplicationGatewayRequestRoutingRule struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewayRequestRoutingRule.
 func (agrrr ApplicationGatewayRequestRoutingRule) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1389,7 +1390,7 @@ func (agrrr ApplicationGatewayRequestRoutingRule) MarshalJSON() ([]byte, error) 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewayRequestRoutingRule struct.
 func (agrrr *ApplicationGatewayRequestRoutingRule) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1441,7 +1442,7 @@ func (agrrr *ApplicationGatewayRequestRoutingRule) UnmarshalJSON(body []byte) er
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewayRequestRoutingRulePropertiesFormat properties of Request routing rule of application gateway
 type ApplicationGatewayRequestRoutingRulePropertiesFormat struct {
 	// RuleType - Gets or sets the rule type. Possible values include: 'Basic'
@@ -1456,7 +1457,7 @@ type ApplicationGatewayRequestRoutingRulePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaysCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type ApplicationGatewaysCreateOrUpdateFuture struct {
@@ -1464,7 +1465,7 @@ type ApplicationGatewaysCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ApplicationGatewaysCreateOrUpdateFuture) Result(client ApplicationGatewaysClient) (ag ApplicationGateway, err error) {
@@ -1507,7 +1508,7 @@ func (future ApplicationGatewaysCreateOrUpdateFuture) Result(client ApplicationG
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaysDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type ApplicationGatewaysDeleteFuture struct {
@@ -1515,7 +1516,7 @@ type ApplicationGatewaysDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ApplicationGatewaysDeleteFuture) Result(client ApplicationGatewaysClient) (ar autorest.Response, err error) {
@@ -1558,7 +1559,7 @@ func (future ApplicationGatewaysDeleteFuture) Result(client ApplicationGatewaysC
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaySku SKU of application gateway
 type ApplicationGatewaySku struct {
 	// Name - Gets or sets name of application gateway SKU. Possible values include: 'StandardSmall', 'StandardMedium', 'StandardLarge'
@@ -1569,7 +1570,7 @@ type ApplicationGatewaySku struct {
 	Capacity *int32 `json:"capacity,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaySslCertificate SSL certificates of application gateway
 type ApplicationGatewaySslCertificate struct {
 	*ApplicationGatewaySslCertificatePropertiesFormat `json:"properties,omitempty"`
@@ -1581,7 +1582,7 @@ type ApplicationGatewaySslCertificate struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ApplicationGatewaySslCertificate.
 func (agsc ApplicationGatewaySslCertificate) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1600,7 +1601,7 @@ func (agsc ApplicationGatewaySslCertificate) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ApplicationGatewaySslCertificate struct.
 func (agsc *ApplicationGatewaySslCertificate) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1652,7 +1653,7 @@ func (agsc *ApplicationGatewaySslCertificate) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaySslCertificatePropertiesFormat properties of SSL certificates of application gateway
 type ApplicationGatewaySslCertificatePropertiesFormat struct {
 	// Data - Gets or sets the certificate data
@@ -1665,7 +1666,7 @@ type ApplicationGatewaySslCertificatePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaysStartFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type ApplicationGatewaysStartFuture struct {
@@ -1673,7 +1674,7 @@ type ApplicationGatewaysStartFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ApplicationGatewaysStartFuture) Result(client ApplicationGatewaysClient) (ar autorest.Response, err error) {
@@ -1716,7 +1717,7 @@ func (future ApplicationGatewaysStartFuture) Result(client ApplicationGatewaysCl
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ApplicationGatewaysStopFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type ApplicationGatewaysStopFuture struct {
@@ -1724,7 +1725,7 @@ type ApplicationGatewaysStopFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ApplicationGatewaysStopFuture) Result(client ApplicationGatewaysClient) (ar autorest.Response, err error) {
@@ -1767,7 +1768,7 @@ func (future ApplicationGatewaysStopFuture) Result(client ApplicationGatewaysCli
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AuthorizationListResult response for ListAuthorizations Api service callRetrieves all authorizations that
 // belongs to an ExpressRouteCircuit
 type AuthorizationListResult struct {
@@ -1778,7 +1779,7 @@ type AuthorizationListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AuthorizationListResultIterator provides access to a complete listing of ExpressRouteCircuitAuthorization
 // values.
 type AuthorizationListResultIterator struct {
@@ -1786,7 +1787,7 @@ type AuthorizationListResultIterator struct {
 	page AuthorizationListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *AuthorizationListResultIterator) Next() error {
@@ -1803,19 +1804,19 @@ func (iter *AuthorizationListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter AuthorizationListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter AuthorizationListResultIterator) Response() AuthorizationListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter AuthorizationListResultIterator) Value() ExpressRouteCircuitAuthorization {
@@ -1825,7 +1826,7 @@ func (iter AuthorizationListResultIterator) Value() ExpressRouteCircuitAuthoriza
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (alr AuthorizationListResult) IsEmpty() bool {
 	return alr.Value == nil || len(*alr.Value) == 0
@@ -1843,14 +1844,14 @@ func (alr AuthorizationListResult) authorizationListResultPreparer() (*http.Requ
 		autorest.WithBaseURL(to.String(alr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AuthorizationListResultPage contains a page of ExpressRouteCircuitAuthorization values.
 type AuthorizationListResultPage struct {
 	fn  func(AuthorizationListResult) (AuthorizationListResult, error)
 	alr AuthorizationListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *AuthorizationListResultPage) Next() error {
@@ -1862,19 +1863,19 @@ func (page *AuthorizationListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page AuthorizationListResultPage) NotDone() bool {
 	return !page.alr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page AuthorizationListResultPage) Response() AuthorizationListResult {
 	return page.alr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page AuthorizationListResultPage) Values() []ExpressRouteCircuitAuthorization {
 	if page.alr.IsEmpty() {
@@ -1883,7 +1884,7 @@ func (page AuthorizationListResultPage) Values() []ExpressRouteCircuitAuthorizat
 	return *page.alr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AuthorizationPropertiesFormat ...
 type AuthorizationPropertiesFormat struct {
 	// AuthorizationKey - Gets or sets the authorization key
@@ -1894,7 +1895,7 @@ type AuthorizationPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // AzureAsyncOperationResult the response body contains the status of the specified asynchronous operation,
 // indicating whether it has succeeded, is inprogress, or has failed. Note that this status is distinct from the
 // HTTP status code returned for the Get Operation Status operation itself. If the asynchronous operation
@@ -1907,7 +1908,7 @@ type AzureAsyncOperationResult struct {
 	Error  *Error          `json:"error,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // BackendAddressPool pool of backend IP addresseses
 type BackendAddressPool struct {
 	*BackendAddressPoolPropertiesFormat `json:"properties,omitempty"`
@@ -1919,7 +1920,7 @@ type BackendAddressPool struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for BackendAddressPool.
 func (bap BackendAddressPool) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1938,7 +1939,7 @@ func (bap BackendAddressPool) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for BackendAddressPool struct.
 func (bap *BackendAddressPool) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1990,7 +1991,7 @@ func (bap *BackendAddressPool) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // BackendAddressPoolPropertiesFormat properties of BackendAddressPool
 type BackendAddressPoolPropertiesFormat struct {
 	// BackendIPConfigurations - Gets collection of references to IPs defined in NICs
@@ -2003,7 +2004,7 @@ type BackendAddressPoolPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ConnectionResetSharedKey ...
 type ConnectionResetSharedKey struct {
 	autorest.Response `json:"-"`
@@ -2011,7 +2012,7 @@ type ConnectionResetSharedKey struct {
 	KeyLength *int64 `json:"keyLength,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ConnectionSharedKey response for GetConnectionSharedKey Api servive call
 type ConnectionSharedKey struct {
 	autorest.Response `json:"-"`
@@ -2019,7 +2020,7 @@ type ConnectionSharedKey struct {
 	Value *string `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DhcpOptions dHCPOptions contains an array of DNS servers available to VMs deployed in the virtual
 // networkStandard DHCP option for a subnet overrides VNET DHCP options.
 type DhcpOptions struct {
@@ -2027,7 +2028,7 @@ type DhcpOptions struct {
 	DNSServers *[]string `json:"dnsServers,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DNSNameAvailabilityResult response for CheckDnsNameAvailability Api servive call
 type DNSNameAvailabilityResult struct {
 	autorest.Response `json:"-"`
@@ -2035,7 +2036,7 @@ type DNSNameAvailabilityResult struct {
 	Available *bool `json:"available,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Error ...
 type Error struct {
 	Code       *string         `json:"code,omitempty"`
@@ -2045,7 +2046,7 @@ type Error struct {
 	InnerError *string         `json:"innerError,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ErrorDetails ...
 type ErrorDetails struct {
 	Code    *string `json:"code,omitempty"`
@@ -2053,7 +2054,7 @@ type ErrorDetails struct {
 	Message *string `json:"message,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuit expressRouteCircuit resource
 type ExpressRouteCircuit struct {
 	autorest.Response `json:"-"`
@@ -2074,7 +2075,7 @@ type ExpressRouteCircuit struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ExpressRouteCircuit.
 func (erc ExpressRouteCircuit) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2105,7 +2106,7 @@ func (erc ExpressRouteCircuit) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ExpressRouteCircuit struct.
 func (erc *ExpressRouteCircuit) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2193,7 +2194,7 @@ func (erc *ExpressRouteCircuit) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitArpTable the arp table associated with the ExpressRouteCircuit
 type ExpressRouteCircuitArpTable struct {
 	// IPAddress - Gets ipAddress.
@@ -2202,7 +2203,7 @@ type ExpressRouteCircuitArpTable struct {
 	MacAddress *string `json:"macAddress,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitAuthorization authorization in a ExpressRouteCircuit resource
 type ExpressRouteCircuitAuthorization struct {
 	autorest.Response              `json:"-"`
@@ -2215,7 +2216,7 @@ type ExpressRouteCircuitAuthorization struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ExpressRouteCircuitAuthorization.
 func (erca ExpressRouteCircuitAuthorization) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2234,7 +2235,7 @@ func (erca ExpressRouteCircuitAuthorization) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ExpressRouteCircuitAuthorization struct.
 func (erca *ExpressRouteCircuitAuthorization) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2286,7 +2287,7 @@ func (erca *ExpressRouteCircuitAuthorization) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitAuthorizationsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results
 // of a long-running operation.
 type ExpressRouteCircuitAuthorizationsCreateOrUpdateFuture struct {
@@ -2294,7 +2295,7 @@ type ExpressRouteCircuitAuthorizationsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ExpressRouteCircuitAuthorizationsCreateOrUpdateFuture) Result(client ExpressRouteCircuitAuthorizationsClient) (erca ExpressRouteCircuitAuthorization, err error) {
@@ -2337,7 +2338,7 @@ func (future ExpressRouteCircuitAuthorizationsCreateOrUpdateFuture) Result(clien
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitAuthorizationsDeleteFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type ExpressRouteCircuitAuthorizationsDeleteFuture struct {
@@ -2345,7 +2346,7 @@ type ExpressRouteCircuitAuthorizationsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ExpressRouteCircuitAuthorizationsDeleteFuture) Result(client ExpressRouteCircuitAuthorizationsClient) (ar autorest.Response, err error) {
@@ -2388,7 +2389,7 @@ func (future ExpressRouteCircuitAuthorizationsDeleteFuture) Result(client Expres
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitListResult response for ListExpressRouteCircuit Api service call
 type ExpressRouteCircuitListResult struct {
 	autorest.Response `json:"-"`
@@ -2398,14 +2399,14 @@ type ExpressRouteCircuitListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitListResultIterator provides access to a complete listing of ExpressRouteCircuit values.
 type ExpressRouteCircuitListResultIterator struct {
 	i    int
 	page ExpressRouteCircuitListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ExpressRouteCircuitListResultIterator) Next() error {
@@ -2422,19 +2423,19 @@ func (iter *ExpressRouteCircuitListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ExpressRouteCircuitListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ExpressRouteCircuitListResultIterator) Response() ExpressRouteCircuitListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ExpressRouteCircuitListResultIterator) Value() ExpressRouteCircuit {
@@ -2444,7 +2445,7 @@ func (iter ExpressRouteCircuitListResultIterator) Value() ExpressRouteCircuit {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (erclr ExpressRouteCircuitListResult) IsEmpty() bool {
 	return erclr.Value == nil || len(*erclr.Value) == 0
@@ -2462,14 +2463,14 @@ func (erclr ExpressRouteCircuitListResult) expressRouteCircuitListResultPreparer
 		autorest.WithBaseURL(to.String(erclr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitListResultPage contains a page of ExpressRouteCircuit values.
 type ExpressRouteCircuitListResultPage struct {
 	fn    func(ExpressRouteCircuitListResult) (ExpressRouteCircuitListResult, error)
 	erclr ExpressRouteCircuitListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ExpressRouteCircuitListResultPage) Next() error {
@@ -2481,19 +2482,19 @@ func (page *ExpressRouteCircuitListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ExpressRouteCircuitListResultPage) NotDone() bool {
 	return !page.erclr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ExpressRouteCircuitListResultPage) Response() ExpressRouteCircuitListResult {
 	return page.erclr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ExpressRouteCircuitListResultPage) Values() []ExpressRouteCircuit {
 	if page.erclr.IsEmpty() {
@@ -2502,7 +2503,7 @@ func (page ExpressRouteCircuitListResultPage) Values() []ExpressRouteCircuit {
 	return *page.erclr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeering peering in a ExpressRouteCircuit resource
 type ExpressRouteCircuitPeering struct {
 	autorest.Response                           `json:"-"`
@@ -2515,7 +2516,7 @@ type ExpressRouteCircuitPeering struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for ExpressRouteCircuitPeering.
 func (ercp ExpressRouteCircuitPeering) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2534,7 +2535,7 @@ func (ercp ExpressRouteCircuitPeering) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for ExpressRouteCircuitPeering struct.
 func (ercp *ExpressRouteCircuitPeering) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2586,7 +2587,7 @@ func (ercp *ExpressRouteCircuitPeering) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringConfig specfies the peering config
 type ExpressRouteCircuitPeeringConfig struct {
 	// AdvertisedPublicPrefixes - Gets or sets the reference of AdvertisedPublicPrefixes
@@ -2599,7 +2600,7 @@ type ExpressRouteCircuitPeeringConfig struct {
 	RoutingRegistryName *string `json:"routingRegistryName,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringListResult response for ListPeering Api service callRetrieves all Peerings that
 // belongs to an ExpressRouteCircuit
 type ExpressRouteCircuitPeeringListResult struct {
@@ -2610,7 +2611,7 @@ type ExpressRouteCircuitPeeringListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringListResultIterator provides access to a complete listing of ExpressRouteCircuitPeering
 // values.
 type ExpressRouteCircuitPeeringListResultIterator struct {
@@ -2618,7 +2619,7 @@ type ExpressRouteCircuitPeeringListResultIterator struct {
 	page ExpressRouteCircuitPeeringListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ExpressRouteCircuitPeeringListResultIterator) Next() error {
@@ -2635,19 +2636,19 @@ func (iter *ExpressRouteCircuitPeeringListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ExpressRouteCircuitPeeringListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ExpressRouteCircuitPeeringListResultIterator) Response() ExpressRouteCircuitPeeringListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ExpressRouteCircuitPeeringListResultIterator) Value() ExpressRouteCircuitPeering {
@@ -2657,7 +2658,7 @@ func (iter ExpressRouteCircuitPeeringListResultIterator) Value() ExpressRouteCir
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ercplr ExpressRouteCircuitPeeringListResult) IsEmpty() bool {
 	return ercplr.Value == nil || len(*ercplr.Value) == 0
@@ -2675,14 +2676,14 @@ func (ercplr ExpressRouteCircuitPeeringListResult) expressRouteCircuitPeeringLis
 		autorest.WithBaseURL(to.String(ercplr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringListResultPage contains a page of ExpressRouteCircuitPeering values.
 type ExpressRouteCircuitPeeringListResultPage struct {
 	fn     func(ExpressRouteCircuitPeeringListResult) (ExpressRouteCircuitPeeringListResult, error)
 	ercplr ExpressRouteCircuitPeeringListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ExpressRouteCircuitPeeringListResultPage) Next() error {
@@ -2694,19 +2695,19 @@ func (page *ExpressRouteCircuitPeeringListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ExpressRouteCircuitPeeringListResultPage) NotDone() bool {
 	return !page.ercplr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ExpressRouteCircuitPeeringListResultPage) Response() ExpressRouteCircuitPeeringListResult {
 	return page.ercplr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ExpressRouteCircuitPeeringListResultPage) Values() []ExpressRouteCircuitPeering {
 	if page.ercplr.IsEmpty() {
@@ -2715,7 +2716,7 @@ func (page ExpressRouteCircuitPeeringListResultPage) Values() []ExpressRouteCirc
 	return *page.ercplr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringPropertiesFormat ...
 type ExpressRouteCircuitPeeringPropertiesFormat struct {
 	// PeeringType - Gets or sets PeeringType. Possible values include: 'AzurePublicPeering', 'AzurePrivatePeering', 'MicrosoftPeering'
@@ -2746,7 +2747,7 @@ type ExpressRouteCircuitPeeringPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type ExpressRouteCircuitPeeringsCreateOrUpdateFuture struct {
@@ -2754,7 +2755,7 @@ type ExpressRouteCircuitPeeringsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ExpressRouteCircuitPeeringsCreateOrUpdateFuture) Result(client ExpressRouteCircuitPeeringsClient) (ercp ExpressRouteCircuitPeering, err error) {
@@ -2797,7 +2798,7 @@ func (future ExpressRouteCircuitPeeringsCreateOrUpdateFuture) Result(client Expr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPeeringsDeleteFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type ExpressRouteCircuitPeeringsDeleteFuture struct {
@@ -2805,7 +2806,7 @@ type ExpressRouteCircuitPeeringsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ExpressRouteCircuitPeeringsDeleteFuture) Result(client ExpressRouteCircuitPeeringsClient) (ar autorest.Response, err error) {
@@ -2848,7 +2849,7 @@ func (future ExpressRouteCircuitPeeringsDeleteFuture) Result(client ExpressRoute
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitPropertiesFormat properties of ExpressRouteCircuit
 type ExpressRouteCircuitPropertiesFormat struct {
 	// CircuitProvisioningState - Gets or sets CircuitProvisioningState state of the resource
@@ -2869,7 +2870,7 @@ type ExpressRouteCircuitPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitRoutesTable the routes table associated with the ExpressRouteCircuit
 type ExpressRouteCircuitRoutesTable struct {
 	// AddressPrefix - Gets AddressPrefix.
@@ -2882,7 +2883,7 @@ type ExpressRouteCircuitRoutesTable struct {
 	AsPath *string `json:"asPath,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsArpTableListResult response for ListArpTable associated with the Express Route Circuits Api
 type ExpressRouteCircuitsArpTableListResult struct {
 	autorest.Response `json:"-"`
@@ -2892,7 +2893,7 @@ type ExpressRouteCircuitsArpTableListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsArpTableListResultIterator provides access to a complete listing of
 // ExpressRouteCircuitArpTable values.
 type ExpressRouteCircuitsArpTableListResultIterator struct {
@@ -2900,7 +2901,7 @@ type ExpressRouteCircuitsArpTableListResultIterator struct {
 	page ExpressRouteCircuitsArpTableListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ExpressRouteCircuitsArpTableListResultIterator) Next() error {
@@ -2917,19 +2918,19 @@ func (iter *ExpressRouteCircuitsArpTableListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ExpressRouteCircuitsArpTableListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ExpressRouteCircuitsArpTableListResultIterator) Response() ExpressRouteCircuitsArpTableListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ExpressRouteCircuitsArpTableListResultIterator) Value() ExpressRouteCircuitArpTable {
@@ -2939,7 +2940,7 @@ func (iter ExpressRouteCircuitsArpTableListResultIterator) Value() ExpressRouteC
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ercatlr ExpressRouteCircuitsArpTableListResult) IsEmpty() bool {
 	return ercatlr.Value == nil || len(*ercatlr.Value) == 0
@@ -2957,14 +2958,14 @@ func (ercatlr ExpressRouteCircuitsArpTableListResult) expressRouteCircuitsArpTab
 		autorest.WithBaseURL(to.String(ercatlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsArpTableListResultPage contains a page of ExpressRouteCircuitArpTable values.
 type ExpressRouteCircuitsArpTableListResultPage struct {
 	fn      func(ExpressRouteCircuitsArpTableListResult) (ExpressRouteCircuitsArpTableListResult, error)
 	ercatlr ExpressRouteCircuitsArpTableListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ExpressRouteCircuitsArpTableListResultPage) Next() error {
@@ -2976,19 +2977,19 @@ func (page *ExpressRouteCircuitsArpTableListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ExpressRouteCircuitsArpTableListResultPage) NotDone() bool {
 	return !page.ercatlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ExpressRouteCircuitsArpTableListResultPage) Response() ExpressRouteCircuitsArpTableListResult {
 	return page.ercatlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ExpressRouteCircuitsArpTableListResultPage) Values() []ExpressRouteCircuitArpTable {
 	if page.ercatlr.IsEmpty() {
@@ -2997,7 +2998,7 @@ func (page ExpressRouteCircuitsArpTableListResultPage) Values() []ExpressRouteCi
 	return *page.ercatlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type ExpressRouteCircuitsCreateOrUpdateFuture struct {
@@ -3005,7 +3006,7 @@ type ExpressRouteCircuitsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ExpressRouteCircuitsCreateOrUpdateFuture) Result(client ExpressRouteCircuitsClient) (erc ExpressRouteCircuit, err error) {
@@ -3048,7 +3049,7 @@ func (future ExpressRouteCircuitsCreateOrUpdateFuture) Result(client ExpressRout
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type ExpressRouteCircuitsDeleteFuture struct {
@@ -3056,7 +3057,7 @@ type ExpressRouteCircuitsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ExpressRouteCircuitsDeleteFuture) Result(client ExpressRouteCircuitsClient) (ar autorest.Response, err error) {
@@ -3099,7 +3100,7 @@ func (future ExpressRouteCircuitsDeleteFuture) Result(client ExpressRouteCircuit
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitServiceProviderProperties contains ServiceProviderProperties in an ExpressRouteCircuit
 type ExpressRouteCircuitServiceProviderProperties struct {
 	// ServiceProviderName - Gets or sets serviceProviderName.
@@ -3110,7 +3111,7 @@ type ExpressRouteCircuitServiceProviderProperties struct {
 	BandwidthInMbps *int32 `json:"bandwidthInMbps,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitSku contains sku in an ExpressRouteCircuit
 type ExpressRouteCircuitSku struct {
 	// Name - Gets or sets name of the sku.
@@ -3121,7 +3122,7 @@ type ExpressRouteCircuitSku struct {
 	Family ExpressRouteCircuitSkuFamily `json:"family,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsRoutesTableListResult response for ListRoutesTable associated with the Express Route
 // Circuits Api
 type ExpressRouteCircuitsRoutesTableListResult struct {
@@ -3132,7 +3133,7 @@ type ExpressRouteCircuitsRoutesTableListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsRoutesTableListResultIterator provides access to a complete listing of
 // ExpressRouteCircuitRoutesTable values.
 type ExpressRouteCircuitsRoutesTableListResultIterator struct {
@@ -3140,7 +3141,7 @@ type ExpressRouteCircuitsRoutesTableListResultIterator struct {
 	page ExpressRouteCircuitsRoutesTableListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ExpressRouteCircuitsRoutesTableListResultIterator) Next() error {
@@ -3157,19 +3158,19 @@ func (iter *ExpressRouteCircuitsRoutesTableListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ExpressRouteCircuitsRoutesTableListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ExpressRouteCircuitsRoutesTableListResultIterator) Response() ExpressRouteCircuitsRoutesTableListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ExpressRouteCircuitsRoutesTableListResultIterator) Value() ExpressRouteCircuitRoutesTable {
@@ -3179,7 +3180,7 @@ func (iter ExpressRouteCircuitsRoutesTableListResultIterator) Value() ExpressRou
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ercrtlr ExpressRouteCircuitsRoutesTableListResult) IsEmpty() bool {
 	return ercrtlr.Value == nil || len(*ercrtlr.Value) == 0
@@ -3197,14 +3198,14 @@ func (ercrtlr ExpressRouteCircuitsRoutesTableListResult) expressRouteCircuitsRou
 		autorest.WithBaseURL(to.String(ercrtlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsRoutesTableListResultPage contains a page of ExpressRouteCircuitRoutesTable values.
 type ExpressRouteCircuitsRoutesTableListResultPage struct {
 	fn      func(ExpressRouteCircuitsRoutesTableListResult) (ExpressRouteCircuitsRoutesTableListResult, error)
 	ercrtlr ExpressRouteCircuitsRoutesTableListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ExpressRouteCircuitsRoutesTableListResultPage) Next() error {
@@ -3216,19 +3217,19 @@ func (page *ExpressRouteCircuitsRoutesTableListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ExpressRouteCircuitsRoutesTableListResultPage) NotDone() bool {
 	return !page.ercrtlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ExpressRouteCircuitsRoutesTableListResultPage) Response() ExpressRouteCircuitsRoutesTableListResult {
 	return page.ercrtlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ExpressRouteCircuitsRoutesTableListResultPage) Values() []ExpressRouteCircuitRoutesTable {
 	if page.ercrtlr.IsEmpty() {
@@ -3237,7 +3238,7 @@ func (page ExpressRouteCircuitsRoutesTableListResultPage) Values() []ExpressRout
 	return *page.ercrtlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsStatsListResult response for ListStats from Express Route Circuits Api service call
 type ExpressRouteCircuitsStatsListResult struct {
 	autorest.Response `json:"-"`
@@ -3247,7 +3248,7 @@ type ExpressRouteCircuitsStatsListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsStatsListResultIterator provides access to a complete listing of ExpressRouteCircuitStats
 // values.
 type ExpressRouteCircuitsStatsListResultIterator struct {
@@ -3255,7 +3256,7 @@ type ExpressRouteCircuitsStatsListResultIterator struct {
 	page ExpressRouteCircuitsStatsListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ExpressRouteCircuitsStatsListResultIterator) Next() error {
@@ -3272,19 +3273,19 @@ func (iter *ExpressRouteCircuitsStatsListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ExpressRouteCircuitsStatsListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ExpressRouteCircuitsStatsListResultIterator) Response() ExpressRouteCircuitsStatsListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ExpressRouteCircuitsStatsListResultIterator) Value() ExpressRouteCircuitStats {
@@ -3294,7 +3295,7 @@ func (iter ExpressRouteCircuitsStatsListResultIterator) Value() ExpressRouteCirc
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ercslr ExpressRouteCircuitsStatsListResult) IsEmpty() bool {
 	return ercslr.Value == nil || len(*ercslr.Value) == 0
@@ -3312,14 +3313,14 @@ func (ercslr ExpressRouteCircuitsStatsListResult) expressRouteCircuitsStatsListR
 		autorest.WithBaseURL(to.String(ercslr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitsStatsListResultPage contains a page of ExpressRouteCircuitStats values.
 type ExpressRouteCircuitsStatsListResultPage struct {
 	fn     func(ExpressRouteCircuitsStatsListResult) (ExpressRouteCircuitsStatsListResult, error)
 	ercslr ExpressRouteCircuitsStatsListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ExpressRouteCircuitsStatsListResultPage) Next() error {
@@ -3331,19 +3332,19 @@ func (page *ExpressRouteCircuitsStatsListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ExpressRouteCircuitsStatsListResultPage) NotDone() bool {
 	return !page.ercslr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ExpressRouteCircuitsStatsListResultPage) Response() ExpressRouteCircuitsStatsListResult {
 	return page.ercslr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ExpressRouteCircuitsStatsListResultPage) Values() []ExpressRouteCircuitStats {
 	if page.ercslr.IsEmpty() {
@@ -3352,7 +3353,7 @@ func (page ExpressRouteCircuitsStatsListResultPage) Values() []ExpressRouteCircu
 	return *page.ercslr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteCircuitStats contains Stats associated with the peering
 type ExpressRouteCircuitStats struct {
 	// BytesIn - Gets BytesIn of the peering.
@@ -3361,7 +3362,7 @@ type ExpressRouteCircuitStats struct {
 	BytesOut *int32 `json:"bytesOut,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteServiceProvider expressRouteResourceProvider object
 type ExpressRouteServiceProvider struct {
 	// ID - Gets or sets the ID of the resource.
@@ -3373,7 +3374,7 @@ type ExpressRouteServiceProvider struct {
 	Properties *ExpressRouteServiceProviderPropertiesFormat `json:"properties,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteServiceProviderBandwidthsOffered contains Bandwidths offered in ExpressRouteServiceProviders
 type ExpressRouteServiceProviderBandwidthsOffered struct {
 	// OfferName - Gets the OfferName
@@ -3382,7 +3383,7 @@ type ExpressRouteServiceProviderBandwidthsOffered struct {
 	ValueInMbps *int32 `json:"valueInMbps,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteServiceProviderListResult response for ListExpressRouteServiceProvider Api service call
 type ExpressRouteServiceProviderListResult struct {
 	autorest.Response `json:"-"`
@@ -3392,7 +3393,7 @@ type ExpressRouteServiceProviderListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteServiceProviderListResultIterator provides access to a complete listing of
 // ExpressRouteServiceProvider values.
 type ExpressRouteServiceProviderListResultIterator struct {
@@ -3400,7 +3401,7 @@ type ExpressRouteServiceProviderListResultIterator struct {
 	page ExpressRouteServiceProviderListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ExpressRouteServiceProviderListResultIterator) Next() error {
@@ -3417,19 +3418,19 @@ func (iter *ExpressRouteServiceProviderListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ExpressRouteServiceProviderListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter ExpressRouteServiceProviderListResultIterator) Response() ExpressRouteServiceProviderListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ExpressRouteServiceProviderListResultIterator) Value() ExpressRouteServiceProvider {
@@ -3439,7 +3440,7 @@ func (iter ExpressRouteServiceProviderListResultIterator) Value() ExpressRouteSe
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ersplr ExpressRouteServiceProviderListResult) IsEmpty() bool {
 	return ersplr.Value == nil || len(*ersplr.Value) == 0
@@ -3457,14 +3458,14 @@ func (ersplr ExpressRouteServiceProviderListResult) expressRouteServiceProviderL
 		autorest.WithBaseURL(to.String(ersplr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteServiceProviderListResultPage contains a page of ExpressRouteServiceProvider values.
 type ExpressRouteServiceProviderListResultPage struct {
 	fn     func(ExpressRouteServiceProviderListResult) (ExpressRouteServiceProviderListResult, error)
 	ersplr ExpressRouteServiceProviderListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ExpressRouteServiceProviderListResultPage) Next() error {
@@ -3476,19 +3477,19 @@ func (page *ExpressRouteServiceProviderListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ExpressRouteServiceProviderListResultPage) NotDone() bool {
 	return !page.ersplr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page ExpressRouteServiceProviderListResultPage) Response() ExpressRouteServiceProviderListResult {
 	return page.ersplr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ExpressRouteServiceProviderListResultPage) Values() []ExpressRouteServiceProvider {
 	if page.ersplr.IsEmpty() {
@@ -3497,7 +3498,7 @@ func (page ExpressRouteServiceProviderListResultPage) Values() []ExpressRouteSer
 	return *page.ersplr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ExpressRouteServiceProviderPropertiesFormat properties of ExpressRouteServiceProvider
 type ExpressRouteServiceProviderPropertiesFormat struct {
 	// PeeringLocations - Gets or list of peering locations
@@ -3508,7 +3509,7 @@ type ExpressRouteServiceProviderPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // FrontendIPConfiguration frontend IP address of the load balancer
 type FrontendIPConfiguration struct {
 	*FrontendIPConfigurationPropertiesFormat `json:"properties,omitempty"`
@@ -3520,7 +3521,7 @@ type FrontendIPConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for FrontendIPConfiguration.
 func (fic FrontendIPConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3539,7 +3540,7 @@ func (fic FrontendIPConfiguration) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for FrontendIPConfiguration struct.
 func (fic *FrontendIPConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3591,7 +3592,7 @@ func (fic *FrontendIPConfiguration) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // FrontendIPConfigurationPropertiesFormat properties of Frontend IP Configuration of the load balancer
 type FrontendIPConfigurationPropertiesFormat struct {
 	// PrivateIPAddress - Gets or sets the IP address of the Load Balancer.This is only specified if a specific private IP address shall be allocated from the subnet specified in subnetRef
@@ -3614,7 +3615,7 @@ type FrontendIPConfigurationPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InboundNatPool inbound NAT pool of the loadbalancer
 type InboundNatPool struct {
 	*InboundNatPoolPropertiesFormat `json:"properties,omitempty"`
@@ -3626,7 +3627,7 @@ type InboundNatPool struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for InboundNatPool.
 func (inp InboundNatPool) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3645,7 +3646,7 @@ func (inp InboundNatPool) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for InboundNatPool struct.
 func (inp *InboundNatPool) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3697,7 +3698,7 @@ func (inp *InboundNatPool) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InboundNatPoolPropertiesFormat properties of Inbound NAT pool
 type InboundNatPoolPropertiesFormat struct {
 	// FrontendIPConfiguration - Gets or sets a reference to frontend IP Addresses
@@ -3714,7 +3715,7 @@ type InboundNatPoolPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InboundNatRule inbound NAT rule of the loadbalancer
 type InboundNatRule struct {
 	*InboundNatRulePropertiesFormat `json:"properties,omitempty"`
@@ -3726,7 +3727,7 @@ type InboundNatRule struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for InboundNatRule.
 func (inr InboundNatRule) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3745,7 +3746,7 @@ func (inr InboundNatRule) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for InboundNatRule struct.
 func (inr *InboundNatRule) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3797,7 +3798,7 @@ func (inr *InboundNatRule) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InboundNatRulePropertiesFormat properties of Inbound NAT rule
 type InboundNatRulePropertiesFormat struct {
 	// FrontendIPConfiguration - Gets or sets a reference to frontend IP Addresses
@@ -3818,7 +3819,7 @@ type InboundNatRulePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Interface a NetworkInterface in a resource group
 type Interface struct {
 	autorest.Response          `json:"-"`
@@ -3837,7 +3838,7 @@ type Interface struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for Interface.
 func (i Interface) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3865,7 +3866,7 @@ func (i Interface) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for Interface struct.
 func (i *Interface) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3944,7 +3945,7 @@ func (i *Interface) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfaceDNSSettings dns Settings of a network interface
 type InterfaceDNSSettings struct {
 	// DNSServers - Gets or sets list of DNS servers IP addresses
@@ -3957,7 +3958,7 @@ type InterfaceDNSSettings struct {
 	InternalFqdn *string `json:"internalFqdn,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfaceIPConfiguration iPConfiguration in a NetworkInterface
 type InterfaceIPConfiguration struct {
 	*InterfaceIPConfigurationPropertiesFormat `json:"properties,omitempty"`
@@ -3969,7 +3970,7 @@ type InterfaceIPConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for InterfaceIPConfiguration.
 func (iic InterfaceIPConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3988,7 +3989,7 @@ func (iic InterfaceIPConfiguration) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for InterfaceIPConfiguration struct.
 func (iic *InterfaceIPConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4040,7 +4041,7 @@ func (iic *InterfaceIPConfiguration) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfaceIPConfigurationPropertiesFormat properties of IPConfiguration
 type InterfaceIPConfigurationPropertiesFormat struct {
 	// PrivateIPAddress - Gets or sets the privateIPAddress of the Network Interface IP Configuration
@@ -4059,7 +4060,7 @@ type InterfaceIPConfigurationPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfaceListResult response for ListNetworkInterface Api service call
 type InterfaceListResult struct {
 	autorest.Response `json:"-"`
@@ -4069,14 +4070,14 @@ type InterfaceListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfaceListResultIterator provides access to a complete listing of Interface values.
 type InterfaceListResultIterator struct {
 	i    int
 	page InterfaceListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *InterfaceListResultIterator) Next() error {
@@ -4093,19 +4094,19 @@ func (iter *InterfaceListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter InterfaceListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter InterfaceListResultIterator) Response() InterfaceListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter InterfaceListResultIterator) Value() Interface {
@@ -4115,7 +4116,7 @@ func (iter InterfaceListResultIterator) Value() Interface {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ilr InterfaceListResult) IsEmpty() bool {
 	return ilr.Value == nil || len(*ilr.Value) == 0
@@ -4133,14 +4134,14 @@ func (ilr InterfaceListResult) interfaceListResultPreparer() (*http.Request, err
 		autorest.WithBaseURL(to.String(ilr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfaceListResultPage contains a page of Interface values.
 type InterfaceListResultPage struct {
 	fn  func(InterfaceListResult) (InterfaceListResult, error)
 	ilr InterfaceListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *InterfaceListResultPage) Next() error {
@@ -4152,19 +4153,19 @@ func (page *InterfaceListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page InterfaceListResultPage) NotDone() bool {
 	return !page.ilr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page InterfaceListResultPage) Response() InterfaceListResult {
 	return page.ilr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page InterfaceListResultPage) Values() []Interface {
 	if page.ilr.IsEmpty() {
@@ -4173,7 +4174,7 @@ func (page InterfaceListResultPage) Values() []Interface {
 	return *page.ilr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfacePropertiesFormat networkInterface properties.
 type InterfacePropertiesFormat struct {
 	// VirtualMachine - Gets or sets the reference of a VirtualMachine
@@ -4196,7 +4197,7 @@ type InterfacePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfacesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type InterfacesCreateOrUpdateFuture struct {
@@ -4204,7 +4205,7 @@ type InterfacesCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future InterfacesCreateOrUpdateFuture) Result(client InterfacesClient) (i Interface, err error) {
@@ -4247,14 +4248,14 @@ func (future InterfacesCreateOrUpdateFuture) Result(client InterfacesClient) (i 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // InterfacesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type InterfacesDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future InterfacesDeleteFuture) Result(client InterfacesClient) (ar autorest.Response, err error) {
@@ -4297,7 +4298,7 @@ func (future InterfacesDeleteFuture) Result(client InterfacesClient) (ar autores
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancer loadBalancer resource
 type LoadBalancer struct {
 	autorest.Response             `json:"-"`
@@ -4316,7 +4317,7 @@ type LoadBalancer struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for LoadBalancer.
 func (lb LoadBalancer) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4344,7 +4345,7 @@ func (lb LoadBalancer) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for LoadBalancer struct.
 func (lb *LoadBalancer) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4423,7 +4424,7 @@ func (lb *LoadBalancer) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancerListResult response for ListLoadBalancers Api service call
 type LoadBalancerListResult struct {
 	autorest.Response `json:"-"`
@@ -4433,14 +4434,14 @@ type LoadBalancerListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancerListResultIterator provides access to a complete listing of LoadBalancer values.
 type LoadBalancerListResultIterator struct {
 	i    int
 	page LoadBalancerListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *LoadBalancerListResultIterator) Next() error {
@@ -4457,19 +4458,19 @@ func (iter *LoadBalancerListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter LoadBalancerListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter LoadBalancerListResultIterator) Response() LoadBalancerListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter LoadBalancerListResultIterator) Value() LoadBalancer {
@@ -4479,7 +4480,7 @@ func (iter LoadBalancerListResultIterator) Value() LoadBalancer {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (lblr LoadBalancerListResult) IsEmpty() bool {
 	return lblr.Value == nil || len(*lblr.Value) == 0
@@ -4497,14 +4498,14 @@ func (lblr LoadBalancerListResult) loadBalancerListResultPreparer() (*http.Reque
 		autorest.WithBaseURL(to.String(lblr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancerListResultPage contains a page of LoadBalancer values.
 type LoadBalancerListResultPage struct {
 	fn   func(LoadBalancerListResult) (LoadBalancerListResult, error)
 	lblr LoadBalancerListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *LoadBalancerListResultPage) Next() error {
@@ -4516,19 +4517,19 @@ func (page *LoadBalancerListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page LoadBalancerListResultPage) NotDone() bool {
 	return !page.lblr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page LoadBalancerListResultPage) Response() LoadBalancerListResult {
 	return page.lblr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page LoadBalancerListResultPage) Values() []LoadBalancer {
 	if page.lblr.IsEmpty() {
@@ -4537,7 +4538,7 @@ func (page LoadBalancerListResultPage) Values() []LoadBalancer {
 	return *page.lblr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancerPropertiesFormat properties of Load Balancer
 type LoadBalancerPropertiesFormat struct {
 	// FrontendIPConfigurations - Gets or sets frontend IP addresses of the load balancer
@@ -4560,7 +4561,7 @@ type LoadBalancerPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancersCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type LoadBalancersCreateOrUpdateFuture struct {
@@ -4568,7 +4569,7 @@ type LoadBalancersCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future LoadBalancersCreateOrUpdateFuture) Result(client LoadBalancersClient) (lb LoadBalancer, err error) {
@@ -4611,14 +4612,14 @@ func (future LoadBalancersCreateOrUpdateFuture) Result(client LoadBalancersClien
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancersDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type LoadBalancersDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future LoadBalancersDeleteFuture) Result(client LoadBalancersClient) (ar autorest.Response, err error) {
@@ -4661,7 +4662,7 @@ func (future LoadBalancersDeleteFuture) Result(client LoadBalancersClient) (ar a
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancingRule rules of the load balancer
 type LoadBalancingRule struct {
 	*LoadBalancingRulePropertiesFormat `json:"properties,omitempty"`
@@ -4673,7 +4674,7 @@ type LoadBalancingRule struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for LoadBalancingRule.
 func (lbr LoadBalancingRule) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4692,7 +4693,7 @@ func (lbr LoadBalancingRule) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for LoadBalancingRule struct.
 func (lbr *LoadBalancingRule) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4744,7 +4745,7 @@ func (lbr *LoadBalancingRule) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LoadBalancingRulePropertiesFormat properties of the load balancer
 type LoadBalancingRulePropertiesFormat struct {
 	// FrontendIPConfiguration - Gets or sets a reference to frontend IP Addresses
@@ -4769,7 +4770,7 @@ type LoadBalancingRulePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGateway a common class for general resource information
 type LocalNetworkGateway struct {
 	autorest.Response                    `json:"-"`
@@ -4788,7 +4789,7 @@ type LocalNetworkGateway struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for LocalNetworkGateway.
 func (lng LocalNetworkGateway) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4816,7 +4817,7 @@ func (lng LocalNetworkGateway) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for LocalNetworkGateway struct.
 func (lng *LocalNetworkGateway) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4895,7 +4896,7 @@ func (lng *LocalNetworkGateway) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGatewayListResult response for ListLocalNetworkGateways Api service call
 type LocalNetworkGatewayListResult struct {
 	autorest.Response `json:"-"`
@@ -4905,14 +4906,14 @@ type LocalNetworkGatewayListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGatewayListResultIterator provides access to a complete listing of LocalNetworkGateway values.
 type LocalNetworkGatewayListResultIterator struct {
 	i    int
 	page LocalNetworkGatewayListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *LocalNetworkGatewayListResultIterator) Next() error {
@@ -4929,19 +4930,19 @@ func (iter *LocalNetworkGatewayListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter LocalNetworkGatewayListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter LocalNetworkGatewayListResultIterator) Response() LocalNetworkGatewayListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter LocalNetworkGatewayListResultIterator) Value() LocalNetworkGateway {
@@ -4951,7 +4952,7 @@ func (iter LocalNetworkGatewayListResultIterator) Value() LocalNetworkGateway {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (lnglr LocalNetworkGatewayListResult) IsEmpty() bool {
 	return lnglr.Value == nil || len(*lnglr.Value) == 0
@@ -4969,14 +4970,14 @@ func (lnglr LocalNetworkGatewayListResult) localNetworkGatewayListResultPreparer
 		autorest.WithBaseURL(to.String(lnglr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGatewayListResultPage contains a page of LocalNetworkGateway values.
 type LocalNetworkGatewayListResultPage struct {
 	fn    func(LocalNetworkGatewayListResult) (LocalNetworkGatewayListResult, error)
 	lnglr LocalNetworkGatewayListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *LocalNetworkGatewayListResultPage) Next() error {
@@ -4988,19 +4989,19 @@ func (page *LocalNetworkGatewayListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page LocalNetworkGatewayListResultPage) NotDone() bool {
 	return !page.lnglr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page LocalNetworkGatewayListResultPage) Response() LocalNetworkGatewayListResult {
 	return page.lnglr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page LocalNetworkGatewayListResultPage) Values() []LocalNetworkGateway {
 	if page.lnglr.IsEmpty() {
@@ -5009,7 +5010,7 @@ func (page LocalNetworkGatewayListResultPage) Values() []LocalNetworkGateway {
 	return *page.lnglr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGatewayPropertiesFormat localNetworkGateway properties
 type LocalNetworkGatewayPropertiesFormat struct {
 	// LocalNetworkAddressSpace - Local network site Address space
@@ -5022,7 +5023,7 @@ type LocalNetworkGatewayPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGatewaysCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type LocalNetworkGatewaysCreateOrUpdateFuture struct {
@@ -5030,7 +5031,7 @@ type LocalNetworkGatewaysCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future LocalNetworkGatewaysCreateOrUpdateFuture) Result(client LocalNetworkGatewaysClient) (lng LocalNetworkGateway, err error) {
@@ -5073,7 +5074,7 @@ func (future LocalNetworkGatewaysCreateOrUpdateFuture) Result(client LocalNetwor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // LocalNetworkGatewaysDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type LocalNetworkGatewaysDeleteFuture struct {
@@ -5081,7 +5082,7 @@ type LocalNetworkGatewaysDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future LocalNetworkGatewaysDeleteFuture) Result(client LocalNetworkGatewaysClient) (ar autorest.Response, err error) {
@@ -5124,7 +5125,7 @@ func (future LocalNetworkGatewaysDeleteFuture) Result(client LocalNetworkGateway
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // OutboundNatRule outbound NAT pool of the loadbalancer
 type OutboundNatRule struct {
 	*OutboundNatRulePropertiesFormat `json:"properties,omitempty"`
@@ -5136,7 +5137,7 @@ type OutboundNatRule struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for OutboundNatRule.
 func (onr OutboundNatRule) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -5155,7 +5156,7 @@ func (onr OutboundNatRule) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for OutboundNatRule struct.
 func (onr *OutboundNatRule) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -5207,7 +5208,7 @@ func (onr *OutboundNatRule) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // OutboundNatRulePropertiesFormat outbound NAT pool of the loadbalancer
 type OutboundNatRulePropertiesFormat struct {
 	// AllocatedOutboundPorts - Gets or sets the number of outbound ports to be used for SNAT
@@ -5220,7 +5221,7 @@ type OutboundNatRulePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Probe load balancer Probe
 type Probe struct {
 	*ProbePropertiesFormat `json:"properties,omitempty"`
@@ -5232,7 +5233,7 @@ type Probe struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for Probe.
 func (p Probe) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -5251,7 +5252,7 @@ func (p Probe) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for Probe struct.
 func (p *Probe) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -5303,7 +5304,7 @@ func (p *Probe) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ProbePropertiesFormat ...
 type ProbePropertiesFormat struct {
 	// LoadBalancingRules - Gets Load balancer rules that use this probe
@@ -5322,7 +5323,7 @@ type ProbePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddress publicIPAddress resource
 type PublicIPAddress struct {
 	autorest.Response                `json:"-"`
@@ -5341,7 +5342,7 @@ type PublicIPAddress struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for PublicIPAddress.
 func (pia PublicIPAddress) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -5369,7 +5370,7 @@ func (pia PublicIPAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for PublicIPAddress struct.
 func (pia *PublicIPAddress) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -5448,7 +5449,7 @@ func (pia *PublicIPAddress) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressDNSSettings contains FQDN of the DNS record associated with the public IP address
 type PublicIPAddressDNSSettings struct {
 	// DomainNameLabel - Gets or sets the Domain name label.The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
@@ -5459,7 +5460,7 @@ type PublicIPAddressDNSSettings struct {
 	ReverseFqdn *string `json:"reverseFqdn,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type PublicIPAddressesCreateOrUpdateFuture struct {
@@ -5467,7 +5468,7 @@ type PublicIPAddressesCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future PublicIPAddressesCreateOrUpdateFuture) Result(client PublicIPAddressesClient) (pia PublicIPAddress, err error) {
@@ -5510,7 +5511,7 @@ func (future PublicIPAddressesCreateOrUpdateFuture) Result(client PublicIPAddres
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type PublicIPAddressesDeleteFuture struct {
@@ -5518,7 +5519,7 @@ type PublicIPAddressesDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future PublicIPAddressesDeleteFuture) Result(client PublicIPAddressesClient) (ar autorest.Response, err error) {
@@ -5561,7 +5562,7 @@ func (future PublicIPAddressesDeleteFuture) Result(client PublicIPAddressesClien
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressListResult response for ListPublicIpAddresses Api service call
 type PublicIPAddressListResult struct {
 	autorest.Response `json:"-"`
@@ -5571,14 +5572,14 @@ type PublicIPAddressListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressListResultIterator provides access to a complete listing of PublicIPAddress values.
 type PublicIPAddressListResultIterator struct {
 	i    int
 	page PublicIPAddressListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *PublicIPAddressListResultIterator) Next() error {
@@ -5595,19 +5596,19 @@ func (iter *PublicIPAddressListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter PublicIPAddressListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter PublicIPAddressListResultIterator) Response() PublicIPAddressListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter PublicIPAddressListResultIterator) Value() PublicIPAddress {
@@ -5617,7 +5618,7 @@ func (iter PublicIPAddressListResultIterator) Value() PublicIPAddress {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (pialr PublicIPAddressListResult) IsEmpty() bool {
 	return pialr.Value == nil || len(*pialr.Value) == 0
@@ -5635,14 +5636,14 @@ func (pialr PublicIPAddressListResult) publicIPAddressListResultPreparer() (*htt
 		autorest.WithBaseURL(to.String(pialr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressListResultPage contains a page of PublicIPAddress values.
 type PublicIPAddressListResultPage struct {
 	fn    func(PublicIPAddressListResult) (PublicIPAddressListResult, error)
 	pialr PublicIPAddressListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *PublicIPAddressListResultPage) Next() error {
@@ -5654,19 +5655,19 @@ func (page *PublicIPAddressListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page PublicIPAddressListResultPage) NotDone() bool {
 	return !page.pialr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page PublicIPAddressListResultPage) Response() PublicIPAddressListResult {
 	return page.pialr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page PublicIPAddressListResultPage) Values() []PublicIPAddress {
 	if page.pialr.IsEmpty() {
@@ -5675,7 +5676,7 @@ func (page PublicIPAddressListResultPage) Values() []PublicIPAddress {
 	return *page.pialr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressPropertiesFormat publicIpAddress properties
 type PublicIPAddressPropertiesFormat struct {
 	// PublicIPAllocationMethod - Gets or sets PublicIP allocation method (Static/Dynamic). Possible values include: 'Static', 'Dynamic'
@@ -5694,7 +5695,7 @@ type PublicIPAddressPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Resource ...
 type Resource struct {
 	// ID - Resource Id
@@ -5709,7 +5710,7 @@ type Resource struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for Resource.
 func (r Resource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -5731,7 +5732,7 @@ func (r Resource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Route route resource
 type Route struct {
 	autorest.Response      `json:"-"`
@@ -5744,7 +5745,7 @@ type Route struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for Route.
 func (r Route) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -5763,7 +5764,7 @@ func (r Route) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for Route struct.
 func (r *Route) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -5815,7 +5816,7 @@ func (r *Route) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteListResult response for ListRoute Api servive call
 type RouteListResult struct {
 	autorest.Response `json:"-"`
@@ -5825,14 +5826,14 @@ type RouteListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteListResultIterator provides access to a complete listing of Route values.
 type RouteListResultIterator struct {
 	i    int
 	page RouteListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *RouteListResultIterator) Next() error {
@@ -5849,19 +5850,19 @@ func (iter *RouteListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter RouteListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter RouteListResultIterator) Response() RouteListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter RouteListResultIterator) Value() Route {
@@ -5871,7 +5872,7 @@ func (iter RouteListResultIterator) Value() Route {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (rlr RouteListResult) IsEmpty() bool {
 	return rlr.Value == nil || len(*rlr.Value) == 0
@@ -5889,14 +5890,14 @@ func (rlr RouteListResult) routeListResultPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(rlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteListResultPage contains a page of Route values.
 type RouteListResultPage struct {
 	fn  func(RouteListResult) (RouteListResult, error)
 	rlr RouteListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *RouteListResultPage) Next() error {
@@ -5908,19 +5909,19 @@ func (page *RouteListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page RouteListResultPage) NotDone() bool {
 	return !page.rlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page RouteListResultPage) Response() RouteListResult {
 	return page.rlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page RouteListResultPage) Values() []Route {
 	if page.rlr.IsEmpty() {
@@ -5929,7 +5930,7 @@ func (page RouteListResultPage) Values() []Route {
 	return *page.rlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RoutePropertiesFormat route resource
 type RoutePropertiesFormat struct {
 	// AddressPrefix - Gets or sets the destination CIDR to which the route applies.
@@ -5942,14 +5943,14 @@ type RoutePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RoutesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type RoutesCreateOrUpdateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future RoutesCreateOrUpdateFuture) Result(client RoutesClient) (r Route, err error) {
@@ -5992,14 +5993,14 @@ func (future RoutesCreateOrUpdateFuture) Result(client RoutesClient) (r Route, e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RoutesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type RoutesDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future RoutesDeleteFuture) Result(client RoutesClient) (ar autorest.Response, err error) {
@@ -6042,7 +6043,7 @@ func (future RoutesDeleteFuture) Result(client RoutesClient) (ar autorest.Respon
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTable routeTable resource
 type RouteTable struct {
 	autorest.Response           `json:"-"`
@@ -6061,7 +6062,7 @@ type RouteTable struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for RouteTable.
 func (rt RouteTable) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -6089,7 +6090,7 @@ func (rt RouteTable) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for RouteTable struct.
 func (rt *RouteTable) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -6168,7 +6169,7 @@ func (rt *RouteTable) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTableListResult response for ListRouteTable Api servive call
 type RouteTableListResult struct {
 	autorest.Response `json:"-"`
@@ -6178,14 +6179,14 @@ type RouteTableListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTableListResultIterator provides access to a complete listing of RouteTable values.
 type RouteTableListResultIterator struct {
 	i    int
 	page RouteTableListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *RouteTableListResultIterator) Next() error {
@@ -6202,19 +6203,19 @@ func (iter *RouteTableListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter RouteTableListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter RouteTableListResultIterator) Response() RouteTableListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter RouteTableListResultIterator) Value() RouteTable {
@@ -6224,7 +6225,7 @@ func (iter RouteTableListResultIterator) Value() RouteTable {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (rtlr RouteTableListResult) IsEmpty() bool {
 	return rtlr.Value == nil || len(*rtlr.Value) == 0
@@ -6242,14 +6243,14 @@ func (rtlr RouteTableListResult) routeTableListResultPreparer() (*http.Request, 
 		autorest.WithBaseURL(to.String(rtlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTableListResultPage contains a page of RouteTable values.
 type RouteTableListResultPage struct {
 	fn   func(RouteTableListResult) (RouteTableListResult, error)
 	rtlr RouteTableListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *RouteTableListResultPage) Next() error {
@@ -6261,19 +6262,19 @@ func (page *RouteTableListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page RouteTableListResultPage) NotDone() bool {
 	return !page.rtlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page RouteTableListResultPage) Response() RouteTableListResult {
 	return page.rtlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page RouteTableListResultPage) Values() []RouteTable {
 	if page.rtlr.IsEmpty() {
@@ -6282,7 +6283,7 @@ func (page RouteTableListResultPage) Values() []RouteTable {
 	return *page.rtlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTablePropertiesFormat route Table resource
 type RouteTablePropertiesFormat struct {
 	// Routes - Gets or sets Routes in a Route Table
@@ -6293,7 +6294,7 @@ type RouteTablePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTablesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type RouteTablesCreateOrUpdateFuture struct {
@@ -6301,7 +6302,7 @@ type RouteTablesCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future RouteTablesCreateOrUpdateFuture) Result(client RouteTablesClient) (rt RouteTable, err error) {
@@ -6344,14 +6345,14 @@ func (future RouteTablesCreateOrUpdateFuture) Result(client RouteTablesClient) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // RouteTablesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type RouteTablesDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future RouteTablesDeleteFuture) Result(client RouteTablesClient) (ar autorest.Response, err error) {
@@ -6394,7 +6395,7 @@ func (future RouteTablesDeleteFuture) Result(client RouteTablesClient) (ar autor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroup networkSecurityGroup resource
 type SecurityGroup struct {
 	autorest.Response              `json:"-"`
@@ -6413,7 +6414,7 @@ type SecurityGroup struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for SecurityGroup.
 func (sg SecurityGroup) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -6441,7 +6442,7 @@ func (sg SecurityGroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for SecurityGroup struct.
 func (sg *SecurityGroup) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -6520,7 +6521,7 @@ func (sg *SecurityGroup) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupListResult response for ListNetworkSecurityGroups Api servive call
 type SecurityGroupListResult struct {
 	autorest.Response `json:"-"`
@@ -6530,14 +6531,14 @@ type SecurityGroupListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupListResultIterator provides access to a complete listing of SecurityGroup values.
 type SecurityGroupListResultIterator struct {
 	i    int
 	page SecurityGroupListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *SecurityGroupListResultIterator) Next() error {
@@ -6554,19 +6555,19 @@ func (iter *SecurityGroupListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter SecurityGroupListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter SecurityGroupListResultIterator) Response() SecurityGroupListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter SecurityGroupListResultIterator) Value() SecurityGroup {
@@ -6576,7 +6577,7 @@ func (iter SecurityGroupListResultIterator) Value() SecurityGroup {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (sglr SecurityGroupListResult) IsEmpty() bool {
 	return sglr.Value == nil || len(*sglr.Value) == 0
@@ -6594,14 +6595,14 @@ func (sglr SecurityGroupListResult) securityGroupListResultPreparer() (*http.Req
 		autorest.WithBaseURL(to.String(sglr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupListResultPage contains a page of SecurityGroup values.
 type SecurityGroupListResultPage struct {
 	fn   func(SecurityGroupListResult) (SecurityGroupListResult, error)
 	sglr SecurityGroupListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *SecurityGroupListResultPage) Next() error {
@@ -6613,19 +6614,19 @@ func (page *SecurityGroupListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page SecurityGroupListResultPage) NotDone() bool {
 	return !page.sglr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page SecurityGroupListResultPage) Response() SecurityGroupListResult {
 	return page.sglr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page SecurityGroupListResultPage) Values() []SecurityGroup {
 	if page.sglr.IsEmpty() {
@@ -6634,7 +6635,7 @@ func (page SecurityGroupListResultPage) Values() []SecurityGroup {
 	return *page.sglr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupPropertiesFormat network Security Group resource
 type SecurityGroupPropertiesFormat struct {
 	// SecurityRules - Gets or sets Security rules of network security group
@@ -6651,7 +6652,7 @@ type SecurityGroupPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SecurityGroupsCreateOrUpdateFuture struct {
@@ -6659,7 +6660,7 @@ type SecurityGroupsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SecurityGroupsCreateOrUpdateFuture) Result(client SecurityGroupsClient) (sg SecurityGroup, err error) {
@@ -6702,14 +6703,14 @@ func (future SecurityGroupsCreateOrUpdateFuture) Result(client SecurityGroupsCli
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type SecurityGroupsDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SecurityGroupsDeleteFuture) Result(client SecurityGroupsClient) (ar autorest.Response, err error) {
@@ -6752,7 +6753,7 @@ func (future SecurityGroupsDeleteFuture) Result(client SecurityGroupsClient) (ar
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRule network security rule
 type SecurityRule struct {
 	autorest.Response             `json:"-"`
@@ -6765,7 +6766,7 @@ type SecurityRule struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for SecurityRule.
 func (sr SecurityRule) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -6784,7 +6785,7 @@ func (sr SecurityRule) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for SecurityRule struct.
 func (sr *SecurityRule) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -6836,7 +6837,7 @@ func (sr *SecurityRule) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRuleListResult response for ListSecurityRule Api service callRetrieves all security rules that belongs
 // to a network security group
 type SecurityRuleListResult struct {
@@ -6847,14 +6848,14 @@ type SecurityRuleListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRuleListResultIterator provides access to a complete listing of SecurityRule values.
 type SecurityRuleListResultIterator struct {
 	i    int
 	page SecurityRuleListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *SecurityRuleListResultIterator) Next() error {
@@ -6871,19 +6872,19 @@ func (iter *SecurityRuleListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter SecurityRuleListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter SecurityRuleListResultIterator) Response() SecurityRuleListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter SecurityRuleListResultIterator) Value() SecurityRule {
@@ -6893,7 +6894,7 @@ func (iter SecurityRuleListResultIterator) Value() SecurityRule {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (srlr SecurityRuleListResult) IsEmpty() bool {
 	return srlr.Value == nil || len(*srlr.Value) == 0
@@ -6911,14 +6912,14 @@ func (srlr SecurityRuleListResult) securityRuleListResultPreparer() (*http.Reque
 		autorest.WithBaseURL(to.String(srlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRuleListResultPage contains a page of SecurityRule values.
 type SecurityRuleListResultPage struct {
 	fn   func(SecurityRuleListResult) (SecurityRuleListResult, error)
 	srlr SecurityRuleListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *SecurityRuleListResultPage) Next() error {
@@ -6930,19 +6931,19 @@ func (page *SecurityRuleListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page SecurityRuleListResultPage) NotDone() bool {
 	return !page.srlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page SecurityRuleListResultPage) Response() SecurityRuleListResult {
 	return page.srlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page SecurityRuleListResultPage) Values() []SecurityRule {
 	if page.srlr.IsEmpty() {
@@ -6951,7 +6952,7 @@ func (page SecurityRuleListResultPage) Values() []SecurityRule {
 	return *page.srlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRulePropertiesFormat ...
 type SecurityRulePropertiesFormat struct {
 	// Description - Gets or sets a description for this rule. Restricted to 140 chars.
@@ -6976,7 +6977,7 @@ type SecurityRulePropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRulesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SecurityRulesCreateOrUpdateFuture struct {
@@ -6984,7 +6985,7 @@ type SecurityRulesCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SecurityRulesCreateOrUpdateFuture) Result(client SecurityRulesClient) (sr SecurityRule, err error) {
@@ -7027,14 +7028,14 @@ func (future SecurityRulesCreateOrUpdateFuture) Result(client SecurityRulesClien
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityRulesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type SecurityRulesDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SecurityRulesDeleteFuture) Result(client SecurityRulesClient) (ar autorest.Response, err error) {
@@ -7077,7 +7078,7 @@ func (future SecurityRulesDeleteFuture) Result(client SecurityRulesClient) (ar a
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Subnet subnet in a VirtualNework resource
 type Subnet struct {
 	autorest.Response       `json:"-"`
@@ -7090,7 +7091,7 @@ type Subnet struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for Subnet.
 func (s Subnet) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -7109,7 +7110,7 @@ func (s Subnet) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for Subnet struct.
 func (s *Subnet) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -7161,7 +7162,7 @@ func (s *Subnet) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubnetListResult response for ListSubnets Api service callRetrieves all subnet that belongs to a virtual network
 type SubnetListResult struct {
 	autorest.Response `json:"-"`
@@ -7171,14 +7172,14 @@ type SubnetListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubnetListResultIterator provides access to a complete listing of Subnet values.
 type SubnetListResultIterator struct {
 	i    int
 	page SubnetListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *SubnetListResultIterator) Next() error {
@@ -7195,19 +7196,19 @@ func (iter *SubnetListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter SubnetListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter SubnetListResultIterator) Response() SubnetListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter SubnetListResultIterator) Value() Subnet {
@@ -7217,7 +7218,7 @@ func (iter SubnetListResultIterator) Value() Subnet {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (slr SubnetListResult) IsEmpty() bool {
 	return slr.Value == nil || len(*slr.Value) == 0
@@ -7235,14 +7236,14 @@ func (slr SubnetListResult) subnetListResultPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(slr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubnetListResultPage contains a page of Subnet values.
 type SubnetListResultPage struct {
 	fn  func(SubnetListResult) (SubnetListResult, error)
 	slr SubnetListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *SubnetListResultPage) Next() error {
@@ -7254,19 +7255,19 @@ func (page *SubnetListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page SubnetListResultPage) NotDone() bool {
 	return !page.slr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page SubnetListResultPage) Response() SubnetListResult {
 	return page.slr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page SubnetListResultPage) Values() []Subnet {
 	if page.slr.IsEmpty() {
@@ -7275,7 +7276,7 @@ func (page SubnetListResultPage) Values() []Subnet {
 	return *page.slr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubnetPropertiesFormat ...
 type SubnetPropertiesFormat struct {
 	// AddressPrefix - Gets or sets Address prefix for the subnet.
@@ -7290,7 +7291,7 @@ type SubnetPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubnetsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SubnetsCreateOrUpdateFuture struct {
@@ -7298,7 +7299,7 @@ type SubnetsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SubnetsCreateOrUpdateFuture) Result(client SubnetsClient) (s Subnet, err error) {
@@ -7341,14 +7342,14 @@ func (future SubnetsCreateOrUpdateFuture) Result(client SubnetsClient) (s Subnet
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubnetsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type SubnetsDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SubnetsDeleteFuture) Result(client SubnetsClient) (ar autorest.Response, err error) {
@@ -7391,14 +7392,14 @@ func (future SubnetsDeleteFuture) Result(client SubnetsClient) (ar autorest.Resp
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SubResource ...
 type SubResource struct {
 	// ID - Resource Id
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Usage describes Network Resource Usage.
 type Usage struct {
 	// Unit - Gets or sets an enum describing the unit of measurement.
@@ -7411,7 +7412,7 @@ type Usage struct {
 	Name *UsageName `json:"name,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UsageName the Usage Names.
 type UsageName struct {
 	// Value - Gets or sets a string describing the resource name.
@@ -7420,7 +7421,7 @@ type UsageName struct {
 	LocalizedValue *string `json:"localizedValue,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UsagesListResult the List Usages operation response.
 type UsagesListResult struct {
 	autorest.Response `json:"-"`
@@ -7430,14 +7431,14 @@ type UsagesListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UsagesListResultIterator provides access to a complete listing of Usage values.
 type UsagesListResultIterator struct {
 	i    int
 	page UsagesListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *UsagesListResultIterator) Next() error {
@@ -7454,19 +7455,19 @@ func (iter *UsagesListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter UsagesListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter UsagesListResultIterator) Response() UsagesListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter UsagesListResultIterator) Value() Usage {
@@ -7476,7 +7477,7 @@ func (iter UsagesListResultIterator) Value() Usage {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ulr UsagesListResult) IsEmpty() bool {
 	return ulr.Value == nil || len(*ulr.Value) == 0
@@ -7494,14 +7495,14 @@ func (ulr UsagesListResult) usagesListResultPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(ulr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UsagesListResultPage contains a page of Usage values.
 type UsagesListResultPage struct {
 	fn  func(UsagesListResult) (UsagesListResult, error)
 	ulr UsagesListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *UsagesListResultPage) Next() error {
@@ -7513,19 +7514,19 @@ func (page *UsagesListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page UsagesListResultPage) NotDone() bool {
 	return !page.ulr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page UsagesListResultPage) Response() UsagesListResult {
 	return page.ulr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page UsagesListResultPage) Values() []Usage {
 	if page.ulr.IsEmpty() {
@@ -7534,7 +7535,7 @@ func (page UsagesListResultPage) Values() []Usage {
 	return *page.ulr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetwork virtual Network resource
 type VirtualNetwork struct {
 	autorest.Response               `json:"-"`
@@ -7553,7 +7554,7 @@ type VirtualNetwork struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for VirtualNetwork.
 func (vn VirtualNetwork) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -7581,7 +7582,7 @@ func (vn VirtualNetwork) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualNetwork struct.
 func (vn *VirtualNetwork) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -7660,7 +7661,7 @@ func (vn *VirtualNetwork) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGateway a common class for general resource information
 type VirtualNetworkGateway struct {
 	autorest.Response                      `json:"-"`
@@ -7679,7 +7680,7 @@ type VirtualNetworkGateway struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for VirtualNetworkGateway.
 func (vng VirtualNetworkGateway) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -7707,7 +7708,7 @@ func (vng VirtualNetworkGateway) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualNetworkGateway struct.
 func (vng *VirtualNetworkGateway) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -7786,7 +7787,7 @@ func (vng *VirtualNetworkGateway) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnection a common class for general resource information
 type VirtualNetworkGatewayConnection struct {
 	autorest.Response                                `json:"-"`
@@ -7805,7 +7806,7 @@ type VirtualNetworkGatewayConnection struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for VirtualNetworkGatewayConnection.
 func (vngc VirtualNetworkGatewayConnection) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -7833,7 +7834,7 @@ func (vngc VirtualNetworkGatewayConnection) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualNetworkGatewayConnection struct.
 func (vngc *VirtualNetworkGatewayConnection) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -7912,7 +7913,7 @@ func (vngc *VirtualNetworkGatewayConnection) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionListResult response for ListVirtualNetworkGatewayConnections Api service call
 type VirtualNetworkGatewayConnectionListResult struct {
 	autorest.Response `json:"-"`
@@ -7922,7 +7923,7 @@ type VirtualNetworkGatewayConnectionListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionListResultIterator provides access to a complete listing of
 // VirtualNetworkGatewayConnection values.
 type VirtualNetworkGatewayConnectionListResultIterator struct {
@@ -7930,7 +7931,7 @@ type VirtualNetworkGatewayConnectionListResultIterator struct {
 	page VirtualNetworkGatewayConnectionListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualNetworkGatewayConnectionListResultIterator) Next() error {
@@ -7947,19 +7948,19 @@ func (iter *VirtualNetworkGatewayConnectionListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualNetworkGatewayConnectionListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualNetworkGatewayConnectionListResultIterator) Response() VirtualNetworkGatewayConnectionListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualNetworkGatewayConnectionListResultIterator) Value() VirtualNetworkGatewayConnection {
@@ -7969,7 +7970,7 @@ func (iter VirtualNetworkGatewayConnectionListResultIterator) Value() VirtualNet
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vngclr VirtualNetworkGatewayConnectionListResult) IsEmpty() bool {
 	return vngclr.Value == nil || len(*vngclr.Value) == 0
@@ -7987,14 +7988,14 @@ func (vngclr VirtualNetworkGatewayConnectionListResult) virtualNetworkGatewayCon
 		autorest.WithBaseURL(to.String(vngclr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionListResultPage contains a page of VirtualNetworkGatewayConnection values.
 type VirtualNetworkGatewayConnectionListResultPage struct {
 	fn     func(VirtualNetworkGatewayConnectionListResult) (VirtualNetworkGatewayConnectionListResult, error)
 	vngclr VirtualNetworkGatewayConnectionListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualNetworkGatewayConnectionListResultPage) Next() error {
@@ -8006,19 +8007,19 @@ func (page *VirtualNetworkGatewayConnectionListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualNetworkGatewayConnectionListResultPage) NotDone() bool {
 	return !page.vngclr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualNetworkGatewayConnectionListResultPage) Response() VirtualNetworkGatewayConnectionListResult {
 	return page.vngclr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualNetworkGatewayConnectionListResultPage) Values() []VirtualNetworkGatewayConnection {
 	if page.vngclr.IsEmpty() {
@@ -8027,7 +8028,7 @@ func (page VirtualNetworkGatewayConnectionListResultPage) Values() []VirtualNetw
 	return *page.vngclr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionPropertiesFormat virtualNeworkGatewayConnection properties
 type VirtualNetworkGatewayConnectionPropertiesFormat struct {
 	VirtualNetworkGateway1 *VirtualNetworkGateway `json:"virtualNetworkGateway1,omitempty"`
@@ -8053,7 +8054,7 @@ type VirtualNetworkGatewayConnectionPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of
 // a long-running operation.
 type VirtualNetworkGatewayConnectionsCreateOrUpdateFuture struct {
@@ -8061,7 +8062,7 @@ type VirtualNetworkGatewayConnectionsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewayConnectionsCreateOrUpdateFuture) Result(client VirtualNetworkGatewayConnectionsClient) (vngc VirtualNetworkGatewayConnection, err error) {
@@ -8104,7 +8105,7 @@ func (future VirtualNetworkGatewayConnectionsCreateOrUpdateFuture) Result(client
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionsDeleteFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualNetworkGatewayConnectionsDeleteFuture struct {
@@ -8112,7 +8113,7 @@ type VirtualNetworkGatewayConnectionsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewayConnectionsDeleteFuture) Result(client VirtualNetworkGatewayConnectionsClient) (ar autorest.Response, err error) {
@@ -8155,7 +8156,7 @@ func (future VirtualNetworkGatewayConnectionsDeleteFuture) Result(client Virtual
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionsResetSharedKeyFuture an abstraction for monitoring and retrieving the results of
 // a long-running operation.
 type VirtualNetworkGatewayConnectionsResetSharedKeyFuture struct {
@@ -8163,7 +8164,7 @@ type VirtualNetworkGatewayConnectionsResetSharedKeyFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewayConnectionsResetSharedKeyFuture) Result(client VirtualNetworkGatewayConnectionsClient) (crsk ConnectionResetSharedKey, err error) {
@@ -8206,7 +8207,7 @@ func (future VirtualNetworkGatewayConnectionsResetSharedKeyFuture) Result(client
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayConnectionsSetSharedKeyFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualNetworkGatewayConnectionsSetSharedKeyFuture struct {
@@ -8214,7 +8215,7 @@ type VirtualNetworkGatewayConnectionsSetSharedKeyFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewayConnectionsSetSharedKeyFuture) Result(client VirtualNetworkGatewayConnectionsClient) (csk ConnectionSharedKey, err error) {
@@ -8257,7 +8258,7 @@ func (future VirtualNetworkGatewayConnectionsSetSharedKeyFuture) Result(client V
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayIPConfiguration ipConfiguration for Virtual network gateway
 type VirtualNetworkGatewayIPConfiguration struct {
 	*VirtualNetworkGatewayIPConfigurationPropertiesFormat `json:"properties,omitempty"`
@@ -8269,7 +8270,7 @@ type VirtualNetworkGatewayIPConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // MarshalJSON is the custom marshaler for VirtualNetworkGatewayIPConfiguration.
 func (vngic VirtualNetworkGatewayIPConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -8288,7 +8289,7 @@ func (vngic VirtualNetworkGatewayIPConfiguration) MarshalJSON() ([]byte, error) 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualNetworkGatewayIPConfiguration struct.
 func (vngic *VirtualNetworkGatewayIPConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -8340,7 +8341,7 @@ func (vngic *VirtualNetworkGatewayIPConfiguration) UnmarshalJSON(body []byte) er
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayIPConfigurationPropertiesFormat properties of VirtualNetworkGatewayIPConfiguration
 type VirtualNetworkGatewayIPConfigurationPropertiesFormat struct {
 	// PrivateIPAddress - Gets or sets the privateIPAddress of the Network Interface IP Configuration
@@ -8355,7 +8356,7 @@ type VirtualNetworkGatewayIPConfigurationPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayListResult response for ListVirtualNetworkGateways Api service call
 type VirtualNetworkGatewayListResult struct {
 	autorest.Response `json:"-"`
@@ -8365,14 +8366,14 @@ type VirtualNetworkGatewayListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayListResultIterator provides access to a complete listing of VirtualNetworkGateway values.
 type VirtualNetworkGatewayListResultIterator struct {
 	i    int
 	page VirtualNetworkGatewayListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualNetworkGatewayListResultIterator) Next() error {
@@ -8389,19 +8390,19 @@ func (iter *VirtualNetworkGatewayListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualNetworkGatewayListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualNetworkGatewayListResultIterator) Response() VirtualNetworkGatewayListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualNetworkGatewayListResultIterator) Value() VirtualNetworkGateway {
@@ -8411,7 +8412,7 @@ func (iter VirtualNetworkGatewayListResultIterator) Value() VirtualNetworkGatewa
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vnglr VirtualNetworkGatewayListResult) IsEmpty() bool {
 	return vnglr.Value == nil || len(*vnglr.Value) == 0
@@ -8429,14 +8430,14 @@ func (vnglr VirtualNetworkGatewayListResult) virtualNetworkGatewayListResultPrep
 		autorest.WithBaseURL(to.String(vnglr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayListResultPage contains a page of VirtualNetworkGateway values.
 type VirtualNetworkGatewayListResultPage struct {
 	fn    func(VirtualNetworkGatewayListResult) (VirtualNetworkGatewayListResult, error)
 	vnglr VirtualNetworkGatewayListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualNetworkGatewayListResultPage) Next() error {
@@ -8448,19 +8449,19 @@ func (page *VirtualNetworkGatewayListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualNetworkGatewayListResultPage) NotDone() bool {
 	return !page.vnglr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualNetworkGatewayListResultPage) Response() VirtualNetworkGatewayListResult {
 	return page.vnglr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualNetworkGatewayListResultPage) Values() []VirtualNetworkGateway {
 	if page.vnglr.IsEmpty() {
@@ -8469,7 +8470,7 @@ func (page VirtualNetworkGatewayListResultPage) Values() []VirtualNetworkGateway
 	return *page.vnglr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewayPropertiesFormat virtualNeworkGateay properties
 type VirtualNetworkGatewayPropertiesFormat struct {
 	// IPConfigurations - IpConfigurations for Virtual network gateway.
@@ -8488,7 +8489,7 @@ type VirtualNetworkGatewayPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewaysCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualNetworkGatewaysCreateOrUpdateFuture struct {
@@ -8496,7 +8497,7 @@ type VirtualNetworkGatewaysCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewaysCreateOrUpdateFuture) Result(client VirtualNetworkGatewaysClient) (vng VirtualNetworkGateway, err error) {
@@ -8539,7 +8540,7 @@ func (future VirtualNetworkGatewaysCreateOrUpdateFuture) Result(client VirtualNe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewaysDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualNetworkGatewaysDeleteFuture struct {
@@ -8547,7 +8548,7 @@ type VirtualNetworkGatewaysDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewaysDeleteFuture) Result(client VirtualNetworkGatewaysClient) (ar autorest.Response, err error) {
@@ -8590,7 +8591,7 @@ func (future VirtualNetworkGatewaysDeleteFuture) Result(client VirtualNetworkGat
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkGatewaysResetFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualNetworkGatewaysResetFuture struct {
@@ -8598,7 +8599,7 @@ type VirtualNetworkGatewaysResetFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworkGatewaysResetFuture) Result(client VirtualNetworkGatewaysClient) (vng VirtualNetworkGateway, err error) {
@@ -8641,7 +8642,7 @@ func (future VirtualNetworkGatewaysResetFuture) Result(client VirtualNetworkGate
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkListResult response for ListVirtualNetworks Api servive call
 type VirtualNetworkListResult struct {
 	autorest.Response `json:"-"`
@@ -8651,14 +8652,14 @@ type VirtualNetworkListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkListResultIterator provides access to a complete listing of VirtualNetwork values.
 type VirtualNetworkListResultIterator struct {
 	i    int
 	page VirtualNetworkListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualNetworkListResultIterator) Next() error {
@@ -8675,19 +8676,19 @@ func (iter *VirtualNetworkListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualNetworkListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualNetworkListResultIterator) Response() VirtualNetworkListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualNetworkListResultIterator) Value() VirtualNetwork {
@@ -8697,7 +8698,7 @@ func (iter VirtualNetworkListResultIterator) Value() VirtualNetwork {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vnlr VirtualNetworkListResult) IsEmpty() bool {
 	return vnlr.Value == nil || len(*vnlr.Value) == 0
@@ -8715,14 +8716,14 @@ func (vnlr VirtualNetworkListResult) virtualNetworkListResultPreparer() (*http.R
 		autorest.WithBaseURL(to.String(vnlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkListResultPage contains a page of VirtualNetwork values.
 type VirtualNetworkListResultPage struct {
 	fn   func(VirtualNetworkListResult) (VirtualNetworkListResult, error)
 	vnlr VirtualNetworkListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualNetworkListResultPage) Next() error {
@@ -8734,19 +8735,19 @@ func (page *VirtualNetworkListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualNetworkListResultPage) NotDone() bool {
 	return !page.vnlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualNetworkListResultPage) Response() VirtualNetworkListResult {
 	return page.vnlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualNetworkListResultPage) Values() []VirtualNetwork {
 	if page.vnlr.IsEmpty() {
@@ -8755,7 +8756,7 @@ func (page VirtualNetworkListResultPage) Values() []VirtualNetwork {
 	return *page.vnlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworkPropertiesFormat ...
 type VirtualNetworkPropertiesFormat struct {
 	// AddressSpace - Gets or sets AddressSpace that contains an array of IP address ranges that can be used by subnets
@@ -8770,7 +8771,7 @@ type VirtualNetworkPropertiesFormat struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworksCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualNetworksCreateOrUpdateFuture struct {
@@ -8778,7 +8779,7 @@ type VirtualNetworksCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworksCreateOrUpdateFuture) Result(client VirtualNetworksClient) (vn VirtualNetwork, err error) {
@@ -8821,7 +8822,7 @@ func (future VirtualNetworksCreateOrUpdateFuture) Result(client VirtualNetworksC
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworksDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualNetworksDeleteFuture struct {
@@ -8829,7 +8830,7 @@ type VirtualNetworksDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualNetworksDeleteFuture) Result(client VirtualNetworksClient) (ar autorest.Response, err error) {

@@ -19,30 +19,31 @@ package servicefabric
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ClusterVersionsClient is the azure Service Fabric Resource Provider API Client
 type ClusterVersionsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // NewClusterVersionsClient creates an instance of the ClusterVersionsClient client.
 func NewClusterVersionsClient() ClusterVersionsClient {
 	return NewClusterVersionsClientWithBaseURI(DefaultBaseURI)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // NewClusterVersionsClientWithBaseURI creates an instance of the ClusterVersionsClient client.
 func NewClusterVersionsClientWithBaseURI(baseURI string) ClusterVersionsClient {
 	return ClusterVersionsClient{NewWithBaseURI(baseURI)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // Get get cluster code versions by location
 //
 // location is the location for the cluster code versions, this is different from cluster location subscriptionID
@@ -69,7 +70,7 @@ func (client ClusterVersionsClient) Get(ctx context.Context, location string, su
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetPreparer prepares the Get request.
 func (client ClusterVersionsClient) GetPreparer(ctx context.Context, location string, subscriptionID string, clusterVersion string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -91,7 +92,7 @@ func (client ClusterVersionsClient) GetPreparer(ctx context.Context, location st
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClusterVersionsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -99,7 +100,7 @@ func (client ClusterVersionsClient) GetSender(req *http.Request) (*http.Response
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ClusterVersionsClient) GetResponder(resp *http.Response) (result ClusterCodeVersionsListResult, err error) {
@@ -113,7 +114,7 @@ func (client ClusterVersionsClient) GetResponder(resp *http.Response) (result Cl
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetByEnvironment get cluster code versions by environment
 //
 // location is the location for the cluster code versions, this is different from cluster location environment is
@@ -141,7 +142,7 @@ func (client ClusterVersionsClient) GetByEnvironment(ctx context.Context, locati
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetByEnvironmentPreparer prepares the GetByEnvironment request.
 func (client ClusterVersionsClient) GetByEnvironmentPreparer(ctx context.Context, location string, environment string, subscriptionID string, clusterVersion string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -164,7 +165,7 @@ func (client ClusterVersionsClient) GetByEnvironmentPreparer(ctx context.Context
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetByEnvironmentSender sends the GetByEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClusterVersionsClient) GetByEnvironmentSender(req *http.Request) (*http.Response, error) {
@@ -172,7 +173,7 @@ func (client ClusterVersionsClient) GetByEnvironmentSender(req *http.Request) (*
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // GetByEnvironmentResponder handles the response to the GetByEnvironment request. The method always
 // closes the http.Response Body.
 func (client ClusterVersionsClient) GetByEnvironmentResponder(resp *http.Response) (result ClusterCodeVersionsListResult, err error) {
@@ -186,7 +187,7 @@ func (client ClusterVersionsClient) GetByEnvironmentResponder(resp *http.Respons
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // List list cluster code versions by location
 //
 // location is the location for the cluster code versions, this is different from cluster location subscriptionID
@@ -213,7 +214,7 @@ func (client ClusterVersionsClient) List(ctx context.Context, location string, s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListPreparer prepares the List request.
 func (client ClusterVersionsClient) ListPreparer(ctx context.Context, location string, subscriptionID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -234,7 +235,7 @@ func (client ClusterVersionsClient) ListPreparer(ctx context.Context, location s
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClusterVersionsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -242,7 +243,7 @@ func (client ClusterVersionsClient) ListSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client ClusterVersionsClient) ListResponder(resp *http.Response) (result ClusterCodeVersionsListResult, err error) {
@@ -256,7 +257,7 @@ func (client ClusterVersionsClient) ListResponder(resp *http.Response) (result C
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListByEnvironment list cluster code versions by environment
 //
 // location is the location for the cluster code versions, this is different from cluster location environment is
@@ -283,7 +284,7 @@ func (client ClusterVersionsClient) ListByEnvironment(ctx context.Context, locat
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListByEnvironmentPreparer prepares the ListByEnvironment request.
 func (client ClusterVersionsClient) ListByEnvironmentPreparer(ctx context.Context, location string, environment string, subscriptionID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -305,7 +306,7 @@ func (client ClusterVersionsClient) ListByEnvironmentPreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListByEnvironmentSender sends the ListByEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClusterVersionsClient) ListByEnvironmentSender(req *http.Request) (*http.Response, error) {
@@ -313,7 +314,7 @@ func (client ClusterVersionsClient) ListByEnvironmentSender(req *http.Request) (
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servicefabric/mgmt/2017-07-01-preview/servicefabric instead.
 // ListByEnvironmentResponder handles the response to the ListByEnvironment request. The method always
 // closes the http.Response Body.
 func (client ClusterVersionsClient) ListByEnvironmentResponder(resp *http.Response) (result ClusterCodeVersionsListResult, err error) {

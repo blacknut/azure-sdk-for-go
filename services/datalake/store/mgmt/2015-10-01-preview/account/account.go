@@ -19,30 +19,31 @@ package account
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // Client is the dataLake Store Client
 type Client struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // NewClient creates an instance of the Client client.
 func NewClient(subscriptionID string) Client {
 	return NewClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // NewClientWithBaseURI creates an instance of the Client client.
 func NewClientWithBaseURI(baseURI string, subscriptionID string) Client {
 	return Client{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // Create creates the specified Data Lake Store account.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. name is the
@@ -64,7 +65,7 @@ func (client Client) Create(ctx context.Context, resourceGroupName string, name 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreatePreparer prepares the Create request.
 func (client Client) CreatePreparer(ctx context.Context, resourceGroupName string, name string, parameters DataLakeStoreAccount) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -88,7 +89,7 @@ func (client Client) CreatePreparer(ctx context.Context, resourceGroupName strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreateSender sends the Create request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) CreateSender(req *http.Request) (future CreateFuture, err error) {
@@ -104,7 +105,7 @@ func (client Client) CreateSender(req *http.Request) (future CreateFuture, err e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreateResponder handles the response to the Create request. The method always
 // closes the http.Response Body.
 func (client Client) CreateResponder(resp *http.Response) (result DataLakeStoreAccount, err error) {
@@ -118,7 +119,7 @@ func (client Client) CreateResponder(resp *http.Response) (result DataLakeStoreA
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreateOrUpdateFirewallRule creates or updates the specified firewall rule.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -146,7 +147,7 @@ func (client Client) CreateOrUpdateFirewallRule(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreateOrUpdateFirewallRulePreparer prepares the CreateOrUpdateFirewallRule request.
 func (client Client) CreateOrUpdateFirewallRulePreparer(ctx context.Context, resourceGroupName string, accountName string, name string, parameters FirewallRule) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -171,7 +172,7 @@ func (client Client) CreateOrUpdateFirewallRulePreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreateOrUpdateFirewallRuleSender sends the CreateOrUpdateFirewallRule request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) CreateOrUpdateFirewallRuleSender(req *http.Request) (*http.Response, error) {
@@ -179,7 +180,7 @@ func (client Client) CreateOrUpdateFirewallRuleSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // CreateOrUpdateFirewallRuleResponder handles the response to the CreateOrUpdateFirewallRule request. The method always
 // closes the http.Response Body.
 func (client Client) CreateOrUpdateFirewallRuleResponder(resp *http.Response) (result FirewallRule, err error) {
@@ -193,7 +194,7 @@ func (client Client) CreateOrUpdateFirewallRuleResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // Delete deletes the specified Data Lake Store account.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -214,7 +215,7 @@ func (client Client) Delete(ctx context.Context, resourceGroupName string, accou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeletePreparer prepares the Delete request.
 func (client Client) DeletePreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -236,7 +237,7 @@ func (client Client) DeletePreparer(ctx context.Context, resourceGroupName strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) DeleteSender(req *http.Request) (future DeleteFuture, err error) {
@@ -252,7 +253,7 @@ func (client Client) DeleteSender(req *http.Request) (future DeleteFuture, err e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client Client) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -265,7 +266,7 @@ func (client Client) DeleteResponder(resp *http.Response) (result autorest.Respo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeleteFirewallRule deletes the specified firewall rule from the specified Data Lake Store account
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -293,7 +294,7 @@ func (client Client) DeleteFirewallRule(ctx context.Context, resourceGroupName s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeleteFirewallRulePreparer prepares the DeleteFirewallRule request.
 func (client Client) DeleteFirewallRulePreparer(ctx context.Context, resourceGroupName string, accountName string, firewallRuleName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -316,7 +317,7 @@ func (client Client) DeleteFirewallRulePreparer(ctx context.Context, resourceGro
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeleteFirewallRuleSender sends the DeleteFirewallRule request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) DeleteFirewallRuleSender(req *http.Request) (*http.Response, error) {
@@ -324,7 +325,7 @@ func (client Client) DeleteFirewallRuleSender(req *http.Request) (*http.Response
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // DeleteFirewallRuleResponder handles the response to the DeleteFirewallRule request. The method always
 // closes the http.Response Body.
 func (client Client) DeleteFirewallRuleResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -337,7 +338,7 @@ func (client Client) DeleteFirewallRuleResponder(resp *http.Response) (result au
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // EnableKeyVault attempts to enable a user managed key vault for encryption of the specified Data Lake Store account.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -364,7 +365,7 @@ func (client Client) EnableKeyVault(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // EnableKeyVaultPreparer prepares the EnableKeyVault request.
 func (client Client) EnableKeyVaultPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -386,7 +387,7 @@ func (client Client) EnableKeyVaultPreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // EnableKeyVaultSender sends the EnableKeyVault request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) EnableKeyVaultSender(req *http.Request) (*http.Response, error) {
@@ -394,7 +395,7 @@ func (client Client) EnableKeyVaultSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // EnableKeyVaultResponder handles the response to the EnableKeyVault request. The method always
 // closes the http.Response Body.
 func (client Client) EnableKeyVaultResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -407,7 +408,7 @@ func (client Client) EnableKeyVaultResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // Get gets the specified Data Lake Store account.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -434,7 +435,7 @@ func (client Client) Get(ctx context.Context, resourceGroupName string, accountN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetPreparer prepares the Get request.
 func (client Client) GetPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -456,7 +457,7 @@ func (client Client) GetPreparer(ctx context.Context, resourceGroupName string, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) GetSender(req *http.Request) (*http.Response, error) {
@@ -464,7 +465,7 @@ func (client Client) GetSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client Client) GetResponder(resp *http.Response) (result DataLakeStoreAccount, err error) {
@@ -478,7 +479,7 @@ func (client Client) GetResponder(resp *http.Response) (result DataLakeStoreAcco
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetFirewallRule gets the specified Data Lake Store firewall rule.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -506,7 +507,7 @@ func (client Client) GetFirewallRule(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetFirewallRulePreparer prepares the GetFirewallRule request.
 func (client Client) GetFirewallRulePreparer(ctx context.Context, resourceGroupName string, accountName string, firewallRuleName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -529,7 +530,7 @@ func (client Client) GetFirewallRulePreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetFirewallRuleSender sends the GetFirewallRule request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) GetFirewallRuleSender(req *http.Request) (*http.Response, error) {
@@ -537,7 +538,7 @@ func (client Client) GetFirewallRuleSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // GetFirewallRuleResponder handles the response to the GetFirewallRule request. The method always
 // closes the http.Response Body.
 func (client Client) GetFirewallRuleResponder(resp *http.Response) (result FirewallRule, err error) {
@@ -551,7 +552,7 @@ func (client Client) GetFirewallRuleResponder(resp *http.Response) (result Firew
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // List lists the Data Lake Store accounts within the subscription. The response includes a link to the next page of
 // results, if any.
 //
@@ -590,7 +591,7 @@ func (client Client) List(ctx context.Context, filter string, top *int32, skip *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListPreparer prepares the List request.
 func (client Client) ListPreparer(ctx context.Context, filter string, top *int32, skip *int32, expand string, selectParameter string, orderby string, count *bool, search string, formatParameter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -637,7 +638,7 @@ func (client Client) ListPreparer(ctx context.Context, filter string, top *int32
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListSender(req *http.Request) (*http.Response, error) {
@@ -645,7 +646,7 @@ func (client Client) ListSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client Client) ListResponder(resp *http.Response) (result DataLakeStoreAccountListResult, err error) {
@@ -680,14 +681,14 @@ func (client Client) listNextResults(lastResults DataLakeStoreAccountListResult)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client Client) ListComplete(ctx context.Context, filter string, top *int32, skip *int32, expand string, selectParameter string, orderby string, count *bool, search string, formatParameter string) (result DataLakeStoreAccountListResultIterator, err error) {
 	result.page, err = client.List(ctx, filter, top, skip, expand, selectParameter, orderby, count, search, formatParameter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListByResourceGroup lists the Data Lake Store accounts within a specific resource group. The response includes a
 // link to the next page of results, if any.
 //
@@ -727,7 +728,7 @@ func (client Client) ListByResourceGroup(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client Client) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string, filter string, top *int32, skip *int32, expand string, selectParameter string, orderby string, count *bool, search string, formatParameter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -775,7 +776,7 @@ func (client Client) ListByResourceGroupPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -783,7 +784,7 @@ func (client Client) ListByResourceGroupSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client Client) ListByResourceGroupResponder(resp *http.Response) (result DataLakeStoreAccountListResult, err error) {
@@ -818,14 +819,14 @@ func (client Client) listByResourceGroupNextResults(lastResults DataLakeStoreAcc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListByResourceGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client Client) ListByResourceGroupComplete(ctx context.Context, resourceGroupName string, filter string, top *int32, skip *int32, expand string, selectParameter string, orderby string, count *bool, search string, formatParameter string) (result DataLakeStoreAccountListResultIterator, err error) {
 	result.page, err = client.ListByResourceGroup(ctx, resourceGroupName, filter, top, skip, expand, selectParameter, orderby, count, search, formatParameter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListFirewallRules lists the Data Lake Store firewall rules within the specified Data Lake Store account.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. accountName
@@ -853,7 +854,7 @@ func (client Client) ListFirewallRules(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListFirewallRulesPreparer prepares the ListFirewallRules request.
 func (client Client) ListFirewallRulesPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -875,7 +876,7 @@ func (client Client) ListFirewallRulesPreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListFirewallRulesSender sends the ListFirewallRules request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListFirewallRulesSender(req *http.Request) (*http.Response, error) {
@@ -883,7 +884,7 @@ func (client Client) ListFirewallRulesSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListFirewallRulesResponder handles the response to the ListFirewallRules request. The method always
 // closes the http.Response Body.
 func (client Client) ListFirewallRulesResponder(resp *http.Response) (result DataLakeStoreFirewallRuleListResult, err error) {
@@ -918,14 +919,14 @@ func (client Client) listFirewallRulesNextResults(lastResults DataLakeStoreFirew
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // ListFirewallRulesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client Client) ListFirewallRulesComplete(ctx context.Context, resourceGroupName string, accountName string) (result DataLakeStoreFirewallRuleListResultIterator, err error) {
 	result.page, err = client.ListFirewallRules(ctx, resourceGroupName, accountName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // Update updates the specified Data Lake Store account information.
 //
 // resourceGroupName is the name of the Azure resource group that contains the Data Lake Store account. name is the
@@ -947,7 +948,7 @@ func (client Client) Update(ctx context.Context, resourceGroupName string, name 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // UpdatePreparer prepares the Update request.
 func (client Client) UpdatePreparer(ctx context.Context, resourceGroupName string, name string, parameters DataLakeStoreAccount) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -971,7 +972,7 @@ func (client Client) UpdatePreparer(ctx context.Context, resourceGroupName strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) UpdateSender(req *http.Request) (future UpdateFuture, err error) {
@@ -987,7 +988,7 @@ func (client Client) UpdateSender(req *http.Request) (future UpdateFuture, err e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datalake/store/mgmt/2015-10-01-preview/account instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client Client) UpdateResponder(resp *http.Response) (result DataLakeStoreAccount, err error) {

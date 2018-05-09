@@ -1,8 +1,8 @@
 # Azure SDK for Go
 
-[![godoc](https://godoc.org/github.com/Azure/azure-sdk-for-go?status.svg)](https://godoc.org/github.com/Azure/azure-sdk-for-go)
+[![godoc](https://godoc.org/github.com/blacknut/azure-sdk-for-go?status.svg)](https://godoc.org/github.com/blacknut/azure-sdk-for-go)
 [![Build Status](https://travis-ci.org/Azure/azure-sdk-for-go.svg?branch=master)](https://travis-ci.org/Azure/azure-sdk-for-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/Azure/azure-sdk-for-go)](https://goreportcard.com/report/github.com/Azure/azure-sdk-for-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/blacknut/azure-sdk-for-go)](https://goreportcard.com/report/github.com/blacknut/azure-sdk-for-go)
 
 azure-sdk-for-go provides Go packages for managing and using Azure services. It has been
 tested with Go 1.8, 1.9 and 1.10.
@@ -37,13 +37,13 @@ recommend [golang/dep](https://github.com/golang/dep).
 ### Install
 
 ```sh
-$ go get -u github.com/Azure/azure-sdk-for-go/...
+$ go get -u github.com/blacknut/azure-sdk-for-go/...
 ```
 
 or if you use dep, within your repo run:
 
 ```sh
-$ dep ensure -add github.com/Azure/azure-sdk-for-go
+$ dep ensure -add github.com/blacknut/azure-sdk-for-go
 ```
 
 If you need to install Go, follow [the official instructions](https://golang.org/dl/).
@@ -58,7 +58,7 @@ For complete examples of many scenarios see [Azure-Samples/azure-sdk-for-go-samp
 3. Invoke API methods using the client, e.g. `c.CreateOrUpdate(...)`.
 4. Handle responses.
 
-[services_dir]: https://github.com/Azure/azure-sdk-for-go/tree/master/services
+[services_dir]: https://github.com/blacknut/azure-sdk-for-go/tree/master/services
 
 For example, to create a new virtual network (substitute your own values for
 strings in angle brackets):
@@ -71,7 +71,7 @@ package main
 
 import (
 	"context"
-	"github.com/Azure/azure-sdk-for-go/services/network/mgmt/2017-09-01/network"
+	"github.com/blacknut/azure-sdk-for-go/services/network/mgmt/2017-09-01/network"
 	"github.com/Azure/go-autorest/autorest/azure/auth"
 	"github.com/Azure/go-autorest/autorest/to"
 )
@@ -168,7 +168,7 @@ most updated Azure datacenters, regional datacenters with earlier APIs, and
 even on-premises installations of Azure Stack.
 
 **SDK versions** apply globally and are tracked by git
-[tags](https://github.com/Azure/azure-sdk-for-go/tags). These are in x.y.z form
+[tags](https://github.com/blacknut/azure-sdk-for-go/tags). These are in x.y.z form
 and generally adhere to [semantic versioning](https://semver.org) specifications.
 
 **Service API versions** are generally represented by a date string and are
@@ -177,8 +177,8 @@ latest API versions for Compute and Network, use the following imports:
 
 ```go
 import (
-    "github.com/Azure/azure-sdk-for-go/services/compute/mgmt/2017-12-01/compute"
-    "github.com/Azure/azure-sdk-for-go/services/network/mgmt/2017-09-01/network"
+    "github.com/blacknut/azure-sdk-for-go/services/compute/mgmt/2017-12-01/compute"
+    "github.com/blacknut/azure-sdk-for-go/services/network/mgmt/2017-09-01/network"
 )
 ```
 
@@ -189,7 +189,7 @@ All avilable services and versions are listed under the `services/` path in
 this repo and in [GoDoc][services_godoc].  Run `find ./services -type d
 -mindepth 3` to list all available service packages.
 
-[services_godoc]:       https://godoc.org/github.com/Azure/azure-sdk-for-go/services
+[services_godoc]:       https://godoc.org/github.com/blacknut/azure-sdk-for-go/services
 
 ### Profiles
 
@@ -203,9 +203,9 @@ component API versions are aliases to the true service package under
 `services/`. You can use them as follows:
 
 ```go
-import "github.com/Azure/azure-sdk-for-go/profiles/2017-03-09/compute/mgmt/compute"
-import "github.com/Azure/azure-sdk-for-go/profiles/2017-03-09/network/mgmt/network"
-import "github.com/Azure/azure-sdk-for-go/profiles/2017-03-09/storage/mgmt/storage"
+import "github.com/blacknut/azure-sdk-for-go/profiles/2017-03-09/compute/mgmt/compute"
+import "github.com/blacknut/azure-sdk-for-go/profiles/2017-03-09/network/mgmt/network"
+import "github.com/blacknut/azure-sdk-for-go/profiles/2017-03-09/storage/mgmt/storage"
 ```
 
 The 2017-03-09 profile is the only one currently available and is for use in
@@ -226,8 +226,8 @@ As an example, to automatically use the most recent Compute APIs, use one of
 the following imports:
 
 ```go
-import "github.com/Azure/azure-sdk-for-go/profiles/latest/compute/mgmt/compute"
-import "github.com/Azure/azure-sdk-for-go/profiles/preview/compute/mgmt/compute"
+import "github.com/blacknut/azure-sdk-for-go/profiles/latest/compute/mgmt/compute"
+import "github.com/blacknut/azure-sdk-for-go/profiles/preview/compute/mgmt/compute"
 ```
 
 ## Inspecting and Debugging
@@ -278,7 +278,7 @@ func LogResponse() autorest.RespondDecorator {
 
 # Resources
 
-- SDK docs are at [godoc.org](https://godoc.org/github.com/Azure/azure-sdk-for-go/).
+- SDK docs are at [godoc.org](https://godoc.org/github.com/blacknut/azure-sdk-for-go/).
 - SDK samples are at [Azure-Samples/azure-sdk-for-go-samples](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 - SDK notifications are published via the [Azure update feed](https://azure.microsoft.com/updates/).
 - Azure API docs are at [docs.microsoft.com/rest/api](https://docs.microsoft.com/rest/api/).

@@ -19,32 +19,33 @@ package servicemap
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/date"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // ClientGroupsClient is the service Map API Reference
 type ClientGroupsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // NewClientGroupsClient creates an instance of the ClientGroupsClient client.
 func NewClientGroupsClient(subscriptionID string) ClientGroupsClient {
 	return NewClientGroupsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // NewClientGroupsClientWithBaseURI creates an instance of the ClientGroupsClient client.
 func NewClientGroupsClientWithBaseURI(baseURI string, subscriptionID string) ClientGroupsClient {
 	return ClientGroupsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // Get retrieves the specified client group
 //
 // resourceGroupName is resource group name within the specified subscriptionId. workspaceName is OMS workspace
@@ -88,7 +89,7 @@ func (client ClientGroupsClient) Get(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetPreparer prepares the Get request.
 func (client ClientGroupsClient) GetPreparer(ctx context.Context, resourceGroupName string, workspaceName string, clientGroupName string, startTime *date.Time, endTime *date.Time) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -117,7 +118,7 @@ func (client ClientGroupsClient) GetPreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClientGroupsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -125,7 +126,7 @@ func (client ClientGroupsClient) GetSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ClientGroupsClient) GetResponder(resp *http.Response) (result ClientGroup, err error) {
@@ -139,7 +140,7 @@ func (client ClientGroupsClient) GetResponder(resp *http.Response) (result Clien
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetMembersCount returns the approximate number of members in the client group.
 //
 // resourceGroupName is resource group name within the specified subscriptionId. workspaceName is OMS workspace
@@ -183,7 +184,7 @@ func (client ClientGroupsClient) GetMembersCount(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetMembersCountPreparer prepares the GetMembersCount request.
 func (client ClientGroupsClient) GetMembersCountPreparer(ctx context.Context, resourceGroupName string, workspaceName string, clientGroupName string, startTime *date.Time, endTime *date.Time) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -212,7 +213,7 @@ func (client ClientGroupsClient) GetMembersCountPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetMembersCountSender sends the GetMembersCount request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClientGroupsClient) GetMembersCountSender(req *http.Request) (*http.Response, error) {
@@ -220,7 +221,7 @@ func (client ClientGroupsClient) GetMembersCountSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // GetMembersCountResponder handles the response to the GetMembersCount request. The method always
 // closes the http.Response Body.
 func (client ClientGroupsClient) GetMembersCountResponder(resp *http.Response) (result ClientGroupMembersCount, err error) {
@@ -234,7 +235,7 @@ func (client ClientGroupsClient) GetMembersCountResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // ListMembers returns the members of the client group during the specified time interval.
 //
 // resourceGroupName is resource group name within the specified subscriptionId. workspaceName is OMS workspace
@@ -285,7 +286,7 @@ func (client ClientGroupsClient) ListMembers(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // ListMembersPreparer prepares the ListMembers request.
 func (client ClientGroupsClient) ListMembersPreparer(ctx context.Context, resourceGroupName string, workspaceName string, clientGroupName string, startTime *date.Time, endTime *date.Time, top *int32) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -317,7 +318,7 @@ func (client ClientGroupsClient) ListMembersPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // ListMembersSender sends the ListMembers request. The method will close the
 // http.Response Body if it receives an error.
 func (client ClientGroupsClient) ListMembersSender(req *http.Request) (*http.Response, error) {
@@ -325,7 +326,7 @@ func (client ClientGroupsClient) ListMembersSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // ListMembersResponder handles the response to the ListMembers request. The method always
 // closes the http.Response Body.
 func (client ClientGroupsClient) ListMembersResponder(resp *http.Response) (result ClientGroupMembersCollection, err error) {
@@ -360,7 +361,7 @@ func (client ClientGroupsClient) listMembersNextResults(lastResults ClientGroupM
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/servicemap instead.
 // ListMembersComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ClientGroupsClient) ListMembersComplete(ctx context.Context, resourceGroupName string, workspaceName string, clientGroupName string, startTime *date.Time, endTime *date.Time, top *int32) (result ClientGroupMembersCollectionIterator, err error) {
 	result.page, err = client.ListMembers(ctx, resourceGroupName, workspaceName, clientGroupName, startTime, endTime, top)

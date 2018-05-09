@@ -19,12 +19,13 @@ package visualstudio
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // AccountsClient is the use these APIs to manage Visual Studio Team Services resources through the Azure Resource
 // Manager. All task operations conform to the HTTP/1.1 protocol specification and each operation returns an
 // x-ms-request-id header that can be used to obtain information about the request. You must make sure that requests
@@ -33,19 +34,19 @@ type AccountsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // NewAccountsClient creates an instance of the AccountsClient client.
 func NewAccountsClient(subscriptionID string) AccountsClient {
 	return NewAccountsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // NewAccountsClientWithBaseURI creates an instance of the AccountsClient client.
 func NewAccountsClientWithBaseURI(baseURI string, subscriptionID string) AccountsClient {
 	return AccountsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CheckNameAvailability checks if the specified Visual Studio Team Services account name is available. Resource name
 // can be either an account name or an account name and PUID.
 //
@@ -72,7 +73,7 @@ func (client AccountsClient) CheckNameAvailability(ctx context.Context, body Che
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CheckNameAvailabilityPreparer prepares the CheckNameAvailability request.
 func (client AccountsClient) CheckNameAvailabilityPreparer(ctx context.Context, body CheckNameAvailabilityParameter) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -94,7 +95,7 @@ func (client AccountsClient) CheckNameAvailabilityPreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CheckNameAvailabilitySender sends the CheckNameAvailability request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) CheckNameAvailabilitySender(req *http.Request) (*http.Response, error) {
@@ -102,7 +103,7 @@ func (client AccountsClient) CheckNameAvailabilitySender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CheckNameAvailabilityResponder handles the response to the CheckNameAvailability request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) CheckNameAvailabilityResponder(resp *http.Response) (result CheckNameAvailabilityResult, err error) {
@@ -116,7 +117,7 @@ func (client AccountsClient) CheckNameAvailabilityResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CreateOrUpdate creates or updates a Visual Studio Team Services account resource.
 //
 // resourceGroupName is name of the resource group within the Azure subscription. body is the request data.
@@ -143,7 +144,7 @@ func (client AccountsClient) CreateOrUpdate(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client AccountsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, body AccountResourceRequest, resourceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -167,7 +168,7 @@ func (client AccountsClient) CreateOrUpdatePreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -175,7 +176,7 @@ func (client AccountsClient) CreateOrUpdateSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) CreateOrUpdateResponder(resp *http.Response) (result AccountResource, err error) {
@@ -189,7 +190,7 @@ func (client AccountsClient) CreateOrUpdateResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // Delete deletes a Visual Studio Team Services account resource.
 //
 // resourceGroupName is name of the resource group within the Azure subscription. resourceName is name of the
@@ -216,7 +217,7 @@ func (client AccountsClient) Delete(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // DeletePreparer prepares the Delete request.
 func (client AccountsClient) DeletePreparer(ctx context.Context, resourceGroupName string, resourceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -238,7 +239,7 @@ func (client AccountsClient) DeletePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -246,7 +247,7 @@ func (client AccountsClient) DeleteSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -259,7 +260,7 @@ func (client AccountsClient) DeleteResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // Get gets the Visual Studio Team Services account resource details.
 //
 // resourceGroupName is name of the resource group within the Azure subscription. resourceName is name of the
@@ -286,7 +287,7 @@ func (client AccountsClient) Get(ctx context.Context, resourceGroupName string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // GetPreparer prepares the Get request.
 func (client AccountsClient) GetPreparer(ctx context.Context, resourceGroupName string, resourceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -308,7 +309,7 @@ func (client AccountsClient) GetPreparer(ctx context.Context, resourceGroupName 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -316,7 +317,7 @@ func (client AccountsClient) GetSender(req *http.Request) (*http.Response, error
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) GetResponder(resp *http.Response) (result AccountResource, err error) {
@@ -330,7 +331,7 @@ func (client AccountsClient) GetResponder(resp *http.Response) (result AccountRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ListByResourceGroup gets all Visual Studio Team Services account resources under the resource group linked to the
 // specified Azure subscription.
 //
@@ -357,7 +358,7 @@ func (client AccountsClient) ListByResourceGroup(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client AccountsClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -378,7 +379,7 @@ func (client AccountsClient) ListByResourceGroupPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -386,7 +387,7 @@ func (client AccountsClient) ListByResourceGroupSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListByResourceGroupResponder(resp *http.Response) (result AccountResourceListResult, err error) {

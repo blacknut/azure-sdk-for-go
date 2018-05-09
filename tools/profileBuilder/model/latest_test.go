@@ -20,7 +20,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Azure/azure-sdk-for-go/tools/profileBuilder/model"
+	"github.com/blacknut/azure-sdk-for-go/tools/profileBuilder/model"
 	"github.com/marstr/collection"
 )
 

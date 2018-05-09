@@ -19,32 +19,33 @@ package analysisservices
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ServersClient is the the Azure Analysis Services Web API provides a RESTful set of web services that enables users
 // to create, retrieve, update, and delete Analysis Services servers
 type ServersClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // NewServersClient creates an instance of the ServersClient client.
 func NewServersClient(subscriptionID string) ServersClient {
 	return NewServersClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // NewServersClientWithBaseURI creates an instance of the ServersClient client.
 func NewServersClientWithBaseURI(baseURI string, subscriptionID string) ServersClient {
 	return ServersClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CheckNameAvailability check the name availability in the target location.
 //
 // location is the region name which the operation will lookup into. serverParameters is contains the information
@@ -81,7 +82,7 @@ func (client ServersClient) CheckNameAvailability(ctx context.Context, location 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CheckNameAvailabilityPreparer prepares the CheckNameAvailability request.
 func (client ServersClient) CheckNameAvailabilityPreparer(ctx context.Context, location string, serverParameters CheckServerNameAvailabilityParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -104,7 +105,7 @@ func (client ServersClient) CheckNameAvailabilityPreparer(ctx context.Context, l
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CheckNameAvailabilitySender sends the CheckNameAvailability request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) CheckNameAvailabilitySender(req *http.Request) (*http.Response, error) {
@@ -112,7 +113,7 @@ func (client ServersClient) CheckNameAvailabilitySender(req *http.Request) (*htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CheckNameAvailabilityResponder handles the response to the CheckNameAvailability request. The method always
 // closes the http.Response Body.
 func (client ServersClient) CheckNameAvailabilityResponder(resp *http.Response) (result CheckServerNameAvailabilityResult, err error) {
@@ -126,7 +127,7 @@ func (client ServersClient) CheckNameAvailabilityResponder(resp *http.Response) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // Create provisions the specified Analysis Services server based on the configuration specified in the request.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -161,7 +162,7 @@ func (client ServersClient) Create(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CreatePreparer prepares the Create request.
 func (client ServersClient) CreatePreparer(ctx context.Context, resourceGroupName string, serverName string, serverParameters Server) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -185,7 +186,7 @@ func (client ServersClient) CreatePreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CreateSender sends the Create request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) CreateSender(req *http.Request) (future ServersCreateFuture, err error) {
@@ -201,7 +202,7 @@ func (client ServersClient) CreateSender(req *http.Request) (future ServersCreat
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // CreateResponder handles the response to the Create request. The method always
 // closes the http.Response Body.
 func (client ServersClient) CreateResponder(resp *http.Response) (result Server, err error) {
@@ -215,7 +216,7 @@ func (client ServersClient) CreateResponder(resp *http.Response) (result Server,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // Delete deletes the specified Analysis Services server.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -249,7 +250,7 @@ func (client ServersClient) Delete(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DeletePreparer prepares the Delete request.
 func (client ServersClient) DeletePreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -271,7 +272,7 @@ func (client ServersClient) DeletePreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) DeleteSender(req *http.Request) (future ServersDeleteFuture, err error) {
@@ -287,7 +288,7 @@ func (client ServersClient) DeleteSender(req *http.Request) (future ServersDelet
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client ServersClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -300,7 +301,7 @@ func (client ServersClient) DeleteResponder(resp *http.Response) (result autores
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DissociateGateway dissociates a Unified Gateway associated with the server.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -340,7 +341,7 @@ func (client ServersClient) DissociateGateway(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DissociateGatewayPreparer prepares the DissociateGateway request.
 func (client ServersClient) DissociateGatewayPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -362,7 +363,7 @@ func (client ServersClient) DissociateGatewayPreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DissociateGatewaySender sends the DissociateGateway request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) DissociateGatewaySender(req *http.Request) (*http.Response, error) {
@@ -370,7 +371,7 @@ func (client ServersClient) DissociateGatewaySender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // DissociateGatewayResponder handles the response to the DissociateGateway request. The method always
 // closes the http.Response Body.
 func (client ServersClient) DissociateGatewayResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -383,7 +384,7 @@ func (client ServersClient) DissociateGatewayResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // GetDetails gets details about the specified Analysis Services server.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -423,7 +424,7 @@ func (client ServersClient) GetDetails(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // GetDetailsPreparer prepares the GetDetails request.
 func (client ServersClient) GetDetailsPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -445,7 +446,7 @@ func (client ServersClient) GetDetailsPreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // GetDetailsSender sends the GetDetails request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) GetDetailsSender(req *http.Request) (*http.Response, error) {
@@ -453,7 +454,7 @@ func (client ServersClient) GetDetailsSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // GetDetailsResponder handles the response to the GetDetails request. The method always
 // closes the http.Response Body.
 func (client ServersClient) GetDetailsResponder(resp *http.Response) (result Server, err error) {
@@ -467,7 +468,7 @@ func (client ServersClient) GetDetailsResponder(resp *http.Response) (result Ser
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // List lists all the Analysis Services servers for the given subscription.
 func (client ServersClient) List(ctx context.Context) (result Servers, err error) {
 	req, err := client.ListPreparer(ctx)
@@ -491,7 +492,7 @@ func (client ServersClient) List(ctx context.Context) (result Servers, err error
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListPreparer prepares the List request.
 func (client ServersClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -511,7 +512,7 @@ func (client ServersClient) ListPreparer(ctx context.Context) (*http.Request, er
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -519,7 +520,7 @@ func (client ServersClient) ListSender(req *http.Request) (*http.Response, error
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListResponder(resp *http.Response) (result Servers, err error) {
@@ -533,7 +534,7 @@ func (client ServersClient) ListResponder(resp *http.Response) (result Servers, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListByResourceGroup gets all the Analysis Services servers for the given resource group.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -568,7 +569,7 @@ func (client ServersClient) ListByResourceGroup(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client ServersClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -589,7 +590,7 @@ func (client ServersClient) ListByResourceGroupPreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -597,7 +598,7 @@ func (client ServersClient) ListByResourceGroupSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListByResourceGroupResponder(resp *http.Response) (result Servers, err error) {
@@ -611,7 +612,7 @@ func (client ServersClient) ListByResourceGroupResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListGatewayStatus return the gateway status of the specified Analysis Services server instance.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -651,7 +652,7 @@ func (client ServersClient) ListGatewayStatus(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListGatewayStatusPreparer prepares the ListGatewayStatus request.
 func (client ServersClient) ListGatewayStatusPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -673,7 +674,7 @@ func (client ServersClient) ListGatewayStatusPreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListGatewayStatusSender sends the ListGatewayStatus request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListGatewayStatusSender(req *http.Request) (*http.Response, error) {
@@ -681,7 +682,7 @@ func (client ServersClient) ListGatewayStatusSender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListGatewayStatusResponder handles the response to the ListGatewayStatus request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListGatewayStatusResponder(resp *http.Response) (result GatewayListStatusLive, err error) {
@@ -695,7 +696,7 @@ func (client ServersClient) ListGatewayStatusResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationResults list the result of the specified operation.
 //
 // location is the region name which the operation will lookup into. operationID is the target operation Id.
@@ -721,7 +722,7 @@ func (client ServersClient) ListOperationResults(ctx context.Context, location s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationResultsPreparer prepares the ListOperationResults request.
 func (client ServersClient) ListOperationResultsPreparer(ctx context.Context, location string, operationID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -743,7 +744,7 @@ func (client ServersClient) ListOperationResultsPreparer(ctx context.Context, lo
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationResultsSender sends the ListOperationResults request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListOperationResultsSender(req *http.Request) (*http.Response, error) {
@@ -751,7 +752,7 @@ func (client ServersClient) ListOperationResultsSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationResultsResponder handles the response to the ListOperationResults request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListOperationResultsResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -764,7 +765,7 @@ func (client ServersClient) ListOperationResultsResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationStatuses list the status of operation.
 //
 // location is the region name which the operation will lookup into. operationID is the target operation Id.
@@ -790,7 +791,7 @@ func (client ServersClient) ListOperationStatuses(ctx context.Context, location 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationStatusesPreparer prepares the ListOperationStatuses request.
 func (client ServersClient) ListOperationStatusesPreparer(ctx context.Context, location string, operationID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -812,7 +813,7 @@ func (client ServersClient) ListOperationStatusesPreparer(ctx context.Context, l
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationStatusesSender sends the ListOperationStatuses request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListOperationStatusesSender(req *http.Request) (*http.Response, error) {
@@ -820,7 +821,7 @@ func (client ServersClient) ListOperationStatusesSender(req *http.Request) (*htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListOperationStatusesResponder handles the response to the ListOperationStatuses request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListOperationStatusesResponder(resp *http.Response) (result OperationStatus, err error) {
@@ -834,7 +835,7 @@ func (client ServersClient) ListOperationStatusesResponder(resp *http.Response) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForExisting lists eligible SKUs for an Analysis Services resource.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -874,7 +875,7 @@ func (client ServersClient) ListSkusForExisting(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForExistingPreparer prepares the ListSkusForExisting request.
 func (client ServersClient) ListSkusForExistingPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -896,7 +897,7 @@ func (client ServersClient) ListSkusForExistingPreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForExistingSender sends the ListSkusForExisting request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListSkusForExistingSender(req *http.Request) (*http.Response, error) {
@@ -904,7 +905,7 @@ func (client ServersClient) ListSkusForExistingSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForExistingResponder handles the response to the ListSkusForExisting request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListSkusForExistingResponder(resp *http.Response) (result SkuEnumerationForExistingResourceResult, err error) {
@@ -918,7 +919,7 @@ func (client ServersClient) ListSkusForExistingResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForNew lists eligible SKUs for Analysis Services resource provider.
 func (client ServersClient) ListSkusForNew(ctx context.Context) (result SkuEnumerationForNewResourceResult, err error) {
 	req, err := client.ListSkusForNewPreparer(ctx)
@@ -942,7 +943,7 @@ func (client ServersClient) ListSkusForNew(ctx context.Context) (result SkuEnume
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForNewPreparer prepares the ListSkusForNew request.
 func (client ServersClient) ListSkusForNewPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -962,7 +963,7 @@ func (client ServersClient) ListSkusForNewPreparer(ctx context.Context) (*http.R
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForNewSender sends the ListSkusForNew request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ListSkusForNewSender(req *http.Request) (*http.Response, error) {
@@ -970,7 +971,7 @@ func (client ServersClient) ListSkusForNewSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ListSkusForNewResponder handles the response to the ListSkusForNew request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ListSkusForNewResponder(resp *http.Response) (result SkuEnumerationForNewResourceResult, err error) {
@@ -984,7 +985,7 @@ func (client ServersClient) ListSkusForNewResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // Resume resumes operation of the specified Analysis Services server instance.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -1018,7 +1019,7 @@ func (client ServersClient) Resume(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ResumePreparer prepares the Resume request.
 func (client ServersClient) ResumePreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1040,7 +1041,7 @@ func (client ServersClient) ResumePreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ResumeSender sends the Resume request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) ResumeSender(req *http.Request) (future ServersResumeFuture, err error) {
@@ -1056,7 +1057,7 @@ func (client ServersClient) ResumeSender(req *http.Request) (future ServersResum
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // ResumeResponder handles the response to the Resume request. The method always
 // closes the http.Response Body.
 func (client ServersClient) ResumeResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -1069,7 +1070,7 @@ func (client ServersClient) ResumeResponder(resp *http.Response) (result autores
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // Suspend supends operation of the specified Analysis Services server instance.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -1103,7 +1104,7 @@ func (client ServersClient) Suspend(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // SuspendPreparer prepares the Suspend request.
 func (client ServersClient) SuspendPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1125,7 +1126,7 @@ func (client ServersClient) SuspendPreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // SuspendSender sends the Suspend request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) SuspendSender(req *http.Request) (future ServersSuspendFuture, err error) {
@@ -1141,7 +1142,7 @@ func (client ServersClient) SuspendSender(req *http.Request) (future ServersSusp
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // SuspendResponder handles the response to the Suspend request. The method always
 // closes the http.Response Body.
 func (client ServersClient) SuspendResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -1154,7 +1155,7 @@ func (client ServersClient) SuspendResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // Update updates the current state of the specified Analysis Services server.
 //
 // resourceGroupName is the name of the Azure Resource group of which a given Analysis Services server is part.
@@ -1189,7 +1190,7 @@ func (client ServersClient) Update(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // UpdatePreparer prepares the Update request.
 func (client ServersClient) UpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, serverUpdateParameters ServerUpdateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1213,7 +1214,7 @@ func (client ServersClient) UpdatePreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServersClient) UpdateSender(req *http.Request) (future ServersUpdateFuture, err error) {
@@ -1229,7 +1230,7 @@ func (client ServersClient) UpdateSender(req *http.Request) (future ServersUpdat
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/analysisservices/preview/mgmt/2017-08-01-beta/analysisservices instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client ServersClient) UpdateResponder(resp *http.Response) (result Server, err error) {

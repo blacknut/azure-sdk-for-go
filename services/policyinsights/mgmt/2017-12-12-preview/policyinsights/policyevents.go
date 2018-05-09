@@ -19,32 +19,33 @@ package policyinsights
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/date"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // PolicyEventsClient is the client for the PolicyEvents methods of the Policyinsights service.
 type PolicyEventsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // NewPolicyEventsClient creates an instance of the PolicyEventsClient client.
 func NewPolicyEventsClient() PolicyEventsClient {
 	return NewPolicyEventsClientWithBaseURI(DefaultBaseURI)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // NewPolicyEventsClientWithBaseURI creates an instance of the PolicyEventsClient client.
 func NewPolicyEventsClientWithBaseURI(baseURI string) PolicyEventsClient {
 	return PolicyEventsClient{NewWithBaseURI(baseURI)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // GetMetadata gets OData metadata XML document.
 //
 // scope is a valid scope, i.e. management group, subscription, resource group, or resource ID. Scope used has no
@@ -71,7 +72,7 @@ func (client PolicyEventsClient) GetMetadata(ctx context.Context, scope string) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // GetMetadataPreparer prepares the GetMetadata request.
 func (client PolicyEventsClient) GetMetadataPreparer(ctx context.Context, scope string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -91,7 +92,7 @@ func (client PolicyEventsClient) GetMetadataPreparer(ctx context.Context, scope 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // GetMetadataSender sends the GetMetadata request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) GetMetadataSender(req *http.Request) (*http.Response, error) {
@@ -99,7 +100,7 @@ func (client PolicyEventsClient) GetMetadataSender(req *http.Request) (*http.Res
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // GetMetadataResponder handles the response to the GetMetadata request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) GetMetadataResponder(resp *http.Response) (result String, err error) {
@@ -113,7 +114,7 @@ func (client PolicyEventsClient) GetMetadataResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForManagementGroup queries policy events for the resources under the management group.
 //
 // managementGroupName is management group name. top is maximum number of records to return. orderBy is ordering
@@ -153,7 +154,7 @@ func (client PolicyEventsClient) ListQueryResultsForManagementGroup(ctx context.
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForManagementGroupPreparer prepares the ListQueryResultsForManagementGroup request.
 func (client PolicyEventsClient) ListQueryResultsForManagementGroupPreparer(ctx context.Context, managementGroupName string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -196,7 +197,7 @@ func (client PolicyEventsClient) ListQueryResultsForManagementGroupPreparer(ctx 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForManagementGroupSender sends the ListQueryResultsForManagementGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForManagementGroupSender(req *http.Request) (*http.Response, error) {
@@ -204,7 +205,7 @@ func (client PolicyEventsClient) ListQueryResultsForManagementGroupSender(req *h
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForManagementGroupResponder handles the response to the ListQueryResultsForManagementGroup request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForManagementGroupResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -218,7 +219,7 @@ func (client PolicyEventsClient) ListQueryResultsForManagementGroupResponder(res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicyDefinition queries policy events for the subscription level policy definition.
 //
 // subscriptionID is microsoft Azure subscription ID. policyDefinitionName is policy definition name. top is
@@ -259,7 +260,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicyDefinition(ctx context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicyDefinitionPreparer prepares the ListQueryResultsForPolicyDefinition request.
 func (client PolicyEventsClient) ListQueryResultsForPolicyDefinitionPreparer(ctx context.Context, subscriptionID string, policyDefinitionName string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -303,7 +304,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicyDefinitionPreparer(ctx
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicyDefinitionSender sends the ListQueryResultsForPolicyDefinition request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForPolicyDefinitionSender(req *http.Request) (*http.Response, error) {
@@ -311,7 +312,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicyDefinitionSender(req *
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicyDefinitionResponder handles the response to the ListQueryResultsForPolicyDefinition request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForPolicyDefinitionResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -325,7 +326,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicyDefinitionResponder(re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicySetDefinition queries policy events for the subscription level policy set definition.
 //
 // subscriptionID is microsoft Azure subscription ID. policySetDefinitionName is policy set definition name. top is
@@ -366,7 +367,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinition(ctx cont
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicySetDefinitionPreparer prepares the ListQueryResultsForPolicySetDefinition request.
 func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinitionPreparer(ctx context.Context, subscriptionID string, policySetDefinitionName string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -410,7 +411,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinitionPreparer(
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicySetDefinitionSender sends the ListQueryResultsForPolicySetDefinition request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinitionSender(req *http.Request) (*http.Response, error) {
@@ -418,7 +419,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinitionSender(re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForPolicySetDefinitionResponder handles the response to the ListQueryResultsForPolicySetDefinition request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinitionResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -432,7 +433,7 @@ func (client PolicyEventsClient) ListQueryResultsForPolicySetDefinitionResponder
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResource queries policy events for the resource.
 //
 // resourceID is resource ID. top is maximum number of records to return. orderBy is ordering expression using
@@ -472,7 +473,7 @@ func (client PolicyEventsClient) ListQueryResultsForResource(ctx context.Context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourcePreparer prepares the ListQueryResultsForResource request.
 func (client PolicyEventsClient) ListQueryResultsForResourcePreparer(ctx context.Context, resourceID string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -514,7 +515,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourcePreparer(ctx context
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceSender sends the ListQueryResultsForResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForResourceSender(req *http.Request) (*http.Response, error) {
@@ -522,7 +523,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceSender(req *http.Req
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceResponder handles the response to the ListQueryResultsForResource request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForResourceResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -536,7 +537,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceResponder(resp *http
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroup queries policy events for the resources under the resource group.
 //
 // subscriptionID is microsoft Azure subscription ID. resourceGroupName is resource group name. top is maximum
@@ -576,7 +577,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroup(ctx context.Co
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupPreparer prepares the ListQueryResultsForResourceGroup request.
 func (client PolicyEventsClient) ListQueryResultsForResourceGroupPreparer(ctx context.Context, subscriptionID string, resourceGroupName string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -619,7 +620,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupPreparer(ctx co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupSender sends the ListQueryResultsForResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -627,7 +628,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupSender(req *htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupResponder handles the response to the ListQueryResultsForResourceGroup request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForResourceGroupResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -641,7 +642,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupResponder(resp 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupLevelPolicyAssignment queries policy events for the resource group level policy
 // assignment.
 //
@@ -683,7 +684,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupLevelPolicyAssignmentPreparer prepares the ListQueryResultsForResourceGroupLevelPolicyAssignment request.
 func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssignmentPreparer(ctx context.Context, subscriptionID string, resourceGroupName string, policyAssignmentName string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -728,7 +729,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssi
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupLevelPolicyAssignmentSender sends the ListQueryResultsForResourceGroupLevelPolicyAssignment request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssignmentSender(req *http.Request) (*http.Response, error) {
@@ -736,7 +737,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssi
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForResourceGroupLevelPolicyAssignmentResponder handles the response to the ListQueryResultsForResourceGroupLevelPolicyAssignment request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssignmentResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -750,7 +751,7 @@ func (client PolicyEventsClient) ListQueryResultsForResourceGroupLevelPolicyAssi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscription queries policy events for the resources under the subscription.
 //
 // subscriptionID is microsoft Azure subscription ID. top is maximum number of records to return. orderBy is
@@ -790,7 +791,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscription(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionPreparer prepares the ListQueryResultsForSubscription request.
 func (client PolicyEventsClient) ListQueryResultsForSubscriptionPreparer(ctx context.Context, subscriptionID string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -832,7 +833,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscriptionPreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionSender sends the ListQueryResultsForSubscription request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForSubscriptionSender(req *http.Request) (*http.Response, error) {
@@ -840,7 +841,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscriptionSender(req *http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionResponder handles the response to the ListQueryResultsForSubscription request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForSubscriptionResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {
@@ -854,7 +855,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscriptionResponder(resp *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionLevelPolicyAssignment queries policy events for the subscription level policy
 // assignment.
 //
@@ -896,7 +897,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscriptionLevelPolicyAssig
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionLevelPolicyAssignmentPreparer prepares the ListQueryResultsForSubscriptionLevelPolicyAssignment request.
 func (client PolicyEventsClient) ListQueryResultsForSubscriptionLevelPolicyAssignmentPreparer(ctx context.Context, subscriptionID string, policyAssignmentName string, top *int32, orderBy string, selectParameter string, from *date.Time, toParameter *date.Time, filter string, apply string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -940,7 +941,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscriptionLevelPolicyAssig
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionLevelPolicyAssignmentSender sends the ListQueryResultsForSubscriptionLevelPolicyAssignment request. The method will close the
 // http.Response Body if it receives an error.
 func (client PolicyEventsClient) ListQueryResultsForSubscriptionLevelPolicyAssignmentSender(req *http.Request) (*http.Response, error) {
@@ -948,7 +949,7 @@ func (client PolicyEventsClient) ListQueryResultsForSubscriptionLevelPolicyAssig
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/policyinsights/mgmt/2017-12-12-preview/policyinsights instead.
 // ListQueryResultsForSubscriptionLevelPolicyAssignmentResponder handles the response to the ListQueryResultsForSubscriptionLevelPolicyAssignment request. The method always
 // closes the http.Response Body.
 func (client PolicyEventsClient) ListQueryResultsForSubscriptionLevelPolicyAssignmentResponder(resp *http.Response) (result PolicyEventsQueryResults, err error) {

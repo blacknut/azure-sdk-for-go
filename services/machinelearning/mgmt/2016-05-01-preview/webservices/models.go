@@ -19,14 +19,15 @@ package webservices
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/date"
 	"github.com/Azure/go-autorest/autorest/to"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AssetType enumerates the values for asset type.
 type AssetType string
 
@@ -37,13 +38,13 @@ const (
 	AssetTypeResource AssetType = "Resource"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleAssetTypeValues returns an array of possible values for the AssetType const type.
 func PossibleAssetTypeValues() []AssetType {
 	return []AssetType{AssetTypeModule, AssetTypeResource}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ColumnFormat enumerates the values for column format.
 type ColumnFormat string
 
@@ -84,13 +85,13 @@ const (
 	Uint8 ColumnFormat = "Uint8"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleColumnFormatValues returns an array of possible values for the ColumnFormat const type.
 func PossibleColumnFormatValues() []ColumnFormat {
 	return []ColumnFormat{Byte, Char, Complex128, Complex64, DateTime, DateTimeOffset, Double, Duration, Float, Int16, Int32, Int64, Int8, Uint16, Uint32, Uint64, Uint8}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ColumnType enumerates the values for column type.
 type ColumnType string
 
@@ -105,13 +106,13 @@ const (
 	String ColumnType = "String"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleColumnTypeValues returns an array of possible values for the ColumnType const type.
 func PossibleColumnTypeValues() []ColumnType {
 	return []ColumnType{Boolean, Integer, Number, String}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // DiagnosticsLevel enumerates the values for diagnostics level.
 type DiagnosticsLevel string
 
@@ -124,13 +125,13 @@ const (
 	None DiagnosticsLevel = "None"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleDiagnosticsLevelValues returns an array of possible values for the DiagnosticsLevel const type.
 func PossibleDiagnosticsLevelValues() []DiagnosticsLevel {
 	return []DiagnosticsLevel{All, Error, None}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // InputPortType enumerates the values for input port type.
 type InputPortType string
 
@@ -139,13 +140,13 @@ const (
 	Dataset InputPortType = "Dataset"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleInputPortTypeValues returns an array of possible values for the InputPortType const type.
 func PossibleInputPortTypeValues() []InputPortType {
 	return []InputPortType{Dataset}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // OutputPortType enumerates the values for output port type.
 type OutputPortType string
 
@@ -154,13 +155,13 @@ const (
 	OutputPortTypeDataset OutputPortType = "Dataset"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleOutputPortTypeValues returns an array of possible values for the OutputPortType const type.
 func PossibleOutputPortTypeValues() []OutputPortType {
 	return []OutputPortType{OutputPortTypeDataset}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PackageType enumerates the values for package type.
 type PackageType string
 
@@ -171,13 +172,13 @@ const (
 	PackageTypeWebServiceProperties PackageType = "WebServiceProperties"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossiblePackageTypeValues returns an array of possible values for the PackageType const type.
 func PossiblePackageTypeValues() []PackageType {
 	return []PackageType{PackageTypeGraph, PackageTypeWebServiceProperties}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ParameterType enumerates the values for parameter type.
 type ParameterType string
 
@@ -208,13 +209,13 @@ const (
 	ParameterTypeString ParameterType = "String"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleParameterTypeValues returns an array of possible values for the ParameterType const type.
 func PossibleParameterTypeValues() []ParameterType {
 	return []ParameterType{ParameterTypeBoolean, ParameterTypeColumnPicker, ParameterTypeCredential, ParameterTypeDataGatewayName, ParameterTypeDouble, ParameterTypeEnumerated, ParameterTypeFloat, ParameterTypeInt, ParameterTypeMode, ParameterTypeParameterRange, ParameterTypeScript, ParameterTypeString}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ProvisioningState enumerates the values for provisioning state.
 type ProvisioningState string
 
@@ -229,13 +230,13 @@ const (
 	Unknown ProvisioningState = "Unknown"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PossibleProvisioningStateValues returns an array of possible values for the ProvisioningState const type.
 func PossibleProvisioningStateValues() []ProvisioningState {
 	return []ProvisioningState{Failed, Provisioning, Succeeded, Unknown}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AssetItem information about an asset associated with the web service.
 type AssetItem struct {
 	// Name - Asset's friendly name.
@@ -256,7 +257,7 @@ type AssetItem struct {
 	Parameters *[]ModuleAssetParameter `json:"parameters,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for AssetItem.
 func (ai AssetItem) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -287,7 +288,7 @@ func (ai AssetItem) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AssetLocation describes the access location for a web service asset.
 type AssetLocation struct {
 	// URI - The URI where the asset is accessible from, (e.g. aml://abc for system assets or https://xyz for user asets
@@ -296,7 +297,7 @@ type AssetLocation struct {
 	Credentials *string `json:"credentials,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ColumnSpecification swagger 2.0 schema for a column within the data table representing a web service input or
 // output. See Swagger specification: http://swagger.io/specification/
 type ColumnSpecification struct {
@@ -312,21 +313,21 @@ type ColumnSpecification struct {
 	XMsIsordered *bool `json:"x-ms-isordered,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // CommitmentPlan information about the machine learning commitment plan associated with the web service.
 type CommitmentPlan struct {
 	// ID - Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // CreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type CreateOrUpdateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future CreateOrUpdateFuture) Result(client Client) (ws WebService, err error) {
@@ -369,7 +370,7 @@ func (future CreateOrUpdateFuture) Result(client Client) (ws WebService, err err
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // DiagnosticsConfiguration diagnostics settings for an Azure ML web service.
 type DiagnosticsConfiguration struct {
 	// Level - Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr). Possible values include: 'None', 'Error', 'All'
@@ -378,7 +379,7 @@ type DiagnosticsConfiguration struct {
 	Expiry *date.Time `json:"expiry,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ExampleRequest sample input data for the service's input(s).
 type ExampleRequest struct {
 	// Inputs - Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
@@ -387,7 +388,7 @@ type ExampleRequest struct {
 	GlobalParameters map[string]interface{} `json:"globalParameters"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for ExampleRequest.
 func (er ExampleRequest) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -400,7 +401,7 @@ func (er ExampleRequest) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // GraphEdge defines an edge within the web service's graph.
 type GraphEdge struct {
 	// SourceNodeID - The source graph node's identifier.
@@ -413,7 +414,7 @@ type GraphEdge struct {
 	TargetPortID *string `json:"targetPortId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // GraphNode specifies a node in the web service graph. The node can either be an input, output or asset node, so
 // only one of the corresponding id properties is populated at any given time.
 type GraphNode struct {
@@ -427,7 +428,7 @@ type GraphNode struct {
 	Parameters map[string]*string `json:"parameters"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for GraphNode.
 func (gn GraphNode) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -446,7 +447,7 @@ func (gn GraphNode) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // GraphPackage defines the graph of modules making up the machine learning solution.
 type GraphPackage struct {
 	// Nodes - The set of nodes making up the graph, provided as a nodeId to GraphNode map
@@ -457,7 +458,7 @@ type GraphPackage struct {
 	GraphParameters map[string]*GraphParameter `json:"graphParameters"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for GraphPackage.
 func (gp GraphPackage) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -473,7 +474,7 @@ func (gp GraphPackage) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // GraphParameter defines a global parameter in the graph.
 type GraphParameter struct {
 	// Description - Description of this graph parameter.
@@ -484,7 +485,7 @@ type GraphParameter struct {
 	Links *[]GraphParameterLink `json:"links,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // GraphParameterLink association link for a graph global parameter to a node in the graph.
 type GraphParameterLink struct {
 	// NodeID - The graph node's identifier
@@ -493,14 +494,14 @@ type GraphParameterLink struct {
 	ParameterKey *string `json:"parameterKey,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // InputPort asset input port
 type InputPort struct {
 	// Type - Port data type. Possible values include: 'Dataset'
 	Type InputPortType `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Keys access keys for the web service calls.
 type Keys struct {
 	autorest.Response `json:"-"`
@@ -510,7 +511,7 @@ type Keys struct {
 	Secondary *string `json:"secondary,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MachineLearningWorkspace information about the machine learning workspace containing the experiment that is
 // source for the web service.
 type MachineLearningWorkspace struct {
@@ -518,7 +519,7 @@ type MachineLearningWorkspace struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ModeValueInfo nested parameter definition.
 type ModeValueInfo struct {
 	// InterfaceString - The interface string name for the nested parameter.
@@ -527,7 +528,7 @@ type ModeValueInfo struct {
 	Parameters *[]ModuleAssetParameter `json:"parameters,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ModuleAssetParameter parameter definition for a module asset.
 type ModuleAssetParameter struct {
 	// Name - Parameter name.
@@ -538,7 +539,7 @@ type ModuleAssetParameter struct {
 	ModeValuesInfo map[string]*ModeValueInfo `json:"modeValuesInfo"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for ModuleAssetParameter.
 func (mapVar ModuleAssetParameter) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -554,14 +555,14 @@ func (mapVar ModuleAssetParameter) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // OutputPort asset output port
 type OutputPort struct {
 	// Type - Port data type. Possible values include: 'OutputPortTypeDataset'
 	Type OutputPortType `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PaginatedWebServicesList paginated list of web services.
 type PaginatedWebServicesList struct {
 	autorest.Response `json:"-"`
@@ -571,14 +572,14 @@ type PaginatedWebServicesList struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PaginatedWebServicesListIterator provides access to a complete listing of WebService values.
 type PaginatedWebServicesListIterator struct {
 	i    int
 	page PaginatedWebServicesListPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *PaginatedWebServicesListIterator) Next() error {
@@ -595,19 +596,19 @@ func (iter *PaginatedWebServicesListIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter PaginatedWebServicesListIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Response returns the raw server response from the last page request.
 func (iter PaginatedWebServicesListIterator) Response() PaginatedWebServicesList {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter PaginatedWebServicesListIterator) Value() WebService {
@@ -617,7 +618,7 @@ func (iter PaginatedWebServicesListIterator) Value() WebService {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (pwsl PaginatedWebServicesList) IsEmpty() bool {
 	return pwsl.Value == nil || len(*pwsl.Value) == 0
@@ -635,14 +636,14 @@ func (pwsl PaginatedWebServicesList) paginatedWebServicesListPreparer() (*http.R
 		autorest.WithBaseURL(to.String(pwsl.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PaginatedWebServicesListPage contains a page of WebService values.
 type PaginatedWebServicesListPage struct {
 	fn   func(PaginatedWebServicesList) (PaginatedWebServicesList, error)
 	pwsl PaginatedWebServicesList
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *PaginatedWebServicesListPage) Next() error {
@@ -654,19 +655,19 @@ func (page *PaginatedWebServicesListPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page PaginatedWebServicesListPage) NotDone() bool {
 	return !page.pwsl.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Response returns the raw server response from the last page request.
 func (page PaginatedWebServicesListPage) Response() PaginatedWebServicesList {
 	return page.pwsl
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page PaginatedWebServicesListPage) Values() []WebService {
 	if page.pwsl.IsEmpty() {
@@ -675,14 +676,14 @@ func (page PaginatedWebServicesListPage) Values() []WebService {
 	return *page.pwsl.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PatchFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type PatchFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future PatchFuture) Result(client Client) (ws WebService, err error) {
@@ -725,14 +726,14 @@ func (future PatchFuture) Result(client Client) (ws WebService, err error) {
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // BasicProperties the set of properties specific to the Azure ML web service resource.
 type BasicProperties interface {
 	AsPropertiesForGraph() (*PropertiesForGraph, bool)
 	AsProperties() (*Properties, bool)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Properties the set of properties specific to the Azure ML web service resource.
 type Properties struct {
 	// Title - The title of the web service.
@@ -814,7 +815,7 @@ func unmarshalBasicPropertiesArray(body []byte) ([]BasicProperties, error) {
 	return pArray, nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for Properties.
 func (p Properties) MarshalJSON() ([]byte, error) {
 	p.PackageType = PackageTypeWebServiceProperties
@@ -882,25 +883,25 @@ func (p Properties) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AsPropertiesForGraph is the BasicProperties implementation for Properties.
 func (p Properties) AsPropertiesForGraph() (*PropertiesForGraph, bool) {
 	return nil, false
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AsProperties is the BasicProperties implementation for Properties.
 func (p Properties) AsProperties() (*Properties, bool) {
 	return &p, true
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AsBasicProperties is the BasicProperties implementation for Properties.
 func (p Properties) AsBasicProperties() (BasicProperties, bool) {
 	return &p, true
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // PropertiesForGraph properties specific to a Graph based web service.
 type PropertiesForGraph struct {
 	// Package - The definition of the graph package making up this web service.
@@ -947,7 +948,7 @@ type PropertiesForGraph struct {
 	PackageType PackageType `json:"packageType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for PropertiesForGraph.
 func (pfg PropertiesForGraph) MarshalJSON() ([]byte, error) {
 	pfg.PackageType = PackageTypeGraph
@@ -1018,39 +1019,39 @@ func (pfg PropertiesForGraph) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AsPropertiesForGraph is the BasicProperties implementation for PropertiesForGraph.
 func (pfg PropertiesForGraph) AsPropertiesForGraph() (*PropertiesForGraph, bool) {
 	return &pfg, true
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AsProperties is the BasicProperties implementation for PropertiesForGraph.
 func (pfg PropertiesForGraph) AsProperties() (*Properties, bool) {
 	return nil, false
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // AsBasicProperties is the BasicProperties implementation for PropertiesForGraph.
 func (pfg PropertiesForGraph) AsBasicProperties() (BasicProperties, bool) {
 	return &pfg, true
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // RealtimeConfiguration holds the available configuration options for an Azure ML web service endpoint.
 type RealtimeConfiguration struct {
 	// MaxConcurrentCalls - Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
 	MaxConcurrentCalls *int32 `json:"maxConcurrentCalls,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // RemoveFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type RemoveFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future RemoveFuture) Result(client Client) (ar autorest.Response, err error) {
@@ -1093,7 +1094,7 @@ func (future RemoveFuture) Result(client Client) (ar autorest.Response, err erro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // Resource ...
 type Resource struct {
 	// ID - Specifies the resource ID.
@@ -1108,7 +1109,7 @@ type Resource struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for Resource.
 func (r Resource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1130,7 +1131,7 @@ func (r Resource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // ServiceInputOutputSpecification the swagger 2.0 schema describing the service's inputs or outputs. See Swagger
 // specification: http://swagger.io/specification/
 type ServiceInputOutputSpecification struct {
@@ -1144,7 +1145,7 @@ type ServiceInputOutputSpecification struct {
 	Properties map[string]*TableSpecification `json:"properties"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for ServiceInputOutputSpecification.
 func (sios ServiceInputOutputSpecification) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1163,7 +1164,7 @@ func (sios ServiceInputOutputSpecification) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // StorageAccount access information for a storage account.
 type StorageAccount struct {
 	// Name - Specifies the name of the storage account.
@@ -1172,7 +1173,7 @@ type StorageAccount struct {
 	Key *string `json:"key,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // TableSpecification the swagger 2.0 schema describing a single service input or output. See Swagger
 // specification: http://swagger.io/specification/
 type TableSpecification struct {
@@ -1188,7 +1189,7 @@ type TableSpecification struct {
 	Properties map[string]*ColumnSpecification `json:"properties"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for TableSpecification.
 func (ts TableSpecification) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1210,7 +1211,7 @@ func (ts TableSpecification) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // WebService instance of an Azure ML web service resource.
 type WebService struct {
 	autorest.Response `json:"-"`
@@ -1228,7 +1229,7 @@ type WebService struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // MarshalJSON is the custom marshaler for WebService.
 func (ws WebService) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1251,7 +1252,7 @@ func (ws WebService) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/webservices instead.
 // UnmarshalJSON is the custom unmarshaler for WebService struct.
 func (ws *WebService) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage

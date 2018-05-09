@@ -15,7 +15,7 @@
 package delta
 
 import (
-	"github.com/Azure/azure-sdk-for-go/tools/apidiff/exports"
+	"github.com/blacknut/azure-sdk-for-go/tools/apidiff/exports"
 )
 
 // GetExports returns a exports.Content struct containing all exports in rhs that aren't in lhs.

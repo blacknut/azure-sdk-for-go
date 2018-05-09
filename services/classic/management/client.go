@@ -24,7 +24,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/Azure/azure-sdk-for-go/version"
+	"github.com/blacknut/azure-sdk-for-go/version"
 )
 
 var (

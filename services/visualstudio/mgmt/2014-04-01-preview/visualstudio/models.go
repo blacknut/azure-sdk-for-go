@@ -19,12 +19,13 @@ package visualstudio
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // AccountResource the response to an account resource GET request.
 type AccountResource struct {
 	autorest.Response `json:"-"`
@@ -42,7 +43,7 @@ type AccountResource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // MarshalJSON is the custom marshaler for AccountResource.
 func (ar AccountResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -67,7 +68,7 @@ func (ar AccountResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // AccountResourceListResult the response to an account resource list GET request.
 type AccountResourceListResult struct {
 	autorest.Response `json:"-"`
@@ -75,7 +76,7 @@ type AccountResourceListResult struct {
 	Value *[]AccountResource `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // AccountResourceRequest the body of a PUT request to modify a Visual Studio account resource.
 type AccountResourceRequest struct {
 	// AccountName - The account name.
@@ -90,7 +91,7 @@ type AccountResourceRequest struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // MarshalJSON is the custom marshaler for AccountResourceRequest.
 func (arr AccountResourceRequest) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -110,7 +111,7 @@ func (arr AccountResourceRequest) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CheckNameAvailabilityParameter the body of a POST request to check name availability.
 type CheckNameAvailabilityParameter struct {
 	// ResourceName - The name of the resource to check availability for.
@@ -119,7 +120,7 @@ type CheckNameAvailabilityParameter struct {
 	ResourceType *string `json:"resourceType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // CheckNameAvailabilityResult the response to a name availability request.
 type CheckNameAvailabilityResult struct {
 	autorest.Response `json:"-"`
@@ -129,7 +130,7 @@ type CheckNameAvailabilityResult struct {
 	NameAvailable *bool `json:"nameAvailable,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ExtensionResource the response to an extension resource GET request.
 type ExtensionResource struct {
 	autorest.Response `json:"-"`
@@ -149,7 +150,7 @@ type ExtensionResource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // MarshalJSON is the custom marshaler for ExtensionResource.
 func (er ExtensionResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -177,7 +178,7 @@ func (er ExtensionResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ExtensionResourceListResult the response to an extension resource list GET request.
 type ExtensionResourceListResult struct {
 	autorest.Response `json:"-"`
@@ -185,7 +186,7 @@ type ExtensionResourceListResult struct {
 	Value *[]ExtensionResource `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ExtensionResourcePlan plan data for an extension resource.
 type ExtensionResourcePlan struct {
 	// Name - Name of the plan.
@@ -200,7 +201,7 @@ type ExtensionResourcePlan struct {
 	Version *string `json:"version,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ExtensionResourceRequest the body of an extension resource PUT request.
 type ExtensionResourceRequest struct {
 	// Location - The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
@@ -213,7 +214,7 @@ type ExtensionResourceRequest struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // MarshalJSON is the custom marshaler for ExtensionResourceRequest.
 func (errVar ExtensionResourceRequest) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -232,7 +233,7 @@ func (errVar ExtensionResourceRequest) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // Operation properties of an operation supported by the resource provider.
 type Operation struct {
 	// Display - The properties of the resource operation.
@@ -241,7 +242,7 @@ type Operation struct {
 	Name *string `json:"name,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // OperationListResult container for a list of operations supported by a resource provider.
 type OperationListResult struct {
 	autorest.Response `json:"-"`
@@ -249,7 +250,7 @@ type OperationListResult struct {
 	Value *[]Operation `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // OperationProperties properties of an operation supported by the resource provider.
 type OperationProperties struct {
 	// Description - The description of the resource operation.
@@ -262,7 +263,7 @@ type OperationProperties struct {
 	Resource *string `json:"resource,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ProjectResource a Visual Studio Team Services project resource.
 type ProjectResource struct {
 	autorest.Response `json:"-"`
@@ -280,7 +281,7 @@ type ProjectResource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // MarshalJSON is the custom marshaler for ProjectResource.
 func (pr ProjectResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -305,7 +306,7 @@ func (pr ProjectResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ProjectResourceListResult the response to a request to list Team Services project resources in a resource
 // group/account.
 type ProjectResourceListResult struct {
@@ -314,14 +315,14 @@ type ProjectResourceListResult struct {
 	Value *[]ProjectResource `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // ProjectsCreateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type ProjectsCreateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ProjectsCreateFuture) Result(client ProjectsClient) (pr ProjectResource, err error) {
@@ -364,7 +365,7 @@ func (future ProjectsCreateFuture) Result(client ProjectsClient) (pr ProjectReso
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // Resource a generic Azure Resource Manager resource.
 type Resource struct {
 	// ID - Unique identifier of the resource.
@@ -379,7 +380,7 @@ type Resource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/visualstudio/mgmt/2014-04-01-preview/visualstudio instead.
 // MarshalJSON is the custom marshaler for Resource.
 func (r Resource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})

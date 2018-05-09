@@ -19,31 +19,32 @@ package datamigration
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ServicesClient is the data Migration Client
 type ServicesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // NewServicesClient creates an instance of the ServicesClient client.
 func NewServicesClient(subscriptionID string) ServicesClient {
 	return NewServicesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // NewServicesClientWithBaseURI creates an instance of the ServicesClient client.
 func NewServicesClientWithBaseURI(baseURI string, subscriptionID string) ServicesClient {
 	return ServicesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckChildrenNameAvailability this method checks whether a proposed nested resource name is valid and available.
 //
 // groupName is name of the resource group serviceName is name of the service parameters is requested name to
@@ -70,7 +71,7 @@ func (client ServicesClient) CheckChildrenNameAvailability(ctx context.Context, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckChildrenNameAvailabilityPreparer prepares the CheckChildrenNameAvailability request.
 func (client ServicesClient) CheckChildrenNameAvailabilityPreparer(ctx context.Context, groupName string, serviceName string, parameters NameAvailabilityRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -94,7 +95,7 @@ func (client ServicesClient) CheckChildrenNameAvailabilityPreparer(ctx context.C
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckChildrenNameAvailabilitySender sends the CheckChildrenNameAvailability request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) CheckChildrenNameAvailabilitySender(req *http.Request) (*http.Response, error) {
@@ -102,7 +103,7 @@ func (client ServicesClient) CheckChildrenNameAvailabilitySender(req *http.Reque
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckChildrenNameAvailabilityResponder handles the response to the CheckChildrenNameAvailability request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) CheckChildrenNameAvailabilityResponder(resp *http.Response) (result NameAvailabilityResponse, err error) {
@@ -116,7 +117,7 @@ func (client ServicesClient) CheckChildrenNameAvailabilityResponder(resp *http.R
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckNameAvailability this method checks whether a proposed top-level resource name is valid and available.
 //
 // location is the Azure region of the operation parameters is requested name to validate
@@ -142,7 +143,7 @@ func (client ServicesClient) CheckNameAvailability(ctx context.Context, location
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckNameAvailabilityPreparer prepares the CheckNameAvailability request.
 func (client ServicesClient) CheckNameAvailabilityPreparer(ctx context.Context, location string, parameters NameAvailabilityRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -165,7 +166,7 @@ func (client ServicesClient) CheckNameAvailabilityPreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckNameAvailabilitySender sends the CheckNameAvailability request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) CheckNameAvailabilitySender(req *http.Request) (*http.Response, error) {
@@ -173,7 +174,7 @@ func (client ServicesClient) CheckNameAvailabilitySender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckNameAvailabilityResponder handles the response to the CheckNameAvailability request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) CheckNameAvailabilityResponder(resp *http.Response) (result NameAvailabilityResponse, err error) {
@@ -187,7 +188,7 @@ func (client ServicesClient) CheckNameAvailabilityResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckStatus the services resource is the top-level resource that represents the Data Migration Service. This action
 // performs a health check and returns the status of the service and virtual machine size.
 //
@@ -214,7 +215,7 @@ func (client ServicesClient) CheckStatus(ctx context.Context, groupName string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckStatusPreparer prepares the CheckStatus request.
 func (client ServicesClient) CheckStatusPreparer(ctx context.Context, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -236,7 +237,7 @@ func (client ServicesClient) CheckStatusPreparer(ctx context.Context, groupName 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckStatusSender sends the CheckStatus request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) CheckStatusSender(req *http.Request) (*http.Response, error) {
@@ -244,7 +245,7 @@ func (client ServicesClient) CheckStatusSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CheckStatusResponder handles the response to the CheckStatus request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) CheckStatusResponder(resp *http.Response) (result ServiceStatusResponse, err error) {
@@ -258,7 +259,7 @@ func (client ServicesClient) CheckStatusResponder(resp *http.Response) (result S
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CreateOrUpdate the services resource is the top-level resource that represents the Data Migration Service. The PUT
 // method creates a new service or updates an existing one. When a service is updated, existing child resources (i.e.
 // tasks) are unaffected. Services currently support a single kind, "vm", which refers to a VM-based service, although
@@ -292,7 +293,7 @@ func (client ServicesClient) CreateOrUpdate(ctx context.Context, parameters Serv
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client ServicesClient) CreateOrUpdatePreparer(ctx context.Context, parameters Service, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -316,7 +317,7 @@ func (client ServicesClient) CreateOrUpdatePreparer(ctx context.Context, paramet
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) CreateOrUpdateSender(req *http.Request) (future ServicesCreateOrUpdateFuture, err error) {
@@ -332,7 +333,7 @@ func (client ServicesClient) CreateOrUpdateSender(req *http.Request) (future Ser
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) CreateOrUpdateResponder(resp *http.Response) (result Service, err error) {
@@ -346,7 +347,7 @@ func (client ServicesClient) CreateOrUpdateResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // Delete the services resource is the top-level resource that represents the Data Migration Service. The DELETE method
 // deletes a service. Any running tasks will be canceled.
 //
@@ -368,7 +369,7 @@ func (client ServicesClient) Delete(ctx context.Context, groupName string, servi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // DeletePreparer prepares the Delete request.
 func (client ServicesClient) DeletePreparer(ctx context.Context, groupName string, serviceName string, deleteRunningTasks *bool) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -393,7 +394,7 @@ func (client ServicesClient) DeletePreparer(ctx context.Context, groupName strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) DeleteSender(req *http.Request) (future ServicesDeleteFuture, err error) {
@@ -409,7 +410,7 @@ func (client ServicesClient) DeleteSender(req *http.Request) (future ServicesDel
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -422,7 +423,7 @@ func (client ServicesClient) DeleteResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // Get the services resource is the top-level resource that represents the Data Migration Service. The GET method
 // retrieves information about a service instance.
 //
@@ -449,7 +450,7 @@ func (client ServicesClient) Get(ctx context.Context, groupName string, serviceN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // GetPreparer prepares the Get request.
 func (client ServicesClient) GetPreparer(ctx context.Context, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -471,7 +472,7 @@ func (client ServicesClient) GetPreparer(ctx context.Context, groupName string, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -479,7 +480,7 @@ func (client ServicesClient) GetSender(req *http.Request) (*http.Response, error
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) GetResponder(resp *http.Response) (result Service, err error) {
@@ -493,7 +494,7 @@ func (client ServicesClient) GetResponder(resp *http.Response) (result Service, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // List the services resource is the top-level resource that represents the Data Migration Service. This method returns
 // a list of service resources in a subscription.
 func (client ServicesClient) List(ctx context.Context) (result ServiceListPage, err error) {
@@ -519,7 +520,7 @@ func (client ServicesClient) List(ctx context.Context) (result ServiceListPage, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListPreparer prepares the List request.
 func (client ServicesClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -539,7 +540,7 @@ func (client ServicesClient) ListPreparer(ctx context.Context) (*http.Request, e
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -547,7 +548,7 @@ func (client ServicesClient) ListSender(req *http.Request) (*http.Response, erro
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) ListResponder(resp *http.Response) (result ServiceList, err error) {
@@ -582,14 +583,14 @@ func (client ServicesClient) listNextResults(lastResults ServiceList) (result Se
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ServicesClient) ListComplete(ctx context.Context) (result ServiceListIterator, err error) {
 	result.page, err = client.List(ctx)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListByResourceGroup the Services resource is the top-level resource that represents the Data Migration Service. This
 // method returns a list of service resources in a resource group.
 //
@@ -617,7 +618,7 @@ func (client ServicesClient) ListByResourceGroup(ctx context.Context, groupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client ServicesClient) ListByResourceGroupPreparer(ctx context.Context, groupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -638,7 +639,7 @@ func (client ServicesClient) ListByResourceGroupPreparer(ctx context.Context, gr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -646,7 +647,7 @@ func (client ServicesClient) ListByResourceGroupSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) ListByResourceGroupResponder(resp *http.Response) (result ServiceList, err error) {
@@ -681,14 +682,14 @@ func (client ServicesClient) listByResourceGroupNextResults(lastResults ServiceL
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListByResourceGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ServicesClient) ListByResourceGroupComplete(ctx context.Context, groupName string) (result ServiceListIterator, err error) {
 	result.page, err = client.ListByResourceGroup(ctx, groupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListSkus the services resource is the top-level resource that represents the Data Migration Service. The skus action
 // returns the list of SKUs that a service resource can be updated to.
 //
@@ -716,7 +717,7 @@ func (client ServicesClient) ListSkus(ctx context.Context, groupName string, ser
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListSkusPreparer prepares the ListSkus request.
 func (client ServicesClient) ListSkusPreparer(ctx context.Context, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -738,7 +739,7 @@ func (client ServicesClient) ListSkusPreparer(ctx context.Context, groupName str
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListSkusSender sends the ListSkus request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) ListSkusSender(req *http.Request) (*http.Response, error) {
@@ -746,7 +747,7 @@ func (client ServicesClient) ListSkusSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListSkusResponder handles the response to the ListSkus request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) ListSkusResponder(resp *http.Response) (result ServiceSkuList, err error) {
@@ -781,14 +782,14 @@ func (client ServicesClient) listSkusNextResults(lastResults ServiceSkuList) (re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // ListSkusComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ServicesClient) ListSkusComplete(ctx context.Context, groupName string, serviceName string) (result ServiceSkuListIterator, err error) {
 	result.page, err = client.ListSkus(ctx, groupName, serviceName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // Start the services resource is the top-level resource that represents the Data Migration Service. This action starts
 // the service and the service can be used for data migration.
 //
@@ -809,7 +810,7 @@ func (client ServicesClient) Start(ctx context.Context, groupName string, servic
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // StartPreparer prepares the Start request.
 func (client ServicesClient) StartPreparer(ctx context.Context, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -831,7 +832,7 @@ func (client ServicesClient) StartPreparer(ctx context.Context, groupName string
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // StartSender sends the Start request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) StartSender(req *http.Request) (future ServicesStartFuture, err error) {
@@ -847,7 +848,7 @@ func (client ServicesClient) StartSender(req *http.Request) (future ServicesStar
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // StartResponder handles the response to the Start request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) StartResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -860,7 +861,7 @@ func (client ServicesClient) StartResponder(resp *http.Response) (result autores
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // Stop the services resource is the top-level resource that represents the Data Migration Service. This action stops
 // the service and the service cannot be used for data migration. The service owner won't be billed when the service is
 // stopped.
@@ -882,7 +883,7 @@ func (client ServicesClient) Stop(ctx context.Context, groupName string, service
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // StopPreparer prepares the Stop request.
 func (client ServicesClient) StopPreparer(ctx context.Context, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -904,7 +905,7 @@ func (client ServicesClient) StopPreparer(ctx context.Context, groupName string,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // StopSender sends the Stop request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) StopSender(req *http.Request) (future ServicesStopFuture, err error) {
@@ -920,7 +921,7 @@ func (client ServicesClient) StopSender(req *http.Request) (future ServicesStopF
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // StopResponder handles the response to the Stop request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) StopResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -933,7 +934,7 @@ func (client ServicesClient) StopResponder(resp *http.Response) (result autorest
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // Update the services resource is the top-level resource that represents the Data Migration Service. The PATCH method
 // updates an existing service. This method can change the kind, SKU, and network of the service, but if tasks are
 // currently running (i.e. the service is busy), this will fail with 400 Bad Request ("ServiceIsBusy").
@@ -956,7 +957,7 @@ func (client ServicesClient) Update(ctx context.Context, parameters Service, gro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // UpdatePreparer prepares the Update request.
 func (client ServicesClient) UpdatePreparer(ctx context.Context, parameters Service, groupName string, serviceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -980,7 +981,7 @@ func (client ServicesClient) UpdatePreparer(ctx context.Context, parameters Serv
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServicesClient) UpdateSender(req *http.Request) (future ServicesUpdateFuture, err error) {
@@ -996,7 +997,7 @@ func (client ServicesClient) UpdateSender(req *http.Request) (future ServicesUpd
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/datamigration/mgmt/2017-11-15-preview/datamigration instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client ServicesClient) UpdateResponder(resp *http.Response) (result Service, err error) {

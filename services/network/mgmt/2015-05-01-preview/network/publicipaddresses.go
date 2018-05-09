@@ -19,30 +19,31 @@ package network
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // PublicIPAddressesClient is the network Client
 type PublicIPAddressesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewPublicIPAddressesClient creates an instance of the PublicIPAddressesClient client.
 func NewPublicIPAddressesClient(subscriptionID string) PublicIPAddressesClient {
 	return NewPublicIPAddressesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewPublicIPAddressesClientWithBaseURI creates an instance of the PublicIPAddressesClient client.
 func NewPublicIPAddressesClientWithBaseURI(baseURI string, subscriptionID string) PublicIPAddressesClient {
 	return PublicIPAddressesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdate the Put PublicIPAddress operation creates/updates a stable/dynamic PublicIP address
 //
 // resourceGroupName is the name of the resource group. publicIPAddressName is the name of the publicIpAddress.
@@ -63,7 +64,7 @@ func (client PublicIPAddressesClient) CreateOrUpdate(ctx context.Context, resour
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client PublicIPAddressesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, publicIPAddressName string, parameters PublicIPAddress) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -87,7 +88,7 @@ func (client PublicIPAddressesClient) CreateOrUpdatePreparer(ctx context.Context
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client PublicIPAddressesClient) CreateOrUpdateSender(req *http.Request) (future PublicIPAddressesCreateOrUpdateFuture, err error) {
@@ -103,7 +104,7 @@ func (client PublicIPAddressesClient) CreateOrUpdateSender(req *http.Request) (f
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client PublicIPAddressesClient) CreateOrUpdateResponder(resp *http.Response) (result PublicIPAddress, err error) {
@@ -117,7 +118,7 @@ func (client PublicIPAddressesClient) CreateOrUpdateResponder(resp *http.Respons
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Delete the delete publicIpAddress operation deletes the specified publicIpAddress.
 //
 // resourceGroupName is the name of the resource group. publicIPAddressName is the name of the subnet.
@@ -137,7 +138,7 @@ func (client PublicIPAddressesClient) Delete(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeletePreparer prepares the Delete request.
 func (client PublicIPAddressesClient) DeletePreparer(ctx context.Context, resourceGroupName string, publicIPAddressName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -159,7 +160,7 @@ func (client PublicIPAddressesClient) DeletePreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client PublicIPAddressesClient) DeleteSender(req *http.Request) (future PublicIPAddressesDeleteFuture, err error) {
@@ -175,7 +176,7 @@ func (client PublicIPAddressesClient) DeleteSender(req *http.Request) (future Pu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client PublicIPAddressesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -188,7 +189,7 @@ func (client PublicIPAddressesClient) DeleteResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Get the Get publicIpAddress operation retreives information about the specified pubicIpAddress
 //
 // resourceGroupName is the name of the resource group. publicIPAddressName is the name of the subnet.
@@ -214,7 +215,7 @@ func (client PublicIPAddressesClient) Get(ctx context.Context, resourceGroupName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetPreparer prepares the Get request.
 func (client PublicIPAddressesClient) GetPreparer(ctx context.Context, resourceGroupName string, publicIPAddressName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -236,7 +237,7 @@ func (client PublicIPAddressesClient) GetPreparer(ctx context.Context, resourceG
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client PublicIPAddressesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -244,7 +245,7 @@ func (client PublicIPAddressesClient) GetSender(req *http.Request) (*http.Respon
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client PublicIPAddressesClient) GetResponder(resp *http.Response) (result PublicIPAddress, err error) {
@@ -258,7 +259,7 @@ func (client PublicIPAddressesClient) GetResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // List the List publicIpAddress opertion retrieves all the publicIpAddresses in a resource group.
 //
 // resourceGroupName is the name of the resource group.
@@ -285,7 +286,7 @@ func (client PublicIPAddressesClient) List(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListPreparer prepares the List request.
 func (client PublicIPAddressesClient) ListPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -306,7 +307,7 @@ func (client PublicIPAddressesClient) ListPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client PublicIPAddressesClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -314,7 +315,7 @@ func (client PublicIPAddressesClient) ListSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client PublicIPAddressesClient) ListResponder(resp *http.Response) (result PublicIPAddressListResult, err error) {
@@ -349,14 +350,14 @@ func (client PublicIPAddressesClient) listNextResults(lastResults PublicIPAddres
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client PublicIPAddressesClient) ListComplete(ctx context.Context, resourceGroupName string) (result PublicIPAddressListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAll the List publicIpAddress opertion retrieves all the publicIpAddresses in a subscription.
 func (client PublicIPAddressesClient) ListAll(ctx context.Context) (result PublicIPAddressListResultPage, err error) {
 	result.fn = client.listAllNextResults
@@ -381,7 +382,7 @@ func (client PublicIPAddressesClient) ListAll(ctx context.Context) (result Publi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllPreparer prepares the ListAll request.
 func (client PublicIPAddressesClient) ListAllPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -401,7 +402,7 @@ func (client PublicIPAddressesClient) ListAllPreparer(ctx context.Context) (*htt
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllSender sends the ListAll request. The method will close the
 // http.Response Body if it receives an error.
 func (client PublicIPAddressesClient) ListAllSender(req *http.Request) (*http.Response, error) {
@@ -409,7 +410,7 @@ func (client PublicIPAddressesClient) ListAllSender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllResponder handles the response to the ListAll request. The method always
 // closes the http.Response Body.
 func (client PublicIPAddressesClient) ListAllResponder(resp *http.Response) (result PublicIPAddressListResult, err error) {
@@ -444,7 +445,7 @@ func (client PublicIPAddressesClient) listAllNextResults(lastResults PublicIPAdd
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllComplete enumerates all values, automatically crossing page boundaries as required.
 func (client PublicIPAddressesClient) ListAllComplete(ctx context.Context) (result PublicIPAddressListResultIterator, err error) {
 	result.page, err = client.ListAll(ctx)

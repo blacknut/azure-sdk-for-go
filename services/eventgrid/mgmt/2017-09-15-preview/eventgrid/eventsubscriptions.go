@@ -19,30 +19,31 @@ package eventgrid
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // EventSubscriptionsClient is the azure EventGrid Management Client
 type EventSubscriptionsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // NewEventSubscriptionsClient creates an instance of the EventSubscriptionsClient client.
 func NewEventSubscriptionsClient(subscriptionID string) EventSubscriptionsClient {
 	return NewEventSubscriptionsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // NewEventSubscriptionsClientWithBaseURI creates an instance of the EventSubscriptionsClient client.
 func NewEventSubscriptionsClientWithBaseURI(baseURI string, subscriptionID string) EventSubscriptionsClient {
 	return EventSubscriptionsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // Create asynchronously creates a new event subscription to the specified scope. Existing event subscriptions cannot
 // be updated with this API and should instead use the Update event subscription API.
 //
@@ -72,7 +73,7 @@ func (client EventSubscriptionsClient) Create(ctx context.Context, scope string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // CreatePreparer prepares the Create request.
 func (client EventSubscriptionsClient) CreatePreparer(ctx context.Context, scope string, eventSubscriptionName string, eventSubscriptionInfo EventSubscription) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -95,7 +96,7 @@ func (client EventSubscriptionsClient) CreatePreparer(ctx context.Context, scope
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // CreateSender sends the Create request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) CreateSender(req *http.Request) (future EventSubscriptionsCreateFuture, err error) {
@@ -111,7 +112,7 @@ func (client EventSubscriptionsClient) CreateSender(req *http.Request) (future E
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // CreateResponder handles the response to the Create request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) CreateResponder(resp *http.Response) (result EventSubscription, err error) {
@@ -125,7 +126,7 @@ func (client EventSubscriptionsClient) CreateResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // Delete delete an existing event subscription
 //
 // scope is the scope of the event subscription. The scope can be a subscription, or a resource group, or a top
@@ -152,7 +153,7 @@ func (client EventSubscriptionsClient) Delete(ctx context.Context, scope string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // DeletePreparer prepares the Delete request.
 func (client EventSubscriptionsClient) DeletePreparer(ctx context.Context, scope string, eventSubscriptionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -173,7 +174,7 @@ func (client EventSubscriptionsClient) DeletePreparer(ctx context.Context, scope
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) DeleteSender(req *http.Request) (future EventSubscriptionsDeleteFuture, err error) {
@@ -189,7 +190,7 @@ func (client EventSubscriptionsClient) DeleteSender(req *http.Request) (future E
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -202,7 +203,7 @@ func (client EventSubscriptionsClient) DeleteResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // Get get properties of an event subscription
 //
 // scope is the scope of the event subscription. The scope can be a subscription, or a resource group, or a top
@@ -235,7 +236,7 @@ func (client EventSubscriptionsClient) Get(ctx context.Context, scope string, ev
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetPreparer prepares the Get request.
 func (client EventSubscriptionsClient) GetPreparer(ctx context.Context, scope string, eventSubscriptionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -256,7 +257,7 @@ func (client EventSubscriptionsClient) GetPreparer(ctx context.Context, scope st
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -264,7 +265,7 @@ func (client EventSubscriptionsClient) GetSender(req *http.Request) (*http.Respo
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) GetResponder(resp *http.Response) (result EventSubscription, err error) {
@@ -278,7 +279,7 @@ func (client EventSubscriptionsClient) GetResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetFullURL get the full endpoint URL for an event subscription
 //
 // scope is the scope of the event subscription. The scope can be a subscription, or a resource group, or a top
@@ -311,7 +312,7 @@ func (client EventSubscriptionsClient) GetFullURL(ctx context.Context, scope str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetFullURLPreparer prepares the GetFullURL request.
 func (client EventSubscriptionsClient) GetFullURLPreparer(ctx context.Context, scope string, eventSubscriptionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -332,7 +333,7 @@ func (client EventSubscriptionsClient) GetFullURLPreparer(ctx context.Context, s
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetFullURLSender sends the GetFullURL request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) GetFullURLSender(req *http.Request) (*http.Response, error) {
@@ -340,7 +341,7 @@ func (client EventSubscriptionsClient) GetFullURLSender(req *http.Request) (*htt
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // GetFullURLResponder handles the response to the GetFullURL request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) GetFullURLResponder(resp *http.Response) (result EventSubscriptionFullURL, err error) {
@@ -354,7 +355,7 @@ func (client EventSubscriptionsClient) GetFullURLResponder(resp *http.Response) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListByResource list all event subscriptions that have been created for a specific topic
 //
 // resourceGroupName is the name of the resource group within the user's subscription. providerNamespace is
@@ -382,7 +383,7 @@ func (client EventSubscriptionsClient) ListByResource(ctx context.Context, resou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListByResourcePreparer prepares the ListByResource request.
 func (client EventSubscriptionsClient) ListByResourcePreparer(ctx context.Context, resourceGroupName string, providerNamespace string, resourceTypeName string, resourceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -406,7 +407,7 @@ func (client EventSubscriptionsClient) ListByResourcePreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListByResourceSender sends the ListByResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListByResourceSender(req *http.Request) (*http.Response, error) {
@@ -414,7 +415,7 @@ func (client EventSubscriptionsClient) ListByResourceSender(req *http.Request) (
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListByResourceResponder handles the response to the ListByResource request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListByResourceResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -428,7 +429,7 @@ func (client EventSubscriptionsClient) ListByResourceResponder(resp *http.Respon
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroup list all global event subscriptions under a specific Azure subscription and resource group
 //
 // resourceGroupName is the name of the resource group within the user's subscription.
@@ -454,7 +455,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroup(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupPreparer prepares the ListGlobalByResourceGroup request.
 func (client EventSubscriptionsClient) ListGlobalByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -475,7 +476,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupPreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupSender sends the ListGlobalByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListGlobalByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -483,7 +484,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupSender(req *http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupResponder handles the response to the ListGlobalByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListGlobalByResourceGroupResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -497,7 +498,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupResponder(resp *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupForTopicType list all global event subscriptions under a resource group for a specific
 // topic type.
 //
@@ -525,7 +526,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicType(ctx
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupForTopicTypePreparer prepares the ListGlobalByResourceGroupForTopicType request.
 func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicTypePreparer(ctx context.Context, resourceGroupName string, topicTypeName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -547,7 +548,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicTypePrep
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupForTopicTypeSender sends the ListGlobalByResourceGroupForTopicType request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicTypeSender(req *http.Request) (*http.Response, error) {
@@ -555,7 +556,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicTypeSend
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalByResourceGroupForTopicTypeResponder handles the response to the ListGlobalByResourceGroupForTopicType request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicTypeResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -569,7 +570,7 @@ func (client EventSubscriptionsClient) ListGlobalByResourceGroupForTopicTypeResp
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscription list all aggregated global event subscriptions under a specific Azure subscription
 func (client EventSubscriptionsClient) ListGlobalBySubscription(ctx context.Context) (result EventSubscriptionsListResult, err error) {
 	req, err := client.ListGlobalBySubscriptionPreparer(ctx)
@@ -593,7 +594,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscription(ctx context.Cont
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionPreparer prepares the ListGlobalBySubscription request.
 func (client EventSubscriptionsClient) ListGlobalBySubscriptionPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -613,7 +614,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionPreparer(ctx cont
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionSender sends the ListGlobalBySubscription request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListGlobalBySubscriptionSender(req *http.Request) (*http.Response, error) {
@@ -621,7 +622,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionSender(req *http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionResponder handles the response to the ListGlobalBySubscription request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListGlobalBySubscriptionResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -635,7 +636,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionResponder(resp *h
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionForTopicType list all global event subscriptions under an Azure subscription for a topic
 // type.
 //
@@ -662,7 +663,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicType(ctx 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionForTopicTypePreparer prepares the ListGlobalBySubscriptionForTopicType request.
 func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicTypePreparer(ctx context.Context, topicTypeName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -683,7 +684,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicTypePrepa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionForTopicTypeSender sends the ListGlobalBySubscriptionForTopicType request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicTypeSender(req *http.Request) (*http.Response, error) {
@@ -691,7 +692,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicTypeSende
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListGlobalBySubscriptionForTopicTypeResponder handles the response to the ListGlobalBySubscriptionForTopicType request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicTypeResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -705,7 +706,7 @@ func (client EventSubscriptionsClient) ListGlobalBySubscriptionForTopicTypeRespo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroup list all event subscriptions from the given location under a specific Azure subscription
 // and resource group
 //
@@ -733,7 +734,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroup(ctx context.C
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupPreparer prepares the ListRegionalByResourceGroup request.
 func (client EventSubscriptionsClient) ListRegionalByResourceGroupPreparer(ctx context.Context, resourceGroupName string, location string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -755,7 +756,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupPreparer(ctx c
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupSender sends the ListRegionalByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListRegionalByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -763,7 +764,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupSender(req *ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupResponder handles the response to the ListRegionalByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListRegionalByResourceGroupResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -777,7 +778,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupResponder(resp
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupForTopicType list all event subscriptions from the given location under a specific Azure
 // subscription and resource group and topic type
 //
@@ -805,7 +806,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicType(c
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupForTopicTypePreparer prepares the ListRegionalByResourceGroupForTopicType request.
 func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicTypePreparer(ctx context.Context, resourceGroupName string, location string, topicTypeName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -828,7 +829,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicTypePr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupForTopicTypeSender sends the ListRegionalByResourceGroupForTopicType request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicTypeSender(req *http.Request) (*http.Response, error) {
@@ -836,7 +837,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicTypeSe
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalByResourceGroupForTopicTypeResponder handles the response to the ListRegionalByResourceGroupForTopicType request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicTypeResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -850,7 +851,7 @@ func (client EventSubscriptionsClient) ListRegionalByResourceGroupForTopicTypeRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscription list all event subscriptions from the given location under a specific Azure subscription
 //
 // location is name of the location
@@ -876,7 +877,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscription(ctx context.Co
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionPreparer prepares the ListRegionalBySubscription request.
 func (client EventSubscriptionsClient) ListRegionalBySubscriptionPreparer(ctx context.Context, location string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -897,7 +898,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionPreparer(ctx co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionSender sends the ListRegionalBySubscription request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListRegionalBySubscriptionSender(req *http.Request) (*http.Response, error) {
@@ -905,7 +906,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionSender(req *htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionResponder handles the response to the ListRegionalBySubscription request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListRegionalBySubscriptionResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -919,7 +920,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionResponder(resp 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionForTopicType list all event subscriptions from the given location under a specific Azure
 // subscription and topic type.
 //
@@ -946,7 +947,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicType(ct
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionForTopicTypePreparer prepares the ListRegionalBySubscriptionForTopicType request.
 func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicTypePreparer(ctx context.Context, location string, topicTypeName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -968,7 +969,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicTypePre
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionForTopicTypeSender sends the ListRegionalBySubscriptionForTopicType request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicTypeSender(req *http.Request) (*http.Response, error) {
@@ -976,7 +977,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicTypeSen
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // ListRegionalBySubscriptionForTopicTypeResponder handles the response to the ListRegionalBySubscriptionForTopicType request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicTypeResponder(resp *http.Response) (result EventSubscriptionsListResult, err error) {
@@ -990,7 +991,7 @@ func (client EventSubscriptionsClient) ListRegionalBySubscriptionForTopicTypeRes
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // Update asynchronously updates an existing event subscription.
 //
 // scope is the scope of existing event subscription. The scope can be a subscription, or a resource group, or a
@@ -1018,7 +1019,7 @@ func (client EventSubscriptionsClient) Update(ctx context.Context, scope string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // UpdatePreparer prepares the Update request.
 func (client EventSubscriptionsClient) UpdatePreparer(ctx context.Context, scope string, eventSubscriptionName string, eventSubscriptionUpdateParameters EventSubscriptionUpdateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1041,7 +1042,7 @@ func (client EventSubscriptionsClient) UpdatePreparer(ctx context.Context, scope
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client EventSubscriptionsClient) UpdateSender(req *http.Request) (future EventSubscriptionsUpdateFuture, err error) {
@@ -1057,7 +1058,7 @@ func (client EventSubscriptionsClient) UpdateSender(req *http.Request) (future E
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/eventgrid/mgmt/2017-09-15-preview/eventgrid instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client EventSubscriptionsClient) UpdateResponder(resp *http.Response) (result EventSubscription, err error) {

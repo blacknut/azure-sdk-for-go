@@ -19,13 +19,14 @@ package sql
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ServerCommunicationLinksClient is the the Azure SQL Database management API provides a RESTful set of web services
 // that interact with Azure SQL Database services to manage your databases. The API enables you to create, retrieve,
 // update, and delete databases.
@@ -33,19 +34,19 @@ type ServerCommunicationLinksClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // NewServerCommunicationLinksClient creates an instance of the ServerCommunicationLinksClient client.
 func NewServerCommunicationLinksClient(subscriptionID string) ServerCommunicationLinksClient {
 	return NewServerCommunicationLinksClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // NewServerCommunicationLinksClientWithBaseURI creates an instance of the ServerCommunicationLinksClient client.
 func NewServerCommunicationLinksClientWithBaseURI(baseURI string, subscriptionID string) ServerCommunicationLinksClient {
 	return ServerCommunicationLinksClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdate creates a server communication link.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -75,7 +76,7 @@ func (client ServerCommunicationLinksClient) CreateOrUpdate(ctx context.Context,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client ServerCommunicationLinksClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, communicationLinkName string, parameters ServerCommunicationLink) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -100,7 +101,7 @@ func (client ServerCommunicationLinksClient) CreateOrUpdatePreparer(ctx context.
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerCommunicationLinksClient) CreateOrUpdateSender(req *http.Request) (future ServerCommunicationLinksCreateOrUpdateFuture, err error) {
@@ -116,7 +117,7 @@ func (client ServerCommunicationLinksClient) CreateOrUpdateSender(req *http.Requ
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client ServerCommunicationLinksClient) CreateOrUpdateResponder(resp *http.Response) (result ServerCommunicationLink, err error) {
@@ -130,7 +131,7 @@ func (client ServerCommunicationLinksClient) CreateOrUpdateResponder(resp *http.
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Delete deletes a server communication link.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -158,7 +159,7 @@ func (client ServerCommunicationLinksClient) Delete(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeletePreparer prepares the Delete request.
 func (client ServerCommunicationLinksClient) DeletePreparer(ctx context.Context, resourceGroupName string, serverName string, communicationLinkName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -181,7 +182,7 @@ func (client ServerCommunicationLinksClient) DeletePreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerCommunicationLinksClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -189,7 +190,7 @@ func (client ServerCommunicationLinksClient) DeleteSender(req *http.Request) (*h
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client ServerCommunicationLinksClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -202,7 +203,7 @@ func (client ServerCommunicationLinksClient) DeleteResponder(resp *http.Response
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Get returns a server communication link.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -230,7 +231,7 @@ func (client ServerCommunicationLinksClient) Get(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetPreparer prepares the Get request.
 func (client ServerCommunicationLinksClient) GetPreparer(ctx context.Context, resourceGroupName string, serverName string, communicationLinkName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -253,7 +254,7 @@ func (client ServerCommunicationLinksClient) GetPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerCommunicationLinksClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -261,7 +262,7 @@ func (client ServerCommunicationLinksClient) GetSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ServerCommunicationLinksClient) GetResponder(resp *http.Response) (result ServerCommunicationLink, err error) {
@@ -275,7 +276,7 @@ func (client ServerCommunicationLinksClient) GetResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServer gets a list of server communication links.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -302,7 +303,7 @@ func (client ServerCommunicationLinksClient) ListByServer(ctx context.Context, r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServerPreparer prepares the ListByServer request.
 func (client ServerCommunicationLinksClient) ListByServerPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -324,7 +325,7 @@ func (client ServerCommunicationLinksClient) ListByServerPreparer(ctx context.Co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServerSender sends the ListByServer request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerCommunicationLinksClient) ListByServerSender(req *http.Request) (*http.Response, error) {
@@ -332,7 +333,7 @@ func (client ServerCommunicationLinksClient) ListByServerSender(req *http.Reques
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByServerResponder handles the response to the ListByServer request. The method always
 // closes the http.Response Body.
 func (client ServerCommunicationLinksClient) ListByServerResponder(resp *http.Response) (result ServerCommunicationLinkListResult, err error) {

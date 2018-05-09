@@ -19,12 +19,13 @@ package authorization
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // RoleDefinitionsClient is the role based access control provides you a way to apply granular level policy
 // administration down to individual resources or resource groups. These operations enable you to manage role
 // definitions and role assignments. A role definition describes the set of actions that can be performed on resources.
@@ -33,19 +34,19 @@ type RoleDefinitionsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // NewRoleDefinitionsClient creates an instance of the RoleDefinitionsClient client.
 func NewRoleDefinitionsClient(subscriptionID string) RoleDefinitionsClient {
 	return NewRoleDefinitionsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // NewRoleDefinitionsClientWithBaseURI creates an instance of the RoleDefinitionsClient client.
 func NewRoleDefinitionsClientWithBaseURI(baseURI string, subscriptionID string) RoleDefinitionsClient {
 	return RoleDefinitionsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // CreateOrUpdate creates or updates a role definition.
 //
 // scope is the scope of the role definition. roleDefinitionID is the ID of the role definition. roleDefinition is
@@ -72,7 +73,7 @@ func (client RoleDefinitionsClient) CreateOrUpdate(ctx context.Context, scope st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client RoleDefinitionsClient) CreateOrUpdatePreparer(ctx context.Context, scope string, roleDefinitionID string, roleDefinition RoleDefinition) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -95,7 +96,7 @@ func (client RoleDefinitionsClient) CreateOrUpdatePreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client RoleDefinitionsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -103,7 +104,7 @@ func (client RoleDefinitionsClient) CreateOrUpdateSender(req *http.Request) (*ht
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client RoleDefinitionsClient) CreateOrUpdateResponder(resp *http.Response) (result RoleDefinition, err error) {
@@ -117,7 +118,7 @@ func (client RoleDefinitionsClient) CreateOrUpdateResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // Delete deletes a role definition.
 //
 // scope is the scope of the role definition. roleDefinitionID is the ID of the role definition to delete.
@@ -143,7 +144,7 @@ func (client RoleDefinitionsClient) Delete(ctx context.Context, scope string, ro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // DeletePreparer prepares the Delete request.
 func (client RoleDefinitionsClient) DeletePreparer(ctx context.Context, scope string, roleDefinitionID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -164,7 +165,7 @@ func (client RoleDefinitionsClient) DeletePreparer(ctx context.Context, scope st
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client RoleDefinitionsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -172,7 +173,7 @@ func (client RoleDefinitionsClient) DeleteSender(req *http.Request) (*http.Respo
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client RoleDefinitionsClient) DeleteResponder(resp *http.Response) (result RoleDefinition, err error) {
@@ -186,7 +187,7 @@ func (client RoleDefinitionsClient) DeleteResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // Get get role definition by name (GUID).
 //
 // scope is the scope of the role definition. roleDefinitionID is the ID of the role definition.
@@ -212,7 +213,7 @@ func (client RoleDefinitionsClient) Get(ctx context.Context, scope string, roleD
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetPreparer prepares the Get request.
 func (client RoleDefinitionsClient) GetPreparer(ctx context.Context, scope string, roleDefinitionID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -233,7 +234,7 @@ func (client RoleDefinitionsClient) GetPreparer(ctx context.Context, scope strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client RoleDefinitionsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -241,7 +242,7 @@ func (client RoleDefinitionsClient) GetSender(req *http.Request) (*http.Response
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client RoleDefinitionsClient) GetResponder(resp *http.Response) (result RoleDefinition, err error) {
@@ -255,7 +256,7 @@ func (client RoleDefinitionsClient) GetResponder(resp *http.Response) (result Ro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetByID gets a role definition by ID.
 //
 // roleDefinitionID is the fully qualified role definition ID. Use the format,
@@ -284,7 +285,7 @@ func (client RoleDefinitionsClient) GetByID(ctx context.Context, roleDefinitionI
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetByIDPreparer prepares the GetByID request.
 func (client RoleDefinitionsClient) GetByIDPreparer(ctx context.Context, roleDefinitionID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -304,7 +305,7 @@ func (client RoleDefinitionsClient) GetByIDPreparer(ctx context.Context, roleDef
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetByIDSender sends the GetByID request. The method will close the
 // http.Response Body if it receives an error.
 func (client RoleDefinitionsClient) GetByIDSender(req *http.Request) (*http.Response, error) {
@@ -312,7 +313,7 @@ func (client RoleDefinitionsClient) GetByIDSender(req *http.Request) (*http.Resp
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // GetByIDResponder handles the response to the GetByID request. The method always
 // closes the http.Response Body.
 func (client RoleDefinitionsClient) GetByIDResponder(resp *http.Response) (result RoleDefinition, err error) {
@@ -326,7 +327,7 @@ func (client RoleDefinitionsClient) GetByIDResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // List get all role definitions that are applicable at scope and above.
 //
 // scope is the scope of the role definition. filter is the filter to apply on the operation. Use atScopeAndBelow
@@ -354,7 +355,7 @@ func (client RoleDefinitionsClient) List(ctx context.Context, scope string, filt
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // ListPreparer prepares the List request.
 func (client RoleDefinitionsClient) ListPreparer(ctx context.Context, scope string, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -377,7 +378,7 @@ func (client RoleDefinitionsClient) ListPreparer(ctx context.Context, scope stri
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client RoleDefinitionsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -385,7 +386,7 @@ func (client RoleDefinitionsClient) ListSender(req *http.Request) (*http.Respons
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client RoleDefinitionsClient) ListResponder(resp *http.Response) (result RoleDefinitionListResult, err error) {
@@ -420,7 +421,7 @@ func (client RoleDefinitionsClient) listNextResults(lastResults RoleDefinitionLi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/authorization/mgmt/2017-10-01-preview/authorization instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client RoleDefinitionsClient) ListComplete(ctx context.Context, scope string, filter string) (result RoleDefinitionListResultIterator, err error) {
 	result.page, err = client.List(ctx, scope, filter)

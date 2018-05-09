@@ -19,30 +19,31 @@ package compute
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionsClient is the compute Client
 type VirtualMachineExtensionsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NewVirtualMachineExtensionsClient creates an instance of the VirtualMachineExtensionsClient client.
 func NewVirtualMachineExtensionsClient(subscriptionID string) VirtualMachineExtensionsClient {
 	return NewVirtualMachineExtensionsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NewVirtualMachineExtensionsClientWithBaseURI creates an instance of the VirtualMachineExtensionsClient client.
 func NewVirtualMachineExtensionsClientWithBaseURI(baseURI string, subscriptionID string) VirtualMachineExtensionsClient {
 	return VirtualMachineExtensionsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // CreateOrUpdate the operation to create or update the extension.
 //
 // resourceGroupName is the name of the resource group. VMName is the name of the virtual machine where the
@@ -64,7 +65,7 @@ func (client VirtualMachineExtensionsClient) CreateOrUpdate(ctx context.Context,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client VirtualMachineExtensionsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, VMName string, VMExtensionName string, extensionParameters VirtualMachineExtension) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -89,7 +90,7 @@ func (client VirtualMachineExtensionsClient) CreateOrUpdatePreparer(ctx context.
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualMachineExtensionsClient) CreateOrUpdateSender(req *http.Request) (future VirtualMachineExtensionsCreateOrUpdateFuture, err error) {
@@ -105,7 +106,7 @@ func (client VirtualMachineExtensionsClient) CreateOrUpdateSender(req *http.Requ
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client VirtualMachineExtensionsClient) CreateOrUpdateResponder(resp *http.Response) (result VirtualMachineExtension, err error) {
@@ -119,7 +120,7 @@ func (client VirtualMachineExtensionsClient) CreateOrUpdateResponder(resp *http.
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Delete the operation to delete the extension.
 //
 // resourceGroupName is the name of the resource group. VMName is the name of the virtual machine where the
@@ -140,7 +141,7 @@ func (client VirtualMachineExtensionsClient) Delete(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DeletePreparer prepares the Delete request.
 func (client VirtualMachineExtensionsClient) DeletePreparer(ctx context.Context, resourceGroupName string, VMName string, VMExtensionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -163,7 +164,7 @@ func (client VirtualMachineExtensionsClient) DeletePreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualMachineExtensionsClient) DeleteSender(req *http.Request) (future VirtualMachineExtensionsDeleteFuture, err error) {
@@ -179,7 +180,7 @@ func (client VirtualMachineExtensionsClient) DeleteSender(req *http.Request) (fu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client VirtualMachineExtensionsClient) DeleteResponder(resp *http.Response) (result OperationStatusResponse, err error) {
@@ -193,7 +194,7 @@ func (client VirtualMachineExtensionsClient) DeleteResponder(resp *http.Response
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Get the operation to get the extension.
 //
 // resourceGroupName is the name of the resource group. VMName is the name of the virtual machine containing the
@@ -221,7 +222,7 @@ func (client VirtualMachineExtensionsClient) Get(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // GetPreparer prepares the Get request.
 func (client VirtualMachineExtensionsClient) GetPreparer(ctx context.Context, resourceGroupName string, VMName string, VMExtensionName string, expand string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -247,7 +248,7 @@ func (client VirtualMachineExtensionsClient) GetPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualMachineExtensionsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -255,7 +256,7 @@ func (client VirtualMachineExtensionsClient) GetSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client VirtualMachineExtensionsClient) GetResponder(resp *http.Response) (result VirtualMachineExtension, err error) {
@@ -269,7 +270,7 @@ func (client VirtualMachineExtensionsClient) GetResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Update the operation to update the extension.
 //
 // resourceGroupName is the name of the resource group. VMName is the name of the virtual machine where the
@@ -291,7 +292,7 @@ func (client VirtualMachineExtensionsClient) Update(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UpdatePreparer prepares the Update request.
 func (client VirtualMachineExtensionsClient) UpdatePreparer(ctx context.Context, resourceGroupName string, VMName string, VMExtensionName string, extensionParameters VirtualMachineExtensionUpdate) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -316,7 +317,7 @@ func (client VirtualMachineExtensionsClient) UpdatePreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualMachineExtensionsClient) UpdateSender(req *http.Request) (future VirtualMachineExtensionsUpdateFuture, err error) {
@@ -332,7 +333,7 @@ func (client VirtualMachineExtensionsClient) UpdateSender(req *http.Request) (fu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client VirtualMachineExtensionsClient) UpdateResponder(resp *http.Response) (result VirtualMachineExtension, err error) {

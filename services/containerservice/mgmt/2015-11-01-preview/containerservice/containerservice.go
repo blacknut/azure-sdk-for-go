@@ -19,31 +19,32 @@ package containerservice
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // Client is the compute Client
 type Client struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // NewClient creates an instance of the Client client.
 func NewClient(subscriptionID string) Client {
 	return NewClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // NewClientWithBaseURI creates an instance of the Client client.
 func NewClientWithBaseURI(baseURI string, subscriptionID string) Client {
 	return Client{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // CreateOrUpdate the operation to create or update a container service.
 //
 // resourceGroupName is the name of the resource group. containerServiceName is the name of the container service
@@ -83,7 +84,7 @@ func (client Client) CreateOrUpdate(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client Client) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, containerServiceName string, parameters ContainerService) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -107,7 +108,7 @@ func (client Client) CreateOrUpdatePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) CreateOrUpdateSender(req *http.Request) (future CreateOrUpdateFuture, err error) {
@@ -123,7 +124,7 @@ func (client Client) CreateOrUpdateSender(req *http.Request) (future CreateOrUpd
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client Client) CreateOrUpdateResponder(resp *http.Response) (result ContainerService, err error) {
@@ -137,7 +138,7 @@ func (client Client) CreateOrUpdateResponder(resp *http.Response) (result Contai
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // Delete the operation to delete a container service.
 //
 // resourceGroupName is the name of the resource group. containerServiceName is the name of the container service
@@ -158,7 +159,7 @@ func (client Client) Delete(ctx context.Context, resourceGroupName string, conta
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // DeletePreparer prepares the Delete request.
 func (client Client) DeletePreparer(ctx context.Context, resourceGroupName string, containerServiceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -180,7 +181,7 @@ func (client Client) DeletePreparer(ctx context.Context, resourceGroupName strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) DeleteSender(req *http.Request) (future DeleteFuture, err error) {
@@ -196,7 +197,7 @@ func (client Client) DeleteSender(req *http.Request) (future DeleteFuture, err e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client Client) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -209,7 +210,7 @@ func (client Client) DeleteResponder(resp *http.Response) (result autorest.Respo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // Get the operation to get a container service.
 //
 // resourceGroupName is the name of the resource group. containerServiceName is the name of the container service
@@ -236,7 +237,7 @@ func (client Client) Get(ctx context.Context, resourceGroupName string, containe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // GetPreparer prepares the Get request.
 func (client Client) GetPreparer(ctx context.Context, resourceGroupName string, containerServiceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -258,7 +259,7 @@ func (client Client) GetPreparer(ctx context.Context, resourceGroupName string, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) GetSender(req *http.Request) (*http.Response, error) {
@@ -266,7 +267,7 @@ func (client Client) GetSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client Client) GetResponder(resp *http.Response) (result ContainerService, err error) {
@@ -280,7 +281,7 @@ func (client Client) GetResponder(resp *http.Response) (result ContainerService,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // ListByResourceGroup the operation to list container services.
 //
 // resourceGroupName is the name of the resource group.
@@ -306,7 +307,7 @@ func (client Client) ListByResourceGroup(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client Client) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -327,7 +328,7 @@ func (client Client) ListByResourceGroupPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -335,7 +336,7 @@ func (client Client) ListByResourceGroupSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerservice/mgmt/2015-11-01-preview/containerservice instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client Client) ListByResourceGroupResponder(resp *http.Response) (result ListResult, err error) {

@@ -19,12 +19,13 @@ package sql
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // SyncGroupsClient is the the Azure SQL Database management API provides a RESTful set of web services that interact
 // with Azure SQL Database services to manage your databases. The API enables you to create, retrieve, update, and
 // delete databases.
@@ -32,19 +33,19 @@ type SyncGroupsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // NewSyncGroupsClient creates an instance of the SyncGroupsClient client.
 func NewSyncGroupsClient(subscriptionID string) SyncGroupsClient {
 	return NewSyncGroupsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // NewSyncGroupsClientWithBaseURI creates an instance of the SyncGroupsClient client.
 func NewSyncGroupsClientWithBaseURI(baseURI string, subscriptionID string) SyncGroupsClient {
 	return SyncGroupsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CancelSync cancels a sync group synchronization.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -72,7 +73,7 @@ func (client SyncGroupsClient) CancelSync(ctx context.Context, resourceGroupName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CancelSyncPreparer prepares the CancelSync request.
 func (client SyncGroupsClient) CancelSyncPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -96,7 +97,7 @@ func (client SyncGroupsClient) CancelSyncPreparer(ctx context.Context, resourceG
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CancelSyncSender sends the CancelSync request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) CancelSyncSender(req *http.Request) (*http.Response, error) {
@@ -104,7 +105,7 @@ func (client SyncGroupsClient) CancelSyncSender(req *http.Request) (*http.Respon
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CancelSyncResponder handles the response to the CancelSync request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) CancelSyncResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -117,7 +118,7 @@ func (client SyncGroupsClient) CancelSyncResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdate creates or updates a sync group.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -140,7 +141,7 @@ func (client SyncGroupsClient) CreateOrUpdate(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client SyncGroupsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string, parameters SyncGroup) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -166,7 +167,7 @@ func (client SyncGroupsClient) CreateOrUpdatePreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) CreateOrUpdateSender(req *http.Request) (future SyncGroupsCreateOrUpdateFuture, err error) {
@@ -182,7 +183,7 @@ func (client SyncGroupsClient) CreateOrUpdateSender(req *http.Request) (future S
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) CreateOrUpdateResponder(resp *http.Response) (result SyncGroup, err error) {
@@ -196,7 +197,7 @@ func (client SyncGroupsClient) CreateOrUpdateResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Delete deletes a sync group.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -218,7 +219,7 @@ func (client SyncGroupsClient) Delete(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeletePreparer prepares the Delete request.
 func (client SyncGroupsClient) DeletePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -242,7 +243,7 @@ func (client SyncGroupsClient) DeletePreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) DeleteSender(req *http.Request) (future SyncGroupsDeleteFuture, err error) {
@@ -258,7 +259,7 @@ func (client SyncGroupsClient) DeleteSender(req *http.Request) (future SyncGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -271,7 +272,7 @@ func (client SyncGroupsClient) DeleteResponder(resp *http.Response) (result auto
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Get gets a sync group.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -299,7 +300,7 @@ func (client SyncGroupsClient) Get(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetPreparer prepares the Get request.
 func (client SyncGroupsClient) GetPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -323,7 +324,7 @@ func (client SyncGroupsClient) GetPreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -331,7 +332,7 @@ func (client SyncGroupsClient) GetSender(req *http.Request) (*http.Response, err
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) GetResponder(resp *http.Response) (result SyncGroup, err error) {
@@ -345,7 +346,7 @@ func (client SyncGroupsClient) GetResponder(resp *http.Response) (result SyncGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByDatabase lists sync groups under a hub database.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -374,7 +375,7 @@ func (client SyncGroupsClient) ListByDatabase(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByDatabasePreparer prepares the ListByDatabase request.
 func (client SyncGroupsClient) ListByDatabasePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -397,7 +398,7 @@ func (client SyncGroupsClient) ListByDatabasePreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByDatabaseSender sends the ListByDatabase request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) ListByDatabaseSender(req *http.Request) (*http.Response, error) {
@@ -405,7 +406,7 @@ func (client SyncGroupsClient) ListByDatabaseSender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByDatabaseResponder handles the response to the ListByDatabase request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) ListByDatabaseResponder(resp *http.Response) (result SyncGroupListResult, err error) {
@@ -440,14 +441,14 @@ func (client SyncGroupsClient) listByDatabaseNextResults(lastResults SyncGroupLi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListByDatabaseComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SyncGroupsClient) ListByDatabaseComplete(ctx context.Context, resourceGroupName string, serverName string, databaseName string) (result SyncGroupListResultIterator, err error) {
 	result.page, err = client.ListByDatabase(ctx, resourceGroupName, serverName, databaseName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListHubSchemas gets a collection of hub database schemas.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -476,7 +477,7 @@ func (client SyncGroupsClient) ListHubSchemas(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListHubSchemasPreparer prepares the ListHubSchemas request.
 func (client SyncGroupsClient) ListHubSchemasPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -500,7 +501,7 @@ func (client SyncGroupsClient) ListHubSchemasPreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListHubSchemasSender sends the ListHubSchemas request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) ListHubSchemasSender(req *http.Request) (*http.Response, error) {
@@ -508,7 +509,7 @@ func (client SyncGroupsClient) ListHubSchemasSender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListHubSchemasResponder handles the response to the ListHubSchemas request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) ListHubSchemasResponder(resp *http.Response) (result SyncFullSchemaPropertiesListResult, err error) {
@@ -543,14 +544,14 @@ func (client SyncGroupsClient) listHubSchemasNextResults(lastResults SyncFullSch
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListHubSchemasComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SyncGroupsClient) ListHubSchemasComplete(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (result SyncFullSchemaPropertiesListResultIterator, err error) {
 	result.page, err = client.ListHubSchemas(ctx, resourceGroupName, serverName, databaseName, syncGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListLogs gets a collection of sync group logs.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -581,7 +582,7 @@ func (client SyncGroupsClient) ListLogs(ctx context.Context, resourceGroupName s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListLogsPreparer prepares the ListLogs request.
 func (client SyncGroupsClient) ListLogsPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string, startTime string, endTime string, typeParameter string, continuationToken string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -611,7 +612,7 @@ func (client SyncGroupsClient) ListLogsPreparer(ctx context.Context, resourceGro
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListLogsSender sends the ListLogs request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) ListLogsSender(req *http.Request) (*http.Response, error) {
@@ -619,7 +620,7 @@ func (client SyncGroupsClient) ListLogsSender(req *http.Request) (*http.Response
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListLogsResponder handles the response to the ListLogs request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) ListLogsResponder(resp *http.Response) (result SyncGroupLogListResult, err error) {
@@ -654,14 +655,14 @@ func (client SyncGroupsClient) listLogsNextResults(lastResults SyncGroupLogListR
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListLogsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SyncGroupsClient) ListLogsComplete(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string, startTime string, endTime string, typeParameter string, continuationToken string) (result SyncGroupLogListResultIterator, err error) {
 	result.page, err = client.ListLogs(ctx, resourceGroupName, serverName, databaseName, syncGroupName, startTime, endTime, typeParameter, continuationToken)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListSyncDatabaseIds gets a collection of sync database ids.
 //
 // locationName is the name of the region where the resource is located.
@@ -688,7 +689,7 @@ func (client SyncGroupsClient) ListSyncDatabaseIds(ctx context.Context, location
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListSyncDatabaseIdsPreparer prepares the ListSyncDatabaseIds request.
 func (client SyncGroupsClient) ListSyncDatabaseIdsPreparer(ctx context.Context, locationName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -709,7 +710,7 @@ func (client SyncGroupsClient) ListSyncDatabaseIdsPreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListSyncDatabaseIdsSender sends the ListSyncDatabaseIds request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) ListSyncDatabaseIdsSender(req *http.Request) (*http.Response, error) {
@@ -717,7 +718,7 @@ func (client SyncGroupsClient) ListSyncDatabaseIdsSender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListSyncDatabaseIdsResponder handles the response to the ListSyncDatabaseIds request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) ListSyncDatabaseIdsResponder(resp *http.Response) (result SyncDatabaseIDListResult, err error) {
@@ -752,14 +753,14 @@ func (client SyncGroupsClient) listSyncDatabaseIdsNextResults(lastResults SyncDa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // ListSyncDatabaseIdsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SyncGroupsClient) ListSyncDatabaseIdsComplete(ctx context.Context, locationName string) (result SyncDatabaseIDListResultIterator, err error) {
 	result.page, err = client.ListSyncDatabaseIds(ctx, locationName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // RefreshHubSchema refreshes a hub database schema.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -781,7 +782,7 @@ func (client SyncGroupsClient) RefreshHubSchema(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // RefreshHubSchemaPreparer prepares the RefreshHubSchema request.
 func (client SyncGroupsClient) RefreshHubSchemaPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -805,7 +806,7 @@ func (client SyncGroupsClient) RefreshHubSchemaPreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // RefreshHubSchemaSender sends the RefreshHubSchema request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) RefreshHubSchemaSender(req *http.Request) (future SyncGroupsRefreshHubSchemaFuture, err error) {
@@ -821,7 +822,7 @@ func (client SyncGroupsClient) RefreshHubSchemaSender(req *http.Request) (future
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // RefreshHubSchemaResponder handles the response to the RefreshHubSchema request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) RefreshHubSchemaResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -834,7 +835,7 @@ func (client SyncGroupsClient) RefreshHubSchemaResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // TriggerSync triggers a sync group synchronization.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -862,7 +863,7 @@ func (client SyncGroupsClient) TriggerSync(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // TriggerSyncPreparer prepares the TriggerSync request.
 func (client SyncGroupsClient) TriggerSyncPreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -886,7 +887,7 @@ func (client SyncGroupsClient) TriggerSyncPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // TriggerSyncSender sends the TriggerSync request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) TriggerSyncSender(req *http.Request) (*http.Response, error) {
@@ -894,7 +895,7 @@ func (client SyncGroupsClient) TriggerSyncSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // TriggerSyncResponder handles the response to the TriggerSync request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) TriggerSyncResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -907,7 +908,7 @@ func (client SyncGroupsClient) TriggerSyncResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // Update updates a sync group.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -930,7 +931,7 @@ func (client SyncGroupsClient) Update(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // UpdatePreparer prepares the Update request.
 func (client SyncGroupsClient) UpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, databaseName string, syncGroupName string, parameters SyncGroup) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -956,7 +957,7 @@ func (client SyncGroupsClient) UpdatePreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client SyncGroupsClient) UpdateSender(req *http.Request) (future SyncGroupsUpdateFuture, err error) {
@@ -972,7 +973,7 @@ func (client SyncGroupsClient) UpdateSender(req *http.Request) (future SyncGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2015-05-01-preview/sql instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client SyncGroupsClient) UpdateResponder(resp *http.Response) (result SyncGroup, err error) {

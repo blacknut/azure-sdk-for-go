@@ -19,31 +19,32 @@ package managedapplications
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // AppliancesClient is the ARM managed applications (appliances)
 type AppliancesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // NewAppliancesClient creates an instance of the AppliancesClient client.
 func NewAppliancesClient(subscriptionID string) AppliancesClient {
 	return NewAppliancesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // NewAppliancesClientWithBaseURI creates an instance of the AppliancesClient client.
 func NewAppliancesClientWithBaseURI(baseURI string, subscriptionID string) AppliancesClient {
 	return AppliancesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdate creates a new appliance.
 //
 // resourceGroupName is the name of the resource group. The name is case insensitive. applianceName is the name of
@@ -86,7 +87,7 @@ func (client AppliancesClient) CreateOrUpdate(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client AppliancesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, applianceName string, parameters Appliance) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -110,7 +111,7 @@ func (client AppliancesClient) CreateOrUpdatePreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) CreateOrUpdateSender(req *http.Request) (future AppliancesCreateOrUpdateFuture, err error) {
@@ -126,7 +127,7 @@ func (client AppliancesClient) CreateOrUpdateSender(req *http.Request) (future A
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) CreateOrUpdateResponder(resp *http.Response) (result Appliance, err error) {
@@ -140,7 +141,7 @@ func (client AppliancesClient) CreateOrUpdateResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdateByID creates a new appliance.
 //
 // applianceID is the fully qualified ID of the appliance, including the appliance name and the appliance resource
@@ -178,7 +179,7 @@ func (client AppliancesClient) CreateOrUpdateByID(ctx context.Context, appliance
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdateByIDPreparer prepares the CreateOrUpdateByID request.
 func (client AppliancesClient) CreateOrUpdateByIDPreparer(ctx context.Context, applianceID string, parameters Appliance) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -200,7 +201,7 @@ func (client AppliancesClient) CreateOrUpdateByIDPreparer(ctx context.Context, a
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdateByIDSender sends the CreateOrUpdateByID request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) CreateOrUpdateByIDSender(req *http.Request) (future AppliancesCreateOrUpdateByIDFuture, err error) {
@@ -216,7 +217,7 @@ func (client AppliancesClient) CreateOrUpdateByIDSender(req *http.Request) (futu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // CreateOrUpdateByIDResponder handles the response to the CreateOrUpdateByID request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) CreateOrUpdateByIDResponder(resp *http.Response) (result Appliance, err error) {
@@ -230,7 +231,7 @@ func (client AppliancesClient) CreateOrUpdateByIDResponder(resp *http.Response) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // Delete deletes the appliance.
 //
 // resourceGroupName is the name of the resource group. The name is case insensitive. applianceName is the name of
@@ -262,7 +263,7 @@ func (client AppliancesClient) Delete(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeletePreparer prepares the Delete request.
 func (client AppliancesClient) DeletePreparer(ctx context.Context, resourceGroupName string, applianceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -284,7 +285,7 @@ func (client AppliancesClient) DeletePreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) DeleteSender(req *http.Request) (future AppliancesDeleteFuture, err error) {
@@ -300,7 +301,7 @@ func (client AppliancesClient) DeleteSender(req *http.Request) (future Appliance
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -313,7 +314,7 @@ func (client AppliancesClient) DeleteResponder(resp *http.Response) (result auto
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeleteByID deletes the appliance.
 //
 // applianceID is the fully qualified ID of the appliance, including the appliance name and the appliance resource
@@ -335,7 +336,7 @@ func (client AppliancesClient) DeleteByID(ctx context.Context, applianceID strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeleteByIDPreparer prepares the DeleteByID request.
 func (client AppliancesClient) DeleteByIDPreparer(ctx context.Context, applianceID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -355,7 +356,7 @@ func (client AppliancesClient) DeleteByIDPreparer(ctx context.Context, appliance
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeleteByIDSender sends the DeleteByID request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) DeleteByIDSender(req *http.Request) (future AppliancesDeleteByIDFuture, err error) {
@@ -371,7 +372,7 @@ func (client AppliancesClient) DeleteByIDSender(req *http.Request) (future Appli
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // DeleteByIDResponder handles the response to the DeleteByID request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) DeleteByIDResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -384,7 +385,7 @@ func (client AppliancesClient) DeleteByIDResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // Get gets the appliance.
 //
 // resourceGroupName is the name of the resource group. The name is case insensitive. applianceName is the name of
@@ -422,7 +423,7 @@ func (client AppliancesClient) Get(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetPreparer prepares the Get request.
 func (client AppliancesClient) GetPreparer(ctx context.Context, resourceGroupName string, applianceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -444,7 +445,7 @@ func (client AppliancesClient) GetPreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -452,7 +453,7 @@ func (client AppliancesClient) GetSender(req *http.Request) (*http.Response, err
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) GetResponder(resp *http.Response) (result Appliance, err error) {
@@ -466,7 +467,7 @@ func (client AppliancesClient) GetResponder(resp *http.Response) (result Applian
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetByID gets the appliance.
 //
 // applianceID is the fully qualified ID of the appliance, including the appliance name and the appliance resource
@@ -494,7 +495,7 @@ func (client AppliancesClient) GetByID(ctx context.Context, applianceID string) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetByIDPreparer prepares the GetByID request.
 func (client AppliancesClient) GetByIDPreparer(ctx context.Context, applianceID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -514,7 +515,7 @@ func (client AppliancesClient) GetByIDPreparer(ctx context.Context, applianceID 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetByIDSender sends the GetByID request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) GetByIDSender(req *http.Request) (*http.Response, error) {
@@ -522,7 +523,7 @@ func (client AppliancesClient) GetByIDSender(req *http.Request) (*http.Response,
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // GetByIDResponder handles the response to the GetByID request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) GetByIDResponder(resp *http.Response) (result Appliance, err error) {
@@ -536,7 +537,7 @@ func (client AppliancesClient) GetByIDResponder(resp *http.Response) (result App
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListByResourceGroup gets all the appliances within a resource group.
 //
 // resourceGroupName is the name of the resource group. The name is case insensitive.
@@ -571,7 +572,7 @@ func (client AppliancesClient) ListByResourceGroup(ctx context.Context, resource
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client AppliancesClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -592,7 +593,7 @@ func (client AppliancesClient) ListByResourceGroupPreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -600,7 +601,7 @@ func (client AppliancesClient) ListByResourceGroupSender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) ListByResourceGroupResponder(resp *http.Response) (result ApplianceListResult, err error) {
@@ -635,14 +636,14 @@ func (client AppliancesClient) listByResourceGroupNextResults(lastResults Applia
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListByResourceGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client AppliancesClient) ListByResourceGroupComplete(ctx context.Context, resourceGroupName string) (result ApplianceListResultIterator, err error) {
 	result.page, err = client.ListByResourceGroup(ctx, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListBySubscription gets all the appliances within a subscription.
 func (client AppliancesClient) ListBySubscription(ctx context.Context) (result ApplianceListResultPage, err error) {
 	result.fn = client.listBySubscriptionNextResults
@@ -667,7 +668,7 @@ func (client AppliancesClient) ListBySubscription(ctx context.Context) (result A
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListBySubscriptionPreparer prepares the ListBySubscription request.
 func (client AppliancesClient) ListBySubscriptionPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -687,7 +688,7 @@ func (client AppliancesClient) ListBySubscriptionPreparer(ctx context.Context) (
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListBySubscriptionSender sends the ListBySubscription request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) ListBySubscriptionSender(req *http.Request) (*http.Response, error) {
@@ -695,7 +696,7 @@ func (client AppliancesClient) ListBySubscriptionSender(req *http.Request) (*htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListBySubscriptionResponder handles the response to the ListBySubscription request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) ListBySubscriptionResponder(resp *http.Response) (result ApplianceListResult, err error) {
@@ -730,14 +731,14 @@ func (client AppliancesClient) listBySubscriptionNextResults(lastResults Applian
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // ListBySubscriptionComplete enumerates all values, automatically crossing page boundaries as required.
 func (client AppliancesClient) ListBySubscriptionComplete(ctx context.Context) (result ApplianceListResultIterator, err error) {
 	result.page, err = client.ListBySubscription(ctx)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // Update updates an existing appliance. The only value that can be updated via PATCH currently is the tags.
 //
 // resourceGroupName is the name of the resource group. The name is case insensitive. applianceName is the name of
@@ -775,7 +776,7 @@ func (client AppliancesClient) Update(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdatePreparer prepares the Update request.
 func (client AppliancesClient) UpdatePreparer(ctx context.Context, resourceGroupName string, applianceName string, parameters *Appliance) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -802,7 +803,7 @@ func (client AppliancesClient) UpdatePreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -810,7 +811,7 @@ func (client AppliancesClient) UpdateSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) UpdateResponder(resp *http.Response) (result Appliance, err error) {
@@ -824,7 +825,7 @@ func (client AppliancesClient) UpdateResponder(resp *http.Response) (result Appl
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdateByID updates an existing appliance. The only value that can be updated via PATCH currently is the tags.
 //
 // applianceID is the fully qualified ID of the appliance, including the appliance name and the appliance resource
@@ -853,7 +854,7 @@ func (client AppliancesClient) UpdateByID(ctx context.Context, applianceID strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdateByIDPreparer prepares the UpdateByID request.
 func (client AppliancesClient) UpdateByIDPreparer(ctx context.Context, applianceID string, parameters *Appliance) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -878,7 +879,7 @@ func (client AppliancesClient) UpdateByIDPreparer(ctx context.Context, appliance
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdateByIDSender sends the UpdateByID request. The method will close the
 // http.Response Body if it receives an error.
 func (client AppliancesClient) UpdateByIDSender(req *http.Request) (*http.Response, error) {
@@ -886,7 +887,7 @@ func (client AppliancesClient) UpdateByIDSender(req *http.Request) (*http.Respon
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2016-09-01-preview/managedapplications instead.
 // UpdateByIDResponder handles the response to the UpdateByID request. The method always
 // closes the http.Response Body.
 func (client AppliancesClient) UpdateByIDResponder(resp *http.Response) (result Appliance, err error) {

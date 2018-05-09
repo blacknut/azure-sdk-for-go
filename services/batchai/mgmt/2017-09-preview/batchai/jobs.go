@@ -19,31 +19,32 @@ package batchai
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // JobsClient is the the Azure BatchAI Management API.
 type JobsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // NewJobsClient creates an instance of the JobsClient client.
 func NewJobsClient(subscriptionID string) JobsClient {
 	return NewJobsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // NewJobsClientWithBaseURI creates an instance of the JobsClient client.
 func NewJobsClientWithBaseURI(baseURI string, subscriptionID string) JobsClient {
 	return JobsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // Create adds a Job that gets executed on a cluster.
 //
 // resourceGroupName is name of the resource group to which the resource belongs. jobName is the name of the job
@@ -107,7 +108,7 @@ func (client JobsClient) Create(ctx context.Context, resourceGroupName string, j
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // CreatePreparer prepares the Create request.
 func (client JobsClient) CreatePreparer(ctx context.Context, resourceGroupName string, jobName string, parameters JobCreateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -131,7 +132,7 @@ func (client JobsClient) CreatePreparer(ctx context.Context, resourceGroupName s
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // CreateSender sends the Create request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) CreateSender(req *http.Request) (future JobsCreateFuture, err error) {
@@ -147,7 +148,7 @@ func (client JobsClient) CreateSender(req *http.Request) (future JobsCreateFutur
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // CreateResponder handles the response to the Create request. The method always
 // closes the http.Response Body.
 func (client JobsClient) CreateResponder(resp *http.Response) (result Job, err error) {
@@ -161,7 +162,7 @@ func (client JobsClient) CreateResponder(resp *http.Response) (result Job, err e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // Delete deletes the specified Batch AI job.
 //
 // resourceGroupName is name of the resource group to which the resource belongs. jobName is the name of the job
@@ -193,7 +194,7 @@ func (client JobsClient) Delete(ctx context.Context, resourceGroupName string, j
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // DeletePreparer prepares the Delete request.
 func (client JobsClient) DeletePreparer(ctx context.Context, resourceGroupName string, jobName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -215,7 +216,7 @@ func (client JobsClient) DeletePreparer(ctx context.Context, resourceGroupName s
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) DeleteSender(req *http.Request) (future JobsDeleteFuture, err error) {
@@ -231,7 +232,7 @@ func (client JobsClient) DeleteSender(req *http.Request) (future JobsDeleteFutur
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client JobsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -244,7 +245,7 @@ func (client JobsClient) DeleteResponder(resp *http.Response) (result autorest.R
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // Get gets information about the specified Batch AI job.
 //
 // resourceGroupName is name of the resource group to which the resource belongs. jobName is the name of the job
@@ -282,7 +283,7 @@ func (client JobsClient) Get(ctx context.Context, resourceGroupName string, jobN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // GetPreparer prepares the Get request.
 func (client JobsClient) GetPreparer(ctx context.Context, resourceGroupName string, jobName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -304,7 +305,7 @@ func (client JobsClient) GetPreparer(ctx context.Context, resourceGroupName stri
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -312,7 +313,7 @@ func (client JobsClient) GetSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client JobsClient) GetResponder(resp *http.Response) (result Job, err error) {
@@ -326,7 +327,7 @@ func (client JobsClient) GetResponder(resp *http.Response) (result Job, err erro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // List gets information about the jobs associated with the subscription.
 //
 // filter is an OData $filter clause.. Used to filter results that are returned in the GET respnose.
@@ -364,7 +365,7 @@ func (client JobsClient) List(ctx context.Context, filter string, selectParamete
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListPreparer prepares the List request.
 func (client JobsClient) ListPreparer(ctx context.Context, filter string, selectParameter string, maxResults *int32) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -395,7 +396,7 @@ func (client JobsClient) ListPreparer(ctx context.Context, filter string, select
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -403,7 +404,7 @@ func (client JobsClient) ListSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client JobsClient) ListResponder(resp *http.Response) (result JobListResult, err error) {
@@ -438,14 +439,14 @@ func (client JobsClient) listNextResults(lastResults JobListResult) (result JobL
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client JobsClient) ListComplete(ctx context.Context, filter string, selectParameter string, maxResults *int32) (result JobListResultIterator, err error) {
 	result.page, err = client.List(ctx, filter, selectParameter, maxResults)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListByResourceGroup gets information about the Batch AI jobs associated within the specified resource group.
 //
 // resourceGroupName is name of the resource group to which the resource belongs. filter is an OData $filter
@@ -486,7 +487,7 @@ func (client JobsClient) ListByResourceGroup(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client JobsClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string, filter string, selectParameter string, maxResults *int32) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -518,7 +519,7 @@ func (client JobsClient) ListByResourceGroupPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -526,7 +527,7 @@ func (client JobsClient) ListByResourceGroupSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client JobsClient) ListByResourceGroupResponder(resp *http.Response) (result JobListResult, err error) {
@@ -561,14 +562,14 @@ func (client JobsClient) listByResourceGroupNextResults(lastResults JobListResul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListByResourceGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client JobsClient) ListByResourceGroupComplete(ctx context.Context, resourceGroupName string, filter string, selectParameter string, maxResults *int32) (result JobListResultIterator, err error) {
 	result.page, err = client.ListByResourceGroup(ctx, resourceGroupName, filter, selectParameter, maxResults)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListOutputFiles list all files inside the given output directory (Only if the output directory is on Azure File
 // Share or Azure Storage container).
 //
@@ -621,7 +622,7 @@ func (client JobsClient) ListOutputFiles(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListOutputFilesPreparer prepares the ListOutputFiles request.
 func (client JobsClient) ListOutputFilesPreparer(ctx context.Context, resourceGroupName string, jobName string, outputdirectoryid string, linkexpiryinminutes *int32, maxResults *int32) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -654,7 +655,7 @@ func (client JobsClient) ListOutputFilesPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListOutputFilesSender sends the ListOutputFiles request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) ListOutputFilesSender(req *http.Request) (*http.Response, error) {
@@ -662,7 +663,7 @@ func (client JobsClient) ListOutputFilesSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListOutputFilesResponder handles the response to the ListOutputFiles request. The method always
 // closes the http.Response Body.
 func (client JobsClient) ListOutputFilesResponder(resp *http.Response) (result FileListResult, err error) {
@@ -697,14 +698,14 @@ func (client JobsClient) listOutputFilesNextResults(lastResults FileListResult) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListOutputFilesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client JobsClient) ListOutputFilesComplete(ctx context.Context, resourceGroupName string, jobName string, outputdirectoryid string, linkexpiryinminutes *int32, maxResults *int32) (result FileListResultIterator, err error) {
 	result.page, err = client.ListOutputFiles(ctx, resourceGroupName, jobName, outputdirectoryid, linkexpiryinminutes, maxResults)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListRemoteLoginInformation gets the IP address and port information of all the compute nodes which are used for job
 // execution.
 //
@@ -744,7 +745,7 @@ func (client JobsClient) ListRemoteLoginInformation(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListRemoteLoginInformationPreparer prepares the ListRemoteLoginInformation request.
 func (client JobsClient) ListRemoteLoginInformationPreparer(ctx context.Context, resourceGroupName string, jobName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -766,7 +767,7 @@ func (client JobsClient) ListRemoteLoginInformationPreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListRemoteLoginInformationSender sends the ListRemoteLoginInformation request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) ListRemoteLoginInformationSender(req *http.Request) (*http.Response, error) {
@@ -774,7 +775,7 @@ func (client JobsClient) ListRemoteLoginInformationSender(req *http.Request) (*h
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListRemoteLoginInformationResponder handles the response to the ListRemoteLoginInformation request. The method always
 // closes the http.Response Body.
 func (client JobsClient) ListRemoteLoginInformationResponder(resp *http.Response) (result RemoteLoginInformationListResult, err error) {
@@ -809,14 +810,14 @@ func (client JobsClient) listRemoteLoginInformationNextResults(lastResults Remot
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // ListRemoteLoginInformationComplete enumerates all values, automatically crossing page boundaries as required.
 func (client JobsClient) ListRemoteLoginInformationComplete(ctx context.Context, resourceGroupName string, jobName string) (result RemoteLoginInformationListResultIterator, err error) {
 	result.page, err = client.ListRemoteLoginInformation(ctx, resourceGroupName, jobName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // Terminate terminates a job.
 //
 // resourceGroupName is name of the resource group to which the resource belongs. jobName is the name of the job
@@ -848,7 +849,7 @@ func (client JobsClient) Terminate(ctx context.Context, resourceGroupName string
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // TerminatePreparer prepares the Terminate request.
 func (client JobsClient) TerminatePreparer(ctx context.Context, resourceGroupName string, jobName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -870,7 +871,7 @@ func (client JobsClient) TerminatePreparer(ctx context.Context, resourceGroupNam
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // TerminateSender sends the Terminate request. The method will close the
 // http.Response Body if it receives an error.
 func (client JobsClient) TerminateSender(req *http.Request) (future JobsTerminateFuture, err error) {
@@ -886,7 +887,7 @@ func (client JobsClient) TerminateSender(req *http.Request) (future JobsTerminat
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/batchai/mgmt/2017-09-preview/batchai instead.
 // TerminateResponder handles the response to the Terminate request. The method always
 // closes the http.Response Body.
 func (client JobsClient) TerminateResponder(resp *http.Response) (result autorest.Response, err error) {

@@ -19,31 +19,32 @@ package compute
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineSizesClient is the compute Client
 type VirtualMachineSizesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NewVirtualMachineSizesClient creates an instance of the VirtualMachineSizesClient client.
 func NewVirtualMachineSizesClient(subscriptionID string) VirtualMachineSizesClient {
 	return NewVirtualMachineSizesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NewVirtualMachineSizesClientWithBaseURI creates an instance of the VirtualMachineSizesClient client.
 func NewVirtualMachineSizesClientWithBaseURI(baseURI string, subscriptionID string) VirtualMachineSizesClient {
 	return VirtualMachineSizesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // List lists all available virtual machine sizes for a subscription in a location.
 //
 // location is the location upon which virtual-machine-sizes is queried.
@@ -75,7 +76,7 @@ func (client VirtualMachineSizesClient) List(ctx context.Context, location strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListPreparer prepares the List request.
 func (client VirtualMachineSizesClient) ListPreparer(ctx context.Context, location string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -96,7 +97,7 @@ func (client VirtualMachineSizesClient) ListPreparer(ctx context.Context, locati
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualMachineSizesClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -104,7 +105,7 @@ func (client VirtualMachineSizesClient) ListSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client VirtualMachineSizesClient) ListResponder(resp *http.Response) (result VirtualMachineSizeListResult, err error) {

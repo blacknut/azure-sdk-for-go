@@ -19,30 +19,31 @@ package network
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // VirtualNetworksClient is the network Client
 type VirtualNetworksClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewVirtualNetworksClient creates an instance of the VirtualNetworksClient client.
 func NewVirtualNetworksClient(subscriptionID string) VirtualNetworksClient {
 	return NewVirtualNetworksClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewVirtualNetworksClientWithBaseURI creates an instance of the VirtualNetworksClient client.
 func NewVirtualNetworksClientWithBaseURI(baseURI string, subscriptionID string) VirtualNetworksClient {
 	return VirtualNetworksClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdate the Put VirtualNetwork operation creates/updates a virtual network in the specified resource group.
 //
 // resourceGroupName is the name of the resource group. virtualNetworkName is the name of the virtual network.
@@ -63,7 +64,7 @@ func (client VirtualNetworksClient) CreateOrUpdate(ctx context.Context, resource
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client VirtualNetworksClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, virtualNetworkName string, parameters VirtualNetwork) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -87,7 +88,7 @@ func (client VirtualNetworksClient) CreateOrUpdatePreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualNetworksClient) CreateOrUpdateSender(req *http.Request) (future VirtualNetworksCreateOrUpdateFuture, err error) {
@@ -103,7 +104,7 @@ func (client VirtualNetworksClient) CreateOrUpdateSender(req *http.Request) (fut
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client VirtualNetworksClient) CreateOrUpdateResponder(resp *http.Response) (result VirtualNetwork, err error) {
@@ -117,7 +118,7 @@ func (client VirtualNetworksClient) CreateOrUpdateResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Delete the Delete VirtualNetwork operation deletes the specifed virtual network
 //
 // resourceGroupName is the name of the resource group. virtualNetworkName is the name of the virtual network.
@@ -137,7 +138,7 @@ func (client VirtualNetworksClient) Delete(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeletePreparer prepares the Delete request.
 func (client VirtualNetworksClient) DeletePreparer(ctx context.Context, resourceGroupName string, virtualNetworkName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -159,7 +160,7 @@ func (client VirtualNetworksClient) DeletePreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualNetworksClient) DeleteSender(req *http.Request) (future VirtualNetworksDeleteFuture, err error) {
@@ -175,7 +176,7 @@ func (client VirtualNetworksClient) DeleteSender(req *http.Request) (future Virt
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client VirtualNetworksClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -188,7 +189,7 @@ func (client VirtualNetworksClient) DeleteResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Get the Get VirtualNetwork operation retrieves information about the specified virtual network.
 //
 // resourceGroupName is the name of the resource group. virtualNetworkName is the name of the virtual network.
@@ -214,7 +215,7 @@ func (client VirtualNetworksClient) Get(ctx context.Context, resourceGroupName s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetPreparer prepares the Get request.
 func (client VirtualNetworksClient) GetPreparer(ctx context.Context, resourceGroupName string, virtualNetworkName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -236,7 +237,7 @@ func (client VirtualNetworksClient) GetPreparer(ctx context.Context, resourceGro
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualNetworksClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -244,7 +245,7 @@ func (client VirtualNetworksClient) GetSender(req *http.Request) (*http.Response
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client VirtualNetworksClient) GetResponder(resp *http.Response) (result VirtualNetwork, err error) {
@@ -258,7 +259,7 @@ func (client VirtualNetworksClient) GetResponder(resp *http.Response) (result Vi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // List the list VirtualNetwork returns all Virtual Networks in a resource group
 //
 // resourceGroupName is the name of the resource group.
@@ -285,7 +286,7 @@ func (client VirtualNetworksClient) List(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListPreparer prepares the List request.
 func (client VirtualNetworksClient) ListPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -306,7 +307,7 @@ func (client VirtualNetworksClient) ListPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualNetworksClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -314,7 +315,7 @@ func (client VirtualNetworksClient) ListSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client VirtualNetworksClient) ListResponder(resp *http.Response) (result VirtualNetworkListResult, err error) {
@@ -349,14 +350,14 @@ func (client VirtualNetworksClient) listNextResults(lastResults VirtualNetworkLi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client VirtualNetworksClient) ListComplete(ctx context.Context, resourceGroupName string) (result VirtualNetworkListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAll the list VirtualNetwork returns all Virtual Networks in a subscription
 func (client VirtualNetworksClient) ListAll(ctx context.Context) (result VirtualNetworkListResultPage, err error) {
 	result.fn = client.listAllNextResults
@@ -381,7 +382,7 @@ func (client VirtualNetworksClient) ListAll(ctx context.Context) (result Virtual
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllPreparer prepares the ListAll request.
 func (client VirtualNetworksClient) ListAllPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -401,7 +402,7 @@ func (client VirtualNetworksClient) ListAllPreparer(ctx context.Context) (*http.
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllSender sends the ListAll request. The method will close the
 // http.Response Body if it receives an error.
 func (client VirtualNetworksClient) ListAllSender(req *http.Request) (*http.Response, error) {
@@ -409,7 +410,7 @@ func (client VirtualNetworksClient) ListAllSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllResponder handles the response to the ListAll request. The method always
 // closes the http.Response Body.
 func (client VirtualNetworksClient) ListAllResponder(resp *http.Response) (result VirtualNetworkListResult, err error) {
@@ -444,7 +445,7 @@ func (client VirtualNetworksClient) listAllNextResults(lastResults VirtualNetwor
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllComplete enumerates all values, automatically crossing page boundaries as required.
 func (client VirtualNetworksClient) ListAllComplete(ctx context.Context) (result VirtualNetworkListResultIterator, err error) {
 	result.page, err = client.ListAll(ctx)

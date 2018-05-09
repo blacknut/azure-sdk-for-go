@@ -23,7 +23,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/Azure/azure-sdk-for-go/tools/profileBuilder/model"
+	"github.com/blacknut/azure-sdk-for-go/tools/profileBuilder/model"
 	"github.com/marstr/randname"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

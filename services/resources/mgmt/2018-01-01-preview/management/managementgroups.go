@@ -19,12 +19,13 @@ package managementgroups
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // Client is the the Azure Management Groups API enables consolidation of multiple
 // subscriptions/resources into an organizational hierarchy and centrally
 // manage access control, policies, alerting and reporting for those resources.
@@ -32,19 +33,19 @@ type Client struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // NewClient creates an instance of the Client client.
 func NewClient(operationResultID string, skiptoken string) Client {
 	return NewClientWithBaseURI(DefaultBaseURI, operationResultID, skiptoken)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // NewClientWithBaseURI creates an instance of the Client client.
 func NewClientWithBaseURI(baseURI string, operationResultID string, skiptoken string) Client {
 	return Client{NewWithBaseURI(baseURI, operationResultID, skiptoken)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // CreateOrUpdate create or update a management group.
 // If a management group is already created and a subsequent create request is issued with different properties, the
 // management group properties will be updated.
@@ -67,7 +68,7 @@ func (client Client) CreateOrUpdate(ctx context.Context, groupID string, createM
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client Client) CreateOrUpdatePreparer(ctx context.Context, groupID string, createManagementGroupRequest CreateManagementGroupRequest, cacheControl string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -96,7 +97,7 @@ func (client Client) CreateOrUpdatePreparer(ctx context.Context, groupID string,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) CreateOrUpdateSender(req *http.Request) (future CreateOrUpdateFuture, err error) {
@@ -112,7 +113,7 @@ func (client Client) CreateOrUpdateSender(req *http.Request) (future CreateOrUpd
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client Client) CreateOrUpdateResponder(resp *http.Response) (result SetObject, err error) {
@@ -126,7 +127,7 @@ func (client Client) CreateOrUpdateResponder(resp *http.Response) (result SetObj
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // Delete delete management group.
 // If a management group contains child resources, the request will fail.
 //
@@ -147,7 +148,7 @@ func (client Client) Delete(ctx context.Context, groupID string, cacheControl st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // DeletePreparer prepares the Delete request.
 func (client Client) DeletePreparer(ctx context.Context, groupID string, cacheControl string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -174,7 +175,7 @@ func (client Client) DeletePreparer(ctx context.Context, groupID string, cacheCo
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) DeleteSender(req *http.Request) (future DeleteFuture, err error) {
@@ -190,7 +191,7 @@ func (client Client) DeleteSender(req *http.Request) (future DeleteFuture, err e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client Client) DeleteResponder(resp *http.Response) (result OperationResults, err error) {
@@ -204,7 +205,7 @@ func (client Client) DeleteResponder(resp *http.Response) (result OperationResul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // Get get the details of the management group.
 //
 // groupID is management Group ID. expand is the $expand=children query string parameter allows clients to request
@@ -235,7 +236,7 @@ func (client Client) Get(ctx context.Context, groupID string, expand string, rec
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // GetPreparer prepares the Get request.
 func (client Client) GetPreparer(ctx context.Context, groupID string, expand string, recurse *bool, filter string, cacheControl string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -271,7 +272,7 @@ func (client Client) GetPreparer(ctx context.Context, groupID string, expand str
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) GetSender(req *http.Request) (*http.Response, error) {
@@ -279,7 +280,7 @@ func (client Client) GetSender(req *http.Request) (*http.Response, error) {
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client Client) GetResponder(resp *http.Response) (result ManagementGroup, err error) {
@@ -293,7 +294,7 @@ func (client Client) GetResponder(resp *http.Response) (result ManagementGroup, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // List list management groups for the authenticated user.
 //
 // cacheControl is indicates that the request shouldn't utilize any caches.
@@ -320,7 +321,7 @@ func (client Client) List(ctx context.Context, cacheControl string) (result List
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // ListPreparer prepares the List request.
 func (client Client) ListPreparer(ctx context.Context, cacheControl string) (*http.Request, error) {
 	const APIVersion = "2018-01-01-preview"
@@ -346,7 +347,7 @@ func (client Client) ListPreparer(ctx context.Context, cacheControl string) (*ht
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListSender(req *http.Request) (*http.Response, error) {
@@ -354,7 +355,7 @@ func (client Client) ListSender(req *http.Request) (*http.Response, error) {
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client Client) ListResponder(resp *http.Response) (result ListResult, err error) {
@@ -389,14 +390,14 @@ func (client Client) listNextResults(lastResults ListResult) (result ListResult,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client Client) ListComplete(ctx context.Context, cacheControl string) (result ListResultIterator, err error) {
 	result.page, err = client.List(ctx, cacheControl)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // Update update a management group.
 //
 // groupID is management Group ID. patchGroupRequest is management group patch parameters. cacheControl is
@@ -423,7 +424,7 @@ func (client Client) Update(ctx context.Context, groupID string, patchGroupReque
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // UpdatePreparer prepares the Update request.
 func (client Client) UpdatePreparer(ctx context.Context, groupID string, patchGroupRequest PatchManagementGroupRequest, cacheControl string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -452,7 +453,7 @@ func (client Client) UpdatePreparer(ctx context.Context, groupID string, patchGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -460,7 +461,7 @@ func (client Client) UpdateSender(req *http.Request) (*http.Response, error) {
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2018-01-01-preview/management instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client Client) UpdateResponder(resp *http.Response) (result ManagementGroup, err error) {

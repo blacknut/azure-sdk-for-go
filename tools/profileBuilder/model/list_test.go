@@ -26,7 +26,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azure-sdk-for-go/tools/profileBuilder/model"
+	"github.com/blacknut/azure-sdk-for-go/tools/profileBuilder/model"
 )
 
 func TestList_Enumerate(t *testing.T) {
@@ -49,8 +49,8 @@ func TestList_Enumerate(t *testing.T) {
 		{
 			smallProfile,
 			map[string]struct{}{
-				path.Join(gopath, "src", "github.com/Azure/azure-sdk-for-go/services/compute/mgmt/2015-06-15/compute"): struct{}{},
-				path.Join(gopath, "src", "github.com/Azure/azure-sdk-for-go/services/network/mgmt/2015-06-15/network"): struct{}{},
+				path.Join(gopath, "src", "github.com/blacknut/azure-sdk-for-go/services/compute/mgmt/2015-06-15/compute"): struct{}{},
+				path.Join(gopath, "src", "github.com/blacknut/azure-sdk-for-go/services/network/mgmt/2015-06-15/network"): struct{}{},
 			},
 		},
 	}

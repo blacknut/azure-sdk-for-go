@@ -19,31 +19,32 @@ package operationalinsights
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // DataSourcesClient is the operational Insights Client
 type DataSourcesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // NewDataSourcesClient creates an instance of the DataSourcesClient client.
 func NewDataSourcesClient(subscriptionID string) DataSourcesClient {
 	return NewDataSourcesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // NewDataSourcesClientWithBaseURI creates an instance of the DataSourcesClient client.
 func NewDataSourcesClientWithBaseURI(baseURI string, subscriptionID string) DataSourcesClient {
 	return DataSourcesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // CreateOrUpdate create or update a data source.
 //
 // resourceGroupName is the name of the resource group to get. The name is case insensitive. workspaceName is name
@@ -81,7 +82,7 @@ func (client DataSourcesClient) CreateOrUpdate(ctx context.Context, resourceGrou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client DataSourcesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, workspaceName string, dataSourceName string, parameters DataSource) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -106,7 +107,7 @@ func (client DataSourcesClient) CreateOrUpdatePreparer(ctx context.Context, reso
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client DataSourcesClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -114,7 +115,7 @@ func (client DataSourcesClient) CreateOrUpdateSender(req *http.Request) (*http.R
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client DataSourcesClient) CreateOrUpdateResponder(resp *http.Response) (result DataSource, err error) {
@@ -128,7 +129,7 @@ func (client DataSourcesClient) CreateOrUpdateResponder(resp *http.Response) (re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // Delete deletes a data source instance.
 //
 // resourceGroupName is the name of the resource group to get. The name is case insensitive. workspaceName is name
@@ -163,7 +164,7 @@ func (client DataSourcesClient) Delete(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // DeletePreparer prepares the Delete request.
 func (client DataSourcesClient) DeletePreparer(ctx context.Context, resourceGroupName string, workspaceName string, dataSourceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -186,7 +187,7 @@ func (client DataSourcesClient) DeletePreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client DataSourcesClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -194,7 +195,7 @@ func (client DataSourcesClient) DeleteSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client DataSourcesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -207,7 +208,7 @@ func (client DataSourcesClient) DeleteResponder(resp *http.Response) (result aut
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // Get gets a datasource instance.
 //
 // resourceGroupName is the name of the resource group to get. The name is case insensitive. workspaceName is name
@@ -242,7 +243,7 @@ func (client DataSourcesClient) Get(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // GetPreparer prepares the Get request.
 func (client DataSourcesClient) GetPreparer(ctx context.Context, resourceGroupName string, workspaceName string, dataSourceName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -265,7 +266,7 @@ func (client DataSourcesClient) GetPreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client DataSourcesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -273,7 +274,7 @@ func (client DataSourcesClient) GetSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client DataSourcesClient) GetResponder(resp *http.Response) (result DataSource, err error) {
@@ -287,7 +288,7 @@ func (client DataSourcesClient) GetResponder(resp *http.Response) (result DataSo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // ListByWorkspace gets the first page of data source instances in a workspace with the link to the next page.
 //
 // resourceGroupName is the name of the resource group to get. The name is case insensitive. workspaceName is the
@@ -324,7 +325,7 @@ func (client DataSourcesClient) ListByWorkspace(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // ListByWorkspacePreparer prepares the ListByWorkspace request.
 func (client DataSourcesClient) ListByWorkspacePreparer(ctx context.Context, resourceGroupName string, workspaceName string, filter string, skiptoken string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -350,7 +351,7 @@ func (client DataSourcesClient) ListByWorkspacePreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // ListByWorkspaceSender sends the ListByWorkspace request. The method will close the
 // http.Response Body if it receives an error.
 func (client DataSourcesClient) ListByWorkspaceSender(req *http.Request) (*http.Response, error) {
@@ -358,7 +359,7 @@ func (client DataSourcesClient) ListByWorkspaceSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // ListByWorkspaceResponder handles the response to the ListByWorkspace request. The method always
 // closes the http.Response Body.
 func (client DataSourcesClient) ListByWorkspaceResponder(resp *http.Response) (result DataSourceListResult, err error) {
@@ -393,7 +394,7 @@ func (client DataSourcesClient) listByWorkspaceNextResults(lastResults DataSourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/operationalinsights/mgmt/2015-11-01-preview/operationalinsights instead.
 // ListByWorkspaceComplete enumerates all values, automatically crossing page boundaries as required.
 func (client DataSourcesClient) ListByWorkspaceComplete(ctx context.Context, resourceGroupName string, workspaceName string, filter string, skiptoken string) (result DataSourceListResultIterator, err error) {
 	result.page, err = client.ListByWorkspace(ctx, resourceGroupName, workspaceName, filter, skiptoken)

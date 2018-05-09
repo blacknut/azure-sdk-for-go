@@ -19,12 +19,13 @@ package sql
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ServerDNSAliasesClient is the the Azure SQL Database management API provides a RESTful set of web services that
 // interact with Azure SQL Database services to manage your databases. The API enables you to create, retrieve, update,
 // and delete databases.
@@ -32,19 +33,19 @@ type ServerDNSAliasesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // NewServerDNSAliasesClient creates an instance of the ServerDNSAliasesClient client.
 func NewServerDNSAliasesClient(subscriptionID string) ServerDNSAliasesClient {
 	return NewServerDNSAliasesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // NewServerDNSAliasesClientWithBaseURI creates an instance of the ServerDNSAliasesClient client.
 func NewServerDNSAliasesClientWithBaseURI(baseURI string, subscriptionID string) ServerDNSAliasesClient {
 	return ServerDNSAliasesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // Acquire acquires server DNS alias from another server.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -66,7 +67,7 @@ func (client ServerDNSAliasesClient) Acquire(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // AcquirePreparer prepares the Acquire request.
 func (client ServerDNSAliasesClient) AcquirePreparer(ctx context.Context, resourceGroupName string, serverName string, DNSAliasName string, parameters ServerDNSAliasAcquisition) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -91,7 +92,7 @@ func (client ServerDNSAliasesClient) AcquirePreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // AcquireSender sends the Acquire request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerDNSAliasesClient) AcquireSender(req *http.Request) (future ServerDNSAliasesAcquireFuture, err error) {
@@ -107,7 +108,7 @@ func (client ServerDNSAliasesClient) AcquireSender(req *http.Request) (future Se
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // AcquireResponder handles the response to the Acquire request. The method always
 // closes the http.Response Body.
 func (client ServerDNSAliasesClient) AcquireResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -120,7 +121,7 @@ func (client ServerDNSAliasesClient) AcquireResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdate creates a server dns alias.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -142,7 +143,7 @@ func (client ServerDNSAliasesClient) CreateOrUpdate(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client ServerDNSAliasesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, DNSAliasName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -165,7 +166,7 @@ func (client ServerDNSAliasesClient) CreateOrUpdatePreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerDNSAliasesClient) CreateOrUpdateSender(req *http.Request) (future ServerDNSAliasesCreateOrUpdateFuture, err error) {
@@ -181,7 +182,7 @@ func (client ServerDNSAliasesClient) CreateOrUpdateSender(req *http.Request) (fu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client ServerDNSAliasesClient) CreateOrUpdateResponder(resp *http.Response) (result ServerDNSAlias, err error) {
@@ -195,7 +196,7 @@ func (client ServerDNSAliasesClient) CreateOrUpdateResponder(resp *http.Response
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // Delete deletes the server DNS alias with the given name.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -217,7 +218,7 @@ func (client ServerDNSAliasesClient) Delete(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // DeletePreparer prepares the Delete request.
 func (client ServerDNSAliasesClient) DeletePreparer(ctx context.Context, resourceGroupName string, serverName string, DNSAliasName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -240,7 +241,7 @@ func (client ServerDNSAliasesClient) DeletePreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerDNSAliasesClient) DeleteSender(req *http.Request) (future ServerDNSAliasesDeleteFuture, err error) {
@@ -256,7 +257,7 @@ func (client ServerDNSAliasesClient) DeleteSender(req *http.Request) (future Ser
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client ServerDNSAliasesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -269,7 +270,7 @@ func (client ServerDNSAliasesClient) DeleteResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // Get gets a server DNS alias.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -297,7 +298,7 @@ func (client ServerDNSAliasesClient) Get(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // GetPreparer prepares the Get request.
 func (client ServerDNSAliasesClient) GetPreparer(ctx context.Context, resourceGroupName string, serverName string, DNSAliasName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -320,7 +321,7 @@ func (client ServerDNSAliasesClient) GetPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerDNSAliasesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -328,7 +329,7 @@ func (client ServerDNSAliasesClient) GetSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client ServerDNSAliasesClient) GetResponder(resp *http.Response) (result ServerDNSAlias, err error) {
@@ -342,7 +343,7 @@ func (client ServerDNSAliasesClient) GetResponder(resp *http.Response) (result S
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServer gets a list of server DNS aliases for a server.
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -371,7 +372,7 @@ func (client ServerDNSAliasesClient) ListByServer(ctx context.Context, resourceG
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerPreparer prepares the ListByServer request.
 func (client ServerDNSAliasesClient) ListByServerPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -393,7 +394,7 @@ func (client ServerDNSAliasesClient) ListByServerPreparer(ctx context.Context, r
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerSender sends the ListByServer request. The method will close the
 // http.Response Body if it receives an error.
 func (client ServerDNSAliasesClient) ListByServerSender(req *http.Request) (*http.Response, error) {
@@ -401,7 +402,7 @@ func (client ServerDNSAliasesClient) ListByServerSender(req *http.Request) (*htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerResponder handles the response to the ListByServer request. The method always
 // closes the http.Response Body.
 func (client ServerDNSAliasesClient) ListByServerResponder(resp *http.Response) (result ServerDNSAliasListResult, err error) {
@@ -436,7 +437,7 @@ func (client ServerDNSAliasesClient) listByServerNextResults(lastResults ServerD
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ServerDNSAliasesClient) ListByServerComplete(ctx context.Context, resourceGroupName string, serverName string) (result ServerDNSAliasListResultIterator, err error) {
 	result.page, err = client.ListByServer(ctx, resourceGroupName, serverName)

@@ -19,12 +19,13 @@ package commitmentplans
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // Client is the these APIs allow end users to operate on Azure Machine Learning Commitment Plans resources and their
 // child Commitment Association resources. They support CRUD operations for commitment plans, get and list operations
 // for commitment associations, moving commitment associations between commitment plans, and retrieving commitment plan
@@ -33,19 +34,19 @@ type Client struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // NewClient creates an instance of the Client client.
 func NewClient(subscriptionID string) Client {
 	return NewClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // NewClientWithBaseURI creates an instance of the Client client.
 func NewClientWithBaseURI(baseURI string, subscriptionID string) Client {
 	return Client{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // CreateOrUpdate create a new Azure ML commitment plan resource or updates an existing one.
 //
 // createOrUpdatePayload is the payload to create or update the Azure ML commitment plan. resourceGroupName is the
@@ -72,7 +73,7 @@ func (client Client) CreateOrUpdate(ctx context.Context, createOrUpdatePayload C
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client Client) CreateOrUpdatePreparer(ctx context.Context, createOrUpdatePayload CommitmentPlan, resourceGroupName string, commitmentPlanName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -96,7 +97,7 @@ func (client Client) CreateOrUpdatePreparer(ctx context.Context, createOrUpdateP
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -104,7 +105,7 @@ func (client Client) CreateOrUpdateSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client Client) CreateOrUpdateResponder(resp *http.Response) (result CommitmentPlan, err error) {
@@ -118,7 +119,7 @@ func (client Client) CreateOrUpdateResponder(resp *http.Response) (result Commit
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // Get retrieve an Azure ML commitment plan by its subscription, resource group and name.
 //
 // resourceGroupName is the resource group name. commitmentPlanName is the Azure ML commitment plan name.
@@ -144,7 +145,7 @@ func (client Client) Get(ctx context.Context, resourceGroupName string, commitme
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // GetPreparer prepares the Get request.
 func (client Client) GetPreparer(ctx context.Context, resourceGroupName string, commitmentPlanName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -166,7 +167,7 @@ func (client Client) GetPreparer(ctx context.Context, resourceGroupName string, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) GetSender(req *http.Request) (*http.Response, error) {
@@ -174,7 +175,7 @@ func (client Client) GetSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client Client) GetResponder(resp *http.Response) (result CommitmentPlan, err error) {
@@ -188,7 +189,7 @@ func (client Client) GetResponder(resp *http.Response) (result CommitmentPlan, e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // List retrieve all Azure ML commitment plans in a subscription.
 //
 // skipToken is continuation token for pagination.
@@ -215,7 +216,7 @@ func (client Client) List(ctx context.Context, skipToken string) (result ListRes
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListPreparer prepares the List request.
 func (client Client) ListPreparer(ctx context.Context, skipToken string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -238,7 +239,7 @@ func (client Client) ListPreparer(ctx context.Context, skipToken string) (*http.
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListSender(req *http.Request) (*http.Response, error) {
@@ -246,7 +247,7 @@ func (client Client) ListSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client Client) ListResponder(resp *http.Response) (result ListResult, err error) {
@@ -281,14 +282,14 @@ func (client Client) listNextResults(lastResults ListResult) (result ListResult,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client Client) ListComplete(ctx context.Context, skipToken string) (result ListResultIterator, err error) {
 	result.page, err = client.List(ctx, skipToken)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListInResourceGroup retrieve all Azure ML commitment plans in a resource group.
 //
 // resourceGroupName is the resource group name. skipToken is continuation token for pagination.
@@ -315,7 +316,7 @@ func (client Client) ListInResourceGroup(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListInResourceGroupPreparer prepares the ListInResourceGroup request.
 func (client Client) ListInResourceGroupPreparer(ctx context.Context, resourceGroupName string, skipToken string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -339,7 +340,7 @@ func (client Client) ListInResourceGroupPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListInResourceGroupSender sends the ListInResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) ListInResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -347,7 +348,7 @@ func (client Client) ListInResourceGroupSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListInResourceGroupResponder handles the response to the ListInResourceGroup request. The method always
 // closes the http.Response Body.
 func (client Client) ListInResourceGroupResponder(resp *http.Response) (result ListResult, err error) {
@@ -382,14 +383,14 @@ func (client Client) listInResourceGroupNextResults(lastResults ListResult) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListInResourceGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client Client) ListInResourceGroupComplete(ctx context.Context, resourceGroupName string, skipToken string) (result ListResultIterator, err error) {
 	result.page, err = client.ListInResourceGroup(ctx, resourceGroupName, skipToken)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // Patch patch an existing Azure ML commitment plan resource.
 //
 // patchPayload is the payload to use to patch the Azure ML commitment plan. Only tags and SKU may be modified on
@@ -417,7 +418,7 @@ func (client Client) Patch(ctx context.Context, patchPayload PatchPayload, resou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // PatchPreparer prepares the Patch request.
 func (client Client) PatchPreparer(ctx context.Context, patchPayload PatchPayload, resourceGroupName string, commitmentPlanName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -441,7 +442,7 @@ func (client Client) PatchPreparer(ctx context.Context, patchPayload PatchPayloa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // PatchSender sends the Patch request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) PatchSender(req *http.Request) (*http.Response, error) {
@@ -449,7 +450,7 @@ func (client Client) PatchSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // PatchResponder handles the response to the Patch request. The method always
 // closes the http.Response Body.
 func (client Client) PatchResponder(resp *http.Response) (result CommitmentPlan, err error) {
@@ -463,7 +464,7 @@ func (client Client) PatchResponder(resp *http.Response) (result CommitmentPlan,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // Remove remove an existing Azure ML commitment plan.
 //
 // resourceGroupName is the resource group name. commitmentPlanName is the Azure ML commitment plan name.
@@ -489,7 +490,7 @@ func (client Client) Remove(ctx context.Context, resourceGroupName string, commi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // RemovePreparer prepares the Remove request.
 func (client Client) RemovePreparer(ctx context.Context, resourceGroupName string, commitmentPlanName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -511,7 +512,7 @@ func (client Client) RemovePreparer(ctx context.Context, resourceGroupName strin
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // RemoveSender sends the Remove request. The method will close the
 // http.Response Body if it receives an error.
 func (client Client) RemoveSender(req *http.Request) (*http.Response, error) {
@@ -519,7 +520,7 @@ func (client Client) RemoveSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // RemoveResponder handles the response to the Remove request. The method always
 // closes the http.Response Body.
 func (client Client) RemoveResponder(resp *http.Response) (result autorest.Response, err error) {

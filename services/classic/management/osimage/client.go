@@ -20,7 +20,7 @@ package osimage
 import (
 	"encoding/xml"
 
-	"github.com/Azure/azure-sdk-for-go/services/classic/management"
+	"github.com/blacknut/azure-sdk-for-go/services/classic/management"
 )
 
 const (

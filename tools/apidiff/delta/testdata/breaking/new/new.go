@@ -18,9 +18,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/Azure/azure-sdk-for-go/version"
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
+	"github.com/blacknut/azure-sdk-for-go/version"
 )
 
 // content lifted from redis

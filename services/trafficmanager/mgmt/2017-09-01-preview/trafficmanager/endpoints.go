@@ -19,30 +19,31 @@ package trafficmanager
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // EndpointsClient is the client for the Endpoints methods of the Trafficmanager service.
 type EndpointsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // NewEndpointsClient creates an instance of the EndpointsClient client.
 func NewEndpointsClient(subscriptionID string) EndpointsClient {
 	return NewEndpointsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // NewEndpointsClientWithBaseURI creates an instance of the EndpointsClient client.
 func NewEndpointsClientWithBaseURI(baseURI string, subscriptionID string) EndpointsClient {
 	return EndpointsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CreateOrUpdate create or update a Traffic Manager endpoint.
 //
 // resourceGroupName is the name of the resource group containing the Traffic Manager endpoint to be created or
@@ -71,7 +72,7 @@ func (client EndpointsClient) CreateOrUpdate(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client EndpointsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, profileName string, endpointType string, endpointName string, parameters Endpoint) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -97,7 +98,7 @@ func (client EndpointsClient) CreateOrUpdatePreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client EndpointsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -105,7 +106,7 @@ func (client EndpointsClient) CreateOrUpdateSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client EndpointsClient) CreateOrUpdateResponder(resp *http.Response) (result Endpoint, err error) {
@@ -119,7 +120,7 @@ func (client EndpointsClient) CreateOrUpdateResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Delete deletes a Traffic Manager endpoint.
 //
 // resourceGroupName is the name of the resource group containing the Traffic Manager endpoint to be deleted.
@@ -147,7 +148,7 @@ func (client EndpointsClient) Delete(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // DeletePreparer prepares the Delete request.
 func (client EndpointsClient) DeletePreparer(ctx context.Context, resourceGroupName string, profileName string, endpointType string, endpointName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -171,7 +172,7 @@ func (client EndpointsClient) DeletePreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client EndpointsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -179,7 +180,7 @@ func (client EndpointsClient) DeleteSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client EndpointsClient) DeleteResponder(resp *http.Response) (result DeleteOperationResult, err error) {
@@ -193,7 +194,7 @@ func (client EndpointsClient) DeleteResponder(resp *http.Response) (result Delet
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Get gets a Traffic Manager endpoint.
 //
 // resourceGroupName is the name of the resource group containing the Traffic Manager endpoint. profileName is the
@@ -221,7 +222,7 @@ func (client EndpointsClient) Get(ctx context.Context, resourceGroupName string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // GetPreparer prepares the Get request.
 func (client EndpointsClient) GetPreparer(ctx context.Context, resourceGroupName string, profileName string, endpointType string, endpointName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -245,7 +246,7 @@ func (client EndpointsClient) GetPreparer(ctx context.Context, resourceGroupName
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client EndpointsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -253,7 +254,7 @@ func (client EndpointsClient) GetSender(req *http.Request) (*http.Response, erro
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client EndpointsClient) GetResponder(resp *http.Response) (result Endpoint, err error) {
@@ -267,7 +268,7 @@ func (client EndpointsClient) GetResponder(resp *http.Response) (result Endpoint
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Update update a Traffic Manager endpoint.
 //
 // resourceGroupName is the name of the resource group containing the Traffic Manager endpoint to be updated.
@@ -296,7 +297,7 @@ func (client EndpointsClient) Update(ctx context.Context, resourceGroupName stri
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UpdatePreparer prepares the Update request.
 func (client EndpointsClient) UpdatePreparer(ctx context.Context, resourceGroupName string, profileName string, endpointType string, endpointName string, parameters Endpoint) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -322,7 +323,7 @@ func (client EndpointsClient) UpdatePreparer(ctx context.Context, resourceGroupN
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client EndpointsClient) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -330,7 +331,7 @@ func (client EndpointsClient) UpdateSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client EndpointsClient) UpdateResponder(resp *http.Response) (result Endpoint, err error) {

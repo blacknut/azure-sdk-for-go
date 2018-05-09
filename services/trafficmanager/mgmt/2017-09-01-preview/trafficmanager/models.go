@@ -19,11 +19,12 @@ package trafficmanager
 
 import (
 	"encoding/json"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/date"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // EndpointMonitorStatus enumerates the values for endpoint monitor status.
 type EndpointMonitorStatus string
 
@@ -42,13 +43,13 @@ const (
 	Stopped EndpointMonitorStatus = "Stopped"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // PossibleEndpointMonitorStatusValues returns an array of possible values for the EndpointMonitorStatus const type.
 func PossibleEndpointMonitorStatusValues() []EndpointMonitorStatus {
 	return []EndpointMonitorStatus{CheckingEndpoint, Degraded, Disabled, Inactive, Online, Stopped}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // EndpointStatus enumerates the values for endpoint status.
 type EndpointStatus string
 
@@ -59,13 +60,13 @@ const (
 	EndpointStatusEnabled EndpointStatus = "Enabled"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // PossibleEndpointStatusValues returns an array of possible values for the EndpointStatus const type.
 func PossibleEndpointStatusValues() []EndpointStatus {
 	return []EndpointStatus{EndpointStatusDisabled, EndpointStatusEnabled}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MonitorProtocol enumerates the values for monitor protocol.
 type MonitorProtocol string
 
@@ -78,13 +79,13 @@ const (
 	TCP MonitorProtocol = "TCP"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // PossibleMonitorProtocolValues returns an array of possible values for the MonitorProtocol const type.
 func PossibleMonitorProtocolValues() []MonitorProtocol {
 	return []MonitorProtocol{HTTP, HTTPS, TCP}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // ProfileMonitorStatus enumerates the values for profile monitor status.
 type ProfileMonitorStatus string
 
@@ -101,13 +102,13 @@ const (
 	ProfileMonitorStatusOnline ProfileMonitorStatus = "Online"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // PossibleProfileMonitorStatusValues returns an array of possible values for the ProfileMonitorStatus const type.
 func PossibleProfileMonitorStatusValues() []ProfileMonitorStatus {
 	return []ProfileMonitorStatus{ProfileMonitorStatusCheckingEndpoints, ProfileMonitorStatusDegraded, ProfileMonitorStatusDisabled, ProfileMonitorStatusInactive, ProfileMonitorStatusOnline}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // ProfileStatus enumerates the values for profile status.
 type ProfileStatus string
 
@@ -118,13 +119,13 @@ const (
 	ProfileStatusEnabled ProfileStatus = "Enabled"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // PossibleProfileStatusValues returns an array of possible values for the ProfileStatus const type.
 func PossibleProfileStatusValues() []ProfileStatus {
 	return []ProfileStatus{ProfileStatusDisabled, ProfileStatusEnabled}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // TrafficRoutingMethod enumerates the values for traffic routing method.
 type TrafficRoutingMethod string
 
@@ -139,13 +140,13 @@ const (
 	Weighted TrafficRoutingMethod = "Weighted"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // PossibleTrafficRoutingMethodValues returns an array of possible values for the TrafficRoutingMethod const type.
 func PossibleTrafficRoutingMethodValues() []TrafficRoutingMethod {
 	return []TrafficRoutingMethod{Geographic, Performance, Priority, Weighted}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CheckTrafficManagerRelativeDNSNameAvailabilityParameters parameters supplied to check Traffic Manager name
 // operation.
 type CheckTrafficManagerRelativeDNSNameAvailabilityParameters struct {
@@ -155,14 +156,14 @@ type CheckTrafficManagerRelativeDNSNameAvailabilityParameters struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CloudError an error returned by the Azure Resource Manager
 type CloudError struct {
 	// Error - The content of the error.
 	Error *CloudErrorBody `json:"error,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // CloudErrorBody the content of an error returned by the Azure Resource Manager
 type CloudErrorBody struct {
 	// Code - Error code
@@ -175,7 +176,7 @@ type CloudErrorBody struct {
 	Details *[]CloudErrorBody `json:"details,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // DeleteOperationResult the result of the request or operation.
 type DeleteOperationResult struct {
 	autorest.Response `json:"-"`
@@ -183,7 +184,7 @@ type DeleteOperationResult struct {
 	OperationResult *bool `json:"boolean,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // DNSConfig class containing DNS settings in a Traffic Manager profile.
 type DNSConfig struct {
 	// RelativeName - The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
@@ -194,7 +195,7 @@ type DNSConfig struct {
 	TTL *int64 `json:"ttl,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Endpoint class representing a Traffic Manager endpoint.
 type Endpoint struct {
 	autorest.Response `json:"-"`
@@ -208,7 +209,7 @@ type Endpoint struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MarshalJSON is the custom marshaler for Endpoint.
 func (e Endpoint) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -227,7 +228,7 @@ func (e Endpoint) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UnmarshalJSON is the custom unmarshaler for Endpoint struct.
 func (e *Endpoint) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -279,7 +280,7 @@ func (e *Endpoint) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // EndpointProperties class representing a Traffic Manager endpoint properties.
 type EndpointProperties struct {
 	// TargetResourceID - The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
@@ -302,7 +303,7 @@ type EndpointProperties struct {
 	GeoMapping *[]string `json:"geoMapping,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // GeographicHierarchy class representing the Geographic hierarchy used with the Geographic traffic routing method.
 type GeographicHierarchy struct {
 	autorest.Response `json:"-"`
@@ -316,7 +317,7 @@ type GeographicHierarchy struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MarshalJSON is the custom marshaler for GeographicHierarchy.
 func (gh GeographicHierarchy) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -335,7 +336,7 @@ func (gh GeographicHierarchy) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UnmarshalJSON is the custom unmarshaler for GeographicHierarchy struct.
 func (gh *GeographicHierarchy) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -387,7 +388,7 @@ func (gh *GeographicHierarchy) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // GeographicHierarchyProperties class representing the properties of the Geographic hierarchy used with the
 // Geographic traffic routing method.
 type GeographicHierarchyProperties struct {
@@ -395,7 +396,7 @@ type GeographicHierarchyProperties struct {
 	GeographicHierarchy *Region `json:"geographicHierarchy,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // HeatMapEndpoint class which is a sparse representation of a Traffic Manager endpoint.
 type HeatMapEndpoint struct {
 	// ResourceID - The ARM Resource ID of this Traffic Manager endpoint.
@@ -404,7 +405,7 @@ type HeatMapEndpoint struct {
 	EndpointID *int32 `json:"endpointId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // HeatMapModel class representing a Traffic Manager HeatMap.
 type HeatMapModel struct {
 	autorest.Response `json:"-"`
@@ -418,7 +419,7 @@ type HeatMapModel struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MarshalJSON is the custom marshaler for HeatMapModel.
 func (hmm HeatMapModel) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -437,7 +438,7 @@ func (hmm HeatMapModel) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UnmarshalJSON is the custom unmarshaler for HeatMapModel struct.
 func (hmm *HeatMapModel) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -489,7 +490,7 @@ func (hmm *HeatMapModel) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // HeatMapProperties class representing a Traffic Manager HeatMap properties.
 type HeatMapProperties struct {
 	// StartTime - The beginning of the time window for this HeatMap, inclusive.
@@ -502,7 +503,7 @@ type HeatMapProperties struct {
 	TrafficFlows *[]TrafficFlow `json:"trafficFlows,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MonitorConfig class containing endpoint monitoring settings in a Traffic Manager profile.
 type MonitorConfig struct {
 	// ProfileMonitorStatus - The profile-level monitoring status of the Traffic Manager profile. Possible values include: 'ProfileMonitorStatusCheckingEndpoints', 'ProfileMonitorStatusOnline', 'ProfileMonitorStatusDegraded', 'ProfileMonitorStatusDisabled', 'ProfileMonitorStatusInactive'
@@ -521,7 +522,7 @@ type MonitorConfig struct {
 	ToleratedNumberOfFailures *int64 `json:"toleratedNumberOfFailures,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // NameAvailability class representing a Traffic Manager Name Availability response.
 type NameAvailability struct {
 	autorest.Response `json:"-"`
@@ -537,7 +538,7 @@ type NameAvailability struct {
 	Message *string `json:"message,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Profile class representing a Traffic Manager profile.
 type Profile struct {
 	autorest.Response `json:"-"`
@@ -555,7 +556,7 @@ type Profile struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MarshalJSON is the custom marshaler for Profile.
 func (p Profile) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -580,7 +581,7 @@ func (p Profile) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UnmarshalJSON is the custom unmarshaler for Profile struct.
 func (p *Profile) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -650,7 +651,7 @@ func (p *Profile) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // ProfileListResult the list Traffic Manager profiles operation response.
 type ProfileListResult struct {
 	autorest.Response `json:"-"`
@@ -658,7 +659,7 @@ type ProfileListResult struct {
 	Value *[]Profile `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // ProfileProperties class representing the Traffic Manager profile properties.
 type ProfileProperties struct {
 	// ProfileStatus - The status of the Traffic Manager profile. Possible values include: 'ProfileStatusEnabled', 'ProfileStatusDisabled'
@@ -673,7 +674,7 @@ type ProfileProperties struct {
 	Endpoints *[]Endpoint `json:"endpoints,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // ProxyResource the resource model definition for a ARM proxy resource. It will have everything other than
 // required location and tags
 type ProxyResource struct {
@@ -685,7 +686,7 @@ type ProxyResource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // QueryExperience class representing a Traffic Manager HeatMap query experience properties.
 type QueryExperience struct {
 	// EndpointID - The id of the endpoint from the 'endpoints' array which these queries were routed to.
@@ -696,7 +697,7 @@ type QueryExperience struct {
 	Latency *float64 `json:"latency,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Region class representing a region in the Geographic hierarchy used with the Geographic traffic routing method.
 type Region struct {
 	// Code - The code of the region
@@ -707,7 +708,7 @@ type Region struct {
 	Regions *[]Region `json:"regions,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // Resource the core properties of ARM resources
 type Resource struct {
 	// ID - Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
@@ -718,7 +719,7 @@ type Resource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // TrackedResource the resource model definition for a ARM tracked top level resource
 type TrackedResource struct {
 	// Tags - Resource tags.
@@ -733,7 +734,7 @@ type TrackedResource struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // MarshalJSON is the custom marshaler for TrackedResource.
 func (tr TrackedResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -755,7 +756,7 @@ func (tr TrackedResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // TrafficFlow class representing a Traffic Manager HeatMap traffic flow properties.
 type TrafficFlow struct {
 	// SourceIP - The IP address that this query experience originated from.
@@ -768,7 +769,7 @@ type TrafficFlow struct {
 	QueryExperiences *[]QueryExperience `json:"queryExperiences,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/trafficmanager/mgmt/2017-09-01-preview/trafficmanager instead.
 // UserMetricsKeyModel class representing a Traffic Manager Real User Metrics key response.
 type UserMetricsKeyModel struct {
 	autorest.Response `json:"-"`

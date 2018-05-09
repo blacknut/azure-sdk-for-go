@@ -19,31 +19,32 @@ package insights
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // LogProfilesClient is the monitor Management Client
 type LogProfilesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // NewLogProfilesClient creates an instance of the LogProfilesClient client.
 func NewLogProfilesClient(subscriptionID string) LogProfilesClient {
 	return NewLogProfilesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // NewLogProfilesClientWithBaseURI creates an instance of the LogProfilesClient client.
 func NewLogProfilesClientWithBaseURI(baseURI string, subscriptionID string) LogProfilesClient {
 	return LogProfilesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // CreateOrUpdate create or update a log profile in Azure Monitoring REST API.
 //
 // logProfileName is the name of the log profile. parameters is parameters supplied to the operation.
@@ -83,7 +84,7 @@ func (client LogProfilesClient) CreateOrUpdate(ctx context.Context, logProfileNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client LogProfilesClient) CreateOrUpdatePreparer(ctx context.Context, logProfileName string, parameters LogProfileResource) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -106,7 +107,7 @@ func (client LogProfilesClient) CreateOrUpdatePreparer(ctx context.Context, logP
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client LogProfilesClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -114,7 +115,7 @@ func (client LogProfilesClient) CreateOrUpdateSender(req *http.Request) (*http.R
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client LogProfilesClient) CreateOrUpdateResponder(resp *http.Response) (result LogProfileResource, err error) {
@@ -128,7 +129,7 @@ func (client LogProfilesClient) CreateOrUpdateResponder(resp *http.Response) (re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // Delete deletes the log profile.
 //
 // logProfileName is the name of the log profile.
@@ -154,7 +155,7 @@ func (client LogProfilesClient) Delete(ctx context.Context, logProfileName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // DeletePreparer prepares the Delete request.
 func (client LogProfilesClient) DeletePreparer(ctx context.Context, logProfileName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -175,7 +176,7 @@ func (client LogProfilesClient) DeletePreparer(ctx context.Context, logProfileNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client LogProfilesClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -183,7 +184,7 @@ func (client LogProfilesClient) DeleteSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client LogProfilesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -196,7 +197,7 @@ func (client LogProfilesClient) DeleteResponder(resp *http.Response) (result aut
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // Get gets the log profile.
 //
 // logProfileName is the name of the log profile.
@@ -222,7 +223,7 @@ func (client LogProfilesClient) Get(ctx context.Context, logProfileName string) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetPreparer prepares the Get request.
 func (client LogProfilesClient) GetPreparer(ctx context.Context, logProfileName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -243,7 +244,7 @@ func (client LogProfilesClient) GetPreparer(ctx context.Context, logProfileName 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client LogProfilesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -251,7 +252,7 @@ func (client LogProfilesClient) GetSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client LogProfilesClient) GetResponder(resp *http.Response) (result LogProfileResource, err error) {
@@ -265,7 +266,7 @@ func (client LogProfilesClient) GetResponder(resp *http.Response) (result LogPro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // List list the log profiles.
 func (client LogProfilesClient) List(ctx context.Context) (result LogProfileCollection, err error) {
 	req, err := client.ListPreparer(ctx)
@@ -289,7 +290,7 @@ func (client LogProfilesClient) List(ctx context.Context) (result LogProfileColl
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListPreparer prepares the List request.
 func (client LogProfilesClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -309,7 +310,7 @@ func (client LogProfilesClient) ListPreparer(ctx context.Context) (*http.Request
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client LogProfilesClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -317,7 +318,7 @@ func (client LogProfilesClient) ListSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client LogProfilesClient) ListResponder(resp *http.Response) (result LogProfileCollection, err error) {
@@ -331,7 +332,7 @@ func (client LogProfilesClient) ListResponder(resp *http.Response) (result LogPr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // Update updates an existing LogProfilesResource. To update other fields use the CreateOrUpdate method.
 //
 // logProfileName is the name of the log profile. logProfilesResource is parameters supplied to the operation.
@@ -357,7 +358,7 @@ func (client LogProfilesClient) Update(ctx context.Context, logProfileName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // UpdatePreparer prepares the Update request.
 func (client LogProfilesClient) UpdatePreparer(ctx context.Context, logProfileName string, logProfilesResource LogProfileResourcePatch) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -380,7 +381,7 @@ func (client LogProfilesClient) UpdatePreparer(ctx context.Context, logProfileNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client LogProfilesClient) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -388,7 +389,7 @@ func (client LogProfilesClient) UpdateSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client LogProfilesClient) UpdateResponder(resp *http.Response) (result LogProfileResource, err error) {

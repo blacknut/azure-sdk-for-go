@@ -19,30 +19,31 @@ package web
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // HostingEnvironmentsClient is the webSite Management Client
 type HostingEnvironmentsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // NewHostingEnvironmentsClient creates an instance of the HostingEnvironmentsClient client.
 func NewHostingEnvironmentsClient(subscriptionID string) HostingEnvironmentsClient {
 	return NewHostingEnvironmentsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // NewHostingEnvironmentsClientWithBaseURI creates an instance of the HostingEnvironmentsClient client.
 func NewHostingEnvironmentsClientWithBaseURI(baseURI string, subscriptionID string) HostingEnvironmentsClient {
 	return HostingEnvironmentsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateHostingEnvironment sends the create or update hosting environment request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -63,7 +64,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironment(ctx con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateHostingEnvironmentPreparer prepares the CreateOrUpdateHostingEnvironment request.
 func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string, hostingEnvironmentEnvelope HostingEnvironment) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -87,7 +88,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironmentPreparer
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateHostingEnvironmentSender sends the CreateOrUpdateHostingEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironmentSender(req *http.Request) (future HostingEnvironmentsCreateOrUpdateHostingEnvironmentFuture, err error) {
@@ -103,7 +104,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironmentSender(r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateHostingEnvironmentResponder handles the response to the CreateOrUpdateHostingEnvironment request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironmentResponder(resp *http.Response) (result HostingEnvironment, err error) {
@@ -117,7 +118,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateHostingEnvironmentResponde
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateMultiRolePool sends the create or update multi role pool request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -138,7 +139,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePool(ctx context.
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateMultiRolePoolPreparer prepares the CreateOrUpdateMultiRolePool request.
 func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePoolPreparer(ctx context.Context, resourceGroupName string, name string, multiRolePoolEnvelope WorkerPool) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -162,7 +163,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePoolPreparer(ctx 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateMultiRolePoolSender sends the CreateOrUpdateMultiRolePool request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePoolSender(req *http.Request) (future HostingEnvironmentsCreateOrUpdateMultiRolePoolFuture, err error) {
@@ -178,7 +179,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePoolSender(req *h
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateMultiRolePoolResponder handles the response to the CreateOrUpdateMultiRolePool request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePoolResponder(resp *http.Response) (result WorkerPool, err error) {
@@ -192,7 +193,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateMultiRolePoolResponder(res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateWorkerPool sends the create or update worker pool request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -213,7 +214,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPool(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateWorkerPoolPreparer prepares the CreateOrUpdateWorkerPool request.
 func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPoolPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string, workerPoolEnvelope WorkerPool) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -238,7 +239,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPoolPreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateWorkerPoolSender sends the CreateOrUpdateWorkerPool request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPoolSender(req *http.Request) (future HostingEnvironmentsCreateOrUpdateWorkerPoolFuture, err error) {
@@ -254,7 +255,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPoolSender(req *http
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateWorkerPoolResponder handles the response to the CreateOrUpdateWorkerPool request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPoolResponder(resp *http.Response) (result WorkerPool, err error) {
@@ -268,7 +269,7 @@ func (client HostingEnvironmentsClient) CreateOrUpdateWorkerPoolResponder(resp *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteHostingEnvironment sends the delete hosting environment request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -289,7 +290,7 @@ func (client HostingEnvironmentsClient) DeleteHostingEnvironment(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteHostingEnvironmentPreparer prepares the DeleteHostingEnvironment request.
 func (client HostingEnvironmentsClient) DeleteHostingEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string, forceDelete *bool) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -314,7 +315,7 @@ func (client HostingEnvironmentsClient) DeleteHostingEnvironmentPreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteHostingEnvironmentSender sends the DeleteHostingEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) DeleteHostingEnvironmentSender(req *http.Request) (future HostingEnvironmentsDeleteHostingEnvironmentFuture, err error) {
@@ -330,7 +331,7 @@ func (client HostingEnvironmentsClient) DeleteHostingEnvironmentSender(req *http
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteHostingEnvironmentResponder handles the response to the DeleteHostingEnvironment request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) DeleteHostingEnvironmentResponder(resp *http.Response) (result SetObject, err error) {
@@ -344,7 +345,7 @@ func (client HostingEnvironmentsClient) DeleteHostingEnvironmentResponder(resp *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironment sends the get hosting environment request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -370,7 +371,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironment(ctx context.Contex
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentPreparer prepares the GetHostingEnvironment request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -392,7 +393,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentPreparer(ctx contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentSender sends the GetHostingEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentSender(req *http.Request) (*http.Response, error) {
@@ -400,7 +401,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentSender(req *http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentResponder handles the response to the GetHostingEnvironment request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentResponder(resp *http.Response) (result HostingEnvironment, err error) {
@@ -414,7 +415,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentResponder(resp *htt
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentCapacities sends the get hosting environment capacities request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -441,7 +442,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacities(ctx cont
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentCapacitiesPreparer prepares the GetHostingEnvironmentCapacities request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacitiesPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -463,7 +464,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacitiesPreparer(
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentCapacitiesSender sends the GetHostingEnvironmentCapacities request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacitiesSender(req *http.Request) (*http.Response, error) {
@@ -471,7 +472,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacitiesSender(re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentCapacitiesResponder handles the response to the GetHostingEnvironmentCapacities request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacitiesResponder(resp *http.Response) (result StampCapacityCollection, err error) {
@@ -506,14 +507,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentCapacitiesNextResul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentCapacitiesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentCapacitiesComplete(ctx context.Context, resourceGroupName string, name string) (result StampCapacityCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentCapacities(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnostics sends the get hosting environment diagnostics request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -539,7 +540,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnostics(ctx con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsPreparer prepares the GetHostingEnvironmentDiagnostics request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -561,7 +562,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsPreparer
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsSender sends the GetHostingEnvironmentDiagnostics request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsSender(req *http.Request) (*http.Response, error) {
@@ -569,7 +570,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsSender(r
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsResponder handles the response to the GetHostingEnvironmentDiagnostics request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsResponder(resp *http.Response) (result ListHostingEnvironmentDiagnostics, err error) {
@@ -583,7 +584,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsResponde
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsItem sends the get hosting environment diagnostics item request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -610,7 +611,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItem(ctx
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsItemPreparer prepares the GetHostingEnvironmentDiagnosticsItem request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItemPreparer(ctx context.Context, resourceGroupName string, name string, diagnosticsName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -633,7 +634,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItemPrep
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsItemSender sends the GetHostingEnvironmentDiagnosticsItem request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItemSender(req *http.Request) (*http.Response, error) {
@@ -641,7 +642,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItemSend
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentDiagnosticsItemResponder handles the response to the GetHostingEnvironmentDiagnosticsItem request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItemResponder(resp *http.Response) (result HostingEnvironmentDiagnostics, err error) {
@@ -655,7 +656,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentDiagnosticsItemResp
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricDefinitions sends the get hosting environment metric definitions request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -681,7 +682,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitions(c
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricDefinitionsPreparer prepares the GetHostingEnvironmentMetricDefinitions request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitionsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -703,7 +704,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitionsPr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricDefinitionsSender sends the GetHostingEnvironmentMetricDefinitions request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitionsSender(req *http.Request) (*http.Response, error) {
@@ -711,7 +712,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitionsSe
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricDefinitionsResponder handles the response to the GetHostingEnvironmentMetricDefinitions request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitionsResponder(resp *http.Response) (result MetricDefinition, err error) {
@@ -725,7 +726,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricDefinitionsRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetrics sends the get hosting environment metrics request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment) details
@@ -755,7 +756,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetrics(ctx context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricsPreparer prepares the GetHostingEnvironmentMetrics request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricsPreparer(ctx context.Context, resourceGroupName string, name string, details *bool, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -783,7 +784,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricsPreparer(ctx
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricsSender sends the GetHostingEnvironmentMetrics request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricsSender(req *http.Request) (*http.Response, error) {
@@ -791,7 +792,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricsSender(req *
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricsResponder handles the response to the GetHostingEnvironmentMetrics request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricsResponder(resp *http.Response) (result ResourceMetricCollection, err error) {
@@ -826,14 +827,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentMetricsNextResults(
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMetricsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMetricsComplete(ctx context.Context, resourceGroupName string, name string, details *bool, filter string) (result ResourceMetricCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentMetrics(ctx, resourceGroupName, name, details, filter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricDefinitions sends the get hosting environment multi role metric definitions
 // request.
 //
@@ -861,7 +862,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricDefinitionsPreparer prepares the GetHostingEnvironmentMultiRoleMetricDefinitions request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefinitionsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -883,7 +884,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefi
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricDefinitionsSender sends the GetHostingEnvironmentMultiRoleMetricDefinitions request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefinitionsSender(req *http.Request) (*http.Response, error) {
@@ -891,7 +892,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefi
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricDefinitionsResponder handles the response to the GetHostingEnvironmentMultiRoleMetricDefinitions request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefinitionsResponder(resp *http.Response) (result MetricDefinitionCollection, err error) {
@@ -926,14 +927,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentMultiRoleMetricDefi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricDefinitionsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricDefinitionsComplete(ctx context.Context, resourceGroupName string, name string) (result MetricDefinitionCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentMultiRoleMetricDefinitions(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetrics sends the get hosting environment multi role metrics request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -965,7 +966,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetrics(ct
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricsPreparer prepares the GetHostingEnvironmentMultiRoleMetrics request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricsPreparer(ctx context.Context, resourceGroupName string, name string, startTime string, endTime string, timeGrain string, details *bool, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1002,7 +1003,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricsPre
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricsSender sends the GetHostingEnvironmentMultiRoleMetrics request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricsSender(req *http.Request) (*http.Response, error) {
@@ -1010,7 +1011,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricsSen
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricsResponder handles the response to the GetHostingEnvironmentMultiRoleMetrics request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricsResponder(resp *http.Response) (result ResourceMetricCollection, err error) {
@@ -1045,14 +1046,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentMultiRoleMetricsNex
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleMetricsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleMetricsComplete(ctx context.Context, resourceGroupName string, name string, startTime string, endTime string, timeGrain string, details *bool, filter string) (result ResourceMetricCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentMultiRoleMetrics(ctx, resourceGroupName, name, startTime, endTime, timeGrain, details, filter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleUsages sends the get hosting environment multi role usages request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1079,7 +1080,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsages(ctx
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleUsagesPreparer prepares the GetHostingEnvironmentMultiRoleUsages request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsagesPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1101,7 +1102,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsagesPrep
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleUsagesSender sends the GetHostingEnvironmentMultiRoleUsages request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsagesSender(req *http.Request) (*http.Response, error) {
@@ -1109,7 +1110,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsagesSend
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleUsagesResponder handles the response to the GetHostingEnvironmentMultiRoleUsages request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsagesResponder(resp *http.Response) (result UsageCollection, err error) {
@@ -1144,14 +1145,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentMultiRoleUsagesNext
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentMultiRoleUsagesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentMultiRoleUsagesComplete(ctx context.Context, resourceGroupName string, name string) (result UsageCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentMultiRoleUsages(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperation sends the get hosting environment operation request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1178,7 +1179,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperation(ctx conte
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperationPreparer prepares the GetHostingEnvironmentOperation request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationPreparer(ctx context.Context, resourceGroupName string, name string, operationID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1201,7 +1202,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationPreparer(c
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperationSender sends the GetHostingEnvironmentOperation request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationSender(req *http.Request) (*http.Response, error) {
@@ -1209,7 +1210,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationSender(req
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperationResponder handles the response to the GetHostingEnvironmentOperation request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationResponder(resp *http.Response) (result SetObject, err error) {
@@ -1223,7 +1224,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationResponder(
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperations sends the get hosting environment operations request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1249,7 +1250,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperations(ctx cont
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperationsPreparer prepares the GetHostingEnvironmentOperations request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1271,7 +1272,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationsPreparer(
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperationsSender sends the GetHostingEnvironmentOperations request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationsSender(req *http.Request) (*http.Response, error) {
@@ -1279,7 +1280,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationsSender(re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentOperationsResponder handles the response to the GetHostingEnvironmentOperations request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationsResponder(resp *http.Response) (result SetObject, err error) {
@@ -1293,7 +1294,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentOperationsResponder
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironments sends the get hosting environments request.
 //
 // resourceGroupName is name of resource group
@@ -1320,7 +1321,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironments(ctx context.Conte
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentsPreparer prepares the GetHostingEnvironments request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentsPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1341,7 +1342,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentsPreparer(ctx conte
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentsSender sends the GetHostingEnvironments request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentsSender(req *http.Request) (*http.Response, error) {
@@ -1349,7 +1350,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentsSender(req *http.R
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentsResponder handles the response to the GetHostingEnvironments request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentsResponder(resp *http.Response) (result HostingEnvironmentCollection, err error) {
@@ -1384,14 +1385,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentsNextResults(lastRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentsComplete(ctx context.Context, resourceGroupName string) (result HostingEnvironmentCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironments(ctx, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentServerFarms sends the get hosting environment server farms request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1418,7 +1419,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarms(ctx con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentServerFarmsPreparer prepares the GetHostingEnvironmentServerFarms request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarmsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1440,7 +1441,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarmsPreparer
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentServerFarmsSender sends the GetHostingEnvironmentServerFarms request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarmsSender(req *http.Request) (*http.Response, error) {
@@ -1448,7 +1449,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarmsSender(r
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentServerFarmsResponder handles the response to the GetHostingEnvironmentServerFarms request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarmsResponder(resp *http.Response) (result ServerFarmCollection, err error) {
@@ -1483,14 +1484,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentServerFarmsNextResu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentServerFarmsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentServerFarmsComplete(ctx context.Context, resourceGroupName string, name string) (result ServerFarmCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentServerFarms(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentSites sends the get hosting environment sites request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1518,7 +1519,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentSites(ctx context.C
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentSitesPreparer prepares the GetHostingEnvironmentSites request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentSitesPreparer(ctx context.Context, resourceGroupName string, name string, propertiesToInclude string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1543,7 +1544,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentSitesPreparer(ctx c
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentSitesSender sends the GetHostingEnvironmentSites request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentSitesSender(req *http.Request) (*http.Response, error) {
@@ -1551,7 +1552,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentSitesSender(req *ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentSitesResponder handles the response to the GetHostingEnvironmentSites request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentSitesResponder(resp *http.Response) (result SiteCollection, err error) {
@@ -1586,14 +1587,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentSitesNextResults(la
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentSitesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentSitesComplete(ctx context.Context, resourceGroupName string, name string, propertiesToInclude string) (result SiteCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentSites(ctx, resourceGroupName, name, propertiesToInclude)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentUsages sends the get hosting environment usages request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment) filter
@@ -1623,7 +1624,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentUsages(ctx context.
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentUsagesPreparer prepares the GetHostingEnvironmentUsages request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentUsagesPreparer(ctx context.Context, resourceGroupName string, name string, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1648,7 +1649,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentUsagesPreparer(ctx 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentUsagesSender sends the GetHostingEnvironmentUsages request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentUsagesSender(req *http.Request) (*http.Response, error) {
@@ -1656,7 +1657,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentUsagesSender(req *h
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentUsagesResponder handles the response to the GetHostingEnvironmentUsages request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentUsagesResponder(resp *http.Response) (result CsmUsageQuotaCollection, err error) {
@@ -1691,14 +1692,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentUsagesNextResults(l
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentUsagesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentUsagesComplete(ctx context.Context, resourceGroupName string, name string, filter string) (result CsmUsageQuotaCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentUsages(ctx, resourceGroupName, name, filter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentVips sends the get hosting environment vips request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1724,7 +1725,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentVips(ctx context.Co
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentVipsPreparer prepares the GetHostingEnvironmentVips request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentVipsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1746,7 +1747,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentVipsPreparer(ctx co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentVipsSender sends the GetHostingEnvironmentVips request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentVipsSender(req *http.Request) (*http.Response, error) {
@@ -1754,7 +1755,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentVipsSender(req *htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentVipsResponder handles the response to the GetHostingEnvironmentVips request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentVipsResponder(resp *http.Response) (result AddressResponse, err error) {
@@ -1768,7 +1769,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentVipsResponder(resp 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebHostingPlans sends the get hosting environment web hosting plans request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -1795,7 +1796,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlans(ctx
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebHostingPlansPreparer prepares the GetHostingEnvironmentWebHostingPlans request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlansPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1817,7 +1818,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlansPrep
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebHostingPlansSender sends the GetHostingEnvironmentWebHostingPlans request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlansSender(req *http.Request) (*http.Response, error) {
@@ -1825,7 +1826,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlansSend
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebHostingPlansResponder handles the response to the GetHostingEnvironmentWebHostingPlans request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlansResponder(resp *http.Response) (result ServerFarmCollection, err error) {
@@ -1860,14 +1861,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentWebHostingPlansNext
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebHostingPlansComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebHostingPlansComplete(ctx context.Context, resourceGroupName string, name string) (result ServerFarmCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentWebHostingPlans(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricDefinitions sends the get hosting environment web worker metric definitions
 // request.
 //
@@ -1896,7 +1897,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricDefinitionsPreparer prepares the GetHostingEnvironmentWebWorkerMetricDefinitions request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefinitionsPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -1919,7 +1920,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefi
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricDefinitionsSender sends the GetHostingEnvironmentWebWorkerMetricDefinitions request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefinitionsSender(req *http.Request) (*http.Response, error) {
@@ -1927,7 +1928,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefi
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricDefinitionsResponder handles the response to the GetHostingEnvironmentWebWorkerMetricDefinitions request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefinitionsResponder(resp *http.Response) (result MetricDefinitionCollection, err error) {
@@ -1962,14 +1963,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentWebWorkerMetricDefi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricDefinitionsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricDefinitionsComplete(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (result MetricDefinitionCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentWebWorkerMetricDefinitions(ctx, resourceGroupName, name, workerPoolName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetrics sends the get hosting environment web worker metrics request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2000,7 +2001,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetrics(ct
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricsPreparer prepares the GetHostingEnvironmentWebWorkerMetrics request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricsPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string, details *bool, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2029,7 +2030,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricsPre
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricsSender sends the GetHostingEnvironmentWebWorkerMetrics request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricsSender(req *http.Request) (*http.Response, error) {
@@ -2037,7 +2038,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricsSen
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricsResponder handles the response to the GetHostingEnvironmentWebWorkerMetrics request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricsResponder(resp *http.Response) (result ResourceMetricCollection, err error) {
@@ -2072,14 +2073,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentWebWorkerMetricsNex
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerMetricsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerMetricsComplete(ctx context.Context, resourceGroupName string, name string, workerPoolName string, details *bool, filter string) (result ResourceMetricCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentWebWorkerMetrics(ctx, resourceGroupName, name, workerPoolName, details, filter)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerUsages sends the get hosting environment web worker usages request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2107,7 +2108,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsages(ctx
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerUsagesPreparer prepares the GetHostingEnvironmentWebWorkerUsages request.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsagesPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2130,7 +2131,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsagesPrep
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerUsagesSender sends the GetHostingEnvironmentWebWorkerUsages request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsagesSender(req *http.Request) (*http.Response, error) {
@@ -2138,7 +2139,7 @@ func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsagesSend
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerUsagesResponder handles the response to the GetHostingEnvironmentWebWorkerUsages request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsagesResponder(resp *http.Response) (result UsageCollection, err error) {
@@ -2173,14 +2174,14 @@ func (client HostingEnvironmentsClient) getHostingEnvironmentWebWorkerUsagesNext
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetHostingEnvironmentWebWorkerUsagesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetHostingEnvironmentWebWorkerUsagesComplete(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (result UsageCollectionIterator, err error) {
 	result.page, err = client.GetHostingEnvironmentWebWorkerUsages(ctx, resourceGroupName, name, workerPoolName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePool sends the get multi role pool request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2206,7 +2207,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePool(ctx context.Context, re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolPreparer prepares the GetMultiRolePool request.
 func (client HostingEnvironmentsClient) GetMultiRolePoolPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2228,7 +2229,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolPreparer(ctx context.Con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolSender sends the GetMultiRolePool request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetMultiRolePoolSender(req *http.Request) (*http.Response, error) {
@@ -2236,7 +2237,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolSender(req *http.Request
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolResponder handles the response to the GetMultiRolePool request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetMultiRolePoolResponder(resp *http.Response) (result WorkerPool, err error) {
@@ -2250,7 +2251,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolResponder(resp *http.Res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricDefinitions sends the get multi role pool instance metric definitions request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2277,7 +2278,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinition
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricDefinitionsPreparer prepares the GetMultiRolePoolInstanceMetricDefinitions request.
 func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinitionsPreparer(ctx context.Context, resourceGroupName string, name string, instance string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2300,7 +2301,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinition
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricDefinitionsSender sends the GetMultiRolePoolInstanceMetricDefinitions request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinitionsSender(req *http.Request) (*http.Response, error) {
@@ -2308,7 +2309,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinition
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricDefinitionsResponder handles the response to the GetMultiRolePoolInstanceMetricDefinitions request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinitionsResponder(resp *http.Response) (result SetObject, err error) {
@@ -2322,7 +2323,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricDefinition
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetrics sends the get multi role pool instance metrics request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2349,7 +2350,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetrics(ctx cont
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricsPreparer prepares the GetMultiRolePoolInstanceMetrics request.
 func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricsPreparer(ctx context.Context, resourceGroupName string, name string, instance string, details *bool) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2375,7 +2376,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricsPreparer(
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricsSender sends the GetMultiRolePoolInstanceMetrics request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricsSender(req *http.Request) (*http.Response, error) {
@@ -2383,7 +2384,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricsSender(re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolInstanceMetricsResponder handles the response to the GetMultiRolePoolInstanceMetrics request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricsResponder(resp *http.Response) (result SetObject, err error) {
@@ -2397,7 +2398,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolInstanceMetricsResponder
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePools sends the get multi role pools request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2424,7 +2425,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePools(ctx context.Context, r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolsPreparer prepares the GetMultiRolePools request.
 func (client HostingEnvironmentsClient) GetMultiRolePoolsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2446,7 +2447,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolsPreparer(ctx context.Co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolsSender sends the GetMultiRolePools request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetMultiRolePoolsSender(req *http.Request) (*http.Response, error) {
@@ -2454,7 +2455,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolsSender(req *http.Reques
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolsResponder handles the response to the GetMultiRolePools request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetMultiRolePoolsResponder(resp *http.Response) (result WorkerPoolCollection, err error) {
@@ -2489,14 +2490,14 @@ func (client HostingEnvironmentsClient) getMultiRolePoolsNextResults(lastResults
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetMultiRolePoolsComplete(ctx context.Context, resourceGroupName string, name string) (result WorkerPoolCollectionIterator, err error) {
 	result.page, err = client.GetMultiRolePools(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolSkus sends the get multi role pool skus request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2523,7 +2524,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolSkus(ctx context.Context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolSkusPreparer prepares the GetMultiRolePoolSkus request.
 func (client HostingEnvironmentsClient) GetMultiRolePoolSkusPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2545,7 +2546,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolSkusPreparer(ctx context
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolSkusSender sends the GetMultiRolePoolSkus request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetMultiRolePoolSkusSender(req *http.Request) (*http.Response, error) {
@@ -2553,7 +2554,7 @@ func (client HostingEnvironmentsClient) GetMultiRolePoolSkusSender(req *http.Req
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolSkusResponder handles the response to the GetMultiRolePoolSkus request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetMultiRolePoolSkusResponder(resp *http.Response) (result SkuInfoCollection, err error) {
@@ -2588,14 +2589,14 @@ func (client HostingEnvironmentsClient) getMultiRolePoolSkusNextResults(lastResu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetMultiRolePoolSkusComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetMultiRolePoolSkusComplete(ctx context.Context, resourceGroupName string, name string) (result SkuInfoCollectionIterator, err error) {
 	result.page, err = client.GetMultiRolePoolSkus(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPool sends the get worker pool request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2622,7 +2623,7 @@ func (client HostingEnvironmentsClient) GetWorkerPool(ctx context.Context, resou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolPreparer prepares the GetWorkerPool request.
 func (client HostingEnvironmentsClient) GetWorkerPoolPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2645,7 +2646,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolPreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolSender sends the GetWorkerPool request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetWorkerPoolSender(req *http.Request) (*http.Response, error) {
@@ -2653,7 +2654,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolSender(req *http.Request) (
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolResponder handles the response to the GetWorkerPool request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetWorkerPoolResponder(resp *http.Response) (result WorkerPool, err error) {
@@ -2667,7 +2668,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolResponder(resp *http.Respon
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricDefinitions sends the get worker pool instance metric definitions request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2694,7 +2695,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitions(c
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricDefinitionsPreparer prepares the GetWorkerPoolInstanceMetricDefinitions request.
 func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitionsPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string, instance string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2718,7 +2719,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitionsPr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricDefinitionsSender sends the GetWorkerPoolInstanceMetricDefinitions request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitionsSender(req *http.Request) (*http.Response, error) {
@@ -2726,7 +2727,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitionsSe
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricDefinitionsResponder handles the response to the GetWorkerPoolInstanceMetricDefinitions request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitionsResponder(resp *http.Response) (result SetObject, err error) {
@@ -2740,7 +2741,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricDefinitionsRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetrics sends the get worker pool instance metrics request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2770,7 +2771,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetrics(ctx context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricsPreparer prepares the GetWorkerPoolInstanceMetrics request.
 func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricsPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string, instance string, details *bool, filter string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2800,7 +2801,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricsPreparer(ctx
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricsSender sends the GetWorkerPoolInstanceMetrics request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricsSender(req *http.Request) (*http.Response, error) {
@@ -2808,7 +2809,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricsSender(req *
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolInstanceMetricsResponder handles the response to the GetWorkerPoolInstanceMetrics request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricsResponder(resp *http.Response) (result SetObject, err error) {
@@ -2822,7 +2823,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolInstanceMetricsResponder(re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPools sends the get worker pools request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2849,7 +2850,7 @@ func (client HostingEnvironmentsClient) GetWorkerPools(ctx context.Context, reso
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolsPreparer prepares the GetWorkerPools request.
 func (client HostingEnvironmentsClient) GetWorkerPoolsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2871,7 +2872,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolsPreparer(ctx context.Conte
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolsSender sends the GetWorkerPools request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetWorkerPoolsSender(req *http.Request) (*http.Response, error) {
@@ -2879,7 +2880,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolsSender(req *http.Request) 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolsResponder handles the response to the GetWorkerPools request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetWorkerPoolsResponder(resp *http.Response) (result WorkerPoolCollection, err error) {
@@ -2914,14 +2915,14 @@ func (client HostingEnvironmentsClient) getWorkerPoolsNextResults(lastResults Wo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetWorkerPoolsComplete(ctx context.Context, resourceGroupName string, name string) (result WorkerPoolCollectionIterator, err error) {
 	result.page, err = client.GetWorkerPools(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolSkus sends the get worker pool skus request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -2949,7 +2950,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolSkus(ctx context.Context, r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolSkusPreparer prepares the GetWorkerPoolSkus request.
 func (client HostingEnvironmentsClient) GetWorkerPoolSkusPreparer(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -2972,7 +2973,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolSkusPreparer(ctx context.Co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolSkusSender sends the GetWorkerPoolSkus request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) GetWorkerPoolSkusSender(req *http.Request) (*http.Response, error) {
@@ -2980,7 +2981,7 @@ func (client HostingEnvironmentsClient) GetWorkerPoolSkusSender(req *http.Reques
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolSkusResponder handles the response to the GetWorkerPoolSkus request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) GetWorkerPoolSkusResponder(resp *http.Response) (result SkuInfoCollection, err error) {
@@ -3015,14 +3016,14 @@ func (client HostingEnvironmentsClient) getWorkerPoolSkusNextResults(lastResults
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetWorkerPoolSkusComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) GetWorkerPoolSkusComplete(ctx context.Context, resourceGroupName string, name string, workerPoolName string) (result SkuInfoCollectionIterator, err error) {
 	result.page, err = client.GetWorkerPoolSkus(ctx, resourceGroupName, name, workerPoolName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // RebootHostingEnvironment sends the reboot hosting environment request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -3048,7 +3049,7 @@ func (client HostingEnvironmentsClient) RebootHostingEnvironment(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // RebootHostingEnvironmentPreparer prepares the RebootHostingEnvironment request.
 func (client HostingEnvironmentsClient) RebootHostingEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -3070,7 +3071,7 @@ func (client HostingEnvironmentsClient) RebootHostingEnvironmentPreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // RebootHostingEnvironmentSender sends the RebootHostingEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) RebootHostingEnvironmentSender(req *http.Request) (*http.Response, error) {
@@ -3078,7 +3079,7 @@ func (client HostingEnvironmentsClient) RebootHostingEnvironmentSender(req *http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // RebootHostingEnvironmentResponder handles the response to the RebootHostingEnvironment request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) RebootHostingEnvironmentResponder(resp *http.Response) (result SetObject, err error) {
@@ -3092,7 +3093,7 @@ func (client HostingEnvironmentsClient) RebootHostingEnvironmentResponder(resp *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ResumeHostingEnvironment sends the resume hosting environment request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -3112,7 +3113,7 @@ func (client HostingEnvironmentsClient) ResumeHostingEnvironment(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ResumeHostingEnvironmentPreparer prepares the ResumeHostingEnvironment request.
 func (client HostingEnvironmentsClient) ResumeHostingEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -3134,7 +3135,7 @@ func (client HostingEnvironmentsClient) ResumeHostingEnvironmentPreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ResumeHostingEnvironmentSender sends the ResumeHostingEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) ResumeHostingEnvironmentSender(req *http.Request) (future HostingEnvironmentsResumeHostingEnvironmentFuture, err error) {
@@ -3150,7 +3151,7 @@ func (client HostingEnvironmentsClient) ResumeHostingEnvironmentSender(req *http
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ResumeHostingEnvironmentResponder handles the response to the ResumeHostingEnvironment request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) ResumeHostingEnvironmentResponder(resp *http.Response) (result SiteCollectionPage, err error) {
@@ -3188,7 +3189,7 @@ func (client HostingEnvironmentsClient) resumeHostingEnvironmentNextResults(last
 	return client.resumeHostingEnvironmentResponder(resp)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ResumeHostingEnvironmentComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) ResumeHostingEnvironmentComplete(ctx context.Context, resourceGroupName string, name string) (result HostingEnvironmentsResumeHostingEnvironmentAllFuture, err error) {
 	var future HostingEnvironmentsResumeHostingEnvironmentFuture
@@ -3198,7 +3199,7 @@ func (client HostingEnvironmentsClient) ResumeHostingEnvironmentComplete(ctx con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // SuspendHostingEnvironment sends the suspend hosting environment request.
 //
 // resourceGroupName is name of resource group name is name of hostingEnvironment (App Service Environment)
@@ -3218,7 +3219,7 @@ func (client HostingEnvironmentsClient) SuspendHostingEnvironment(ctx context.Co
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // SuspendHostingEnvironmentPreparer prepares the SuspendHostingEnvironment request.
 func (client HostingEnvironmentsClient) SuspendHostingEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -3240,7 +3241,7 @@ func (client HostingEnvironmentsClient) SuspendHostingEnvironmentPreparer(ctx co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // SuspendHostingEnvironmentSender sends the SuspendHostingEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client HostingEnvironmentsClient) SuspendHostingEnvironmentSender(req *http.Request) (future HostingEnvironmentsSuspendHostingEnvironmentFuture, err error) {
@@ -3256,7 +3257,7 @@ func (client HostingEnvironmentsClient) SuspendHostingEnvironmentSender(req *htt
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // SuspendHostingEnvironmentResponder handles the response to the SuspendHostingEnvironment request. The method always
 // closes the http.Response Body.
 func (client HostingEnvironmentsClient) SuspendHostingEnvironmentResponder(resp *http.Response) (result SiteCollectionPage, err error) {
@@ -3294,7 +3295,7 @@ func (client HostingEnvironmentsClient) suspendHostingEnvironmentNextResults(las
 	return client.suspendHostingEnvironmentResponder(resp)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // SuspendHostingEnvironmentComplete enumerates all values, automatically crossing page boundaries as required.
 func (client HostingEnvironmentsClient) SuspendHostingEnvironmentComplete(ctx context.Context, resourceGroupName string, name string) (result HostingEnvironmentsSuspendHostingEnvironmentAllFuture, err error) {
 	var future HostingEnvironmentsSuspendHostingEnvironmentFuture

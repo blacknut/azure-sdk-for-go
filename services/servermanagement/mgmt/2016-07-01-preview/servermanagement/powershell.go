@@ -19,31 +19,32 @@ package servermanagement
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // PowerShellClient is the REST API for Azure Server Management Service.
 type PowerShellClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // NewPowerShellClient creates an instance of the PowerShellClient client.
 func NewPowerShellClient(subscriptionID string) PowerShellClient {
 	return NewPowerShellClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // NewPowerShellClientWithBaseURI creates an instance of the PowerShellClient client.
 func NewPowerShellClientWithBaseURI(baseURI string, subscriptionID string) PowerShellClient {
 	return PowerShellClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CancelCommand cancels a PowerShell command.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -76,7 +77,7 @@ func (client PowerShellClient) CancelCommand(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CancelCommandPreparer prepares the CancelCommand request.
 func (client PowerShellClient) CancelCommandPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string, pssession string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -100,7 +101,7 @@ func (client PowerShellClient) CancelCommandPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CancelCommandSender sends the CancelCommand request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) CancelCommandSender(req *http.Request) (future PowerShellCancelCommandFuture, err error) {
@@ -116,7 +117,7 @@ func (client PowerShellClient) CancelCommandSender(req *http.Request) (future Po
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CancelCommandResponder handles the response to the CancelCommand request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) CancelCommandResponder(resp *http.Response) (result PowerShellCommandResults, err error) {
@@ -130,7 +131,7 @@ func (client PowerShellClient) CancelCommandResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CreateSession creates a PowerShell session.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -163,7 +164,7 @@ func (client PowerShellClient) CreateSession(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CreateSessionPreparer prepares the CreateSession request.
 func (client PowerShellClient) CreateSessionPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string, pssession string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -187,7 +188,7 @@ func (client PowerShellClient) CreateSessionPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CreateSessionSender sends the CreateSession request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) CreateSessionSender(req *http.Request) (future PowerShellCreateSessionFuture, err error) {
@@ -203,7 +204,7 @@ func (client PowerShellClient) CreateSessionSender(req *http.Request) (future Po
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // CreateSessionResponder handles the response to the CreateSession request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) CreateSessionResponder(resp *http.Response) (result PowerShellSessionResource, err error) {
@@ -217,7 +218,7 @@ func (client PowerShellClient) CreateSessionResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // GetCommandStatus gets the status of a command.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -256,7 +257,7 @@ func (client PowerShellClient) GetCommandStatus(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // GetCommandStatusPreparer prepares the GetCommandStatus request.
 func (client PowerShellClient) GetCommandStatusPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string, pssession string, expand PowerShellExpandOption) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -283,7 +284,7 @@ func (client PowerShellClient) GetCommandStatusPreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // GetCommandStatusSender sends the GetCommandStatus request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) GetCommandStatusSender(req *http.Request) (*http.Response, error) {
@@ -291,7 +292,7 @@ func (client PowerShellClient) GetCommandStatusSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // GetCommandStatusResponder handles the response to the GetCommandStatus request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) GetCommandStatusResponder(resp *http.Response) (result PowerShellCommandStatus, err error) {
@@ -305,7 +306,7 @@ func (client PowerShellClient) GetCommandStatusResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // InvokeCommand creates a PowerShell script and invokes it.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -339,7 +340,7 @@ func (client PowerShellClient) InvokeCommand(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // InvokeCommandPreparer prepares the InvokeCommand request.
 func (client PowerShellClient) InvokeCommandPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string, pssession string, powerShellCommandParameters PowerShellCommandParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -365,7 +366,7 @@ func (client PowerShellClient) InvokeCommandPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // InvokeCommandSender sends the InvokeCommand request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) InvokeCommandSender(req *http.Request) (future PowerShellInvokeCommandFuture, err error) {
@@ -381,7 +382,7 @@ func (client PowerShellClient) InvokeCommandSender(req *http.Request) (future Po
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // InvokeCommandResponder handles the response to the InvokeCommand request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) InvokeCommandResponder(resp *http.Response) (result PowerShellCommandResults, err error) {
@@ -395,7 +396,7 @@ func (client PowerShellClient) InvokeCommandResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // ListSession gets a list of the active sessions.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -433,7 +434,7 @@ func (client PowerShellClient) ListSession(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // ListSessionPreparer prepares the ListSession request.
 func (client PowerShellClient) ListSessionPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -456,7 +457,7 @@ func (client PowerShellClient) ListSessionPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // ListSessionSender sends the ListSession request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) ListSessionSender(req *http.Request) (*http.Response, error) {
@@ -464,7 +465,7 @@ func (client PowerShellClient) ListSessionSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // ListSessionResponder handles the response to the ListSession request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) ListSessionResponder(resp *http.Response) (result PowerShellSessionResources, err error) {
@@ -478,7 +479,7 @@ func (client PowerShellClient) ListSessionResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // TabCompletion gets tab completion values for a command.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -518,7 +519,7 @@ func (client PowerShellClient) TabCompletion(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // TabCompletionPreparer prepares the TabCompletion request.
 func (client PowerShellClient) TabCompletionPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string, pssession string, powerShellTabCompletionParamters PowerShellTabCompletionParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -544,7 +545,7 @@ func (client PowerShellClient) TabCompletionPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // TabCompletionSender sends the TabCompletion request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) TabCompletionSender(req *http.Request) (*http.Response, error) {
@@ -552,7 +553,7 @@ func (client PowerShellClient) TabCompletionSender(req *http.Request) (*http.Res
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // TabCompletionResponder handles the response to the TabCompletion request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) TabCompletionResponder(resp *http.Response) (result PowerShellTabCompletionResults, err error) {
@@ -566,7 +567,7 @@ func (client PowerShellClient) TabCompletionResponder(resp *http.Response) (resu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // UpdateCommand updates a running PowerShell command with more data.
 //
 // resourceGroupName is the resource group name uniquely identifies the resource group within the user
@@ -599,7 +600,7 @@ func (client PowerShellClient) UpdateCommand(ctx context.Context, resourceGroupN
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // UpdateCommandPreparer prepares the UpdateCommand request.
 func (client PowerShellClient) UpdateCommandPreparer(ctx context.Context, resourceGroupName string, nodeName string, session string, pssession string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -623,7 +624,7 @@ func (client PowerShellClient) UpdateCommandPreparer(ctx context.Context, resour
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // UpdateCommandSender sends the UpdateCommand request. The method will close the
 // http.Response Body if it receives an error.
 func (client PowerShellClient) UpdateCommandSender(req *http.Request) (future PowerShellUpdateCommandFuture, err error) {
@@ -639,7 +640,7 @@ func (client PowerShellClient) UpdateCommandSender(req *http.Request) (future Po
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/servermanagement/mgmt/2016-07-01-preview/servermanagement instead.
 // UpdateCommandResponder handles the response to the UpdateCommand request. The method always
 // closes the http.Response Body.
 func (client PowerShellClient) UpdateCommandResponder(resp *http.Response) (result PowerShellCommandResults, err error) {

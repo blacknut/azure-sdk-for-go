@@ -19,13 +19,14 @@ package logic
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/date"
 	"github.com/Azure/go-autorest/autorest/to"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AgreementType enumerates the values for agreement type.
 type AgreementType string
 
@@ -40,13 +41,13 @@ const (
 	X12 AgreementType = "X12"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleAgreementTypeValues returns an array of possible values for the AgreementType const type.
 func PossibleAgreementTypeValues() []AgreementType {
 	return []AgreementType{AS2, Edifact, NotSpecified, X12}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactCharacterSet enumerates the values for edifact character set.
 type EdifactCharacterSet string
 
@@ -83,13 +84,13 @@ const (
 	EdifactCharacterSetUNOY EdifactCharacterSet = "UNOY"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleEdifactCharacterSetValues returns an array of possible values for the EdifactCharacterSet const type.
 func PossibleEdifactCharacterSetValues() []EdifactCharacterSet {
 	return []EdifactCharacterSet{EdifactCharacterSetKECA, EdifactCharacterSetNotSpecified, EdifactCharacterSetUNOA, EdifactCharacterSetUNOB, EdifactCharacterSetUNOC, EdifactCharacterSetUNOD, EdifactCharacterSetUNOE, EdifactCharacterSetUNOF, EdifactCharacterSetUNOG, EdifactCharacterSetUNOH, EdifactCharacterSetUNOI, EdifactCharacterSetUNOJ, EdifactCharacterSetUNOK, EdifactCharacterSetUNOX, EdifactCharacterSetUNOY}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactDecimalIndicator enumerates the values for edifact decimal indicator.
 type EdifactDecimalIndicator string
 
@@ -102,13 +103,13 @@ const (
 	EdifactDecimalIndicatorNotSpecified EdifactDecimalIndicator = "NotSpecified"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleEdifactDecimalIndicatorValues returns an array of possible values for the EdifactDecimalIndicator const type.
 func PossibleEdifactDecimalIndicatorValues() []EdifactDecimalIndicator {
 	return []EdifactDecimalIndicator{EdifactDecimalIndicatorComma, EdifactDecimalIndicatorDecimal, EdifactDecimalIndicatorNotSpecified}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EncryptionAlgorithm enumerates the values for encryption algorithm.
 type EncryptionAlgorithm string
 
@@ -129,13 +130,13 @@ const (
 	EncryptionAlgorithmRC2 EncryptionAlgorithm = "RC2"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleEncryptionAlgorithmValues returns an array of possible values for the EncryptionAlgorithm const type.
 func PossibleEncryptionAlgorithmValues() []EncryptionAlgorithm {
 	return []EncryptionAlgorithm{EncryptionAlgorithmAES128, EncryptionAlgorithmAES192, EncryptionAlgorithmAES256, EncryptionAlgorithmDES3, EncryptionAlgorithmNone, EncryptionAlgorithmNotSpecified, EncryptionAlgorithmRC2}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // HashingAlgorithm enumerates the values for hashing algorithm.
 type HashingAlgorithm string
 
@@ -152,13 +153,13 @@ const (
 	HashingAlgorithmSHA2512 HashingAlgorithm = "SHA2512"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleHashingAlgorithmValues returns an array of possible values for the HashingAlgorithm const type.
 func PossibleHashingAlgorithmValues() []HashingAlgorithm {
 	return []HashingAlgorithm{HashingAlgorithmNone, HashingAlgorithmNotSpecified, HashingAlgorithmSHA2256, HashingAlgorithmSHA2384, HashingAlgorithmSHA2512}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MapType enumerates the values for map type.
 type MapType string
 
@@ -169,13 +170,13 @@ const (
 	MapTypeXslt MapType = "Xslt"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleMapTypeValues returns an array of possible values for the MapType const type.
 func PossibleMapTypeValues() []MapType {
 	return []MapType{MapTypeNotSpecified, MapTypeXslt}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MessageFilterType enumerates the values for message filter type.
 type MessageFilterType string
 
@@ -188,13 +189,13 @@ const (
 	MessageFilterTypeNotSpecified MessageFilterType = "NotSpecified"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleMessageFilterTypeValues returns an array of possible values for the MessageFilterType const type.
 func PossibleMessageFilterTypeValues() []MessageFilterType {
 	return []MessageFilterType{MessageFilterTypeExclude, MessageFilterTypeInclude, MessageFilterTypeNotSpecified}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PartnerType enumerates the values for partner type.
 type PartnerType string
 
@@ -205,13 +206,13 @@ const (
 	PartnerTypeNotSpecified PartnerType = "NotSpecified"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossiblePartnerTypeValues returns an array of possible values for the PartnerType const type.
 func PossiblePartnerTypeValues() []PartnerType {
 	return []PartnerType{PartnerTypeB2B, PartnerTypeNotSpecified}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // SchemaType enumerates the values for schema type.
 type SchemaType string
 
@@ -222,13 +223,13 @@ const (
 	SchemaTypeXML SchemaType = "Xml"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleSchemaTypeValues returns an array of possible values for the SchemaType const type.
 func PossibleSchemaTypeValues() []SchemaType {
 	return []SchemaType{SchemaTypeNotSpecified, SchemaTypeXML}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // SegmentTerminatorSuffix enumerates the values for segment terminator suffix.
 type SegmentTerminatorSuffix string
 
@@ -245,13 +246,13 @@ const (
 	SegmentTerminatorSuffixNotSpecified SegmentTerminatorSuffix = "NotSpecified"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleSegmentTerminatorSuffixValues returns an array of possible values for the SegmentTerminatorSuffix const type.
 func PossibleSegmentTerminatorSuffixValues() []SegmentTerminatorSuffix {
 	return []SegmentTerminatorSuffix{SegmentTerminatorSuffixCR, SegmentTerminatorSuffixCRLF, SegmentTerminatorSuffixLF, SegmentTerminatorSuffixNone, SegmentTerminatorSuffixNotSpecified}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // SkuName enumerates the values for sku name.
 type SkuName string
 
@@ -270,13 +271,13 @@ const (
 	SkuNameStandard SkuName = "Standard"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleSkuNameValues returns an array of possible values for the SkuName const type.
 func PossibleSkuNameValues() []SkuName {
 	return []SkuName{SkuNameBasic, SkuNameFree, SkuNameNotSpecified, SkuNamePremium, SkuNameShared, SkuNameStandard}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // TrailingSeparatorPolicy enumerates the values for trailing separator policy.
 type TrailingSeparatorPolicy string
 
@@ -291,13 +292,13 @@ const (
 	TrailingSeparatorPolicyOptional TrailingSeparatorPolicy = "Optional"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleTrailingSeparatorPolicyValues returns an array of possible values for the TrailingSeparatorPolicy const type.
 func PossibleTrailingSeparatorPolicyValues() []TrailingSeparatorPolicy {
 	return []TrailingSeparatorPolicy{TrailingSeparatorPolicyMandatory, TrailingSeparatorPolicyNotAllowed, TrailingSeparatorPolicyNotSpecified, TrailingSeparatorPolicyOptional}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // UsageIndicator enumerates the values for usage indicator.
 type UsageIndicator string
 
@@ -312,13 +313,13 @@ const (
 	UsageIndicatorTest UsageIndicator = "Test"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleUsageIndicatorValues returns an array of possible values for the UsageIndicator const type.
 func PossibleUsageIndicatorValues() []UsageIndicator {
 	return []UsageIndicator{UsageIndicatorInformation, UsageIndicatorNotSpecified, UsageIndicatorProduction, UsageIndicatorTest}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12CharacterSet enumerates the values for x12 character set.
 type X12CharacterSet string
 
@@ -333,13 +334,13 @@ const (
 	X12CharacterSetUTF8 X12CharacterSet = "UTF8"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleX12CharacterSetValues returns an array of possible values for the X12CharacterSet const type.
 func PossibleX12CharacterSetValues() []X12CharacterSet {
 	return []X12CharacterSet{X12CharacterSetBasic, X12CharacterSetExtended, X12CharacterSetNotSpecified, X12CharacterSetUTF8}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12DateFormat enumerates the values for x12 date format.
 type X12DateFormat string
 
@@ -352,13 +353,13 @@ const (
 	X12DateFormatYYMMDD X12DateFormat = "YYMMDD"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleX12DateFormatValues returns an array of possible values for the X12DateFormat const type.
 func PossibleX12DateFormatValues() []X12DateFormat {
 	return []X12DateFormat{X12DateFormatCCYYMMDD, X12DateFormatNotSpecified, X12DateFormatYYMMDD}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12TimeFormat enumerates the values for x12 time format.
 type X12TimeFormat string
 
@@ -375,13 +376,13 @@ const (
 	X12TimeFormatNotSpecified X12TimeFormat = "NotSpecified"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PossibleX12TimeFormatValues returns an array of possible values for the X12TimeFormat const type.
 func PossibleX12TimeFormatValues() []X12TimeFormat {
 	return []X12TimeFormat{X12TimeFormatHHMM, X12TimeFormatHHMMSS, X12TimeFormatHHMMSSd, X12TimeFormatHHMMSSdd, X12TimeFormatNotSpecified}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AgreementContent ...
 type AgreementContent struct {
 	// AS2 - The AS2 agreement content.
@@ -392,7 +393,7 @@ type AgreementContent struct {
 	Edifact *EdifactAgreementContent `json:"Edifact,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2AcknowledgementConnectionSettings ...
 type AS2AcknowledgementConnectionSettings struct {
 	// IgnoreCertificateNameMismatch - The value indicating whether to ignore mismatch in certificate name.
@@ -405,7 +406,7 @@ type AS2AcknowledgementConnectionSettings struct {
 	UnfoldHTTPHeaders *bool `json:"unfoldHttpHeaders,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2AgreementContent ...
 type AS2AgreementContent struct {
 	// ReceiveAgreement - The AS2 one-way receive agreement.
@@ -414,7 +415,7 @@ type AS2AgreementContent struct {
 	SendAgreement *AS2OneWayAgreement `json:"sendAgreement,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2EnvelopeSettings ...
 type AS2EnvelopeSettings struct {
 	// MessageContentType - The message content type.
@@ -429,7 +430,7 @@ type AS2EnvelopeSettings struct {
 	AutogenerateFileName *bool `json:"AutogenerateFileName,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2ErrorSettings ...
 type AS2ErrorSettings struct {
 	// SuspendDuplicateMessage - The value indicating whether to suspend duplicate message.
@@ -438,7 +439,7 @@ type AS2ErrorSettings struct {
 	ResendIfMdnNotReceived *bool `json:"ResendIfMdnNotReceived,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2MdnSettings ...
 type AS2MdnSettings struct {
 	// NeedMdn - The value indicating whether to send or request a MDN.
@@ -461,7 +462,7 @@ type AS2MdnSettings struct {
 	MicHashingAlgorithm HashingAlgorithm `json:"micHashingAlgorithm,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2MessageConnectionSettings ...
 type AS2MessageConnectionSettings struct {
 	// IgnoreCertificateNameMismatch - The value indicating whether to ignore mismatch in certificate name.
@@ -474,7 +475,7 @@ type AS2MessageConnectionSettings struct {
 	UnfoldHTTPHeaders *bool `json:"unfoldHttpHeaders,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2OneWayAgreement ...
 type AS2OneWayAgreement struct {
 	// SenderBusinessIdentity - The sender business identity
@@ -485,7 +486,7 @@ type AS2OneWayAgreement struct {
 	ProtocolSettings *AS2ProtocolSettings `json:"protocolSettings,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2ProtocolSettings ...
 type AS2ProtocolSettings struct {
 	// MessageConnectionSettings - The message connection settings.
@@ -504,7 +505,7 @@ type AS2ProtocolSettings struct {
 	ErrorSettings *AS2ErrorSettings `json:"errorSettings,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2SecuritySettings ...
 type AS2SecuritySettings struct {
 	// OverrideGroupSigningCertificate - The value indicating whether to send or request a MDN.
@@ -527,7 +528,7 @@ type AS2SecuritySettings struct {
 	EnableNrrForInboundMdn *bool `json:"enableNrrForInboundMdn,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // AS2ValidationSettings ...
 type AS2ValidationSettings struct {
 	// OverrideMessageProperties - The value indicating whether to override incoming message properties with those in agreement.
@@ -550,14 +551,14 @@ type AS2ValidationSettings struct {
 	EncryptionAlgorithm EncryptionAlgorithm `json:"encryptionAlgorithm,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // B2BPartnerContent ...
 type B2BPartnerContent struct {
 	// BusinessIdentities - The list of partner business identities.
 	BusinessIdentities *[]BusinessIdentity `json:"businessIdentities,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // BusinessIdentity ...
 type BusinessIdentity struct {
 	// Qualifier - The business identity qualifier.
@@ -566,7 +567,7 @@ type BusinessIdentity struct {
 	Value *string `json:"Value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // CallbackURL ...
 type CallbackURL struct {
 	autorest.Response `json:"-"`
@@ -574,7 +575,7 @@ type CallbackURL struct {
 	Value *string `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactAcknowledgementSettings ...
 type EdifactAcknowledgementSettings struct {
 	// NeedTechnicalAcknowledgement - The value indicating whether technical acknowledgement is needed.
@@ -601,7 +602,7 @@ type EdifactAcknowledgementSettings struct {
 	RolloverAcknowledgementControlNumber *bool `json:"rolloverAcknowledgementControlNumber,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactAgreementContent ...
 type EdifactAgreementContent struct {
 	// ReceiveAgreement - The EDIFACT one-way receive agreement.
@@ -610,7 +611,7 @@ type EdifactAgreementContent struct {
 	SendAgreement *EdifactOneWayAgreement `json:"sendAgreement,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactDelimiterOverride ...
 type EdifactDelimiterOverride struct {
 	// MessageID - The message id.
@@ -639,7 +640,7 @@ type EdifactDelimiterOverride struct {
 	TargetNamespace *string `json:"targetNamespace,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactEnvelopeOverride ...
 type EdifactEnvelopeOverride struct {
 	// MessageID - The message id on which this envelope settings has to be applied.
@@ -674,7 +675,7 @@ type EdifactEnvelopeOverride struct {
 	ApplicationPassword *string `json:"applicationPassword,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactEnvelopeSettings ...
 type EdifactEnvelopeSettings struct {
 	// GroupAssociationAssignedCode - The group association assigned code.
@@ -761,7 +762,7 @@ type EdifactEnvelopeSettings struct {
 	ReceiverInternalSubIdentification *string `json:"receiverInternalSubIdentification,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactFramingSettings ...
 type EdifactFramingSettings struct {
 	// ServiceCodeListDirectoryVersion - The service code list directory version.
@@ -788,21 +789,21 @@ type EdifactFramingSettings struct {
 	SegmentTerminatorSuffix SegmentTerminatorSuffix `json:"segmentTerminatorSuffix,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactMessageFilter ...
 type EdifactMessageFilter struct {
 	// MessageFilterType - The message filter type. Possible values include: 'MessageFilterTypeNotSpecified', 'MessageFilterTypeInclude', 'MessageFilterTypeExclude'
 	MessageFilterType MessageFilterType `json:"messageFilterType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactMessageIdentifier ...
 type EdifactMessageIdentifier struct {
 	// MessageID - The message id on which this envelope settings has to be applied.
 	MessageID *string `json:"messageId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactOneWayAgreement ...
 type EdifactOneWayAgreement struct {
 	// SenderBusinessIdentity - The sender business identity
@@ -813,7 +814,7 @@ type EdifactOneWayAgreement struct {
 	ProtocolSettings *EdifactProtocolSettings `json:"protocolSettings,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactProcessingSettings ...
 type EdifactProcessingSettings struct {
 	// MaskSecurityInfo - The value indicating whether to mask security information.
@@ -828,7 +829,7 @@ type EdifactProcessingSettings struct {
 	UseDotAsDecimalSeparator *bool `json:"useDotAsDecimalSeparator,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactProtocolSettings ...
 type EdifactProtocolSettings struct {
 	// ValidationSettings - The EDIFACT validation settings.
@@ -855,7 +856,7 @@ type EdifactProtocolSettings struct {
 	EdifactDelimiterOverrides *[]EdifactDelimiterOverride `json:"edifactDelimiterOverrides,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactSchemaReference ...
 type EdifactSchemaReference struct {
 	// MessageID - The message id.
@@ -874,7 +875,7 @@ type EdifactSchemaReference struct {
 	SchemaName *string `json:"schemaName,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactValidationOverride ...
 type EdifactValidationOverride struct {
 	// MessageID - The message id on which the validation settings has to be applied.
@@ -893,7 +894,7 @@ type EdifactValidationOverride struct {
 	TrimLeadingAndTrailingSpacesAndZeroes *bool `json:"trimLeadingAndTrailingSpacesAndZeroes,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // EdifactValidationSettings ...
 type EdifactValidationSettings struct {
 	// ValidateCharacterSet - The value indicating whether to validate character set in the message.
@@ -918,7 +919,7 @@ type EdifactValidationSettings struct {
 	TrailingSeparatorPolicy TrailingSeparatorPolicy `json:"trailingSeparatorPolicy,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccount ...
 type IntegrationAccount struct {
 	autorest.Response `json:"-"`
@@ -938,7 +939,7 @@ type IntegrationAccount struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccount.
 func (ia IntegrationAccount) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -964,7 +965,7 @@ func (ia IntegrationAccount) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountAgreement ...
 type IntegrationAccountAgreement struct {
 	autorest.Response `json:"-"`
@@ -982,7 +983,7 @@ type IntegrationAccountAgreement struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccountAgreement.
 func (iaa IntegrationAccountAgreement) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1007,7 +1008,7 @@ func (iaa IntegrationAccountAgreement) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // UnmarshalJSON is the custom unmarshaler for IntegrationAccountAgreement struct.
 func (iaa *IntegrationAccountAgreement) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1077,14 +1078,14 @@ func (iaa *IntegrationAccountAgreement) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountAgreementFilter ...
 type IntegrationAccountAgreementFilter struct {
 	// AgreementType - The agreement type of integration account agreement. Possible values include: 'NotSpecified', 'AS2', 'X12', 'Edifact'
 	AgreementType AgreementType `json:"agreementType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountAgreementListResult ...
 type IntegrationAccountAgreementListResult struct {
 	autorest.Response `json:"-"`
@@ -1094,7 +1095,7 @@ type IntegrationAccountAgreementListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountAgreementListResultIterator provides access to a complete listing of
 // IntegrationAccountAgreement values.
 type IntegrationAccountAgreementListResultIterator struct {
@@ -1102,7 +1103,7 @@ type IntegrationAccountAgreementListResultIterator struct {
 	page IntegrationAccountAgreementListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *IntegrationAccountAgreementListResultIterator) Next() error {
@@ -1119,19 +1120,19 @@ func (iter *IntegrationAccountAgreementListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter IntegrationAccountAgreementListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (iter IntegrationAccountAgreementListResultIterator) Response() IntegrationAccountAgreementListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter IntegrationAccountAgreementListResultIterator) Value() IntegrationAccountAgreement {
@@ -1141,7 +1142,7 @@ func (iter IntegrationAccountAgreementListResultIterator) Value() IntegrationAcc
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (iaalr IntegrationAccountAgreementListResult) IsEmpty() bool {
 	return iaalr.Value == nil || len(*iaalr.Value) == 0
@@ -1159,14 +1160,14 @@ func (iaalr IntegrationAccountAgreementListResult) integrationAccountAgreementLi
 		autorest.WithBaseURL(to.String(iaalr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountAgreementListResultPage contains a page of IntegrationAccountAgreement values.
 type IntegrationAccountAgreementListResultPage struct {
 	fn    func(IntegrationAccountAgreementListResult) (IntegrationAccountAgreementListResult, error)
 	iaalr IntegrationAccountAgreementListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *IntegrationAccountAgreementListResultPage) Next() error {
@@ -1178,19 +1179,19 @@ func (page *IntegrationAccountAgreementListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page IntegrationAccountAgreementListResultPage) NotDone() bool {
 	return !page.iaalr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (page IntegrationAccountAgreementListResultPage) Response() IntegrationAccountAgreementListResult {
 	return page.iaalr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page IntegrationAccountAgreementListResultPage) Values() []IntegrationAccountAgreement {
 	if page.iaalr.IsEmpty() {
@@ -1199,7 +1200,7 @@ func (page IntegrationAccountAgreementListResultPage) Values() []IntegrationAcco
 	return *page.iaalr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountAgreementProperties ...
 type IntegrationAccountAgreementProperties struct {
 	// CreatedTime - The created time.
@@ -1222,7 +1223,7 @@ type IntegrationAccountAgreementProperties struct {
 	Content *AgreementContent `json:"content,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountCertificate ...
 type IntegrationAccountCertificate struct {
 	autorest.Response `json:"-"`
@@ -1240,7 +1241,7 @@ type IntegrationAccountCertificate struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccountCertificate.
 func (iac IntegrationAccountCertificate) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1265,7 +1266,7 @@ func (iac IntegrationAccountCertificate) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // UnmarshalJSON is the custom unmarshaler for IntegrationAccountCertificate struct.
 func (iac *IntegrationAccountCertificate) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1335,7 +1336,7 @@ func (iac *IntegrationAccountCertificate) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountCertificateListResult ...
 type IntegrationAccountCertificateListResult struct {
 	autorest.Response `json:"-"`
@@ -1345,7 +1346,7 @@ type IntegrationAccountCertificateListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountCertificateListResultIterator provides access to a complete listing of
 // IntegrationAccountCertificate values.
 type IntegrationAccountCertificateListResultIterator struct {
@@ -1353,7 +1354,7 @@ type IntegrationAccountCertificateListResultIterator struct {
 	page IntegrationAccountCertificateListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *IntegrationAccountCertificateListResultIterator) Next() error {
@@ -1370,19 +1371,19 @@ func (iter *IntegrationAccountCertificateListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter IntegrationAccountCertificateListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (iter IntegrationAccountCertificateListResultIterator) Response() IntegrationAccountCertificateListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter IntegrationAccountCertificateListResultIterator) Value() IntegrationAccountCertificate {
@@ -1392,7 +1393,7 @@ func (iter IntegrationAccountCertificateListResultIterator) Value() IntegrationA
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (iaclr IntegrationAccountCertificateListResult) IsEmpty() bool {
 	return iaclr.Value == nil || len(*iaclr.Value) == 0
@@ -1410,14 +1411,14 @@ func (iaclr IntegrationAccountCertificateListResult) integrationAccountCertifica
 		autorest.WithBaseURL(to.String(iaclr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountCertificateListResultPage contains a page of IntegrationAccountCertificate values.
 type IntegrationAccountCertificateListResultPage struct {
 	fn    func(IntegrationAccountCertificateListResult) (IntegrationAccountCertificateListResult, error)
 	iaclr IntegrationAccountCertificateListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *IntegrationAccountCertificateListResultPage) Next() error {
@@ -1429,19 +1430,19 @@ func (page *IntegrationAccountCertificateListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page IntegrationAccountCertificateListResultPage) NotDone() bool {
 	return !page.iaclr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (page IntegrationAccountCertificateListResultPage) Response() IntegrationAccountCertificateListResult {
 	return page.iaclr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page IntegrationAccountCertificateListResultPage) Values() []IntegrationAccountCertificate {
 	if page.iaclr.IsEmpty() {
@@ -1450,7 +1451,7 @@ func (page IntegrationAccountCertificateListResultPage) Values() []IntegrationAc
 	return *page.iaclr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountCertificateProperties ...
 type IntegrationAccountCertificateProperties struct {
 	// CreatedTime - The created time.
@@ -1465,7 +1466,7 @@ type IntegrationAccountCertificateProperties struct {
 	PublicCertificate *string `json:"publicCertificate,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountContentHash ...
 type IntegrationAccountContentHash struct {
 	// Algorithm - The conetnt hash algorithm.
@@ -1474,7 +1475,7 @@ type IntegrationAccountContentHash struct {
 	Value *string `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountContentLink ...
 type IntegrationAccountContentLink struct {
 	// URI - The content link URI.
@@ -1489,7 +1490,7 @@ type IntegrationAccountContentLink struct {
 	Metadata interface{} `json:"metadata,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountListResult ...
 type IntegrationAccountListResult struct {
 	autorest.Response `json:"-"`
@@ -1499,14 +1500,14 @@ type IntegrationAccountListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountListResultIterator provides access to a complete listing of IntegrationAccount values.
 type IntegrationAccountListResultIterator struct {
 	i    int
 	page IntegrationAccountListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *IntegrationAccountListResultIterator) Next() error {
@@ -1523,19 +1524,19 @@ func (iter *IntegrationAccountListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter IntegrationAccountListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (iter IntegrationAccountListResultIterator) Response() IntegrationAccountListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter IntegrationAccountListResultIterator) Value() IntegrationAccount {
@@ -1545,7 +1546,7 @@ func (iter IntegrationAccountListResultIterator) Value() IntegrationAccount {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ialr IntegrationAccountListResult) IsEmpty() bool {
 	return ialr.Value == nil || len(*ialr.Value) == 0
@@ -1563,14 +1564,14 @@ func (ialr IntegrationAccountListResult) integrationAccountListResultPreparer() 
 		autorest.WithBaseURL(to.String(ialr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountListResultPage contains a page of IntegrationAccount values.
 type IntegrationAccountListResultPage struct {
 	fn   func(IntegrationAccountListResult) (IntegrationAccountListResult, error)
 	ialr IntegrationAccountListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *IntegrationAccountListResultPage) Next() error {
@@ -1582,19 +1583,19 @@ func (page *IntegrationAccountListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page IntegrationAccountListResultPage) NotDone() bool {
 	return !page.ialr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (page IntegrationAccountListResultPage) Response() IntegrationAccountListResult {
 	return page.ialr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page IntegrationAccountListResultPage) Values() []IntegrationAccount {
 	if page.ialr.IsEmpty() {
@@ -1603,7 +1604,7 @@ func (page IntegrationAccountListResultPage) Values() []IntegrationAccount {
 	return *page.ialr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountMap ...
 type IntegrationAccountMap struct {
 	autorest.Response `json:"-"`
@@ -1621,7 +1622,7 @@ type IntegrationAccountMap struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccountMap.
 func (iam IntegrationAccountMap) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1646,7 +1647,7 @@ func (iam IntegrationAccountMap) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // UnmarshalJSON is the custom unmarshaler for IntegrationAccountMap struct.
 func (iam *IntegrationAccountMap) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1716,14 +1717,14 @@ func (iam *IntegrationAccountMap) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountMapFilter ...
 type IntegrationAccountMapFilter struct {
 	// SchemaType - The map type of integration account map. Possible values include: 'MapTypeNotSpecified', 'MapTypeXslt'
 	SchemaType MapType `json:"schemaType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountMapListResult ...
 type IntegrationAccountMapListResult struct {
 	autorest.Response `json:"-"`
@@ -1733,14 +1734,14 @@ type IntegrationAccountMapListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountMapListResultIterator provides access to a complete listing of IntegrationAccountMap values.
 type IntegrationAccountMapListResultIterator struct {
 	i    int
 	page IntegrationAccountMapListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *IntegrationAccountMapListResultIterator) Next() error {
@@ -1757,19 +1758,19 @@ func (iter *IntegrationAccountMapListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter IntegrationAccountMapListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (iter IntegrationAccountMapListResultIterator) Response() IntegrationAccountMapListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter IntegrationAccountMapListResultIterator) Value() IntegrationAccountMap {
@@ -1779,7 +1780,7 @@ func (iter IntegrationAccountMapListResultIterator) Value() IntegrationAccountMa
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (iamlr IntegrationAccountMapListResult) IsEmpty() bool {
 	return iamlr.Value == nil || len(*iamlr.Value) == 0
@@ -1797,14 +1798,14 @@ func (iamlr IntegrationAccountMapListResult) integrationAccountMapListResultPrep
 		autorest.WithBaseURL(to.String(iamlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountMapListResultPage contains a page of IntegrationAccountMap values.
 type IntegrationAccountMapListResultPage struct {
 	fn    func(IntegrationAccountMapListResult) (IntegrationAccountMapListResult, error)
 	iamlr IntegrationAccountMapListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *IntegrationAccountMapListResultPage) Next() error {
@@ -1816,19 +1817,19 @@ func (page *IntegrationAccountMapListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page IntegrationAccountMapListResultPage) NotDone() bool {
 	return !page.iamlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (page IntegrationAccountMapListResultPage) Response() IntegrationAccountMapListResult {
 	return page.iamlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page IntegrationAccountMapListResultPage) Values() []IntegrationAccountMap {
 	if page.iamlr.IsEmpty() {
@@ -1837,7 +1838,7 @@ func (page IntegrationAccountMapListResultPage) Values() []IntegrationAccountMap
 	return *page.iamlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountMapProperties ...
 type IntegrationAccountMapProperties struct {
 	// MapType - The map type. Possible values include: 'MapTypeNotSpecified', 'MapTypeXslt'
@@ -1856,7 +1857,7 @@ type IntegrationAccountMapProperties struct {
 	Metadata interface{} `json:"metadata,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountPartner ...
 type IntegrationAccountPartner struct {
 	autorest.Response `json:"-"`
@@ -1874,7 +1875,7 @@ type IntegrationAccountPartner struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccountPartner.
 func (iap IntegrationAccountPartner) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1899,7 +1900,7 @@ func (iap IntegrationAccountPartner) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // UnmarshalJSON is the custom unmarshaler for IntegrationAccountPartner struct.
 func (iap *IntegrationAccountPartner) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1969,14 +1970,14 @@ func (iap *IntegrationAccountPartner) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountPartnerFilter ...
 type IntegrationAccountPartnerFilter struct {
 	// PartnerType - The partner type of integration account partner. Possible values include: 'PartnerTypeNotSpecified', 'PartnerTypeB2B'
 	PartnerType PartnerType `json:"partnerType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountPartnerListResult ...
 type IntegrationAccountPartnerListResult struct {
 	autorest.Response `json:"-"`
@@ -1986,7 +1987,7 @@ type IntegrationAccountPartnerListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountPartnerListResultIterator provides access to a complete listing of IntegrationAccountPartner
 // values.
 type IntegrationAccountPartnerListResultIterator struct {
@@ -1994,7 +1995,7 @@ type IntegrationAccountPartnerListResultIterator struct {
 	page IntegrationAccountPartnerListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *IntegrationAccountPartnerListResultIterator) Next() error {
@@ -2011,19 +2012,19 @@ func (iter *IntegrationAccountPartnerListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter IntegrationAccountPartnerListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (iter IntegrationAccountPartnerListResultIterator) Response() IntegrationAccountPartnerListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter IntegrationAccountPartnerListResultIterator) Value() IntegrationAccountPartner {
@@ -2033,7 +2034,7 @@ func (iter IntegrationAccountPartnerListResultIterator) Value() IntegrationAccou
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (iaplr IntegrationAccountPartnerListResult) IsEmpty() bool {
 	return iaplr.Value == nil || len(*iaplr.Value) == 0
@@ -2051,14 +2052,14 @@ func (iaplr IntegrationAccountPartnerListResult) integrationAccountPartnerListRe
 		autorest.WithBaseURL(to.String(iaplr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountPartnerListResultPage contains a page of IntegrationAccountPartner values.
 type IntegrationAccountPartnerListResultPage struct {
 	fn    func(IntegrationAccountPartnerListResult) (IntegrationAccountPartnerListResult, error)
 	iaplr IntegrationAccountPartnerListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *IntegrationAccountPartnerListResultPage) Next() error {
@@ -2070,19 +2071,19 @@ func (page *IntegrationAccountPartnerListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page IntegrationAccountPartnerListResultPage) NotDone() bool {
 	return !page.iaplr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (page IntegrationAccountPartnerListResultPage) Response() IntegrationAccountPartnerListResult {
 	return page.iaplr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page IntegrationAccountPartnerListResultPage) Values() []IntegrationAccountPartner {
 	if page.iaplr.IsEmpty() {
@@ -2091,7 +2092,7 @@ func (page IntegrationAccountPartnerListResultPage) Values() []IntegrationAccoun
 	return *page.iaplr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountPartnerProperties ...
 type IntegrationAccountPartnerProperties struct {
 	// PartnerType - The partner type. Possible values include: 'PartnerTypeNotSpecified', 'PartnerTypeB2B'
@@ -2106,7 +2107,7 @@ type IntegrationAccountPartnerProperties struct {
 	Content *PartnerContent `json:"content,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountResource ...
 type IntegrationAccountResource struct {
 	// ID - The resource id.
@@ -2121,7 +2122,7 @@ type IntegrationAccountResource struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccountResource.
 func (iar IntegrationAccountResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2143,7 +2144,7 @@ func (iar IntegrationAccountResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSchema ...
 type IntegrationAccountSchema struct {
 	autorest.Response `json:"-"`
@@ -2161,7 +2162,7 @@ type IntegrationAccountSchema struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // MarshalJSON is the custom marshaler for IntegrationAccountSchema.
 func (ias IntegrationAccountSchema) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2186,7 +2187,7 @@ func (ias IntegrationAccountSchema) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // UnmarshalJSON is the custom unmarshaler for IntegrationAccountSchema struct.
 func (ias *IntegrationAccountSchema) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2256,14 +2257,14 @@ func (ias *IntegrationAccountSchema) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSchemaFilter ...
 type IntegrationAccountSchemaFilter struct {
 	// SchemaType - The schema type of integration account schema. Possible values include: 'SchemaTypeNotSpecified', 'SchemaTypeXML'
 	SchemaType SchemaType `json:"schemaType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSchemaListResult ...
 type IntegrationAccountSchemaListResult struct {
 	autorest.Response `json:"-"`
@@ -2273,7 +2274,7 @@ type IntegrationAccountSchemaListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSchemaListResultIterator provides access to a complete listing of IntegrationAccountSchema
 // values.
 type IntegrationAccountSchemaListResultIterator struct {
@@ -2281,7 +2282,7 @@ type IntegrationAccountSchemaListResultIterator struct {
 	page IntegrationAccountSchemaListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *IntegrationAccountSchemaListResultIterator) Next() error {
@@ -2298,19 +2299,19 @@ func (iter *IntegrationAccountSchemaListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter IntegrationAccountSchemaListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (iter IntegrationAccountSchemaListResultIterator) Response() IntegrationAccountSchemaListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter IntegrationAccountSchemaListResultIterator) Value() IntegrationAccountSchema {
@@ -2320,7 +2321,7 @@ func (iter IntegrationAccountSchemaListResultIterator) Value() IntegrationAccoun
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (iaslr IntegrationAccountSchemaListResult) IsEmpty() bool {
 	return iaslr.Value == nil || len(*iaslr.Value) == 0
@@ -2338,14 +2339,14 @@ func (iaslr IntegrationAccountSchemaListResult) integrationAccountSchemaListResu
 		autorest.WithBaseURL(to.String(iaslr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSchemaListResultPage contains a page of IntegrationAccountSchema values.
 type IntegrationAccountSchemaListResultPage struct {
 	fn    func(IntegrationAccountSchemaListResult) (IntegrationAccountSchemaListResult, error)
 	iaslr IntegrationAccountSchemaListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *IntegrationAccountSchemaListResultPage) Next() error {
@@ -2357,19 +2358,19 @@ func (page *IntegrationAccountSchemaListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page IntegrationAccountSchemaListResultPage) NotDone() bool {
 	return !page.iaslr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Response returns the raw server response from the last page request.
 func (page IntegrationAccountSchemaListResultPage) Response() IntegrationAccountSchemaListResult {
 	return page.iaslr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page IntegrationAccountSchemaListResultPage) Values() []IntegrationAccountSchema {
 	if page.iaslr.IsEmpty() {
@@ -2378,7 +2379,7 @@ func (page IntegrationAccountSchemaListResultPage) Values() []IntegrationAccount
 	return *page.iaslr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSchemaProperties ...
 type IntegrationAccountSchemaProperties struct {
 	// SchemaType - The schema type. Possible values include: 'SchemaTypeNotSpecified', 'SchemaTypeXML'
@@ -2399,14 +2400,14 @@ type IntegrationAccountSchemaProperties struct {
 	Metadata interface{} `json:"metadata,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountSku ...
 type IntegrationAccountSku struct {
 	// Name - The sku name. Possible values include: 'SkuNameNotSpecified', 'SkuNameFree', 'SkuNameShared', 'SkuNameBasic', 'SkuNameStandard', 'SkuNamePremium'
 	Name SkuName `json:"name,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // KeyVaultKeyReference ...
 type KeyVaultKeyReference struct {
 	// KeyVault - The key vault reference.
@@ -2417,7 +2418,7 @@ type KeyVaultKeyReference struct {
 	KeyVersion *string `json:"keyVersion,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // KeyVaultKeyReferenceKeyVault the key vault reference.
 type KeyVaultKeyReferenceKeyVault struct {
 	// ID - The resource id.
@@ -2428,21 +2429,21 @@ type KeyVaultKeyReferenceKeyVault struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // ListCallbackURLParameters ...
 type ListCallbackURLParameters struct {
 	// NotAfter - The expiry time.
 	NotAfter *date.Time `json:"NotAfter,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // PartnerContent ...
 type PartnerContent struct {
 	// B2b - The B2B partner content.
 	B2b *B2BPartnerContent `json:"b2b,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12AcknowledgementSettings ...
 type X12AcknowledgementSettings struct {
 	// NeedTechnicalAcknowledgement - The value indicating whether technical acknowledgement is needed.
@@ -2477,7 +2478,7 @@ type X12AcknowledgementSettings struct {
 	RolloverAcknowledgementControlNumber *bool `json:"rolloverAcknowledgementControlNumber,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12AgreementContent ...
 type X12AgreementContent struct {
 	// ReceiveAgreement - The X12 one-way receive agreement.
@@ -2486,7 +2487,7 @@ type X12AgreementContent struct {
 	SendAgreement *X12OneWayAgreement `json:"sendAgreement,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12DelimiterOverrides ...
 type X12DelimiterOverrides struct {
 	// ProtocolVersion - The protocol version.
@@ -2509,7 +2510,7 @@ type X12DelimiterOverrides struct {
 	TargetNamespace *string `json:"targetNamespace,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12EnvelopeOverride ...
 type X12EnvelopeOverride struct {
 	// TargetNamespace - The target namespace on which this envelope settings has to be applied.
@@ -2534,7 +2535,7 @@ type X12EnvelopeOverride struct {
 	TimeFormat X12TimeFormat `json:"timeFormat,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12EnvelopeSettings ...
 type X12EnvelopeSettings struct {
 	// ControlStandardsID - The controls standards id.
@@ -2587,7 +2588,7 @@ type X12EnvelopeSettings struct {
 	UsageIndicator UsageIndicator `json:"usageIndicator,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12FramingSettings ...
 type X12FramingSettings struct {
 	// DataElementSeparator - The data element separator.
@@ -2606,21 +2607,21 @@ type X12FramingSettings struct {
 	SegmentTerminatorSuffix SegmentTerminatorSuffix `json:"segmentTerminatorSuffix,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12MessageFilter ...
 type X12MessageFilter struct {
 	// MessageFilterType - The message filter type. Possible values include: 'MessageFilterTypeNotSpecified', 'MessageFilterTypeInclude', 'MessageFilterTypeExclude'
 	MessageFilterType MessageFilterType `json:"messageFilterType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12MessageIdentifier ...
 type X12MessageIdentifier struct {
 	// MessageID - The message id.
 	MessageID *string `json:"messageId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12OneWayAgreement ...
 type X12OneWayAgreement struct {
 	// SenderBusinessIdentity - The sender business identity
@@ -2631,7 +2632,7 @@ type X12OneWayAgreement struct {
 	ProtocolSettings *X12ProtocolSettings `json:"protocolSettings,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12ProcessingSettings ...
 type X12ProcessingSettings struct {
 	// MaskSecurityInfo - The value indicating whether to mask security information.
@@ -2648,7 +2649,7 @@ type X12ProcessingSettings struct {
 	UseDotAsDecimalSeparator *bool `json:"useDotAsDecimalSeparator,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12ProtocolSettings ...
 type X12ProtocolSettings struct {
 	// ValidationSettings - The X12 validation settings.
@@ -2677,7 +2678,7 @@ type X12ProtocolSettings struct {
 	X12DelimiterOverrides *[]X12DelimiterOverrides `json:"x12DelimiterOverrides,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12SchemaReference ...
 type X12SchemaReference struct {
 	// MessageID - The message id.
@@ -2690,7 +2691,7 @@ type X12SchemaReference struct {
 	SchemaName *string `json:"schemaName,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12SecuritySettings ...
 type X12SecuritySettings struct {
 	// AuthorizationQualifier - The authorization qualifier.
@@ -2703,7 +2704,7 @@ type X12SecuritySettings struct {
 	PasswordValue *string `json:"passwordValue,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12ValidationOverride ...
 type X12ValidationOverride struct {
 	// MessageID - The message id on which the validation settings has to be applied.
@@ -2722,7 +2723,7 @@ type X12ValidationOverride struct {
 	TrailingSeparatorPolicy TrailingSeparatorPolicy `json:"trailingSeparatorPolicy,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // X12ValidationSettings ...
 type X12ValidationSettings struct {
 	// ValidateCharacterSet - The value indicating whether to validate character set in the message.

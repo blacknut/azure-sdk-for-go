@@ -19,30 +19,31 @@ package dtl
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // LabClient is the azure DevTest Labs REST API version 2015-05-21-preview.
 type LabClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // NewLabClient creates an instance of the LabClient client.
 func NewLabClient(subscriptionID string) LabClient {
 	return NewLabClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // NewLabClientWithBaseURI creates an instance of the LabClient client.
 func NewLabClientWithBaseURI(baseURI string, subscriptionID string) LabClient {
 	return LabClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateEnvironment create virtual machines in a Lab. This operation can take a while to complete.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -62,7 +63,7 @@ func (client LabClient) CreateEnvironment(ctx context.Context, resourceGroupName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateEnvironmentPreparer prepares the CreateEnvironment request.
 func (client LabClient) CreateEnvironmentPreparer(ctx context.Context, resourceGroupName string, name string, labVirtualMachine LabVirtualMachine) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -86,7 +87,7 @@ func (client LabClient) CreateEnvironmentPreparer(ctx context.Context, resourceG
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateEnvironmentSender sends the CreateEnvironment request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) CreateEnvironmentSender(req *http.Request) (future LabCreateEnvironmentFuture, err error) {
@@ -102,7 +103,7 @@ func (client LabClient) CreateEnvironmentSender(req *http.Request) (future LabCr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateEnvironmentResponder handles the response to the CreateEnvironment request. The method always
 // closes the http.Response Body.
 func (client LabClient) CreateEnvironmentResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -115,7 +116,7 @@ func (client LabClient) CreateEnvironmentResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateOrUpdateResource create or replace an existing Lab. This operation can take a while to complete.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -135,7 +136,7 @@ func (client LabClient) CreateOrUpdateResource(ctx context.Context, resourceGrou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateOrUpdateResourcePreparer prepares the CreateOrUpdateResource request.
 func (client LabClient) CreateOrUpdateResourcePreparer(ctx context.Context, resourceGroupName string, name string, lab Lab) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -159,7 +160,7 @@ func (client LabClient) CreateOrUpdateResourcePreparer(ctx context.Context, reso
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateOrUpdateResourceSender sends the CreateOrUpdateResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) CreateOrUpdateResourceSender(req *http.Request) (future LabCreateOrUpdateResourceFuture, err error) {
@@ -175,7 +176,7 @@ func (client LabClient) CreateOrUpdateResourceSender(req *http.Request) (future 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // CreateOrUpdateResourceResponder handles the response to the CreateOrUpdateResource request. The method always
 // closes the http.Response Body.
 func (client LabClient) CreateOrUpdateResourceResponder(resp *http.Response) (result Lab, err error) {
@@ -189,7 +190,7 @@ func (client LabClient) CreateOrUpdateResourceResponder(resp *http.Response) (re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // DeleteResource delete lab. This operation can take a while to complete.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -209,7 +210,7 @@ func (client LabClient) DeleteResource(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // DeleteResourcePreparer prepares the DeleteResource request.
 func (client LabClient) DeleteResourcePreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -231,7 +232,7 @@ func (client LabClient) DeleteResourcePreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // DeleteResourceSender sends the DeleteResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) DeleteResourceSender(req *http.Request) (future LabDeleteResourceFuture, err error) {
@@ -247,7 +248,7 @@ func (client LabClient) DeleteResourceSender(req *http.Request) (future LabDelet
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // DeleteResourceResponder handles the response to the DeleteResource request. The method always
 // closes the http.Response Body.
 func (client LabClient) DeleteResourceResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -260,7 +261,7 @@ func (client LabClient) DeleteResourceResponder(resp *http.Response) (result aut
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateUploadURI generate a URI for uploading custom disk images to a Lab.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -286,7 +287,7 @@ func (client LabClient) GenerateUploadURI(ctx context.Context, resourceGroupName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateUploadURIPreparer prepares the GenerateUploadURI request.
 func (client LabClient) GenerateUploadURIPreparer(ctx context.Context, resourceGroupName string, name string, generateUploadURIParameter GenerateUploadURIParameter) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -310,7 +311,7 @@ func (client LabClient) GenerateUploadURIPreparer(ctx context.Context, resourceG
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateUploadURISender sends the GenerateUploadURI request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) GenerateUploadURISender(req *http.Request) (*http.Response, error) {
@@ -318,7 +319,7 @@ func (client LabClient) GenerateUploadURISender(req *http.Request) (*http.Respon
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateUploadURIResponder handles the response to the GenerateUploadURI request. The method always
 // closes the http.Response Body.
 func (client LabClient) GenerateUploadURIResponder(resp *http.Response) (result GenerateUploadURIResponse, err error) {
@@ -332,7 +333,7 @@ func (client LabClient) GenerateUploadURIResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResource get lab.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -358,7 +359,7 @@ func (client LabClient) GetResource(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResourcePreparer prepares the GetResource request.
 func (client LabClient) GetResourcePreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -380,7 +381,7 @@ func (client LabClient) GetResourcePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResourceSender sends the GetResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) GetResourceSender(req *http.Request) (*http.Response, error) {
@@ -388,7 +389,7 @@ func (client LabClient) GetResourceSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResourceResponder handles the response to the GetResource request. The method always
 // closes the http.Response Body.
 func (client LabClient) GetResourceResponder(resp *http.Response) (result Lab, err error) {
@@ -402,7 +403,7 @@ func (client LabClient) GetResourceResponder(resp *http.Response) (result Lab, e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListByResourceGroup list labs.
 //
 // resourceGroupName is the name of the resource group. filter is the filter to apply on the operation.
@@ -429,7 +430,7 @@ func (client LabClient) ListByResourceGroup(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client LabClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string, filter string, top *int32, orderBy string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -459,7 +460,7 @@ func (client LabClient) ListByResourceGroupPreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -467,7 +468,7 @@ func (client LabClient) ListByResourceGroupSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client LabClient) ListByResourceGroupResponder(resp *http.Response) (result ResponseWithContinuationLab, err error) {
@@ -502,14 +503,14 @@ func (client LabClient) listByResourceGroupNextResults(lastResults ResponseWithC
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListByResourceGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client LabClient) ListByResourceGroupComplete(ctx context.Context, resourceGroupName string, filter string, top *int32, orderBy string) (result ResponseWithContinuationLabIterator, err error) {
 	result.page, err = client.ListByResourceGroup(ctx, resourceGroupName, filter, top, orderBy)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListBySubscription list labs.
 //
 // filter is the filter to apply on the operation.
@@ -536,7 +537,7 @@ func (client LabClient) ListBySubscription(ctx context.Context, filter string, t
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListBySubscriptionPreparer prepares the ListBySubscription request.
 func (client LabClient) ListBySubscriptionPreparer(ctx context.Context, filter string, top *int32, orderBy string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -565,7 +566,7 @@ func (client LabClient) ListBySubscriptionPreparer(ctx context.Context, filter s
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListBySubscriptionSender sends the ListBySubscription request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) ListBySubscriptionSender(req *http.Request) (*http.Response, error) {
@@ -573,7 +574,7 @@ func (client LabClient) ListBySubscriptionSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListBySubscriptionResponder handles the response to the ListBySubscription request. The method always
 // closes the http.Response Body.
 func (client LabClient) ListBySubscriptionResponder(resp *http.Response) (result ResponseWithContinuationLab, err error) {
@@ -608,14 +609,14 @@ func (client LabClient) listBySubscriptionNextResults(lastResults ResponseWithCo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListBySubscriptionComplete enumerates all values, automatically crossing page boundaries as required.
 func (client LabClient) ListBySubscriptionComplete(ctx context.Context, filter string, top *int32, orderBy string) (result ResponseWithContinuationLabIterator, err error) {
 	result.page, err = client.ListBySubscription(ctx, filter, top, orderBy)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListVhds list disk images available for custom image creation.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -642,7 +643,7 @@ func (client LabClient) ListVhds(ctx context.Context, resourceGroupName string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListVhdsPreparer prepares the ListVhds request.
 func (client LabClient) ListVhdsPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -664,7 +665,7 @@ func (client LabClient) ListVhdsPreparer(ctx context.Context, resourceGroupName 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListVhdsSender sends the ListVhds request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) ListVhdsSender(req *http.Request) (*http.Response, error) {
@@ -672,7 +673,7 @@ func (client LabClient) ListVhdsSender(req *http.Request) (*http.Response, error
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListVhdsResponder handles the response to the ListVhds request. The method always
 // closes the http.Response Body.
 func (client LabClient) ListVhdsResponder(resp *http.Response) (result ResponseWithContinuationLabVhd, err error) {
@@ -707,14 +708,14 @@ func (client LabClient) listVhdsNextResults(lastResults ResponseWithContinuation
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListVhdsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client LabClient) ListVhdsComplete(ctx context.Context, resourceGroupName string, name string) (result ResponseWithContinuationLabVhdIterator, err error) {
 	result.page, err = client.ListVhds(ctx, resourceGroupName, name)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // PatchResource modify properties of labs.
 //
 // resourceGroupName is the name of the resource group. name is the name of the lab.
@@ -740,7 +741,7 @@ func (client LabClient) PatchResource(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // PatchResourcePreparer prepares the PatchResource request.
 func (client LabClient) PatchResourcePreparer(ctx context.Context, resourceGroupName string, name string, lab Lab) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -764,7 +765,7 @@ func (client LabClient) PatchResourcePreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // PatchResourceSender sends the PatchResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client LabClient) PatchResourceSender(req *http.Request) (*http.Response, error) {
@@ -772,7 +773,7 @@ func (client LabClient) PatchResourceSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // PatchResourceResponder handles the response to the PatchResource request. The method always
 // closes the http.Response Body.
 func (client LabClient) PatchResourceResponder(resp *http.Response) (result Lab, err error) {

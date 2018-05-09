@@ -19,12 +19,13 @@ package addons
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // PlanTypeName enumerates the values for plan type name.
 type PlanTypeName string
 
@@ -37,13 +38,13 @@ const (
 	Standard PlanTypeName = "Standard"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // PossiblePlanTypeNameValues returns an array of possible values for the PlanTypeName const type.
 func PossiblePlanTypeNameValues() []PlanTypeName {
 	return []PlanTypeName{Advanced, Essential, Standard}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // ProvisioningState enumerates the values for provisioning state.
 type ProvisioningState string
 
@@ -64,13 +65,13 @@ const (
 	Upgrading ProvisioningState = "Upgrading"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // PossibleProvisioningStateValues returns an array of possible values for the ProvisioningState const type.
 func PossibleProvisioningStateValues() []ProvisioningState {
 	return []ProvisioningState{Cancelled, Cancelling, Downgrading, Failed, Purchasing, Succeeded, Upgrading}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // SupportPlanType enumerates the values for support plan type.
 type SupportPlanType string
 
@@ -83,20 +84,20 @@ const (
 	SupportPlanTypeStandard SupportPlanType = "standard"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // PossibleSupportPlanTypeValues returns an array of possible values for the SupportPlanType const type.
 func PossibleSupportPlanTypeValues() []SupportPlanType {
 	return []SupportPlanType{SupportPlanTypeAdvanced, SupportPlanTypeEssential, SupportPlanTypeStandard}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // CanonicalSupportPlanProperties the properties of the Canonical support plan.
 type CanonicalSupportPlanProperties struct {
 	// ProvisioningState - The provisioning state of the resource. Possible values include: 'Succeeded', 'Failed', 'Cancelled', 'Purchasing', 'Downgrading', 'Cancelling', 'Upgrading'
 	ProvisioningState ProvisioningState `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // CanonicalSupportPlanResponseEnvelope the status of the Canonical support plan.
 type CanonicalSupportPlanResponseEnvelope struct {
 	autorest.Response `json:"-"`
@@ -110,7 +111,7 @@ type CanonicalSupportPlanResponseEnvelope struct {
 	*CanonicalSupportPlanProperties `json:"properties,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // MarshalJSON is the custom marshaler for CanonicalSupportPlanResponseEnvelope.
 func (cspre CanonicalSupportPlanResponseEnvelope) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -129,7 +130,7 @@ func (cspre CanonicalSupportPlanResponseEnvelope) MarshalJSON() ([]byte, error) 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // UnmarshalJSON is the custom unmarshaler for CanonicalSupportPlanResponseEnvelope struct.
 func (cspre *CanonicalSupportPlanResponseEnvelope) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -181,7 +182,7 @@ func (cspre *CanonicalSupportPlanResponseEnvelope) UnmarshalJSON(body []byte) er
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // CanonicalSupportPlanStatusItem ...
 type CanonicalSupportPlanStatusItem struct {
 	// SupportPlanType - Support plan type. Possible values include: 'SupportPlanTypeEssential', 'SupportPlanTypeStandard', 'SupportPlanTypeAdvanced'
@@ -194,7 +195,7 @@ type CanonicalSupportPlanStatusItem struct {
 	WillEmitOneTimeChargeIfReEnabled *bool `json:"willEmitOneTimeChargeIfReEnabled,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // ErrorDefinition error description and code explaining why an operation failed.
 type ErrorDefinition struct {
 	// Message - Description of the error.
@@ -203,21 +204,21 @@ type ErrorDefinition struct {
 	Code *int32 `json:"code,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // ListCanonicalSupportPlanStatusItem ...
 type ListCanonicalSupportPlanStatusItem struct {
 	autorest.Response `json:"-"`
 	Value             *[]CanonicalSupportPlanStatusItem `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // ListOperationsDefinition ...
 type ListOperationsDefinition struct {
 	autorest.Response `json:"-"`
 	Value             *[]OperationsDefinition `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // OperationsDefinition definition object with the name and properties of an operation.
 type OperationsDefinition struct {
 	// Name - Name of the operation.
@@ -226,7 +227,7 @@ type OperationsDefinition struct {
 	Display *OperationsDisplayDefinition `json:"display,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // OperationsDisplayDefinition display object with properties of the operation.
 type OperationsDisplayDefinition struct {
 	// Provider - Resource provider of the operation.
@@ -239,7 +240,7 @@ type OperationsDisplayDefinition struct {
 	Description *string `json:"description,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // SupportPlanTypesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SupportPlanTypesCreateOrUpdateFuture struct {
@@ -247,7 +248,7 @@ type SupportPlanTypesCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SupportPlanTypesCreateOrUpdateFuture) Result(client SupportPlanTypesClient) (cspre CanonicalSupportPlanResponseEnvelope, err error) {
@@ -290,7 +291,7 @@ func (future SupportPlanTypesCreateOrUpdateFuture) Result(client SupportPlanType
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // SupportPlanTypesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SupportPlanTypesDeleteFuture struct {
@@ -298,7 +299,7 @@ type SupportPlanTypesDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/addons/mgmt/2017-05-15/addons instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SupportPlanTypesDeleteFuture) Result(client SupportPlanTypesClient) (cspre CanonicalSupportPlanResponseEnvelope, err error) {

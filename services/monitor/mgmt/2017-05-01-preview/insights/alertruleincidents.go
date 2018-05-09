@@ -19,30 +19,31 @@ package insights
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // AlertRuleIncidentsClient is the monitor Management Client
 type AlertRuleIncidentsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // NewAlertRuleIncidentsClient creates an instance of the AlertRuleIncidentsClient client.
 func NewAlertRuleIncidentsClient(subscriptionID string) AlertRuleIncidentsClient {
 	return NewAlertRuleIncidentsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // NewAlertRuleIncidentsClientWithBaseURI creates an instance of the AlertRuleIncidentsClient client.
 func NewAlertRuleIncidentsClientWithBaseURI(baseURI string, subscriptionID string) AlertRuleIncidentsClient {
 	return AlertRuleIncidentsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // Get gets an incident associated to an alert rule
 //
 // resourceGroupName is the name of the resource group. ruleName is the name of the rule. incidentName is the name
@@ -69,7 +70,7 @@ func (client AlertRuleIncidentsClient) Get(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetPreparer prepares the Get request.
 func (client AlertRuleIncidentsClient) GetPreparer(ctx context.Context, resourceGroupName string, ruleName string, incidentName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -92,7 +93,7 @@ func (client AlertRuleIncidentsClient) GetPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client AlertRuleIncidentsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -100,7 +101,7 @@ func (client AlertRuleIncidentsClient) GetSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client AlertRuleIncidentsClient) GetResponder(resp *http.Response) (result Incident, err error) {
@@ -114,7 +115,7 @@ func (client AlertRuleIncidentsClient) GetResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListByAlertRule gets a list of incidents associated to an alert rule
 //
 // resourceGroupName is the name of the resource group. ruleName is the name of the rule.
@@ -140,7 +141,7 @@ func (client AlertRuleIncidentsClient) ListByAlertRule(ctx context.Context, reso
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListByAlertRulePreparer prepares the ListByAlertRule request.
 func (client AlertRuleIncidentsClient) ListByAlertRulePreparer(ctx context.Context, resourceGroupName string, ruleName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -162,7 +163,7 @@ func (client AlertRuleIncidentsClient) ListByAlertRulePreparer(ctx context.Conte
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListByAlertRuleSender sends the ListByAlertRule request. The method will close the
 // http.Response Body if it receives an error.
 func (client AlertRuleIncidentsClient) ListByAlertRuleSender(req *http.Request) (*http.Response, error) {
@@ -170,7 +171,7 @@ func (client AlertRuleIncidentsClient) ListByAlertRuleSender(req *http.Request) 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListByAlertRuleResponder handles the response to the ListByAlertRule request. The method always
 // closes the http.Response Body.
 func (client AlertRuleIncidentsClient) ListByAlertRuleResponder(resp *http.Response) (result IncidentListResult, err error) {

@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Azure/azure-sdk-for-go/services/classic/management"
+	"github.com/blacknut/azure-sdk-for-go/services/classic/management"
 )
 
 // Definitions of numerous constants representing API endpoints.

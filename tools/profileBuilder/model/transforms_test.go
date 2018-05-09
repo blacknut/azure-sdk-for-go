@@ -21,7 +21,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azure-sdk-for-go/tools/profileBuilder/model"
+	"github.com/blacknut/azure-sdk-for-go/tools/profileBuilder/model"
 )
 
 func Test_GetAliasPath(t *testing.T) {

@@ -19,31 +19,32 @@ package logic
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // IntegrationAccountCertificatesClient is the REST API for Azure Logic Apps.
 type IntegrationAccountCertificatesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NewIntegrationAccountCertificatesClient creates an instance of the IntegrationAccountCertificatesClient client.
 func NewIntegrationAccountCertificatesClient(subscriptionID string) IntegrationAccountCertificatesClient {
 	return NewIntegrationAccountCertificatesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // NewIntegrationAccountCertificatesClientWithBaseURI creates an instance of the IntegrationAccountCertificatesClient
 // client.
 func NewIntegrationAccountCertificatesClientWithBaseURI(baseURI string, subscriptionID string) IntegrationAccountCertificatesClient {
 	return IntegrationAccountCertificatesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // CreateOrUpdate creates or updates an integration account certificate.
 //
 // resourceGroupName is the resource group name. integrationAccountName is the integration account name.
@@ -70,7 +71,7 @@ func (client IntegrationAccountCertificatesClient) CreateOrUpdate(ctx context.Co
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client IntegrationAccountCertificatesClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, integrationAccountName string, certificateName string, certificate IntegrationAccountCertificate) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -95,7 +96,7 @@ func (client IntegrationAccountCertificatesClient) CreateOrUpdatePreparer(ctx co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client IntegrationAccountCertificatesClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -103,7 +104,7 @@ func (client IntegrationAccountCertificatesClient) CreateOrUpdateSender(req *htt
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client IntegrationAccountCertificatesClient) CreateOrUpdateResponder(resp *http.Response) (result IntegrationAccountCertificate, err error) {
@@ -117,7 +118,7 @@ func (client IntegrationAccountCertificatesClient) CreateOrUpdateResponder(resp 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Delete deletes an integration account certificate.
 //
 // resourceGroupName is the resource group name. integrationAccountName is the integration account name.
@@ -144,7 +145,7 @@ func (client IntegrationAccountCertificatesClient) Delete(ctx context.Context, r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // DeletePreparer prepares the Delete request.
 func (client IntegrationAccountCertificatesClient) DeletePreparer(ctx context.Context, resourceGroupName string, integrationAccountName string, certificateName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -167,7 +168,7 @@ func (client IntegrationAccountCertificatesClient) DeletePreparer(ctx context.Co
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client IntegrationAccountCertificatesClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -175,7 +176,7 @@ func (client IntegrationAccountCertificatesClient) DeleteSender(req *http.Reques
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client IntegrationAccountCertificatesClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -188,7 +189,7 @@ func (client IntegrationAccountCertificatesClient) DeleteResponder(resp *http.Re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // Get gets an integration account certificate.
 //
 // resourceGroupName is the resource group name. integrationAccountName is the integration account name.
@@ -215,7 +216,7 @@ func (client IntegrationAccountCertificatesClient) Get(ctx context.Context, reso
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // GetPreparer prepares the Get request.
 func (client IntegrationAccountCertificatesClient) GetPreparer(ctx context.Context, resourceGroupName string, integrationAccountName string, certificateName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -238,7 +239,7 @@ func (client IntegrationAccountCertificatesClient) GetPreparer(ctx context.Conte
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client IntegrationAccountCertificatesClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -246,7 +247,7 @@ func (client IntegrationAccountCertificatesClient) GetSender(req *http.Request) 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client IntegrationAccountCertificatesClient) GetResponder(resp *http.Response) (result IntegrationAccountCertificate, err error) {
@@ -260,7 +261,7 @@ func (client IntegrationAccountCertificatesClient) GetResponder(resp *http.Respo
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // List gets a list of integration account certificates.
 //
 // resourceGroupName is the resource group name. integrationAccountName is the integration account name. top is the
@@ -288,7 +289,7 @@ func (client IntegrationAccountCertificatesClient) List(ctx context.Context, res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // ListPreparer prepares the List request.
 func (client IntegrationAccountCertificatesClient) ListPreparer(ctx context.Context, resourceGroupName string, integrationAccountName string, top *int32) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -313,7 +314,7 @@ func (client IntegrationAccountCertificatesClient) ListPreparer(ctx context.Cont
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client IntegrationAccountCertificatesClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -321,7 +322,7 @@ func (client IntegrationAccountCertificatesClient) ListSender(req *http.Request)
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client IntegrationAccountCertificatesClient) ListResponder(resp *http.Response) (result IntegrationAccountCertificateListResult, err error) {
@@ -356,7 +357,7 @@ func (client IntegrationAccountCertificatesClient) listNextResults(lastResults I
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-08-01-preview/logic instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client IntegrationAccountCertificatesClient) ListComplete(ctx context.Context, resourceGroupName string, integrationAccountName string, top *int32) (result IntegrationAccountCertificateListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName, integrationAccountName, top)

@@ -19,30 +19,31 @@ package logic
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // WorkflowAccessKeysClient is the REST API for Azure Logic Apps.
 type WorkflowAccessKeysClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // NewWorkflowAccessKeysClient creates an instance of the WorkflowAccessKeysClient client.
 func NewWorkflowAccessKeysClient(subscriptionID string) WorkflowAccessKeysClient {
 	return NewWorkflowAccessKeysClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // NewWorkflowAccessKeysClientWithBaseURI creates an instance of the WorkflowAccessKeysClient client.
 func NewWorkflowAccessKeysClientWithBaseURI(baseURI string, subscriptionID string) WorkflowAccessKeysClient {
 	return WorkflowAccessKeysClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // CreateOrUpdate creates or updates a workflow access key.
 //
 // resourceGroupName is the resource group name. workflowName is the workflow name. accessKeyName is the workflow
@@ -69,7 +70,7 @@ func (client WorkflowAccessKeysClient) CreateOrUpdate(ctx context.Context, resou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client WorkflowAccessKeysClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, workflowName string, accessKeyName string, workflowAccesskey WorkflowAccessKey) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -94,7 +95,7 @@ func (client WorkflowAccessKeysClient) CreateOrUpdatePreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client WorkflowAccessKeysClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -102,7 +103,7 @@ func (client WorkflowAccessKeysClient) CreateOrUpdateSender(req *http.Request) (
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client WorkflowAccessKeysClient) CreateOrUpdateResponder(resp *http.Response) (result WorkflowAccessKey, err error) {
@@ -116,7 +117,7 @@ func (client WorkflowAccessKeysClient) CreateOrUpdateResponder(resp *http.Respon
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // Delete deletes a workflow access key.
 //
 // resourceGroupName is the resource group name. workflowName is the workflow name. accessKeyName is the workflow
@@ -143,7 +144,7 @@ func (client WorkflowAccessKeysClient) Delete(ctx context.Context, resourceGroup
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // DeletePreparer prepares the Delete request.
 func (client WorkflowAccessKeysClient) DeletePreparer(ctx context.Context, resourceGroupName string, workflowName string, accessKeyName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -166,7 +167,7 @@ func (client WorkflowAccessKeysClient) DeletePreparer(ctx context.Context, resou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client WorkflowAccessKeysClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -174,7 +175,7 @@ func (client WorkflowAccessKeysClient) DeleteSender(req *http.Request) (*http.Re
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client WorkflowAccessKeysClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -187,7 +188,7 @@ func (client WorkflowAccessKeysClient) DeleteResponder(resp *http.Response) (res
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // Get gets a workflow access key.
 //
 // resourceGroupName is the resource group name. workflowName is the workflow name. accessKeyName is the workflow
@@ -214,7 +215,7 @@ func (client WorkflowAccessKeysClient) Get(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // GetPreparer prepares the Get request.
 func (client WorkflowAccessKeysClient) GetPreparer(ctx context.Context, resourceGroupName string, workflowName string, accessKeyName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -237,7 +238,7 @@ func (client WorkflowAccessKeysClient) GetPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client WorkflowAccessKeysClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -245,7 +246,7 @@ func (client WorkflowAccessKeysClient) GetSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client WorkflowAccessKeysClient) GetResponder(resp *http.Response) (result WorkflowAccessKey, err error) {
@@ -259,7 +260,7 @@ func (client WorkflowAccessKeysClient) GetResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // List gets a list of workflow access keys.
 //
 // resourceGroupName is the resource group name. workflowName is the workflow name. top is the number of items to
@@ -287,7 +288,7 @@ func (client WorkflowAccessKeysClient) List(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListPreparer prepares the List request.
 func (client WorkflowAccessKeysClient) ListPreparer(ctx context.Context, resourceGroupName string, workflowName string, top *int32) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -312,7 +313,7 @@ func (client WorkflowAccessKeysClient) ListPreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client WorkflowAccessKeysClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -320,7 +321,7 @@ func (client WorkflowAccessKeysClient) ListSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client WorkflowAccessKeysClient) ListResponder(resp *http.Response) (result WorkflowAccessKeyListResult, err error) {
@@ -355,14 +356,14 @@ func (client WorkflowAccessKeysClient) listNextResults(lastResults WorkflowAcces
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client WorkflowAccessKeysClient) ListComplete(ctx context.Context, resourceGroupName string, workflowName string, top *int32) (result WorkflowAccessKeyListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName, workflowName, top)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListSecretKeys lists secret keys.
 //
 // resourceGroupName is the resource group name. workflowName is the workflow name. accessKeyName is the workflow
@@ -389,7 +390,7 @@ func (client WorkflowAccessKeysClient) ListSecretKeys(ctx context.Context, resou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListSecretKeysPreparer prepares the ListSecretKeys request.
 func (client WorkflowAccessKeysClient) ListSecretKeysPreparer(ctx context.Context, resourceGroupName string, workflowName string, accessKeyName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -412,7 +413,7 @@ func (client WorkflowAccessKeysClient) ListSecretKeysPreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListSecretKeysSender sends the ListSecretKeys request. The method will close the
 // http.Response Body if it receives an error.
 func (client WorkflowAccessKeysClient) ListSecretKeysSender(req *http.Request) (*http.Response, error) {
@@ -420,7 +421,7 @@ func (client WorkflowAccessKeysClient) ListSecretKeysSender(req *http.Request) (
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // ListSecretKeysResponder handles the response to the ListSecretKeys request. The method always
 // closes the http.Response Body.
 func (client WorkflowAccessKeysClient) ListSecretKeysResponder(resp *http.Response) (result WorkflowSecretKeys, err error) {
@@ -434,7 +435,7 @@ func (client WorkflowAccessKeysClient) ListSecretKeysResponder(resp *http.Respon
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // RegenerateSecretKey regenerates secret key.
 //
 // resourceGroupName is the resource group name. workflowName is the workflow name. accessKeyName is the workflow
@@ -461,7 +462,7 @@ func (client WorkflowAccessKeysClient) RegenerateSecretKey(ctx context.Context, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // RegenerateSecretKeyPreparer prepares the RegenerateSecretKey request.
 func (client WorkflowAccessKeysClient) RegenerateSecretKeyPreparer(ctx context.Context, resourceGroupName string, workflowName string, accessKeyName string, parameters RegenerateSecretKeyParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -486,7 +487,7 @@ func (client WorkflowAccessKeysClient) RegenerateSecretKeyPreparer(ctx context.C
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // RegenerateSecretKeySender sends the RegenerateSecretKey request. The method will close the
 // http.Response Body if it receives an error.
 func (client WorkflowAccessKeysClient) RegenerateSecretKeySender(req *http.Request) (*http.Response, error) {
@@ -494,7 +495,7 @@ func (client WorkflowAccessKeysClient) RegenerateSecretKeySender(req *http.Reque
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/logic/mgmt/2015-02-01-preview/logic instead.
 // RegenerateSecretKeyResponder handles the response to the RegenerateSecretKey request. The method always
 // closes the http.Response Body.
 func (client WorkflowAccessKeysClient) RegenerateSecretKeyResponder(resp *http.Response) (result WorkflowSecretKeys, err error) {

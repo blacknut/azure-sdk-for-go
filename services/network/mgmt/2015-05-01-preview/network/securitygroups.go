@@ -19,30 +19,31 @@ package network
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // SecurityGroupsClient is the network Client
 type SecurityGroupsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewSecurityGroupsClient creates an instance of the SecurityGroupsClient client.
 func NewSecurityGroupsClient(subscriptionID string) SecurityGroupsClient {
 	return NewSecurityGroupsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // NewSecurityGroupsClientWithBaseURI creates an instance of the SecurityGroupsClient client.
 func NewSecurityGroupsClientWithBaseURI(baseURI string, subscriptionID string) SecurityGroupsClient {
 	return SecurityGroupsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdate the Put NetworkSecurityGroup operation creates/updates a network security groupin the specified
 // resource group.
 //
@@ -64,7 +65,7 @@ func (client SecurityGroupsClient) CreateOrUpdate(ctx context.Context, resourceG
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client SecurityGroupsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string, parameters SecurityGroup) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -88,7 +89,7 @@ func (client SecurityGroupsClient) CreateOrUpdatePreparer(ctx context.Context, r
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityGroupsClient) CreateOrUpdateSender(req *http.Request) (future SecurityGroupsCreateOrUpdateFuture, err error) {
@@ -104,7 +105,7 @@ func (client SecurityGroupsClient) CreateOrUpdateSender(req *http.Request) (futu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client SecurityGroupsClient) CreateOrUpdateResponder(resp *http.Response) (result SecurityGroup, err error) {
@@ -118,7 +119,7 @@ func (client SecurityGroupsClient) CreateOrUpdateResponder(resp *http.Response) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Delete the Delete NetworkSecurityGroup operation deletes the specifed network security group
 //
 // resourceGroupName is the name of the resource group. networkSecurityGroupName is the name of the network
@@ -139,7 +140,7 @@ func (client SecurityGroupsClient) Delete(ctx context.Context, resourceGroupName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeletePreparer prepares the Delete request.
 func (client SecurityGroupsClient) DeletePreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -161,7 +162,7 @@ func (client SecurityGroupsClient) DeletePreparer(ctx context.Context, resourceG
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityGroupsClient) DeleteSender(req *http.Request) (future SecurityGroupsDeleteFuture, err error) {
@@ -177,7 +178,7 @@ func (client SecurityGroupsClient) DeleteSender(req *http.Request) (future Secur
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client SecurityGroupsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -190,7 +191,7 @@ func (client SecurityGroupsClient) DeleteResponder(resp *http.Response) (result 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // Get the Get NetworkSecurityGroups operation retrieves information about the specified network security group.
 //
 // resourceGroupName is the name of the resource group. networkSecurityGroupName is the name of the network
@@ -217,7 +218,7 @@ func (client SecurityGroupsClient) Get(ctx context.Context, resourceGroupName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetPreparer prepares the Get request.
 func (client SecurityGroupsClient) GetPreparer(ctx context.Context, resourceGroupName string, networkSecurityGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -239,7 +240,7 @@ func (client SecurityGroupsClient) GetPreparer(ctx context.Context, resourceGrou
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityGroupsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -247,7 +248,7 @@ func (client SecurityGroupsClient) GetSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client SecurityGroupsClient) GetResponder(resp *http.Response) (result SecurityGroup, err error) {
@@ -261,7 +262,7 @@ func (client SecurityGroupsClient) GetResponder(resp *http.Response) (result Sec
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // List the list NetworkSecurityGroups returns all network security groups in a resource group
 //
 // resourceGroupName is the name of the resource group.
@@ -288,7 +289,7 @@ func (client SecurityGroupsClient) List(ctx context.Context, resourceGroupName s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListPreparer prepares the List request.
 func (client SecurityGroupsClient) ListPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -309,7 +310,7 @@ func (client SecurityGroupsClient) ListPreparer(ctx context.Context, resourceGro
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityGroupsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -317,7 +318,7 @@ func (client SecurityGroupsClient) ListSender(req *http.Request) (*http.Response
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client SecurityGroupsClient) ListResponder(resp *http.Response) (result SecurityGroupListResult, err error) {
@@ -352,14 +353,14 @@ func (client SecurityGroupsClient) listNextResults(lastResults SecurityGroupList
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SecurityGroupsClient) ListComplete(ctx context.Context, resourceGroupName string) (result SecurityGroupListResultIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAll the list NetworkSecurityGroups returns all network security groups in a subscription
 func (client SecurityGroupsClient) ListAll(ctx context.Context) (result SecurityGroupListResultPage, err error) {
 	result.fn = client.listAllNextResults
@@ -384,7 +385,7 @@ func (client SecurityGroupsClient) ListAll(ctx context.Context) (result Security
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllPreparer prepares the ListAll request.
 func (client SecurityGroupsClient) ListAllPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -404,7 +405,7 @@ func (client SecurityGroupsClient) ListAllPreparer(ctx context.Context) (*http.R
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllSender sends the ListAll request. The method will close the
 // http.Response Body if it receives an error.
 func (client SecurityGroupsClient) ListAllSender(req *http.Request) (*http.Response, error) {
@@ -412,7 +413,7 @@ func (client SecurityGroupsClient) ListAllSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllResponder handles the response to the ListAll request. The method always
 // closes the http.Response Body.
 func (client SecurityGroupsClient) ListAllResponder(resp *http.Response) (result SecurityGroupListResult, err error) {
@@ -447,7 +448,7 @@ func (client SecurityGroupsClient) listAllNextResults(lastResults SecurityGroupL
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/network/mgmt/2015-05-01-preview/network instead.
 // ListAllComplete enumerates all values, automatically crossing page boundaries as required.
 func (client SecurityGroupsClient) ListAllComplete(ctx context.Context) (result SecurityGroupListResultIterator, err error) {
 	result.page, err = client.ListAll(ctx)

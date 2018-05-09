@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	"github.com/Azure/azure-sdk-for-go/services/resources/mgmt/2017-05-10/resources"
+	"github.com/blacknut/azure-sdk-for-go/services/resources/mgmt/2017-05-10/resources"
 )
 
 // Build is a helper that creates a resources.Deployment, which can

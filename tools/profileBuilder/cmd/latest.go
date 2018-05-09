@@ -22,7 +22,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/Azure/azure-sdk-for-go/tools/profileBuilder/model"
+	"github.com/blacknut/azure-sdk-for-go/tools/profileBuilder/model"
 	"github.com/marstr/randname"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -49,7 +49,7 @@ var latestFlags = viper.New()
 var latestCmd = &cobra.Command{
 	Use:   "latest",
 	Short: "Reflects on the available packages, choosing the most recent ones.",
-	Long: `Scans through the availabe API Versions, and chooses only the most 
+	Long: `Scans through the availabe API Versions, and chooses only the most
 recent functionality.
 
 By default, this command ignores API versions that are in preview.`,

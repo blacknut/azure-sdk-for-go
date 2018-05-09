@@ -19,13 +19,13 @@ package msi
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/to"
-	"github.com/satori/go.uuid"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // UserAssignedIdentities enumerates the values for user assigned identities.
 type UserAssignedIdentities string
 
@@ -34,20 +34,20 @@ const (
 	MicrosoftManagedIdentityuserAssignedIdentities UserAssignedIdentities = "Microsoft.ManagedIdentity/userAssignedIdentities"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // PossibleUserAssignedIdentitiesValues returns an array of possible values for the UserAssignedIdentities const type.
 func PossibleUserAssignedIdentitiesValues() []UserAssignedIdentities {
 	return []UserAssignedIdentities{MicrosoftManagedIdentityuserAssignedIdentities}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // CloudError an error response from the ManagedServiceIdentity service.
 type CloudError struct {
 	// Error - A list of additional details about the error.
 	Error *CloudErrorBody `json:"error,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // CloudErrorBody an error response from the ManagedServiceIdentity service.
 type CloudErrorBody struct {
 	// Code - An identifier for the error.
@@ -60,7 +60,7 @@ type CloudErrorBody struct {
 	Details *[]CloudErrorBody `json:"details,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Identity describes an identity resource.
 type Identity struct {
 	autorest.Response `json:"-"`
@@ -78,7 +78,7 @@ type Identity struct {
 	Type UserAssignedIdentities `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // MarshalJSON is the custom marshaler for Identity.
 func (i Identity) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -103,7 +103,7 @@ func (i Identity) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // UnmarshalJSON is the custom unmarshaler for Identity struct.
 func (i *Identity) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -173,7 +173,7 @@ func (i *Identity) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // IdentityProperties the properties associated with the identity.
 type IdentityProperties struct {
 	// TenantID - The id of the tenant which the identity belongs to.
@@ -186,7 +186,7 @@ type IdentityProperties struct {
 	ClientSecretURL *string `json:"clientSecretUrl,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Operation operation supported by the Microsoft.ManagedIdentity REST API.
 type Operation struct {
 	// Name - The name of the REST Operation. This is of the format {provider}/{resource}/{operation}.
@@ -195,7 +195,7 @@ type Operation struct {
 	Display *OperationDisplay `json:"display,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // OperationDisplay the object that describes the operation.
 type OperationDisplay struct {
 	// Provider - Friendly name of the resource provider.
@@ -208,7 +208,7 @@ type OperationDisplay struct {
 	Description *string `json:"description,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // OperationListResult a list of operations supported by Microsoft.ManagedIdentity Resource Provider.
 type OperationListResult struct {
 	autorest.Response `json:"-"`
@@ -218,14 +218,14 @@ type OperationListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // OperationListResultIterator provides access to a complete listing of Operation values.
 type OperationListResultIterator struct {
 	i    int
 	page OperationListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *OperationListResultIterator) Next() error {
@@ -242,19 +242,19 @@ func (iter *OperationListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter OperationListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Response returns the raw server response from the last page request.
 func (iter OperationListResultIterator) Response() OperationListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter OperationListResultIterator) Value() Operation {
@@ -264,7 +264,7 @@ func (iter OperationListResultIterator) Value() Operation {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (olr OperationListResult) IsEmpty() bool {
 	return olr.Value == nil || len(*olr.Value) == 0
@@ -282,14 +282,14 @@ func (olr OperationListResult) operationListResultPreparer() (*http.Request, err
 		autorest.WithBaseURL(to.String(olr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // OperationListResultPage contains a page of Operation values.
 type OperationListResultPage struct {
 	fn  func(OperationListResult) (OperationListResult, error)
 	olr OperationListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *OperationListResultPage) Next() error {
@@ -301,19 +301,19 @@ func (page *OperationListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page OperationListResultPage) NotDone() bool {
 	return !page.olr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Response returns the raw server response from the last page request.
 func (page OperationListResultPage) Response() OperationListResult {
 	return page.olr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page OperationListResultPage) Values() []Operation {
 	if page.olr.IsEmpty() {
@@ -322,7 +322,7 @@ func (page OperationListResultPage) Values() []Operation {
 	return *page.olr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // UserAssignedIdentitiesListResult values returned by the List operation.
 type UserAssignedIdentitiesListResult struct {
 	autorest.Response `json:"-"`
@@ -332,14 +332,14 @@ type UserAssignedIdentitiesListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // UserAssignedIdentitiesListResultIterator provides access to a complete listing of Identity values.
 type UserAssignedIdentitiesListResultIterator struct {
 	i    int
 	page UserAssignedIdentitiesListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *UserAssignedIdentitiesListResultIterator) Next() error {
@@ -356,19 +356,19 @@ func (iter *UserAssignedIdentitiesListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter UserAssignedIdentitiesListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Response returns the raw server response from the last page request.
 func (iter UserAssignedIdentitiesListResultIterator) Response() UserAssignedIdentitiesListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter UserAssignedIdentitiesListResultIterator) Value() Identity {
@@ -378,7 +378,7 @@ func (iter UserAssignedIdentitiesListResultIterator) Value() Identity {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (uailr UserAssignedIdentitiesListResult) IsEmpty() bool {
 	return uailr.Value == nil || len(*uailr.Value) == 0
@@ -396,14 +396,14 @@ func (uailr UserAssignedIdentitiesListResult) userAssignedIdentitiesListResultPr
 		autorest.WithBaseURL(to.String(uailr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // UserAssignedIdentitiesListResultPage contains a page of Identity values.
 type UserAssignedIdentitiesListResultPage struct {
 	fn    func(UserAssignedIdentitiesListResult) (UserAssignedIdentitiesListResult, error)
 	uailr UserAssignedIdentitiesListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *UserAssignedIdentitiesListResultPage) Next() error {
@@ -415,19 +415,19 @@ func (page *UserAssignedIdentitiesListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page UserAssignedIdentitiesListResultPage) NotDone() bool {
 	return !page.uailr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Response returns the raw server response from the last page request.
 func (page UserAssignedIdentitiesListResultPage) Response() UserAssignedIdentitiesListResult {
 	return page.uailr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/msi/mgmt/2015-08-31-preview/msi instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page UserAssignedIdentitiesListResultPage) Values() []Identity {
 	if page.uailr.IsEmpty() {

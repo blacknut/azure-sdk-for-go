@@ -19,30 +19,31 @@ package web
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GlobalDomainRegistrationClient is the webSite Management Client
 type GlobalDomainRegistrationClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // NewGlobalDomainRegistrationClient creates an instance of the GlobalDomainRegistrationClient client.
 func NewGlobalDomainRegistrationClient(subscriptionID string) GlobalDomainRegistrationClient {
 	return NewGlobalDomainRegistrationClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // NewGlobalDomainRegistrationClientWithBaseURI creates an instance of the GlobalDomainRegistrationClient client.
 func NewGlobalDomainRegistrationClientWithBaseURI(baseURI string, subscriptionID string) GlobalDomainRegistrationClient {
 	return GlobalDomainRegistrationClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CheckDomainAvailability sends the check domain availability request.
 //
 // identifier is name of the domain
@@ -68,7 +69,7 @@ func (client GlobalDomainRegistrationClient) CheckDomainAvailability(ctx context
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CheckDomainAvailabilityPreparer prepares the CheckDomainAvailability request.
 func (client GlobalDomainRegistrationClient) CheckDomainAvailabilityPreparer(ctx context.Context, identifier NameIdentifier) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -90,7 +91,7 @@ func (client GlobalDomainRegistrationClient) CheckDomainAvailabilityPreparer(ctx
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CheckDomainAvailabilitySender sends the CheckDomainAvailability request. The method will close the
 // http.Response Body if it receives an error.
 func (client GlobalDomainRegistrationClient) CheckDomainAvailabilitySender(req *http.Request) (*http.Response, error) {
@@ -98,7 +99,7 @@ func (client GlobalDomainRegistrationClient) CheckDomainAvailabilitySender(req *
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CheckDomainAvailabilityResponder handles the response to the CheckDomainAvailability request. The method always
 // closes the http.Response Body.
 func (client GlobalDomainRegistrationClient) CheckDomainAvailabilityResponder(resp *http.Response) (result DomainAvailablilityCheckResult, err error) {
@@ -112,7 +113,7 @@ func (client GlobalDomainRegistrationClient) CheckDomainAvailabilityResponder(re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetAllDomains sends the get all domains request.
 func (client GlobalDomainRegistrationClient) GetAllDomains(ctx context.Context) (result DomainCollectionPage, err error) {
 	result.fn = client.getAllDomainsNextResults
@@ -137,7 +138,7 @@ func (client GlobalDomainRegistrationClient) GetAllDomains(ctx context.Context) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetAllDomainsPreparer prepares the GetAllDomains request.
 func (client GlobalDomainRegistrationClient) GetAllDomainsPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -157,7 +158,7 @@ func (client GlobalDomainRegistrationClient) GetAllDomainsPreparer(ctx context.C
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetAllDomainsSender sends the GetAllDomains request. The method will close the
 // http.Response Body if it receives an error.
 func (client GlobalDomainRegistrationClient) GetAllDomainsSender(req *http.Request) (*http.Response, error) {
@@ -165,7 +166,7 @@ func (client GlobalDomainRegistrationClient) GetAllDomainsSender(req *http.Reque
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetAllDomainsResponder handles the response to the GetAllDomains request. The method always
 // closes the http.Response Body.
 func (client GlobalDomainRegistrationClient) GetAllDomainsResponder(resp *http.Response) (result DomainCollection, err error) {
@@ -200,14 +201,14 @@ func (client GlobalDomainRegistrationClient) getAllDomainsNextResults(lastResult
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetAllDomainsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client GlobalDomainRegistrationClient) GetAllDomainsComplete(ctx context.Context) (result DomainCollectionIterator, err error) {
 	result.page, err = client.GetAllDomains(ctx)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetDomainControlCenterSsoRequest sends the get domain control center sso request request.
 func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequest(ctx context.Context) (result DomainControlCenterSsoRequest, err error) {
 	req, err := client.GetDomainControlCenterSsoRequestPreparer(ctx)
@@ -231,7 +232,7 @@ func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequest(ct
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetDomainControlCenterSsoRequestPreparer prepares the GetDomainControlCenterSsoRequest request.
 func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequestPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -251,7 +252,7 @@ func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequestPre
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetDomainControlCenterSsoRequestSender sends the GetDomainControlCenterSsoRequest request. The method will close the
 // http.Response Body if it receives an error.
 func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequestSender(req *http.Request) (*http.Response, error) {
@@ -259,7 +260,7 @@ func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequestSen
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetDomainControlCenterSsoRequestResponder handles the response to the GetDomainControlCenterSsoRequest request. The method always
 // closes the http.Response Body.
 func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequestResponder(resp *http.Response) (result DomainControlCenterSsoRequest, err error) {
@@ -273,7 +274,7 @@ func (client GlobalDomainRegistrationClient) GetDomainControlCenterSsoRequestRes
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ListDomainRecommendations sends the list domain recommendations request.
 //
 // parameters is domain recommendation search parameters
@@ -300,7 +301,7 @@ func (client GlobalDomainRegistrationClient) ListDomainRecommendations(ctx conte
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ListDomainRecommendationsPreparer prepares the ListDomainRecommendations request.
 func (client GlobalDomainRegistrationClient) ListDomainRecommendationsPreparer(ctx context.Context, parameters DomainRecommendationSearchParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -322,7 +323,7 @@ func (client GlobalDomainRegistrationClient) ListDomainRecommendationsPreparer(c
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ListDomainRecommendationsSender sends the ListDomainRecommendations request. The method will close the
 // http.Response Body if it receives an error.
 func (client GlobalDomainRegistrationClient) ListDomainRecommendationsSender(req *http.Request) (*http.Response, error) {
@@ -330,7 +331,7 @@ func (client GlobalDomainRegistrationClient) ListDomainRecommendationsSender(req
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ListDomainRecommendationsResponder handles the response to the ListDomainRecommendations request. The method always
 // closes the http.Response Body.
 func (client GlobalDomainRegistrationClient) ListDomainRecommendationsResponder(resp *http.Response) (result NameIdentifierCollection, err error) {
@@ -365,14 +366,14 @@ func (client GlobalDomainRegistrationClient) listDomainRecommendationsNextResult
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ListDomainRecommendationsComplete enumerates all values, automatically crossing page boundaries as required.
 func (client GlobalDomainRegistrationClient) ListDomainRecommendationsComplete(ctx context.Context, parameters DomainRecommendationSearchParameters) (result NameIdentifierCollectionIterator, err error) {
 	result.page, err = client.ListDomainRecommendations(ctx, parameters)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ValidateDomainPurchaseInformation sends the validate domain purchase information request.
 //
 // domainRegistrationInput is domain registration information
@@ -398,7 +399,7 @@ func (client GlobalDomainRegistrationClient) ValidateDomainPurchaseInformation(c
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ValidateDomainPurchaseInformationPreparer prepares the ValidateDomainPurchaseInformation request.
 func (client GlobalDomainRegistrationClient) ValidateDomainPurchaseInformationPreparer(ctx context.Context, domainRegistrationInput DomainRegistrationInput) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -420,7 +421,7 @@ func (client GlobalDomainRegistrationClient) ValidateDomainPurchaseInformationPr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ValidateDomainPurchaseInformationSender sends the ValidateDomainPurchaseInformation request. The method will close the
 // http.Response Body if it receives an error.
 func (client GlobalDomainRegistrationClient) ValidateDomainPurchaseInformationSender(req *http.Request) (*http.Response, error) {
@@ -428,7 +429,7 @@ func (client GlobalDomainRegistrationClient) ValidateDomainPurchaseInformationSe
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // ValidateDomainPurchaseInformationResponder handles the response to the ValidateDomainPurchaseInformation request. The method always
 // closes the http.Response Body.
 func (client GlobalDomainRegistrationClient) ValidateDomainPurchaseInformationResponder(resp *http.Response) (result SetObject, err error) {

@@ -19,31 +19,32 @@ package cognitiveservices
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // AccountsClient is the cognitive Services Management Client
 type AccountsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // NewAccountsClient creates an instance of the AccountsClient client.
 func NewAccountsClient(subscriptionID string) AccountsClient {
 	return NewAccountsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // NewAccountsClientWithBaseURI creates an instance of the AccountsClient client.
 func NewAccountsClientWithBaseURI(baseURI string, subscriptionID string) AccountsClient {
 	return AccountsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // Create create Cognitive Services Account. Accounts is a resource group wide resource type. It holds the keys for
 // developer to access intelligent APIs. It's also the resource type for billing.
 //
@@ -85,7 +86,7 @@ func (client AccountsClient) Create(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // CreatePreparer prepares the Create request.
 func (client AccountsClient) CreatePreparer(ctx context.Context, resourceGroupName string, accountName string, parameters AccountCreateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -109,7 +110,7 @@ func (client AccountsClient) CreatePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // CreateSender sends the Create request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) CreateSender(req *http.Request) (*http.Response, error) {
@@ -117,7 +118,7 @@ func (client AccountsClient) CreateSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // CreateResponder handles the response to the Create request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) CreateResponder(resp *http.Response) (result Account, err error) {
@@ -131,7 +132,7 @@ func (client AccountsClient) CreateResponder(resp *http.Response) (result Accoun
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // Delete deletes a Cognitive Services account from the resource group.
 //
 // resourceGroupName is the name of the resource group within the user's subscription. accountName is the name of
@@ -167,7 +168,7 @@ func (client AccountsClient) Delete(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // DeletePreparer prepares the Delete request.
 func (client AccountsClient) DeletePreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -189,7 +190,7 @@ func (client AccountsClient) DeletePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -197,7 +198,7 @@ func (client AccountsClient) DeleteSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -210,7 +211,7 @@ func (client AccountsClient) DeleteResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // GetProperties returns a Cognitive Services account specified by the parameters.
 //
 // resourceGroupName is the name of the resource group within the user's subscription. accountName is the name of
@@ -246,7 +247,7 @@ func (client AccountsClient) GetProperties(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // GetPropertiesPreparer prepares the GetProperties request.
 func (client AccountsClient) GetPropertiesPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -268,7 +269,7 @@ func (client AccountsClient) GetPropertiesPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // GetPropertiesSender sends the GetProperties request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) GetPropertiesSender(req *http.Request) (*http.Response, error) {
@@ -276,7 +277,7 @@ func (client AccountsClient) GetPropertiesSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // GetPropertiesResponder handles the response to the GetProperties request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) GetPropertiesResponder(resp *http.Response) (result Account, err error) {
@@ -290,7 +291,7 @@ func (client AccountsClient) GetPropertiesResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // List returns all the resources of a particular type belonging to a subscription.
 func (client AccountsClient) List(ctx context.Context) (result AccountListResult, err error) {
 	req, err := client.ListPreparer(ctx)
@@ -314,7 +315,7 @@ func (client AccountsClient) List(ctx context.Context) (result AccountListResult
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListPreparer prepares the List request.
 func (client AccountsClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -334,7 +335,7 @@ func (client AccountsClient) ListPreparer(ctx context.Context) (*http.Request, e
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -342,7 +343,7 @@ func (client AccountsClient) ListSender(req *http.Request) (*http.Response, erro
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListResponder(resp *http.Response) (result AccountListResult, err error) {
@@ -356,7 +357,7 @@ func (client AccountsClient) ListResponder(resp *http.Response) (result AccountL
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListByResourceGroup returns all the resources of a particular type belonging to a resource group
 //
 // resourceGroupName is the name of the resource group within the user's subscription.
@@ -382,7 +383,7 @@ func (client AccountsClient) ListByResourceGroup(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client AccountsClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -403,7 +404,7 @@ func (client AccountsClient) ListByResourceGroupPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -411,7 +412,7 @@ func (client AccountsClient) ListByResourceGroupSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListByResourceGroupResponder(resp *http.Response) (result AccountListResult, err error) {
@@ -425,7 +426,7 @@ func (client AccountsClient) ListByResourceGroupResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListKeys lists the account keys for the specified Cognitive Services account.
 //
 // resourceGroupName is the name of the resource group within the user's subscription. accountName is the name of
@@ -461,7 +462,7 @@ func (client AccountsClient) ListKeys(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListKeysPreparer prepares the ListKeys request.
 func (client AccountsClient) ListKeysPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -483,7 +484,7 @@ func (client AccountsClient) ListKeysPreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListKeysSender sends the ListKeys request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListKeysSender(req *http.Request) (*http.Response, error) {
@@ -491,7 +492,7 @@ func (client AccountsClient) ListKeysSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListKeysResponder handles the response to the ListKeys request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListKeysResponder(resp *http.Response) (result AccountKeys, err error) {
@@ -505,7 +506,7 @@ func (client AccountsClient) ListKeysResponder(resp *http.Response) (result Acco
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListSkus list available SKUs for the requested Cognitive Services account
 //
 // resourceGroupName is the name of the resource group within the user's subscription. accountName is the name of
@@ -541,7 +542,7 @@ func (client AccountsClient) ListSkus(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListSkusPreparer prepares the ListSkus request.
 func (client AccountsClient) ListSkusPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -563,7 +564,7 @@ func (client AccountsClient) ListSkusPreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListSkusSender sends the ListSkus request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListSkusSender(req *http.Request) (*http.Response, error) {
@@ -571,7 +572,7 @@ func (client AccountsClient) ListSkusSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // ListSkusResponder handles the response to the ListSkus request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListSkusResponder(resp *http.Response) (result AccountEnumerateSkusResult, err error) {
@@ -585,7 +586,7 @@ func (client AccountsClient) ListSkusResponder(resp *http.Response) (result Acco
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // RegenerateKey regenerates the specified account key for the specified Cognitive Services account.
 //
 // resourceGroupName is the name of the resource group within the user's subscription. accountName is the name of
@@ -622,7 +623,7 @@ func (client AccountsClient) RegenerateKey(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // RegenerateKeyPreparer prepares the RegenerateKey request.
 func (client AccountsClient) RegenerateKeyPreparer(ctx context.Context, resourceGroupName string, accountName string, body RegenerateKeyParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -646,7 +647,7 @@ func (client AccountsClient) RegenerateKeyPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // RegenerateKeySender sends the RegenerateKey request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) RegenerateKeySender(req *http.Request) (*http.Response, error) {
@@ -654,7 +655,7 @@ func (client AccountsClient) RegenerateKeySender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // RegenerateKeyResponder handles the response to the RegenerateKey request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) RegenerateKeyResponder(resp *http.Response) (result AccountKeys, err error) {
@@ -668,7 +669,7 @@ func (client AccountsClient) RegenerateKeyResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // Update updates a Cognitive Services account
 //
 // resourceGroupName is the name of the resource group within the user's subscription. accountName is the name of
@@ -705,7 +706,7 @@ func (client AccountsClient) Update(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // UpdatePreparer prepares the Update request.
 func (client AccountsClient) UpdatePreparer(ctx context.Context, resourceGroupName string, accountName string, body AccountUpdateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -729,7 +730,7 @@ func (client AccountsClient) UpdatePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -737,7 +738,7 @@ func (client AccountsClient) UpdateSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/cognitiveservices/preview/mgmt/2016-02-01-preview/cognitiveservices instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) UpdateResponder(resp *http.Response) (result Account, err error) {

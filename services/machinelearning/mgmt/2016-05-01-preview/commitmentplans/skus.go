@@ -19,12 +19,13 @@ package commitmentplans
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // SkusClient is the these APIs allow end users to operate on Azure Machine Learning Commitment Plans resources and
 // their child Commitment Association resources. They support CRUD operations for commitment plans, get and list
 // operations for commitment associations, moving commitment associations between commitment plans, and retrieving
@@ -33,19 +34,19 @@ type SkusClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // NewSkusClient creates an instance of the SkusClient client.
 func NewSkusClient(subscriptionID string) SkusClient {
 	return NewSkusClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // NewSkusClientWithBaseURI creates an instance of the SkusClient client.
 func NewSkusClientWithBaseURI(baseURI string, subscriptionID string) SkusClient {
 	return SkusClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // List lists the available commitment plan SKUs.
 func (client SkusClient) List(ctx context.Context) (result SkuListResult, err error) {
 	req, err := client.ListPreparer(ctx)
@@ -69,7 +70,7 @@ func (client SkusClient) List(ctx context.Context) (result SkuListResult, err er
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListPreparer prepares the List request.
 func (client SkusClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -89,7 +90,7 @@ func (client SkusClient) ListPreparer(ctx context.Context) (*http.Request, error
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client SkusClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -97,7 +98,7 @@ func (client SkusClient) ListSender(req *http.Request) (*http.Response, error) {
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/machinelearning/mgmt/2016-05-01-preview/commitmentplans instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client SkusClient) ListResponder(resp *http.Response) (result SkuListResult, err error) {

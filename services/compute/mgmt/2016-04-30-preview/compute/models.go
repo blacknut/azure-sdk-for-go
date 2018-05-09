@@ -19,14 +19,15 @@ package compute
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/date"
 	"github.com/Azure/go-autorest/autorest/to"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AccessLevel enumerates the values for access level.
 type AccessLevel string
 
@@ -37,13 +38,13 @@ const (
 	Read AccessLevel = "Read"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleAccessLevelValues returns an array of possible values for the AccessLevel const type.
 func PossibleAccessLevelValues() []AccessLevel {
 	return []AccessLevel{None, Read}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // CachingTypes enumerates the values for caching types.
 type CachingTypes string
 
@@ -56,13 +57,13 @@ const (
 	CachingTypesReadWrite CachingTypes = "ReadWrite"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleCachingTypesValues returns an array of possible values for the CachingTypes const type.
 func PossibleCachingTypesValues() []CachingTypes {
 	return []CachingTypes{CachingTypesNone, CachingTypesReadOnly, CachingTypesReadWrite}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ComponentNames enumerates the values for component names.
 type ComponentNames string
 
@@ -71,13 +72,13 @@ const (
 	MicrosoftWindowsShellSetup ComponentNames = "Microsoft-Windows-Shell-Setup"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleComponentNamesValues returns an array of possible values for the ComponentNames const type.
 func PossibleComponentNamesValues() []ComponentNames {
 	return []ComponentNames{MicrosoftWindowsShellSetup}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskCreateOption enumerates the values for disk create option.
 type DiskCreateOption string
 
@@ -96,13 +97,13 @@ const (
 	Restore DiskCreateOption = "Restore"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleDiskCreateOptionValues returns an array of possible values for the DiskCreateOption const type.
 func PossibleDiskCreateOptionValues() []DiskCreateOption {
 	return []DiskCreateOption{Attach, Copy, Empty, FromImage, Import, Restore}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskCreateOptionTypes enumerates the values for disk create option types.
 type DiskCreateOptionTypes string
 
@@ -115,13 +116,13 @@ const (
 	DiskCreateOptionTypesFromImage DiskCreateOptionTypes = "FromImage"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleDiskCreateOptionTypesValues returns an array of possible values for the DiskCreateOptionTypes const type.
 func PossibleDiskCreateOptionTypesValues() []DiskCreateOptionTypes {
 	return []DiskCreateOptionTypes{DiskCreateOptionTypesAttach, DiskCreateOptionTypesEmpty, DiskCreateOptionTypesFromImage}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // InstanceViewTypes enumerates the values for instance view types.
 type InstanceViewTypes string
 
@@ -130,13 +131,13 @@ const (
 	InstanceView InstanceViewTypes = "instanceView"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleInstanceViewTypesValues returns an array of possible values for the InstanceViewTypes const type.
 func PossibleInstanceViewTypesValues() []InstanceViewTypes {
 	return []InstanceViewTypes{InstanceView}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // OperatingSystemStateTypes enumerates the values for operating system state types.
 type OperatingSystemStateTypes string
 
@@ -147,13 +148,13 @@ const (
 	Specialized OperatingSystemStateTypes = "Specialized"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleOperatingSystemStateTypesValues returns an array of possible values for the OperatingSystemStateTypes const type.
 func PossibleOperatingSystemStateTypesValues() []OperatingSystemStateTypes {
 	return []OperatingSystemStateTypes{Generalized, Specialized}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // OperatingSystemTypes enumerates the values for operating system types.
 type OperatingSystemTypes string
 
@@ -164,13 +165,13 @@ const (
 	Windows OperatingSystemTypes = "Windows"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleOperatingSystemTypesValues returns an array of possible values for the OperatingSystemTypes const type.
 func PossibleOperatingSystemTypesValues() []OperatingSystemTypes {
 	return []OperatingSystemTypes{Linux, Windows}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PassNames enumerates the values for pass names.
 type PassNames string
 
@@ -179,13 +180,13 @@ const (
 	OobeSystem PassNames = "OobeSystem"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossiblePassNamesValues returns an array of possible values for the PassNames const type.
 func PossiblePassNamesValues() []PassNames {
 	return []PassNames{OobeSystem}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ProtocolTypes enumerates the values for protocol types.
 type ProtocolTypes string
 
@@ -196,13 +197,13 @@ const (
 	HTTPS ProtocolTypes = "Https"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleProtocolTypesValues returns an array of possible values for the ProtocolTypes const type.
 func PossibleProtocolTypesValues() []ProtocolTypes {
 	return []ProtocolTypes{HTTP, HTTPS}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ResourceIdentityType enumerates the values for resource identity type.
 type ResourceIdentityType string
 
@@ -211,13 +212,13 @@ const (
 	SystemAssigned ResourceIdentityType = "SystemAssigned"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleResourceIdentityTypeValues returns an array of possible values for the ResourceIdentityType const type.
 func PossibleResourceIdentityTypeValues() []ResourceIdentityType {
 	return []ResourceIdentityType{SystemAssigned}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SettingNames enumerates the values for setting names.
 type SettingNames string
 
@@ -228,13 +229,13 @@ const (
 	FirstLogonCommands SettingNames = "FirstLogonCommands"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleSettingNamesValues returns an array of possible values for the SettingNames const type.
 func PossibleSettingNamesValues() []SettingNames {
 	return []SettingNames{AutoLogon, FirstLogonCommands}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // StatusLevelTypes enumerates the values for status level types.
 type StatusLevelTypes string
 
@@ -247,13 +248,13 @@ const (
 	Warning StatusLevelTypes = "Warning"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleStatusLevelTypesValues returns an array of possible values for the StatusLevelTypes const type.
 func PossibleStatusLevelTypesValues() []StatusLevelTypes {
 	return []StatusLevelTypes{Error, Info, Warning}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // StorageAccountTypes enumerates the values for storage account types.
 type StorageAccountTypes string
 
@@ -264,13 +265,13 @@ const (
 	StandardLRS StorageAccountTypes = "Standard_LRS"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleStorageAccountTypesValues returns an array of possible values for the StorageAccountTypes const type.
 func PossibleStorageAccountTypesValues() []StorageAccountTypes {
 	return []StorageAccountTypes{PremiumLRS, StandardLRS}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UpgradeMode enumerates the values for upgrade mode.
 type UpgradeMode string
 
@@ -281,13 +282,13 @@ const (
 	Manual UpgradeMode = "Manual"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleUpgradeModeValues returns an array of possible values for the UpgradeMode const type.
 func PossibleUpgradeModeValues() []UpgradeMode {
 	return []UpgradeMode{Automatic, Manual}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetSkuScaleType enumerates the values for virtual machine scale set sku scale type.
 type VirtualMachineScaleSetSkuScaleType string
 
@@ -298,13 +299,13 @@ const (
 	VirtualMachineScaleSetSkuScaleTypeNone VirtualMachineScaleSetSkuScaleType = "None"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleVirtualMachineScaleSetSkuScaleTypeValues returns an array of possible values for the VirtualMachineScaleSetSkuScaleType const type.
 func PossibleVirtualMachineScaleSetSkuScaleTypeValues() []VirtualMachineScaleSetSkuScaleType {
 	return []VirtualMachineScaleSetSkuScaleType{VirtualMachineScaleSetSkuScaleTypeAutomatic, VirtualMachineScaleSetSkuScaleTypeNone}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineSizeTypes enumerates the values for virtual machine size types.
 type VirtualMachineSizeTypes string
 
@@ -437,13 +438,13 @@ const (
 	StandardGS5 VirtualMachineSizeTypes = "Standard_GS5"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PossibleVirtualMachineSizeTypesValues returns an array of possible values for the VirtualMachineSizeTypes const type.
 func PossibleVirtualMachineSizeTypesValues() []VirtualMachineSizeTypes {
 	return []VirtualMachineSizeTypes{BasicA0, BasicA1, BasicA2, BasicA3, BasicA4, StandardA0, StandardA1, StandardA10, StandardA11, StandardA2, StandardA3, StandardA4, StandardA5, StandardA6, StandardA7, StandardA8, StandardA9, StandardD1, StandardD11, StandardD11V2, StandardD12, StandardD12V2, StandardD13, StandardD13V2, StandardD14, StandardD14V2, StandardD15V2, StandardD1V2, StandardD2, StandardD2V2, StandardD3, StandardD3V2, StandardD4, StandardD4V2, StandardD5V2, StandardDS1, StandardDS11, StandardDS11V2, StandardDS12, StandardDS12V2, StandardDS13, StandardDS13V2, StandardDS14, StandardDS14V2, StandardDS15V2, StandardDS1V2, StandardDS2, StandardDS2V2, StandardDS3, StandardDS3V2, StandardDS4, StandardDS4V2, StandardDS5V2, StandardG1, StandardG2, StandardG3, StandardG4, StandardG5, StandardGS1, StandardGS2, StandardGS3, StandardGS4, StandardGS5}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AccessURI a disk access SAS uri.
 type AccessURI struct {
 	autorest.Response `json:"-"`
@@ -451,7 +452,7 @@ type AccessURI struct {
 	*AccessURIOutput `json:"properties,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for AccessURI.
 func (au AccessURI) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -461,7 +462,7 @@ func (au AccessURI) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for AccessURI struct.
 func (au *AccessURI) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -486,14 +487,14 @@ func (au *AccessURI) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AccessURIOutput azure properties, including output.
 type AccessURIOutput struct {
 	// AccessURIRaw - Operation output data (raw JSON)
 	*AccessURIRaw `json:"output,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for AccessURIOutput.
 func (auo AccessURIOutput) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -503,7 +504,7 @@ func (auo AccessURIOutput) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for AccessURIOutput struct.
 func (auo *AccessURIOutput) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -528,14 +529,14 @@ func (auo *AccessURIOutput) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AccessURIRaw this object gets 'bubbled up' through flattening.
 type AccessURIRaw struct {
 	// AccessSAS - A SAS uri for accessing a disk.
 	AccessSAS *string `json:"accessSAS,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AdditionalUnattendContent specifies additional XML formatted information that can be included in the
 // Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the
 // pass in which the content is applied.
@@ -550,14 +551,14 @@ type AdditionalUnattendContent struct {
 	Content *string `json:"content,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // APIEntityReference the API entity reference.
 type APIEntityReference struct {
 	// ID - The ARM resource id in the form of /subscriptions/{SubcriptionId}/resourceGroups/{ResourceGroupName}/...
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // APIError api error.
 type APIError struct {
 	// Details - The Api error details
@@ -572,7 +573,7 @@ type APIError struct {
 	Message *string `json:"message,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // APIErrorBase api error base.
 type APIErrorBase struct {
 	// Code - The error code.
@@ -583,7 +584,7 @@ type APIErrorBase struct {
 	Message *string `json:"message,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AvailabilitySet specifies information about the availability set that the virtual machine should be assigned to.
 // Virtual machines specified in the same availability set are allocated to different nodes to maximize
 // availability. For more information about availability sets, see [Manage the availability of virtual
@@ -609,7 +610,7 @@ type AvailabilitySet struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for AvailabilitySet.
 func (as AvailabilitySet) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -637,7 +638,7 @@ func (as AvailabilitySet) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for AvailabilitySet struct.
 func (as *AvailabilitySet) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -716,7 +717,7 @@ func (as *AvailabilitySet) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AvailabilitySetListResult the List Availability Set operation response.
 type AvailabilitySetListResult struct {
 	autorest.Response `json:"-"`
@@ -724,7 +725,7 @@ type AvailabilitySetListResult struct {
 	Value *[]AvailabilitySet `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // AvailabilitySetProperties the instance view of a resource.
 type AvailabilitySetProperties struct {
 	// PlatformUpdateDomainCount - Update Domain count.
@@ -739,7 +740,7 @@ type AvailabilitySetProperties struct {
 	Managed *bool `json:"managed,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // BootDiagnostics boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot
 // to diagnose VM status. <br><br> For Linux Virtual Machines, you can easily view the output of your console log.
 // <br><br> For both Windows and Linux virtual machines, Azure also enables you to see a screenshot of the VM from
@@ -751,7 +752,7 @@ type BootDiagnostics struct {
 	StorageURI *string `json:"storageUri,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // BootDiagnosticsInstanceView the instance view of a virtual machine boot diagnostics.
 type BootDiagnosticsInstanceView struct {
 	// ConsoleScreenshotBlobURI - The console screenshot blob URI.
@@ -760,7 +761,7 @@ type BootDiagnosticsInstanceView struct {
 	SerialConsoleLogBlobURI *string `json:"serialConsoleLogBlobUri,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // CreationData data used when creating a disk.
 type CreationData struct {
 	// CreateOption - This enumerates the possible sources of a disk's creation. Possible values include: 'Empty', 'Attach', 'FromImage', 'Import', 'Copy', 'Restore'
@@ -775,7 +776,7 @@ type CreationData struct {
 	SourceResourceID *string `json:"sourceResourceId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DataDisk describes a data disk.
 type DataDisk struct {
 	// Lun - Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
@@ -796,21 +797,21 @@ type DataDisk struct {
 	ManagedDisk *ManagedDiskParameters `json:"managedDisk,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DataDiskImage contains the data disk images information.
 type DataDiskImage struct {
 	// Lun - Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
 	Lun *int32 `json:"lun,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiagnosticsProfile specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
 type DiagnosticsProfile struct {
 	// BootDiagnostics - Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> For Linux Virtual Machines, you can easily view the output of your console log. <br><br> For both Windows and Linux virtual machines, Azure also enables you to see a screenshot of the VM from the hypervisor.
 	BootDiagnostics *BootDiagnostics `json:"bootDiagnostics,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Disk disk resource.
 type Disk struct {
 	autorest.Response `json:"-"`
@@ -827,7 +828,7 @@ type Disk struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for Disk.
 func (d Disk) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -852,7 +853,7 @@ func (d Disk) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for Disk struct.
 func (d *Disk) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -922,7 +923,7 @@ func (d *Disk) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskEncryptionSettings describes a Encryption Settings for a Disk
 type DiskEncryptionSettings struct {
 	// DiskEncryptionKey - Specifies the location of the disk encryption key, which is a Key Vault Secret.
@@ -933,7 +934,7 @@ type DiskEncryptionSettings struct {
 	Enabled *bool `json:"enabled,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskInstanceView the instance view of the disk.
 type DiskInstanceView struct {
 	// Name - The disk name.
@@ -942,7 +943,7 @@ type DiskInstanceView struct {
 	Statuses *[]InstanceViewStatus `json:"statuses,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskList the List Disks operation response.
 type DiskList struct {
 	autorest.Response `json:"-"`
@@ -952,14 +953,14 @@ type DiskList struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskListIterator provides access to a complete listing of Disk values.
 type DiskListIterator struct {
 	i    int
 	page DiskListPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *DiskListIterator) Next() error {
@@ -976,19 +977,19 @@ func (iter *DiskListIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter DiskListIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter DiskListIterator) Response() DiskList {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter DiskListIterator) Value() Disk {
@@ -998,7 +999,7 @@ func (iter DiskListIterator) Value() Disk {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (dl DiskList) IsEmpty() bool {
 	return dl.Value == nil || len(*dl.Value) == 0
@@ -1016,14 +1017,14 @@ func (dl DiskList) diskListPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(dl.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskListPage contains a page of Disk values.
 type DiskListPage struct {
 	fn func(DiskList) (DiskList, error)
 	dl DiskList
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *DiskListPage) Next() error {
@@ -1035,19 +1036,19 @@ func (page *DiskListPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page DiskListPage) NotDone() bool {
 	return !page.dl.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page DiskListPage) Response() DiskList {
 	return page.dl
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page DiskListPage) Values() []Disk {
 	if page.dl.IsEmpty() {
@@ -1056,7 +1057,7 @@ func (page DiskListPage) Values() []Disk {
 	return *page.dl.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskProperties disk resource properties.
 type DiskProperties struct {
 	// AccountType - the storage account type of the disk. Possible values include: 'StandardLRS', 'PremiumLRS'
@@ -1077,14 +1078,14 @@ type DiskProperties struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DisksCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type DisksCreateOrUpdateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future DisksCreateOrUpdateFuture) Result(client DisksClient) (d Disk, err error) {
@@ -1127,14 +1128,14 @@ func (future DisksCreateOrUpdateFuture) Result(client DisksClient) (d Disk, err 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DisksDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type DisksDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future DisksDeleteFuture) Result(client DisksClient) (osr OperationStatusResponse, err error) {
@@ -1177,14 +1178,14 @@ func (future DisksDeleteFuture) Result(client DisksClient) (osr OperationStatusR
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DisksGrantAccessFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type DisksGrantAccessFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future DisksGrantAccessFuture) Result(client DisksClient) (au AccessURI, err error) {
@@ -1227,14 +1228,14 @@ func (future DisksGrantAccessFuture) Result(client DisksClient) (au AccessURI, e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DisksRevokeAccessFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type DisksRevokeAccessFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future DisksRevokeAccessFuture) Result(client DisksClient) (osr OperationStatusResponse, err error) {
@@ -1277,14 +1278,14 @@ func (future DisksRevokeAccessFuture) Result(client DisksClient) (osr OperationS
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DisksUpdateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type DisksUpdateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future DisksUpdateFuture) Result(client DisksClient) (d Disk, err error) {
@@ -1327,7 +1328,7 @@ func (future DisksUpdateFuture) Result(client DisksClient) (d Disk, err error) {
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskUpdate disk update resource.
 type DiskUpdate struct {
 	*DiskUpdateProperties `json:"properties,omitempty"`
@@ -1335,7 +1336,7 @@ type DiskUpdate struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for DiskUpdate.
 func (du DiskUpdate) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1348,7 +1349,7 @@ func (du DiskUpdate) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for DiskUpdate struct.
 func (du *DiskUpdate) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1382,7 +1383,7 @@ func (du *DiskUpdate) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // DiskUpdateProperties disk resource update properties.
 type DiskUpdateProperties struct {
 	// AccountType - the storage account type of the disk. Possible values include: 'StandardLRS', 'PremiumLRS'
@@ -1397,7 +1398,7 @@ type DiskUpdateProperties struct {
 	EncryptionSettings *EncryptionSettings `json:"encryptionSettings,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // EncryptionSettings encryption settings for disk or snapshot
 type EncryptionSettings struct {
 	// Enabled - Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
@@ -1408,7 +1409,7 @@ type EncryptionSettings struct {
 	KeyEncryptionKey *KeyVaultAndKeyReference `json:"keyEncryptionKey,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // GrantAccessData data used for requesting a SAS.
 type GrantAccessData struct {
 	// Access - Possible values include: 'None', 'Read'
@@ -1417,14 +1418,14 @@ type GrantAccessData struct {
 	DurationInSeconds *int32 `json:"durationInSeconds,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // HardwareProfile specifies the hardware settings for the virtual machine.
 type HardwareProfile struct {
 	// VMSize - Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](virtualmachines-list-sizes-availability-set.md) <br><br> [List all available virtual machine sizes in a region](virtualmachines-list-sizes-region.md) <br><br> [List all available virtual machine sizes for resizing](virtualmachines-list-sizes-for-resizing.md). Possible values include: 'BasicA0', 'BasicA1', 'BasicA2', 'BasicA3', 'BasicA4', 'StandardA0', 'StandardA1', 'StandardA2', 'StandardA3', 'StandardA4', 'StandardA5', 'StandardA6', 'StandardA7', 'StandardA8', 'StandardA9', 'StandardA10', 'StandardA11', 'StandardD1', 'StandardD2', 'StandardD3', 'StandardD4', 'StandardD11', 'StandardD12', 'StandardD13', 'StandardD14', 'StandardD1V2', 'StandardD2V2', 'StandardD3V2', 'StandardD4V2', 'StandardD5V2', 'StandardD11V2', 'StandardD12V2', 'StandardD13V2', 'StandardD14V2', 'StandardD15V2', 'StandardDS1', 'StandardDS2', 'StandardDS3', 'StandardDS4', 'StandardDS11', 'StandardDS12', 'StandardDS13', 'StandardDS14', 'StandardDS1V2', 'StandardDS2V2', 'StandardDS3V2', 'StandardDS4V2', 'StandardDS5V2', 'StandardDS11V2', 'StandardDS12V2', 'StandardDS13V2', 'StandardDS14V2', 'StandardDS15V2', 'StandardG1', 'StandardG2', 'StandardG3', 'StandardG4', 'StandardG5', 'StandardGS1', 'StandardGS2', 'StandardGS3', 'StandardGS4', 'StandardGS5'
 	VMSize VirtualMachineSizeTypes `json:"vmSize,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Image the source user image virtual hard disk. The virtual hard disk will be copied before being attached to the
 // virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
 type Image struct {
@@ -1442,7 +1443,7 @@ type Image struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for Image.
 func (i Image) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -1467,7 +1468,7 @@ func (i Image) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for Image struct.
 func (i *Image) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -1537,7 +1538,7 @@ func (i *Image) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageDataDisk describes a data disk.
 type ImageDataDisk struct {
 	// Lun - Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
@@ -1554,7 +1555,7 @@ type ImageDataDisk struct {
 	DiskSizeGB *int32 `json:"diskSizeGB,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageDiskReference the source image used for creating the disk.
 type ImageDiskReference struct {
 	// ID - A relative uri containing either a Platform Imgage Repository or user image reference.
@@ -1563,7 +1564,7 @@ type ImageDiskReference struct {
 	Lun *int32 `json:"lun,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageListResult the List Image operation response.
 type ImageListResult struct {
 	autorest.Response `json:"-"`
@@ -1573,14 +1574,14 @@ type ImageListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageListResultIterator provides access to a complete listing of Image values.
 type ImageListResultIterator struct {
 	i    int
 	page ImageListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ImageListResultIterator) Next() error {
@@ -1597,19 +1598,19 @@ func (iter *ImageListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ImageListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter ImageListResultIterator) Response() ImageListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ImageListResultIterator) Value() Image {
@@ -1619,7 +1620,7 @@ func (iter ImageListResultIterator) Value() Image {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (ilr ImageListResult) IsEmpty() bool {
 	return ilr.Value == nil || len(*ilr.Value) == 0
@@ -1637,14 +1638,14 @@ func (ilr ImageListResult) imageListResultPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(ilr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageListResultPage contains a page of Image values.
 type ImageListResultPage struct {
 	fn  func(ImageListResult) (ImageListResult, error)
 	ilr ImageListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ImageListResultPage) Next() error {
@@ -1656,19 +1657,19 @@ func (page *ImageListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ImageListResultPage) NotDone() bool {
 	return !page.ilr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page ImageListResultPage) Response() ImageListResult {
 	return page.ilr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ImageListResultPage) Values() []Image {
 	if page.ilr.IsEmpty() {
@@ -1677,7 +1678,7 @@ func (page ImageListResultPage) Values() []Image {
 	return *page.ilr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageOSDisk describes an Operating System disk.
 type ImageOSDisk struct {
 	// OsType - This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**. Possible values include: 'Windows', 'Linux'
@@ -1696,7 +1697,7 @@ type ImageOSDisk struct {
 	DiskSizeGB *int32 `json:"diskSizeGB,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageProperties describes the properties of an Image.
 type ImageProperties struct {
 	// SourceVirtualMachine - The source virtual machine from which Image is created.
@@ -1707,7 +1708,7 @@ type ImageProperties struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageReference specifies information about the image to use. You can specify information about platform images,
 // marketplace images, or virtual machine images. This element is required when you want to use a platform image,
 // marketplace image, or virtual machine image, but is not used in other creation operations.
@@ -1724,14 +1725,14 @@ type ImageReference struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImagesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type ImagesCreateOrUpdateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ImagesCreateOrUpdateFuture) Result(client ImagesClient) (i Image, err error) {
@@ -1774,14 +1775,14 @@ func (future ImagesCreateOrUpdateFuture) Result(client ImagesClient) (i Image, e
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImagesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type ImagesDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future ImagesDeleteFuture) Result(client ImagesClient) (osr OperationStatusResponse, err error) {
@@ -1824,7 +1825,7 @@ func (future ImagesDeleteFuture) Result(client ImagesClient) (osr OperationStatu
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ImageStorageProfile describes a storage profile.
 type ImageStorageProfile struct {
 	// OsDisk - Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
@@ -1833,7 +1834,7 @@ type ImageStorageProfile struct {
 	DataDisks *[]ImageDataDisk `json:"dataDisks,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // InnerError inner error details.
 type InnerError struct {
 	// Exceptiontype - The exception type.
@@ -1842,7 +1843,7 @@ type InnerError struct {
 	Errordetail *string `json:"errordetail,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // InstanceViewStatus instance view status.
 type InstanceViewStatus struct {
 	// Code - The status code.
@@ -1857,7 +1858,7 @@ type InstanceViewStatus struct {
 	Time *date.Time `json:"time,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // KeyVaultAndKeyReference key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to
 // unwrap the encryptionKey
 type KeyVaultAndKeyReference struct {
@@ -1867,7 +1868,7 @@ type KeyVaultAndKeyReference struct {
 	KeyURL *string `json:"keyUrl,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // KeyVaultAndSecretReference key Vault Secret Url and vault id of the encryption key
 type KeyVaultAndSecretReference struct {
 	// SourceVault - Resource id of the KeyVault containing the key or secret
@@ -1876,7 +1877,7 @@ type KeyVaultAndSecretReference struct {
 	SecretURL *string `json:"secretUrl,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // KeyVaultKeyReference describes a reference to Key Vault Key
 type KeyVaultKeyReference struct {
 	// KeyURL - The URL referencing a key encryption key in Key Vault.
@@ -1885,7 +1886,7 @@ type KeyVaultKeyReference struct {
 	SourceVault *SubResource `json:"sourceVault,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // KeyVaultSecretReference describes a reference to Key Vault Secret
 type KeyVaultSecretReference struct {
 	// SecretURL - The URL referencing a secret in a Key Vault.
@@ -1894,7 +1895,7 @@ type KeyVaultSecretReference struct {
 	SourceVault *SubResource `json:"sourceVault,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // LinuxConfiguration specifies the Linux operating system settings on the virtual machine. <br><br>For a list of
 // supported Linux distributions, see [Linux on Azure-Endorsed
 // Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
@@ -1907,7 +1908,7 @@ type LinuxConfiguration struct {
 	SSH *SSHConfiguration `json:"ssh,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListUsagesResult the List Usages operation response.
 type ListUsagesResult struct {
 	autorest.Response `json:"-"`
@@ -1917,14 +1918,14 @@ type ListUsagesResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListUsagesResultIterator provides access to a complete listing of Usage values.
 type ListUsagesResultIterator struct {
 	i    int
 	page ListUsagesResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *ListUsagesResultIterator) Next() error {
@@ -1941,19 +1942,19 @@ func (iter *ListUsagesResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter ListUsagesResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter ListUsagesResultIterator) Response() ListUsagesResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter ListUsagesResultIterator) Value() Usage {
@@ -1963,7 +1964,7 @@ func (iter ListUsagesResultIterator) Value() Usage {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (lur ListUsagesResult) IsEmpty() bool {
 	return lur.Value == nil || len(*lur.Value) == 0
@@ -1981,14 +1982,14 @@ func (lur ListUsagesResult) listUsagesResultPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(lur.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListUsagesResultPage contains a page of Usage values.
 type ListUsagesResultPage struct {
 	fn  func(ListUsagesResult) (ListUsagesResult, error)
 	lur ListUsagesResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *ListUsagesResultPage) Next() error {
@@ -2000,19 +2001,19 @@ func (page *ListUsagesResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page ListUsagesResultPage) NotDone() bool {
 	return !page.lur.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page ListUsagesResultPage) Response() ListUsagesResult {
 	return page.lur
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page ListUsagesResultPage) Values() []Usage {
 	if page.lur.IsEmpty() {
@@ -2021,28 +2022,28 @@ func (page ListUsagesResultPage) Values() []Usage {
 	return *page.lur.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListVirtualMachineExtensionImage ...
 type ListVirtualMachineExtensionImage struct {
 	autorest.Response `json:"-"`
 	Value             *[]VirtualMachineExtensionImage `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ListVirtualMachineImageResource ...
 type ListVirtualMachineImageResource struct {
 	autorest.Response `json:"-"`
 	Value             *[]VirtualMachineImageResource `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // LongRunningOperationProperties compute-specific operation properties, including output
 type LongRunningOperationProperties struct {
 	// Output - Operation output data (raw JSON)
 	Output interface{} `json:"output,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ManagedDiskParameters the parameters of a managed disk.
 type ManagedDiskParameters struct {
 	// StorageAccountType - Specifies the storage account type for the managed disk. Possible values are: Standard_LRS or Premium_LRS. Possible values include: 'StandardLRS', 'PremiumLRS'
@@ -2051,7 +2052,7 @@ type ManagedDiskParameters struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NetworkInterfaceReference describes a network interface reference.
 type NetworkInterfaceReference struct {
 	*NetworkInterfaceReferenceProperties `json:"properties,omitempty"`
@@ -2059,7 +2060,7 @@ type NetworkInterfaceReference struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for NetworkInterfaceReference.
 func (nir NetworkInterfaceReference) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2072,7 +2073,7 @@ func (nir NetworkInterfaceReference) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for NetworkInterfaceReference struct.
 func (nir *NetworkInterfaceReference) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2106,21 +2107,21 @@ func (nir *NetworkInterfaceReference) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NetworkInterfaceReferenceProperties describes a network interface reference properties.
 type NetworkInterfaceReferenceProperties struct {
 	// Primary - Specifies the primary network interface in case the virtual machine has more than 1 network interface.
 	Primary *bool `json:"primary,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NetworkProfile specifies the network interfaces of the virtual machine.
 type NetworkProfile struct {
 	// NetworkInterfaces - Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
 	NetworkInterfaces *[]NetworkInterfaceReference `json:"networkInterfaces,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // OperationStatusResponse operation status response
 type OperationStatusResponse struct {
 	autorest.Response `json:"-"`
@@ -2136,7 +2137,7 @@ type OperationStatusResponse struct {
 	Error *APIError `json:"error,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // OSDisk specifies information about the operating system disk used by the virtual machine. <br><br> For more
 // information about disks, see [About disks and VHDs for Azure virtual
 // machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
@@ -2161,14 +2162,14 @@ type OSDisk struct {
 	ManagedDisk *ManagedDiskParameters `json:"managedDisk,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // OSDiskImage contains the os disk image information.
 type OSDiskImage struct {
 	// OperatingSystem - The operating system of the osDiskImage. Possible values include: 'Windows', 'Linux'
 	OperatingSystem OperatingSystemTypes `json:"operatingSystem,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // OSProfile specifies the operating system settings for the virtual machine.
 type OSProfile struct {
 	// ComputerName - Specifies the host OS name of the virtual machine. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).
@@ -2187,7 +2188,7 @@ type OSProfile struct {
 	Secrets *[]VaultSecretGroup `json:"secrets,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Plan specifies information about the marketplace image used to create the virtual machine. This element is only
 // used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for
 // programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to
@@ -2203,7 +2204,7 @@ type Plan struct {
 	PromotionCode *string `json:"promotionCode,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // PurchasePlan used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 type PurchasePlan struct {
 	// Publisher - The publisher ID.
@@ -2214,7 +2215,7 @@ type PurchasePlan struct {
 	Product *string `json:"product,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Resource the Resource model definition.
 type Resource struct {
 	// ID - Resource Id
@@ -2229,7 +2230,7 @@ type Resource struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for Resource.
 func (r Resource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2251,14 +2252,14 @@ func (r Resource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // ResourceUpdate the Resource model definition.
 type ResourceUpdate struct {
 	// Tags - Resource tags
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for ResourceUpdate.
 func (ru ResourceUpdate) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2268,7 +2269,7 @@ func (ru ResourceUpdate) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Sku describes a virtual machine scale set sku.
 type Sku struct {
 	// Name - The sku name.
@@ -2279,7 +2280,7 @@ type Sku struct {
 	Capacity *int64 `json:"capacity,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Snapshot snapshot resource.
 type Snapshot struct {
 	autorest.Response `json:"-"`
@@ -2296,7 +2297,7 @@ type Snapshot struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for Snapshot.
 func (s Snapshot) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2321,7 +2322,7 @@ func (s Snapshot) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for Snapshot struct.
 func (s *Snapshot) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2391,7 +2392,7 @@ func (s *Snapshot) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotList the List Snapshots operation response.
 type SnapshotList struct {
 	autorest.Response `json:"-"`
@@ -2401,14 +2402,14 @@ type SnapshotList struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotListIterator provides access to a complete listing of Snapshot values.
 type SnapshotListIterator struct {
 	i    int
 	page SnapshotListPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *SnapshotListIterator) Next() error {
@@ -2425,19 +2426,19 @@ func (iter *SnapshotListIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter SnapshotListIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter SnapshotListIterator) Response() SnapshotList {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter SnapshotListIterator) Value() Snapshot {
@@ -2447,7 +2448,7 @@ func (iter SnapshotListIterator) Value() Snapshot {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (sl SnapshotList) IsEmpty() bool {
 	return sl.Value == nil || len(*sl.Value) == 0
@@ -2465,14 +2466,14 @@ func (sl SnapshotList) snapshotListPreparer() (*http.Request, error) {
 		autorest.WithBaseURL(to.String(sl.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotListPage contains a page of Snapshot values.
 type SnapshotListPage struct {
 	fn func(SnapshotList) (SnapshotList, error)
 	sl SnapshotList
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *SnapshotListPage) Next() error {
@@ -2484,19 +2485,19 @@ func (page *SnapshotListPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page SnapshotListPage) NotDone() bool {
 	return !page.sl.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page SnapshotListPage) Response() SnapshotList {
 	return page.sl
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page SnapshotListPage) Values() []Snapshot {
 	if page.sl.IsEmpty() {
@@ -2505,7 +2506,7 @@ func (page SnapshotListPage) Values() []Snapshot {
 	return *page.sl.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SnapshotsCreateOrUpdateFuture struct {
@@ -2513,7 +2514,7 @@ type SnapshotsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SnapshotsCreateOrUpdateFuture) Result(client SnapshotsClient) (s Snapshot, err error) {
@@ -2556,14 +2557,14 @@ func (future SnapshotsCreateOrUpdateFuture) Result(client SnapshotsClient) (s Sn
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type SnapshotsDeleteFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SnapshotsDeleteFuture) Result(client SnapshotsClient) (osr OperationStatusResponse, err error) {
@@ -2606,14 +2607,14 @@ func (future SnapshotsDeleteFuture) Result(client SnapshotsClient) (osr Operatio
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotsGrantAccessFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type SnapshotsGrantAccessFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SnapshotsGrantAccessFuture) Result(client SnapshotsClient) (au AccessURI, err error) {
@@ -2656,7 +2657,7 @@ func (future SnapshotsGrantAccessFuture) Result(client SnapshotsClient) (au Acce
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotsRevokeAccessFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type SnapshotsRevokeAccessFuture struct {
@@ -2664,7 +2665,7 @@ type SnapshotsRevokeAccessFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SnapshotsRevokeAccessFuture) Result(client SnapshotsClient) (osr OperationStatusResponse, err error) {
@@ -2707,14 +2708,14 @@ func (future SnapshotsRevokeAccessFuture) Result(client SnapshotsClient) (osr Op
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotsUpdateFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type SnapshotsUpdateFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future SnapshotsUpdateFuture) Result(client SnapshotsClient) (s Snapshot, err error) {
@@ -2757,7 +2758,7 @@ func (future SnapshotsUpdateFuture) Result(client SnapshotsClient) (s Snapshot, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SnapshotUpdate snapshot update resource.
 type SnapshotUpdate struct {
 	*DiskUpdateProperties `json:"properties,omitempty"`
@@ -2765,7 +2766,7 @@ type SnapshotUpdate struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for SnapshotUpdate.
 func (su SnapshotUpdate) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2778,7 +2779,7 @@ func (su SnapshotUpdate) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for SnapshotUpdate struct.
 func (su *SnapshotUpdate) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -2812,7 +2813,7 @@ func (su *SnapshotUpdate) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SourceVault the vault id is an Azure Resource Manager Resoure id in the form
 // /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
 type SourceVault struct {
@@ -2820,14 +2821,14 @@ type SourceVault struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SSHConfiguration SSH configuration for Linux based VMs running on Azure
 type SSHConfiguration struct {
 	// PublicKeys - The list of SSH public keys used to authenticate with linux based VMs.
 	PublicKeys *[]SSHPublicKey `json:"publicKeys,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SSHPublicKey contains information about SSH certificate public key and the path on the Linux VM where the public
 // key is placed.
 type SSHPublicKey struct {
@@ -2837,7 +2838,7 @@ type SSHPublicKey struct {
 	KeyData *string `json:"keyData,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // StorageProfile specifies the storage settings for the virtual machine disks.
 type StorageProfile struct {
 	// ImageReference - Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
@@ -2848,28 +2849,28 @@ type StorageProfile struct {
 	DataDisks *[]DataDisk `json:"dataDisks,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SubResource ...
 type SubResource struct {
 	// ID - Resource Id
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // SubResourceReadOnly ...
 type SubResourceReadOnly struct {
 	// ID - Resource Id
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UpdateResource the Update Resource model definition.
 type UpdateResource struct {
 	// Tags - Resource tags
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for UpdateResource.
 func (ur UpdateResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2879,14 +2880,14 @@ func (ur UpdateResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UpgradePolicy describes an upgrade policy - automatic or manual.
 type UpgradePolicy struct {
 	// Mode - Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time. Possible values include: 'Automatic', 'Manual'
 	Mode UpgradeMode `json:"mode,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Usage describes Compute Resource Usage.
 type Usage struct {
 	// Unit - An enum describing the unit of usage measurement.
@@ -2899,7 +2900,7 @@ type Usage struct {
 	Name *UsageName `json:"name,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UsageName the Usage Names.
 type UsageName struct {
 	// Value - The name of the resource.
@@ -2908,7 +2909,7 @@ type UsageName struct {
 	LocalizedValue *string `json:"localizedValue,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VaultCertificate describes a single certificate reference in a Key Vault, and where the certificate should
 // reside on the VM.
 type VaultCertificate struct {
@@ -2918,7 +2919,7 @@ type VaultCertificate struct {
 	CertificateStore *string `json:"certificateStore,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VaultSecretGroup describes a set of certificates which are all in the same Key Vault.
 type VaultSecretGroup struct {
 	// SourceVault - The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
@@ -2927,14 +2928,14 @@ type VaultSecretGroup struct {
 	VaultCertificates *[]VaultCertificate `json:"vaultCertificates,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualHardDisk describes the uri of a disk.
 type VirtualHardDisk struct {
 	// URI - Specifies the virtual hard disk's uri.
 	URI *string `json:"uri,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachine describes a Virtual Machine.
 type VirtualMachine struct {
 	autorest.Response `json:"-"`
@@ -2957,7 +2958,7 @@ type VirtualMachine struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachine.
 func (VM VirtualMachine) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -2991,7 +2992,7 @@ func (VM VirtualMachine) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachine struct.
 func (VM *VirtualMachine) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3088,7 +3089,7 @@ func (VM *VirtualMachine) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineAgentInstanceView the instance view of the VM Agent running on the virtual machine.
 type VirtualMachineAgentInstanceView struct {
 	// VMAgentVersion - The VM Agent full version.
@@ -3099,7 +3100,7 @@ type VirtualMachineAgentInstanceView struct {
 	Statuses *[]InstanceViewStatus `json:"statuses,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineCaptureParameters capture Virtual Machine parameters.
 type VirtualMachineCaptureParameters struct {
 	// VhdPrefix - The captured virtual hard disk's name prefix.
@@ -3110,7 +3111,7 @@ type VirtualMachineCaptureParameters struct {
 	OverwriteVhds *bool `json:"overwriteVhds,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineCaptureResult resource Id.
 type VirtualMachineCaptureResult struct {
 	autorest.Response                      `json:"-"`
@@ -3119,7 +3120,7 @@ type VirtualMachineCaptureResult struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineCaptureResult.
 func (vmcr VirtualMachineCaptureResult) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3132,7 +3133,7 @@ func (vmcr VirtualMachineCaptureResult) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineCaptureResult struct.
 func (vmcr *VirtualMachineCaptureResult) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3166,14 +3167,14 @@ func (vmcr *VirtualMachineCaptureResult) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineCaptureResultProperties compute-specific operation properties, including output
 type VirtualMachineCaptureResultProperties struct {
 	// Output - Operation output data (raw JSON)
 	Output interface{} `json:"output,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtension describes a Virtual Machine Extension.
 type VirtualMachineExtension struct {
 	autorest.Response                  `json:"-"`
@@ -3190,7 +3191,7 @@ type VirtualMachineExtension struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineExtension.
 func (vme VirtualMachineExtension) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3215,7 +3216,7 @@ func (vme VirtualMachineExtension) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineExtension struct.
 func (vme *VirtualMachineExtension) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3285,7 +3286,7 @@ func (vme *VirtualMachineExtension) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionHandlerInstanceView the instance view of a virtual machine extension handler.
 type VirtualMachineExtensionHandlerInstanceView struct {
 	// Type - Specifies the type of the extension; an example is "CustomScriptExtension".
@@ -3296,7 +3297,7 @@ type VirtualMachineExtensionHandlerInstanceView struct {
 	Status *InstanceViewStatus `json:"status,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionImage describes a Virtual Machine Extension Image.
 type VirtualMachineExtensionImage struct {
 	autorest.Response                       `json:"-"`
@@ -3313,7 +3314,7 @@ type VirtualMachineExtensionImage struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineExtensionImage.
 func (vmei VirtualMachineExtensionImage) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3338,7 +3339,7 @@ func (vmei VirtualMachineExtensionImage) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineExtensionImage struct.
 func (vmei *VirtualMachineExtensionImage) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3408,7 +3409,7 @@ func (vmei *VirtualMachineExtensionImage) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionImageProperties describes the properties of a Virtual Machine Extension Image.
 type VirtualMachineExtensionImageProperties struct {
 	// OperatingSystem - The operating system this extension supports.
@@ -3423,7 +3424,7 @@ type VirtualMachineExtensionImageProperties struct {
 	SupportsMultipleExtensions *bool `json:"supportsMultipleExtensions,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionInstanceView the instance view of a virtual machine extension.
 type VirtualMachineExtensionInstanceView struct {
 	// Name - The virtual machine extension name.
@@ -3438,7 +3439,7 @@ type VirtualMachineExtensionInstanceView struct {
 	Statuses *[]InstanceViewStatus `json:"statuses,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionProperties describes the properties of a Virtual Machine Extension.
 type VirtualMachineExtensionProperties struct {
 	// ForceUpdateTag - How the extension handler should be forced to update even if the extension configuration has not changed.
@@ -3461,7 +3462,7 @@ type VirtualMachineExtensionProperties struct {
 	InstanceView *VirtualMachineExtensionInstanceView `json:"instanceView,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineExtensionsCreateOrUpdateFuture struct {
@@ -3469,7 +3470,7 @@ type VirtualMachineExtensionsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineExtensionsCreateOrUpdateFuture) Result(client VirtualMachineExtensionsClient) (vme VirtualMachineExtension, err error) {
@@ -3512,7 +3513,7 @@ func (future VirtualMachineExtensionsCreateOrUpdateFuture) Result(client Virtual
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineExtensionsDeleteFuture struct {
@@ -3520,7 +3521,7 @@ type VirtualMachineExtensionsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineExtensionsDeleteFuture) Result(client VirtualMachineExtensionsClient) (osr OperationStatusResponse, err error) {
@@ -3563,7 +3564,7 @@ func (future VirtualMachineExtensionsDeleteFuture) Result(client VirtualMachineE
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionsListResult the List Extension operation response
 type VirtualMachineExtensionsListResult struct {
 	autorest.Response `json:"-"`
@@ -3571,7 +3572,7 @@ type VirtualMachineExtensionsListResult struct {
 	Value *[]VirtualMachineExtension `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionsUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineExtensionsUpdateFuture struct {
@@ -3579,7 +3580,7 @@ type VirtualMachineExtensionsUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineExtensionsUpdateFuture) Result(client VirtualMachineExtensionsClient) (vme VirtualMachineExtension, err error) {
@@ -3622,7 +3623,7 @@ func (future VirtualMachineExtensionsUpdateFuture) Result(client VirtualMachineE
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionUpdate describes a Virtual Machine Extension.
 type VirtualMachineExtensionUpdate struct {
 	*VirtualMachineExtensionUpdateProperties `json:"properties,omitempty"`
@@ -3630,7 +3631,7 @@ type VirtualMachineExtensionUpdate struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineExtensionUpdate.
 func (vmeu VirtualMachineExtensionUpdate) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3643,7 +3644,7 @@ func (vmeu VirtualMachineExtensionUpdate) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineExtensionUpdate struct.
 func (vmeu *VirtualMachineExtensionUpdate) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3677,7 +3678,7 @@ func (vmeu *VirtualMachineExtensionUpdate) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineExtensionUpdateProperties describes the properties of a Virtual Machine Extension.
 type VirtualMachineExtensionUpdateProperties struct {
 	// ForceUpdateTag - How the extension handler should be forced to update even if the extension configuration has not changed.
@@ -3696,7 +3697,7 @@ type VirtualMachineExtensionUpdateProperties struct {
 	ProtectedSettings interface{} `json:"protectedSettings,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineIdentity identity for the virtual machine.
 type VirtualMachineIdentity struct {
 	// PrincipalID - The principal id of virtual machine identity.
@@ -3707,7 +3708,7 @@ type VirtualMachineIdentity struct {
 	Type ResourceIdentityType `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineImage describes a Virtual Machine Image.
 type VirtualMachineImage struct {
 	autorest.Response              `json:"-"`
@@ -3722,7 +3723,7 @@ type VirtualMachineImage struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineImage.
 func (vmi VirtualMachineImage) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3744,7 +3745,7 @@ func (vmi VirtualMachineImage) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineImage struct.
 func (vmi *VirtualMachineImage) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -3805,7 +3806,7 @@ func (vmi *VirtualMachineImage) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineImageProperties describes the properties of a Virtual Machine Image.
 type VirtualMachineImageProperties struct {
 	Plan           *PurchasePlan    `json:"plan,omitempty"`
@@ -3813,7 +3814,7 @@ type VirtualMachineImageProperties struct {
 	DataDiskImages *[]DataDiskImage `json:"dataDiskImages,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineImageResource virtual machine image resource information.
 type VirtualMachineImageResource struct {
 	// Name - The name of the resource.
@@ -3826,7 +3827,7 @@ type VirtualMachineImageResource struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineImageResource.
 func (vmir VirtualMachineImageResource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -3845,7 +3846,7 @@ func (vmir VirtualMachineImageResource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineInstanceView the instance view of a virtual machine.
 type VirtualMachineInstanceView struct {
 	// PlatformUpdateDomain - Specifies the update domain of the virtual machine.
@@ -3866,7 +3867,7 @@ type VirtualMachineInstanceView struct {
 	Statuses *[]InstanceViewStatus `json:"statuses,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineListResult the List Virtual Machine operation response.
 type VirtualMachineListResult struct {
 	autorest.Response `json:"-"`
@@ -3876,14 +3877,14 @@ type VirtualMachineListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineListResultIterator provides access to a complete listing of VirtualMachine values.
 type VirtualMachineListResultIterator struct {
 	i    int
 	page VirtualMachineListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualMachineListResultIterator) Next() error {
@@ -3900,19 +3901,19 @@ func (iter *VirtualMachineListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualMachineListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualMachineListResultIterator) Response() VirtualMachineListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualMachineListResultIterator) Value() VirtualMachine {
@@ -3922,7 +3923,7 @@ func (iter VirtualMachineListResultIterator) Value() VirtualMachine {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vmlr VirtualMachineListResult) IsEmpty() bool {
 	return vmlr.Value == nil || len(*vmlr.Value) == 0
@@ -3940,14 +3941,14 @@ func (vmlr VirtualMachineListResult) virtualMachineListResultPreparer() (*http.R
 		autorest.WithBaseURL(to.String(vmlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineListResultPage contains a page of VirtualMachine values.
 type VirtualMachineListResultPage struct {
 	fn   func(VirtualMachineListResult) (VirtualMachineListResult, error)
 	vmlr VirtualMachineListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualMachineListResultPage) Next() error {
@@ -3959,19 +3960,19 @@ func (page *VirtualMachineListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualMachineListResultPage) NotDone() bool {
 	return !page.vmlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualMachineListResultPage) Response() VirtualMachineListResult {
 	return page.vmlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualMachineListResultPage) Values() []VirtualMachine {
 	if page.vmlr.IsEmpty() {
@@ -3980,7 +3981,7 @@ func (page VirtualMachineListResultPage) Values() []VirtualMachine {
 	return *page.vmlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineProperties describes the properties of a Virtual Machine.
 type VirtualMachineProperties struct {
 	// HardwareProfile - Specifies the hardware settings for the virtual machine.
@@ -4005,7 +4006,7 @@ type VirtualMachineProperties struct {
 	VMID *string `json:"vmId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSet describes a Virtual Machine Scale Set.
 type VirtualMachineScaleSet struct {
 	autorest.Response `json:"-"`
@@ -4028,7 +4029,7 @@ type VirtualMachineScaleSet struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineScaleSet.
 func (vmss VirtualMachineScaleSet) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4062,7 +4063,7 @@ func (vmss VirtualMachineScaleSet) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineScaleSet struct.
 func (vmss *VirtualMachineScaleSet) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4159,7 +4160,7 @@ func (vmss *VirtualMachineScaleSet) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetDataDisk describes a virtual machine scale set data disk.
 type VirtualMachineScaleSetDataDisk struct {
 	// Name - The disk name.
@@ -4176,7 +4177,7 @@ type VirtualMachineScaleSetDataDisk struct {
 	ManagedDisk *VirtualMachineScaleSetManagedDiskParameters `json:"managedDisk,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetExtension describes a Virtual Machine Scale Set Extension.
 type VirtualMachineScaleSetExtension struct {
 	// Name - The name of the extension.
@@ -4186,7 +4187,7 @@ type VirtualMachineScaleSetExtension struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineScaleSetExtension.
 func (vmsse VirtualMachineScaleSetExtension) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4202,7 +4203,7 @@ func (vmsse VirtualMachineScaleSetExtension) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineScaleSetExtension struct.
 func (vmsse *VirtualMachineScaleSetExtension) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4245,14 +4246,14 @@ func (vmsse *VirtualMachineScaleSetExtension) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetExtensionProfile describes a virtual machine scale set extension profile.
 type VirtualMachineScaleSetExtensionProfile struct {
 	// Extensions - The virtual machine scale set child extension resources.
 	Extensions *[]VirtualMachineScaleSetExtension `json:"extensions,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetExtensionProperties describes the properties of a Virtual Machine Scale Set Extension.
 type VirtualMachineScaleSetExtensionProperties struct {
 	// Publisher - The name of the extension handler publisher.
@@ -4271,7 +4272,7 @@ type VirtualMachineScaleSetExtensionProperties struct {
 	ProvisioningState *string `json:"provisioningState,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetIdentity identity for the virtual machine scale set.
 type VirtualMachineScaleSetIdentity struct {
 	// PrincipalID - The principal id of virtual machine scale set identity.
@@ -4282,7 +4283,7 @@ type VirtualMachineScaleSetIdentity struct {
 	Type ResourceIdentityType `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetInstanceView the instance view of a virtual machine scale set.
 type VirtualMachineScaleSetInstanceView struct {
 	autorest.Response `json:"-"`
@@ -4294,7 +4295,7 @@ type VirtualMachineScaleSetInstanceView struct {
 	Statuses *[]InstanceViewStatus `json:"statuses,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetInstanceViewStatusesSummary instance view statuses summary for virtual machines of a
 // virtual machine scale set.
 type VirtualMachineScaleSetInstanceViewStatusesSummary struct {
@@ -4302,7 +4303,7 @@ type VirtualMachineScaleSetInstanceViewStatusesSummary struct {
 	StatusesSummary *[]VirtualMachineStatusCodeCount `json:"statusesSummary,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetIPConfiguration describes a virtual machine scale set network profile's IP configuration.
 type VirtualMachineScaleSetIPConfiguration struct {
 	// Name - The IP configuration name.
@@ -4312,7 +4313,7 @@ type VirtualMachineScaleSetIPConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineScaleSetIPConfiguration.
 func (vmssic VirtualMachineScaleSetIPConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4328,7 +4329,7 @@ func (vmssic VirtualMachineScaleSetIPConfiguration) MarshalJSON() ([]byte, error
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineScaleSetIPConfiguration struct.
 func (vmssic *VirtualMachineScaleSetIPConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4371,7 +4372,7 @@ func (vmssic *VirtualMachineScaleSetIPConfiguration) UnmarshalJSON(body []byte) 
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetIPConfigurationProperties describes a virtual machine scale set network profile's IP
 // configuration properties.
 type VirtualMachineScaleSetIPConfigurationProperties struct {
@@ -4385,7 +4386,7 @@ type VirtualMachineScaleSetIPConfigurationProperties struct {
 	LoadBalancerInboundNatPools *[]SubResource `json:"loadBalancerInboundNatPools,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListResult the List Virtual Machine operation response.
 type VirtualMachineScaleSetListResult struct {
 	autorest.Response `json:"-"`
@@ -4395,14 +4396,14 @@ type VirtualMachineScaleSetListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListResultIterator provides access to a complete listing of VirtualMachineScaleSet values.
 type VirtualMachineScaleSetListResultIterator struct {
 	i    int
 	page VirtualMachineScaleSetListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualMachineScaleSetListResultIterator) Next() error {
@@ -4419,19 +4420,19 @@ func (iter *VirtualMachineScaleSetListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualMachineScaleSetListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualMachineScaleSetListResultIterator) Response() VirtualMachineScaleSetListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualMachineScaleSetListResultIterator) Value() VirtualMachineScaleSet {
@@ -4441,7 +4442,7 @@ func (iter VirtualMachineScaleSetListResultIterator) Value() VirtualMachineScale
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vmsslr VirtualMachineScaleSetListResult) IsEmpty() bool {
 	return vmsslr.Value == nil || len(*vmsslr.Value) == 0
@@ -4459,14 +4460,14 @@ func (vmsslr VirtualMachineScaleSetListResult) virtualMachineScaleSetListResultP
 		autorest.WithBaseURL(to.String(vmsslr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListResultPage contains a page of VirtualMachineScaleSet values.
 type VirtualMachineScaleSetListResultPage struct {
 	fn     func(VirtualMachineScaleSetListResult) (VirtualMachineScaleSetListResult, error)
 	vmsslr VirtualMachineScaleSetListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualMachineScaleSetListResultPage) Next() error {
@@ -4478,19 +4479,19 @@ func (page *VirtualMachineScaleSetListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualMachineScaleSetListResultPage) NotDone() bool {
 	return !page.vmsslr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualMachineScaleSetListResultPage) Response() VirtualMachineScaleSetListResult {
 	return page.vmsslr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualMachineScaleSetListResultPage) Values() []VirtualMachineScaleSet {
 	if page.vmsslr.IsEmpty() {
@@ -4499,7 +4500,7 @@ func (page VirtualMachineScaleSetListResultPage) Values() []VirtualMachineScaleS
 	return *page.vmsslr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListSkusResult the Virtual Machine Scale Set List Skus operation response.
 type VirtualMachineScaleSetListSkusResult struct {
 	autorest.Response `json:"-"`
@@ -4509,7 +4510,7 @@ type VirtualMachineScaleSetListSkusResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListSkusResultIterator provides access to a complete listing of VirtualMachineScaleSetSku
 // values.
 type VirtualMachineScaleSetListSkusResultIterator struct {
@@ -4517,7 +4518,7 @@ type VirtualMachineScaleSetListSkusResultIterator struct {
 	page VirtualMachineScaleSetListSkusResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualMachineScaleSetListSkusResultIterator) Next() error {
@@ -4534,19 +4535,19 @@ func (iter *VirtualMachineScaleSetListSkusResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualMachineScaleSetListSkusResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualMachineScaleSetListSkusResultIterator) Response() VirtualMachineScaleSetListSkusResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualMachineScaleSetListSkusResultIterator) Value() VirtualMachineScaleSetSku {
@@ -4556,7 +4557,7 @@ func (iter VirtualMachineScaleSetListSkusResultIterator) Value() VirtualMachineS
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vmsslsr VirtualMachineScaleSetListSkusResult) IsEmpty() bool {
 	return vmsslsr.Value == nil || len(*vmsslsr.Value) == 0
@@ -4574,14 +4575,14 @@ func (vmsslsr VirtualMachineScaleSetListSkusResult) virtualMachineScaleSetListSk
 		autorest.WithBaseURL(to.String(vmsslsr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListSkusResultPage contains a page of VirtualMachineScaleSetSku values.
 type VirtualMachineScaleSetListSkusResultPage struct {
 	fn      func(VirtualMachineScaleSetListSkusResult) (VirtualMachineScaleSetListSkusResult, error)
 	vmsslsr VirtualMachineScaleSetListSkusResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualMachineScaleSetListSkusResultPage) Next() error {
@@ -4593,19 +4594,19 @@ func (page *VirtualMachineScaleSetListSkusResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualMachineScaleSetListSkusResultPage) NotDone() bool {
 	return !page.vmsslsr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualMachineScaleSetListSkusResultPage) Response() VirtualMachineScaleSetListSkusResult {
 	return page.vmsslsr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualMachineScaleSetListSkusResultPage) Values() []VirtualMachineScaleSetSku {
 	if page.vmsslsr.IsEmpty() {
@@ -4614,7 +4615,7 @@ func (page VirtualMachineScaleSetListSkusResultPage) Values() []VirtualMachineSc
 	return *page.vmsslsr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListWithLinkResult the List Virtual Machine operation response.
 type VirtualMachineScaleSetListWithLinkResult struct {
 	autorest.Response `json:"-"`
@@ -4624,7 +4625,7 @@ type VirtualMachineScaleSetListWithLinkResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListWithLinkResultIterator provides access to a complete listing of VirtualMachineScaleSet
 // values.
 type VirtualMachineScaleSetListWithLinkResultIterator struct {
@@ -4632,7 +4633,7 @@ type VirtualMachineScaleSetListWithLinkResultIterator struct {
 	page VirtualMachineScaleSetListWithLinkResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualMachineScaleSetListWithLinkResultIterator) Next() error {
@@ -4649,19 +4650,19 @@ func (iter *VirtualMachineScaleSetListWithLinkResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualMachineScaleSetListWithLinkResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualMachineScaleSetListWithLinkResultIterator) Response() VirtualMachineScaleSetListWithLinkResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualMachineScaleSetListWithLinkResultIterator) Value() VirtualMachineScaleSet {
@@ -4671,7 +4672,7 @@ func (iter VirtualMachineScaleSetListWithLinkResultIterator) Value() VirtualMach
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vmsslwlr VirtualMachineScaleSetListWithLinkResult) IsEmpty() bool {
 	return vmsslwlr.Value == nil || len(*vmsslwlr.Value) == 0
@@ -4689,14 +4690,14 @@ func (vmsslwlr VirtualMachineScaleSetListWithLinkResult) virtualMachineScaleSetL
 		autorest.WithBaseURL(to.String(vmsslwlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetListWithLinkResultPage contains a page of VirtualMachineScaleSet values.
 type VirtualMachineScaleSetListWithLinkResultPage struct {
 	fn       func(VirtualMachineScaleSetListWithLinkResult) (VirtualMachineScaleSetListWithLinkResult, error)
 	vmsslwlr VirtualMachineScaleSetListWithLinkResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualMachineScaleSetListWithLinkResultPage) Next() error {
@@ -4708,19 +4709,19 @@ func (page *VirtualMachineScaleSetListWithLinkResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualMachineScaleSetListWithLinkResultPage) NotDone() bool {
 	return !page.vmsslwlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualMachineScaleSetListWithLinkResultPage) Response() VirtualMachineScaleSetListWithLinkResult {
 	return page.vmsslwlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualMachineScaleSetListWithLinkResultPage) Values() []VirtualMachineScaleSet {
 	if page.vmsslwlr.IsEmpty() {
@@ -4729,14 +4730,14 @@ func (page VirtualMachineScaleSetListWithLinkResultPage) Values() []VirtualMachi
 	return *page.vmsslwlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetManagedDiskParameters describes the parameters of a ScaleSet managed disk.
 type VirtualMachineScaleSetManagedDiskParameters struct {
 	// StorageAccountType - Specifies the storage account type for the managed disk. Possible values are: Standard_LRS or Premium_LRS. Possible values include: 'StandardLRS', 'PremiumLRS'
 	StorageAccountType StorageAccountTypes `json:"storageAccountType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetNetworkConfiguration describes a virtual machine scale set network profile's network
 // configurations.
 type VirtualMachineScaleSetNetworkConfiguration struct {
@@ -4747,7 +4748,7 @@ type VirtualMachineScaleSetNetworkConfiguration struct {
 	ID *string `json:"id,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineScaleSetNetworkConfiguration.
 func (vmssnc VirtualMachineScaleSetNetworkConfiguration) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -4763,7 +4764,7 @@ func (vmssnc VirtualMachineScaleSetNetworkConfiguration) MarshalJSON() ([]byte, 
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineScaleSetNetworkConfiguration struct.
 func (vmssnc *VirtualMachineScaleSetNetworkConfiguration) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -4806,7 +4807,7 @@ func (vmssnc *VirtualMachineScaleSetNetworkConfiguration) UnmarshalJSON(body []b
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetNetworkConfigurationProperties describes a virtual machine scale set network profile's IP
 // configuration.
 type VirtualMachineScaleSetNetworkConfigurationProperties struct {
@@ -4816,14 +4817,14 @@ type VirtualMachineScaleSetNetworkConfigurationProperties struct {
 	IPConfigurations *[]VirtualMachineScaleSetIPConfiguration `json:"ipConfigurations,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetNetworkProfile describes a virtual machine scale set network profile.
 type VirtualMachineScaleSetNetworkProfile struct {
 	// NetworkInterfaceConfigurations - The list of network configurations.
 	NetworkInterfaceConfigurations *[]VirtualMachineScaleSetNetworkConfiguration `json:"networkInterfaceConfigurations,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetOSDisk describes a virtual machine scale set operating system disk.
 type VirtualMachineScaleSetOSDisk struct {
 	// Name - The disk name.
@@ -4842,7 +4843,7 @@ type VirtualMachineScaleSetOSDisk struct {
 	ManagedDisk *VirtualMachineScaleSetManagedDiskParameters `json:"managedDisk,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetOSProfile describes a virtual machine scale set OS profile.
 type VirtualMachineScaleSetOSProfile struct {
 	// ComputerNamePrefix - Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 15 characters long.
@@ -4861,7 +4862,7 @@ type VirtualMachineScaleSetOSProfile struct {
 	Secrets *[]VaultSecretGroup `json:"secrets,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetProperties describes the properties of a Virtual Machine Scale Set.
 type VirtualMachineScaleSetProperties struct {
 	// UpgradePolicy - The upgrade policy.
@@ -4876,7 +4877,7 @@ type VirtualMachineScaleSetProperties struct {
 	SinglePlacementGroup *bool `json:"singlePlacementGroup,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetsCreateOrUpdateFuture struct {
@@ -4884,7 +4885,7 @@ type VirtualMachineScaleSetsCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsCreateOrUpdateFuture) Result(client VirtualMachineScaleSetsClient) (vmss VirtualMachineScaleSet, err error) {
@@ -4927,7 +4928,7 @@ func (future VirtualMachineScaleSetsCreateOrUpdateFuture) Result(client VirtualM
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsDeallocateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetsDeallocateFuture struct {
@@ -4935,7 +4936,7 @@ type VirtualMachineScaleSetsDeallocateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsDeallocateFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -4978,7 +4979,7 @@ func (future VirtualMachineScaleSetsDeallocateFuture) Result(client VirtualMachi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetsDeleteFuture struct {
@@ -4986,7 +4987,7 @@ type VirtualMachineScaleSetsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsDeleteFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5029,7 +5030,7 @@ func (future VirtualMachineScaleSetsDeleteFuture) Result(client VirtualMachineSc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsDeleteInstancesFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetsDeleteInstancesFuture struct {
@@ -5037,7 +5038,7 @@ type VirtualMachineScaleSetsDeleteInstancesFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsDeleteInstancesFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5080,7 +5081,7 @@ func (future VirtualMachineScaleSetsDeleteInstancesFuture) Result(client Virtual
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetSku describes an available virtual machine scale set sku.
 type VirtualMachineScaleSetSku struct {
 	// ResourceType - The type of resource the sku applies to.
@@ -5091,7 +5092,7 @@ type VirtualMachineScaleSetSku struct {
 	Capacity *VirtualMachineScaleSetSkuCapacity `json:"capacity,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetSkuCapacity describes scaling information of a sku.
 type VirtualMachineScaleSetSkuCapacity struct {
 	// Minimum - The minimum capacity.
@@ -5104,7 +5105,7 @@ type VirtualMachineScaleSetSkuCapacity struct {
 	ScaleType VirtualMachineScaleSetSkuScaleType `json:"scaleType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsPowerOffFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetsPowerOffFuture struct {
@@ -5112,7 +5113,7 @@ type VirtualMachineScaleSetsPowerOffFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsPowerOffFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5155,7 +5156,7 @@ func (future VirtualMachineScaleSetsPowerOffFuture) Result(client VirtualMachine
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsReimageAllFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetsReimageAllFuture struct {
@@ -5163,7 +5164,7 @@ type VirtualMachineScaleSetsReimageAllFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsReimageAllFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5206,7 +5207,7 @@ func (future VirtualMachineScaleSetsReimageAllFuture) Result(client VirtualMachi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsReimageFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetsReimageFuture struct {
@@ -5214,7 +5215,7 @@ type VirtualMachineScaleSetsReimageFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsReimageFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5257,7 +5258,7 @@ func (future VirtualMachineScaleSetsReimageFuture) Result(client VirtualMachineS
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsRestartFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetsRestartFuture struct {
@@ -5265,7 +5266,7 @@ type VirtualMachineScaleSetsRestartFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsRestartFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5308,7 +5309,7 @@ func (future VirtualMachineScaleSetsRestartFuture) Result(client VirtualMachineS
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsStartFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetsStartFuture struct {
@@ -5316,7 +5317,7 @@ type VirtualMachineScaleSetsStartFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsStartFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5359,7 +5360,7 @@ func (future VirtualMachineScaleSetsStartFuture) Result(client VirtualMachineSca
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetStorageProfile describes a virtual machine scale set storage profile.
 type VirtualMachineScaleSetStorageProfile struct {
 	// ImageReference - The image reference.
@@ -5370,7 +5371,7 @@ type VirtualMachineScaleSetStorageProfile struct {
 	DataDisks *[]VirtualMachineScaleSetDataDisk `json:"dataDisks,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetsUpdateInstancesFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetsUpdateInstancesFuture struct {
@@ -5378,7 +5379,7 @@ type VirtualMachineScaleSetsUpdateInstancesFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetsUpdateInstancesFuture) Result(client VirtualMachineScaleSetsClient) (osr OperationStatusResponse, err error) {
@@ -5421,7 +5422,7 @@ func (future VirtualMachineScaleSetsUpdateInstancesFuture) Result(client Virtual
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVM describes a virtual machine scale set virtual machine.
 type VirtualMachineScaleSetVM struct {
 	autorest.Response `json:"-"`
@@ -5446,7 +5447,7 @@ type VirtualMachineScaleSetVM struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // MarshalJSON is the custom marshaler for VirtualMachineScaleSetVM.
 func (vmssv VirtualMachineScaleSetVM) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -5483,7 +5484,7 @@ func (vmssv VirtualMachineScaleSetVM) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // UnmarshalJSON is the custom unmarshaler for VirtualMachineScaleSetVM struct.
 func (vmssv *VirtualMachineScaleSetVM) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -5589,7 +5590,7 @@ func (vmssv *VirtualMachineScaleSetVM) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMExtensionsSummary extensions summary for virtual machines of a virtual machine scale
 // set.
 type VirtualMachineScaleSetVMExtensionsSummary struct {
@@ -5599,14 +5600,14 @@ type VirtualMachineScaleSetVMExtensionsSummary struct {
 	StatusesSummary *[]VirtualMachineStatusCodeCount `json:"statusesSummary,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMInstanceIDs specifies a list of virtual machine instance IDs from the VM scale set.
 type VirtualMachineScaleSetVMInstanceIDs struct {
 	// InstanceIds - The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
 	InstanceIds *[]string `json:"instanceIds,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMInstanceRequiredIDs specifies a list of virtual machine instance IDs from the VM scale
 // set.
 type VirtualMachineScaleSetVMInstanceRequiredIDs struct {
@@ -5614,7 +5615,7 @@ type VirtualMachineScaleSetVMInstanceRequiredIDs struct {
 	InstanceIds *[]string `json:"instanceIds,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMInstanceView the instance view of a virtual machine scale set VM.
 type VirtualMachineScaleSetVMInstanceView struct {
 	autorest.Response `json:"-"`
@@ -5638,7 +5639,7 @@ type VirtualMachineScaleSetVMInstanceView struct {
 	PlacementGroupID *string `json:"placementGroupId,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMListResult the List Virtual Machine Scale Set VMs operation response.
 type VirtualMachineScaleSetVMListResult struct {
 	autorest.Response `json:"-"`
@@ -5648,7 +5649,7 @@ type VirtualMachineScaleSetVMListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMListResultIterator provides access to a complete listing of VirtualMachineScaleSetVM
 // values.
 type VirtualMachineScaleSetVMListResultIterator struct {
@@ -5656,7 +5657,7 @@ type VirtualMachineScaleSetVMListResultIterator struct {
 	page VirtualMachineScaleSetVMListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *VirtualMachineScaleSetVMListResultIterator) Next() error {
@@ -5673,19 +5674,19 @@ func (iter *VirtualMachineScaleSetVMListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter VirtualMachineScaleSetVMListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (iter VirtualMachineScaleSetVMListResultIterator) Response() VirtualMachineScaleSetVMListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter VirtualMachineScaleSetVMListResultIterator) Value() VirtualMachineScaleSetVM {
@@ -5695,7 +5696,7 @@ func (iter VirtualMachineScaleSetVMListResultIterator) Value() VirtualMachineSca
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (vmssvlr VirtualMachineScaleSetVMListResult) IsEmpty() bool {
 	return vmssvlr.Value == nil || len(*vmssvlr.Value) == 0
@@ -5713,14 +5714,14 @@ func (vmssvlr VirtualMachineScaleSetVMListResult) virtualMachineScaleSetVMListRe
 		autorest.WithBaseURL(to.String(vmssvlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMListResultPage contains a page of VirtualMachineScaleSetVM values.
 type VirtualMachineScaleSetVMListResultPage struct {
 	fn      func(VirtualMachineScaleSetVMListResult) (VirtualMachineScaleSetVMListResult, error)
 	vmssvlr VirtualMachineScaleSetVMListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *VirtualMachineScaleSetVMListResultPage) Next() error {
@@ -5732,19 +5733,19 @@ func (page *VirtualMachineScaleSetVMListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page VirtualMachineScaleSetVMListResultPage) NotDone() bool {
 	return !page.vmssvlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Response returns the raw server response from the last page request.
 func (page VirtualMachineScaleSetVMListResultPage) Response() VirtualMachineScaleSetVMListResult {
 	return page.vmssvlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page VirtualMachineScaleSetVMListResultPage) Values() []VirtualMachineScaleSetVM {
 	if page.vmssvlr.IsEmpty() {
@@ -5753,7 +5754,7 @@ func (page VirtualMachineScaleSetVMListResultPage) Values() []VirtualMachineScal
 	return *page.vmssvlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMProfile describes a virtual machine scale set virtual machine profile.
 type VirtualMachineScaleSetVMProfile struct {
 	// OsProfile - The virtual machine scale set OS profile.
@@ -5766,7 +5767,7 @@ type VirtualMachineScaleSetVMProfile struct {
 	ExtensionProfile *VirtualMachineScaleSetExtensionProfile `json:"extensionProfile,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMProperties describes the properties of a virtual machine scale set virtual machine.
 type VirtualMachineScaleSetVMProperties struct {
 	// LatestModelApplied - Specifies whether the latest model has been applied to the virtual machine.
@@ -5793,7 +5794,7 @@ type VirtualMachineScaleSetVMProperties struct {
 	LicenseType *string `json:"licenseType,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsDeallocateFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetVMsDeallocateFuture struct {
@@ -5801,7 +5802,7 @@ type VirtualMachineScaleSetVMsDeallocateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsDeallocateFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -5844,7 +5845,7 @@ func (future VirtualMachineScaleSetVMsDeallocateFuture) Result(client VirtualMac
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetVMsDeleteFuture struct {
@@ -5852,7 +5853,7 @@ type VirtualMachineScaleSetVMsDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsDeleteFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -5895,7 +5896,7 @@ func (future VirtualMachineScaleSetVMsDeleteFuture) Result(client VirtualMachine
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsPowerOffFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetVMsPowerOffFuture struct {
@@ -5903,7 +5904,7 @@ type VirtualMachineScaleSetVMsPowerOffFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsPowerOffFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -5946,7 +5947,7 @@ func (future VirtualMachineScaleSetVMsPowerOffFuture) Result(client VirtualMachi
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsReimageAllFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetVMsReimageAllFuture struct {
@@ -5954,7 +5955,7 @@ type VirtualMachineScaleSetVMsReimageAllFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsReimageAllFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -5997,7 +5998,7 @@ func (future VirtualMachineScaleSetVMsReimageAllFuture) Result(client VirtualMac
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsReimageFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetVMsReimageFuture struct {
@@ -6005,7 +6006,7 @@ type VirtualMachineScaleSetVMsReimageFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsReimageFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -6048,7 +6049,7 @@ func (future VirtualMachineScaleSetVMsReimageFuture) Result(client VirtualMachin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsRestartFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachineScaleSetVMsRestartFuture struct {
@@ -6056,7 +6057,7 @@ type VirtualMachineScaleSetVMsRestartFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsRestartFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -6099,7 +6100,7 @@ func (future VirtualMachineScaleSetVMsRestartFuture) Result(client VirtualMachin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineScaleSetVMsStartFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachineScaleSetVMsStartFuture struct {
@@ -6107,7 +6108,7 @@ type VirtualMachineScaleSetVMsStartFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachineScaleSetVMsStartFuture) Result(client VirtualMachineScaleSetVMsClient) (osr OperationStatusResponse, err error) {
@@ -6150,7 +6151,7 @@ func (future VirtualMachineScaleSetVMsStartFuture) Result(client VirtualMachineS
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesCaptureFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesCaptureFuture struct {
@@ -6158,7 +6159,7 @@ type VirtualMachinesCaptureFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesCaptureFuture) Result(client VirtualMachinesClient) (vmcr VirtualMachineCaptureResult, err error) {
@@ -6201,7 +6202,7 @@ func (future VirtualMachinesCaptureFuture) Result(client VirtualMachinesClient) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesConvertToManagedDisksFuture an abstraction for monitoring and retrieving the results of a
 // long-running operation.
 type VirtualMachinesConvertToManagedDisksFuture struct {
@@ -6209,7 +6210,7 @@ type VirtualMachinesConvertToManagedDisksFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesConvertToManagedDisksFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6252,7 +6253,7 @@ func (future VirtualMachinesConvertToManagedDisksFuture) Result(client VirtualMa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesCreateOrUpdateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesCreateOrUpdateFuture struct {
@@ -6260,7 +6261,7 @@ type VirtualMachinesCreateOrUpdateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesCreateOrUpdateFuture) Result(client VirtualMachinesClient) (VM VirtualMachine, err error) {
@@ -6303,7 +6304,7 @@ func (future VirtualMachinesCreateOrUpdateFuture) Result(client VirtualMachinesC
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesDeallocateFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesDeallocateFuture struct {
@@ -6311,7 +6312,7 @@ type VirtualMachinesDeallocateFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesDeallocateFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6354,7 +6355,7 @@ func (future VirtualMachinesDeallocateFuture) Result(client VirtualMachinesClien
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesDeleteFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesDeleteFuture struct {
@@ -6362,7 +6363,7 @@ type VirtualMachinesDeleteFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesDeleteFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6405,7 +6406,7 @@ func (future VirtualMachinesDeleteFuture) Result(client VirtualMachinesClient) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineSize describes the properties of a VM size.
 type VirtualMachineSize struct {
 	// Name - The name of the virtual machine size.
@@ -6422,7 +6423,7 @@ type VirtualMachineSize struct {
 	MaxDataDiskCount *int32 `json:"maxDataDiskCount,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineSizeListResult the List Virtual Machine operation response.
 type VirtualMachineSizeListResult struct {
 	autorest.Response `json:"-"`
@@ -6430,7 +6431,7 @@ type VirtualMachineSizeListResult struct {
 	Value *[]VirtualMachineSize `json:"value,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesPowerOffFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesPowerOffFuture struct {
@@ -6438,7 +6439,7 @@ type VirtualMachinesPowerOffFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesPowerOffFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6481,7 +6482,7 @@ func (future VirtualMachinesPowerOffFuture) Result(client VirtualMachinesClient)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesRedeployFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesRedeployFuture struct {
@@ -6489,7 +6490,7 @@ type VirtualMachinesRedeployFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesRedeployFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6532,7 +6533,7 @@ func (future VirtualMachinesRedeployFuture) Result(client VirtualMachinesClient)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesRestartFuture an abstraction for monitoring and retrieving the results of a long-running
 // operation.
 type VirtualMachinesRestartFuture struct {
@@ -6540,7 +6541,7 @@ type VirtualMachinesRestartFuture struct {
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesRestartFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6583,14 +6584,14 @@ func (future VirtualMachinesRestartFuture) Result(client VirtualMachinesClient) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachinesStartFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type VirtualMachinesStartFuture struct {
 	azure.Future
 	req *http.Request
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // Result returns the result of the asynchronous operation.
 // If the operation has not completed it will return an error.
 func (future VirtualMachinesStartFuture) Result(client VirtualMachinesClient) (osr OperationStatusResponse, err error) {
@@ -6633,7 +6634,7 @@ func (future VirtualMachinesStartFuture) Result(client VirtualMachinesClient) (o
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // VirtualMachineStatusCodeCount the status code and count of the virtual machine scale set instance view status
 // summary.
 type VirtualMachineStatusCodeCount struct {
@@ -6643,7 +6644,7 @@ type VirtualMachineStatusCodeCount struct {
 	Count *int32 `json:"count,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // WindowsConfiguration specifies Windows operating system settings on the virtual machine.
 type WindowsConfiguration struct {
 	// ProvisionVMAgent - Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
@@ -6658,14 +6659,14 @@ type WindowsConfiguration struct {
 	WinRM *WinRMConfiguration `json:"winRM,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // WinRMConfiguration describes Windows Remote Management configuration of the VM
 type WinRMConfiguration struct {
 	// Listeners - The list of Windows Remote Management listeners
 	Listeners *[]WinRMListener `json:"listeners,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/compute/mgmt/2016-04-30-preview/compute instead.
 // WinRMListener describes Protocol and thumbprint of Windows Remote Management listener
 type WinRMListener struct {
 	// Protocol - Specifies the protocol of listener. <br><br> Possible values are: <br>**http** <br><br> **https**. Possible values include: 'HTTP', 'HTTPS'

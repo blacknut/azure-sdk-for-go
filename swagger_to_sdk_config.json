@@ -19,7 +19,7 @@
       "sdkrel:GOPATH": "../../../.."
     },
     "advanced_options": {
-      "clone_dir": "./src/github.com/Azure/azure-sdk-for-go"
+      "clone_dir": "./src/github.com/blacknut/azure-sdk-for-go"
     },
     "version": "0.2.0"
   }

@@ -19,30 +19,31 @@ package dtl
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ArtifactClient is the azure DevTest Labs REST API version 2015-05-21-preview.
 type ArtifactClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // NewArtifactClient creates an instance of the ArtifactClient client.
 func NewArtifactClient(subscriptionID string) ArtifactClient {
 	return NewArtifactClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // NewArtifactClientWithBaseURI creates an instance of the ArtifactClient client.
 func NewArtifactClientWithBaseURI(baseURI string, subscriptionID string) ArtifactClient {
 	return ArtifactClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateArmTemplate generates an ARM template for the given artifact, uploads the required files to a storage
 // account, and validates the generated artifact.
 //
@@ -70,7 +71,7 @@ func (client ArtifactClient) GenerateArmTemplate(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateArmTemplatePreparer prepares the GenerateArmTemplate request.
 func (client ArtifactClient) GenerateArmTemplatePreparer(ctx context.Context, resourceGroupName string, labName string, artifactSourceName string, name string, generateArmTemplateRequest GenerateArmTemplateRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -96,7 +97,7 @@ func (client ArtifactClient) GenerateArmTemplatePreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateArmTemplateSender sends the GenerateArmTemplate request. The method will close the
 // http.Response Body if it receives an error.
 func (client ArtifactClient) GenerateArmTemplateSender(req *http.Request) (*http.Response, error) {
@@ -104,7 +105,7 @@ func (client ArtifactClient) GenerateArmTemplateSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GenerateArmTemplateResponder handles the response to the GenerateArmTemplate request. The method always
 // closes the http.Response Body.
 func (client ArtifactClient) GenerateArmTemplateResponder(resp *http.Response) (result ArmTemplateInfo, err error) {
@@ -118,7 +119,7 @@ func (client ArtifactClient) GenerateArmTemplateResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResource get artifact.
 //
 // resourceGroupName is the name of the resource group. labName is the name of the lab. artifactSourceName is the
@@ -145,7 +146,7 @@ func (client ArtifactClient) GetResource(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResourcePreparer prepares the GetResource request.
 func (client ArtifactClient) GetResourcePreparer(ctx context.Context, resourceGroupName string, labName string, artifactSourceName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -169,7 +170,7 @@ func (client ArtifactClient) GetResourcePreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResourceSender sends the GetResource request. The method will close the
 // http.Response Body if it receives an error.
 func (client ArtifactClient) GetResourceSender(req *http.Request) (*http.Response, error) {
@@ -177,7 +178,7 @@ func (client ArtifactClient) GetResourceSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // GetResourceResponder handles the response to the GetResource request. The method always
 // closes the http.Response Body.
 func (client ArtifactClient) GetResourceResponder(resp *http.Response) (result Artifact, err error) {
@@ -191,7 +192,7 @@ func (client ArtifactClient) GetResourceResponder(resp *http.Response) (result A
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // List list artifacts.
 //
 // resourceGroupName is the name of the resource group. labName is the name of the lab. artifactSourceName is the
@@ -219,7 +220,7 @@ func (client ArtifactClient) List(ctx context.Context, resourceGroupName string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListPreparer prepares the List request.
 func (client ArtifactClient) ListPreparer(ctx context.Context, resourceGroupName string, labName string, artifactSourceName string, filter string, top *int32, orderBy string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -251,7 +252,7 @@ func (client ArtifactClient) ListPreparer(ctx context.Context, resourceGroupName
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client ArtifactClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -259,7 +260,7 @@ func (client ArtifactClient) ListSender(req *http.Request) (*http.Response, erro
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client ArtifactClient) ListResponder(resp *http.Response) (result ResponseWithContinuationArtifact, err error) {
@@ -294,7 +295,7 @@ func (client ArtifactClient) listNextResults(lastResults ResponseWithContinuatio
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/devtestlabs/mgmt/2015-05-21-preview/dtl instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client ArtifactClient) ListComplete(ctx context.Context, resourceGroupName string, labName string, artifactSourceName string, filter string, top *int32, orderBy string) (result ResponseWithContinuationArtifactIterator, err error) {
 	result.page, err = client.List(ctx, resourceGroupName, labName, artifactSourceName, filter, top, orderBy)

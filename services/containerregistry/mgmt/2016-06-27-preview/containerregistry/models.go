@@ -19,13 +19,14 @@ package containerregistry
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/date"
 	"github.com/Azure/go-autorest/autorest/to"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Registry an object that represents a container registry.
 type Registry struct {
 	autorest.Response `json:"-"`
@@ -43,7 +44,7 @@ type Registry struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // MarshalJSON is the custom marshaler for Registry.
 func (r Registry) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -68,7 +69,7 @@ func (r Registry) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // UnmarshalJSON is the custom unmarshaler for Registry struct.
 func (r *Registry) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -138,7 +139,7 @@ func (r *Registry) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryCredentials the result of a request to get the administrator login credentials for a container registry.
 type RegistryCredentials struct {
 	autorest.Response `json:"-"`
@@ -148,7 +149,7 @@ type RegistryCredentials struct {
 	Password *string `json:"password,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryListResult the result of a request to list container registries.
 type RegistryListResult struct {
 	autorest.Response `json:"-"`
@@ -158,14 +159,14 @@ type RegistryListResult struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryListResultIterator provides access to a complete listing of Registry values.
 type RegistryListResultIterator struct {
 	i    int
 	page RegistryListResultPage
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Next advances to the next value.  If there was an error making
 // the request the iterator does not advance and the error is returned.
 func (iter *RegistryListResultIterator) Next() error {
@@ -182,19 +183,19 @@ func (iter *RegistryListResultIterator) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // NotDone returns true if the enumeration should be started or is not yet complete.
 func (iter RegistryListResultIterator) NotDone() bool {
 	return iter.page.NotDone() && iter.i < len(iter.page.Values())
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Response returns the raw server response from the last page request.
 func (iter RegistryListResultIterator) Response() RegistryListResult {
 	return iter.page.Response()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Value returns the current value or a zero-initialized value if the
 // iterator has advanced beyond the end of the collection.
 func (iter RegistryListResultIterator) Value() Registry {
@@ -204,7 +205,7 @@ func (iter RegistryListResultIterator) Value() Registry {
 	return iter.page.Values()[iter.i]
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // IsEmpty returns true if the ListResult contains no values.
 func (rlr RegistryListResult) IsEmpty() bool {
 	return rlr.Value == nil || len(*rlr.Value) == 0
@@ -222,14 +223,14 @@ func (rlr RegistryListResult) registryListResultPreparer() (*http.Request, error
 		autorest.WithBaseURL(to.String(rlr.NextLink)))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryListResultPage contains a page of Registry values.
 type RegistryListResultPage struct {
 	fn  func(RegistryListResult) (RegistryListResult, error)
 	rlr RegistryListResult
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Next advances to the next page of values.  If there was an error making
 // the request the page does not advance and the error is returned.
 func (page *RegistryListResultPage) Next() error {
@@ -241,19 +242,19 @@ func (page *RegistryListResultPage) Next() error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // NotDone returns true if the page enumeration should be started or is not yet complete.
 func (page RegistryListResultPage) NotDone() bool {
 	return !page.rlr.IsEmpty()
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Response returns the raw server response from the last page request.
 func (page RegistryListResultPage) Response() RegistryListResult {
 	return page.rlr
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Values returns the slice of values for the current page or nil if there are no values.
 func (page RegistryListResultPage) Values() []Registry {
 	if page.rlr.IsEmpty() {
@@ -262,7 +263,7 @@ func (page RegistryListResultPage) Values() []Registry {
 	return *page.rlr.Value
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryNameCheckRequest a request to check whether the container registry name is available.
 type RegistryNameCheckRequest struct {
 	// Name - The name of the container registry.
@@ -271,7 +272,7 @@ type RegistryNameCheckRequest struct {
 	Type *string `json:"type,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryNameStatus the result of a request to check the availability of a container registry name.
 type RegistryNameStatus struct {
 	autorest.Response `json:"-"`
@@ -283,7 +284,7 @@ type RegistryNameStatus struct {
 	Message *string `json:"message,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryProperties the properties of a container registry.
 type RegistryProperties struct {
 	// LoginServer - The URL that can be used to log into the container registry.
@@ -296,7 +297,7 @@ type RegistryProperties struct {
 	StorageAccount *StorageAccountProperties `json:"storageAccount,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryPropertiesUpdateParameters the parameters for updating the properties of a container registry.
 type RegistryPropertiesUpdateParameters struct {
 	// AdminUserEnabled - The value that indicates whether the admin user is enabled. This value is false by default.
@@ -305,7 +306,7 @@ type RegistryPropertiesUpdateParameters struct {
 	StorageAccount *StorageAccountProperties `json:"storageAccount,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // RegistryUpdateParameters the parameters for updating a container registry.
 type RegistryUpdateParameters struct {
 	// Tags - The resource tags for the container registry.
@@ -314,7 +315,7 @@ type RegistryUpdateParameters struct {
 	*RegistryPropertiesUpdateParameters `json:"properties,omitempty"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // MarshalJSON is the custom marshaler for RegistryUpdateParameters.
 func (rup RegistryUpdateParameters) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -327,7 +328,7 @@ func (rup RegistryUpdateParameters) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // UnmarshalJSON is the custom unmarshaler for RegistryUpdateParameters struct.
 func (rup *RegistryUpdateParameters) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -361,7 +362,7 @@ func (rup *RegistryUpdateParameters) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // Resource an Azure resource.
 type Resource struct {
 	// ID - The resource ID.
@@ -376,7 +377,7 @@ type Resource struct {
 	Tags map[string]*string `json:"tags"`
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // MarshalJSON is the custom marshaler for Resource.
 func (r Resource) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]interface{})
@@ -398,7 +399,7 @@ func (r Resource) MarshalJSON() ([]byte, error) {
 	return json.Marshal(objectMap)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry instead.
 // StorageAccountProperties the properties of a storage account for a container registry.
 type StorageAccountProperties struct {
 	// Name - The name of the storage account.

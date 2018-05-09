@@ -19,31 +19,32 @@ package location
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // AccountsClient is the resource Provider
 type AccountsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // NewAccountsClient creates an instance of the AccountsClient client.
 func NewAccountsClient(subscriptionID string) AccountsClient {
 	return NewAccountsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // NewAccountsClientWithBaseURI creates an instance of the AccountsClient client.
 func NewAccountsClientWithBaseURI(baseURI string, subscriptionID string) AccountsClient {
 	return AccountsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // CreateOrUpdate create or update a Location Based Services Account. A Location Based Services Account holds the keys
 // which allow access to the Location Based Services REST APIs.
 //
@@ -80,7 +81,7 @@ func (client AccountsClient) CreateOrUpdate(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client AccountsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, accountName string, locationBasedServicesAccountCreateParameters BasedServicesAccountCreateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -104,7 +105,7 @@ func (client AccountsClient) CreateOrUpdatePreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -112,7 +113,7 @@ func (client AccountsClient) CreateOrUpdateSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) CreateOrUpdateResponder(resp *http.Response) (result BasedServicesAccount, err error) {
@@ -126,7 +127,7 @@ func (client AccountsClient) CreateOrUpdateResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // Delete delete a Location Based Services Account
 //
 // resourceGroupName is the name of the Azure Resource Group. accountName is the name of the Location Based
@@ -153,7 +154,7 @@ func (client AccountsClient) Delete(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // DeletePreparer prepares the Delete request.
 func (client AccountsClient) DeletePreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -175,7 +176,7 @@ func (client AccountsClient) DeletePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -183,7 +184,7 @@ func (client AccountsClient) DeleteSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -196,7 +197,7 @@ func (client AccountsClient) DeleteResponder(resp *http.Response) (result autore
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // Get get a Location Based Services Account
 //
 // resourceGroupName is the name of the Azure Resource Group. accountName is the name of the Location Based
@@ -223,7 +224,7 @@ func (client AccountsClient) Get(ctx context.Context, resourceGroupName string, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // GetPreparer prepares the Get request.
 func (client AccountsClient) GetPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -245,7 +246,7 @@ func (client AccountsClient) GetPreparer(ctx context.Context, resourceGroupName 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -253,7 +254,7 @@ func (client AccountsClient) GetSender(req *http.Request) (*http.Response, error
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) GetResponder(resp *http.Response) (result BasedServicesAccount, err error) {
@@ -267,7 +268,7 @@ func (client AccountsClient) GetResponder(resp *http.Response) (result BasedServ
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListByResourceGroup get all Location Based Services Accounts in a Resource Group
 //
 // resourceGroupName is the name of the Azure Resource Group.
@@ -293,7 +294,7 @@ func (client AccountsClient) ListByResourceGroup(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListByResourceGroupPreparer prepares the ListByResourceGroup request.
 func (client AccountsClient) ListByResourceGroupPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -314,7 +315,7 @@ func (client AccountsClient) ListByResourceGroupPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListByResourceGroupSender sends the ListByResourceGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListByResourceGroupSender(req *http.Request) (*http.Response, error) {
@@ -322,7 +323,7 @@ func (client AccountsClient) ListByResourceGroupSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListByResourceGroupResponder handles the response to the ListByResourceGroup request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListByResourceGroupResponder(resp *http.Response) (result BasedServicesAccounts, err error) {
@@ -336,7 +337,7 @@ func (client AccountsClient) ListByResourceGroupResponder(resp *http.Response) (
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListBySubscription get all Location Based Services Accounts in a Subscription
 func (client AccountsClient) ListBySubscription(ctx context.Context) (result BasedServicesAccounts, err error) {
 	req, err := client.ListBySubscriptionPreparer(ctx)
@@ -360,7 +361,7 @@ func (client AccountsClient) ListBySubscription(ctx context.Context) (result Bas
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListBySubscriptionPreparer prepares the ListBySubscription request.
 func (client AccountsClient) ListBySubscriptionPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -380,7 +381,7 @@ func (client AccountsClient) ListBySubscriptionPreparer(ctx context.Context) (*h
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListBySubscriptionSender sends the ListBySubscription request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListBySubscriptionSender(req *http.Request) (*http.Response, error) {
@@ -388,7 +389,7 @@ func (client AccountsClient) ListBySubscriptionSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListBySubscriptionResponder handles the response to the ListBySubscription request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListBySubscriptionResponder(resp *http.Response) (result BasedServicesAccounts, err error) {
@@ -402,7 +403,7 @@ func (client AccountsClient) ListBySubscriptionResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListKeys get the keys to use with the Location Based Services APIs. A key is used to authenticate and authorize
 // access to the Location Based Services REST APIs. Only one key is needed at a time; two are given to provide seamless
 // key regeneration.
@@ -431,7 +432,7 @@ func (client AccountsClient) ListKeys(ctx context.Context, resourceGroupName str
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListKeysPreparer prepares the ListKeys request.
 func (client AccountsClient) ListKeysPreparer(ctx context.Context, resourceGroupName string, accountName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -453,7 +454,7 @@ func (client AccountsClient) ListKeysPreparer(ctx context.Context, resourceGroup
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListKeysSender sends the ListKeys request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListKeysSender(req *http.Request) (*http.Response, error) {
@@ -461,7 +462,7 @@ func (client AccountsClient) ListKeysSender(req *http.Request) (*http.Response, 
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListKeysResponder handles the response to the ListKeys request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListKeysResponder(resp *http.Response) (result BasedServicesAccountKeys, err error) {
@@ -475,7 +476,7 @@ func (client AccountsClient) ListKeysResponder(resp *http.Response) (result Base
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListOperations list operations available for the Location Based Services Resource Provider
 func (client AccountsClient) ListOperations(ctx context.Context) (result BasedServicesOperations, err error) {
 	req, err := client.ListOperationsPreparer(ctx)
@@ -499,7 +500,7 @@ func (client AccountsClient) ListOperations(ctx context.Context) (result BasedSe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListOperationsPreparer prepares the ListOperations request.
 func (client AccountsClient) ListOperationsPreparer(ctx context.Context) (*http.Request, error) {
 	const APIVersion = "2017-01-01-preview"
@@ -515,7 +516,7 @@ func (client AccountsClient) ListOperationsPreparer(ctx context.Context) (*http.
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListOperationsSender sends the ListOperations request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) ListOperationsSender(req *http.Request) (*http.Response, error) {
@@ -523,7 +524,7 @@ func (client AccountsClient) ListOperationsSender(req *http.Request) (*http.Resp
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // ListOperationsResponder handles the response to the ListOperations request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) ListOperationsResponder(resp *http.Response) (result BasedServicesOperations, err error) {
@@ -537,7 +538,7 @@ func (client AccountsClient) ListOperationsResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // Move moves Location Based Services Accounts from one ResourceGroup (or Subscription) to another
 //
 // resourceGroupName is the name of the resource group that contains Location Based Services Account to move.
@@ -571,7 +572,7 @@ func (client AccountsClient) Move(ctx context.Context, resourceGroupName string,
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // MovePreparer prepares the Move request.
 func (client AccountsClient) MovePreparer(ctx context.Context, resourceGroupName string, moveRequest BasedServicesAccountsMoveRequest) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -594,7 +595,7 @@ func (client AccountsClient) MovePreparer(ctx context.Context, resourceGroupName
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // MoveSender sends the Move request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) MoveSender(req *http.Request) (*http.Response, error) {
@@ -602,7 +603,7 @@ func (client AccountsClient) MoveSender(req *http.Request) (*http.Response, erro
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // MoveResponder handles the response to the Move request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) MoveResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -615,7 +616,7 @@ func (client AccountsClient) MoveResponder(resp *http.Response) (result autorest
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // RegenerateKeys regenerate either the primary or secondary key for use with the Location Based Services APIs. The old
 // key will stop working immediately.
 //
@@ -643,7 +644,7 @@ func (client AccountsClient) RegenerateKeys(ctx context.Context, resourceGroupNa
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // RegenerateKeysPreparer prepares the RegenerateKeys request.
 func (client AccountsClient) RegenerateKeysPreparer(ctx context.Context, resourceGroupName string, accountName string, keySpecification BasedServicesKeySpecification) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -667,7 +668,7 @@ func (client AccountsClient) RegenerateKeysPreparer(ctx context.Context, resourc
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // RegenerateKeysSender sends the RegenerateKeys request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) RegenerateKeysSender(req *http.Request) (*http.Response, error) {
@@ -675,7 +676,7 @@ func (client AccountsClient) RegenerateKeysSender(req *http.Request) (*http.Resp
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // RegenerateKeysResponder handles the response to the RegenerateKeys request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) RegenerateKeysResponder(resp *http.Response) (result BasedServicesAccountKeys, err error) {
@@ -689,7 +690,7 @@ func (client AccountsClient) RegenerateKeysResponder(resp *http.Response) (resul
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // Update updates a Location Based Services Account. Only a subset of the parameters may be updated after creation,
 // such as Sku and Tags.
 //
@@ -718,7 +719,7 @@ func (client AccountsClient) Update(ctx context.Context, resourceGroupName strin
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // UpdatePreparer prepares the Update request.
 func (client AccountsClient) UpdatePreparer(ctx context.Context, resourceGroupName string, accountName string, locationBasedServicesAccountUpdateParameters BasedServicesAccountUpdateParameters) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -742,7 +743,7 @@ func (client AccountsClient) UpdatePreparer(ctx context.Context, resourceGroupNa
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // UpdateSender sends the Update request. The method will close the
 // http.Response Body if it receives an error.
 func (client AccountsClient) UpdateSender(req *http.Request) (*http.Response, error) {
@@ -750,7 +751,7 @@ func (client AccountsClient) UpdateSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/location/mgmt/2017-01-01-preview/location instead.
 // UpdateResponder handles the response to the Update request. The method always
 // closes the http.Response Body.
 func (client AccountsClient) UpdateResponder(resp *http.Response) (result BasedServicesAccount, err error) {

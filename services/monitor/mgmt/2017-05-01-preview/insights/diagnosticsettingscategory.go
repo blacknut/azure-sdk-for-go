@@ -19,30 +19,31 @@ package insights
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // DiagnosticSettingsCategoryClient is the monitor Management Client
 type DiagnosticSettingsCategoryClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // NewDiagnosticSettingsCategoryClient creates an instance of the DiagnosticSettingsCategoryClient client.
 func NewDiagnosticSettingsCategoryClient(subscriptionID string) DiagnosticSettingsCategoryClient {
 	return NewDiagnosticSettingsCategoryClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // NewDiagnosticSettingsCategoryClientWithBaseURI creates an instance of the DiagnosticSettingsCategoryClient client.
 func NewDiagnosticSettingsCategoryClientWithBaseURI(baseURI string, subscriptionID string) DiagnosticSettingsCategoryClient {
 	return DiagnosticSettingsCategoryClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // Get gets the diagnostic settings category for the specified resource.
 //
 // resourceURI is the identifier of the resource. name is the name of the diagnostic setting.
@@ -68,7 +69,7 @@ func (client DiagnosticSettingsCategoryClient) Get(ctx context.Context, resource
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetPreparer prepares the Get request.
 func (client DiagnosticSettingsCategoryClient) GetPreparer(ctx context.Context, resourceURI string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -89,7 +90,7 @@ func (client DiagnosticSettingsCategoryClient) GetPreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client DiagnosticSettingsCategoryClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -97,7 +98,7 @@ func (client DiagnosticSettingsCategoryClient) GetSender(req *http.Request) (*ht
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client DiagnosticSettingsCategoryClient) GetResponder(resp *http.Response) (result DiagnosticSettingsCategoryResource, err error) {
@@ -111,7 +112,7 @@ func (client DiagnosticSettingsCategoryClient) GetResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // List lists the diagnostic settings categories for the specified resource.
 //
 // resourceURI is the identifier of the resource.
@@ -137,7 +138,7 @@ func (client DiagnosticSettingsCategoryClient) List(ctx context.Context, resourc
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListPreparer prepares the List request.
 func (client DiagnosticSettingsCategoryClient) ListPreparer(ctx context.Context, resourceURI string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -157,7 +158,7 @@ func (client DiagnosticSettingsCategoryClient) ListPreparer(ctx context.Context,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client DiagnosticSettingsCategoryClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -165,7 +166,7 @@ func (client DiagnosticSettingsCategoryClient) ListSender(req *http.Request) (*h
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/monitor/mgmt/2017-05-01-preview/insights instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client DiagnosticSettingsCategoryClient) ListResponder(resp *http.Response) (result DiagnosticSettingsCategoryResourceCollection, err error) {

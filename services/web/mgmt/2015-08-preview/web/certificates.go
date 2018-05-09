@@ -19,30 +19,31 @@ package web
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CertificatesClient is the webSite Management Client
 type CertificatesClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // NewCertificatesClient creates an instance of the CertificatesClient client.
 func NewCertificatesClient(subscriptionID string) CertificatesClient {
 	return NewCertificatesClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // NewCertificatesClientWithBaseURI creates an instance of the CertificatesClient client.
 func NewCertificatesClientWithBaseURI(baseURI string, subscriptionID string) CertificatesClient {
 	return CertificatesClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCertificate sends the create or update certificate request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate. certificateEnvelope is details
@@ -69,7 +70,7 @@ func (client CertificatesClient) CreateOrUpdateCertificate(ctx context.Context, 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCertificatePreparer prepares the CreateOrUpdateCertificate request.
 func (client CertificatesClient) CreateOrUpdateCertificatePreparer(ctx context.Context, resourceGroupName string, name string, certificateEnvelope Certificate) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -93,7 +94,7 @@ func (client CertificatesClient) CreateOrUpdateCertificatePreparer(ctx context.C
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCertificateSender sends the CreateOrUpdateCertificate request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) CreateOrUpdateCertificateSender(req *http.Request) (*http.Response, error) {
@@ -101,7 +102,7 @@ func (client CertificatesClient) CreateOrUpdateCertificateSender(req *http.Reque
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCertificateResponder handles the response to the CreateOrUpdateCertificate request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) CreateOrUpdateCertificateResponder(resp *http.Response) (result Certificate, err error) {
@@ -115,7 +116,7 @@ func (client CertificatesClient) CreateOrUpdateCertificateResponder(resp *http.R
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCsr sends the create or update csr request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate. csrEnvelope is details of
@@ -142,7 +143,7 @@ func (client CertificatesClient) CreateOrUpdateCsr(ctx context.Context, resource
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCsrPreparer prepares the CreateOrUpdateCsr request.
 func (client CertificatesClient) CreateOrUpdateCsrPreparer(ctx context.Context, resourceGroupName string, name string, csrEnvelope Csr) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -166,7 +167,7 @@ func (client CertificatesClient) CreateOrUpdateCsrPreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCsrSender sends the CreateOrUpdateCsr request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) CreateOrUpdateCsrSender(req *http.Request) (*http.Response, error) {
@@ -174,7 +175,7 @@ func (client CertificatesClient) CreateOrUpdateCsrSender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // CreateOrUpdateCsrResponder handles the response to the CreateOrUpdateCsr request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) CreateOrUpdateCsrResponder(resp *http.Response) (result Csr, err error) {
@@ -188,7 +189,7 @@ func (client CertificatesClient) CreateOrUpdateCsrResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCertificate sends the delete certificate request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate to be deleted.
@@ -214,7 +215,7 @@ func (client CertificatesClient) DeleteCertificate(ctx context.Context, resource
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCertificatePreparer prepares the DeleteCertificate request.
 func (client CertificatesClient) DeleteCertificatePreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -236,7 +237,7 @@ func (client CertificatesClient) DeleteCertificatePreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCertificateSender sends the DeleteCertificate request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) DeleteCertificateSender(req *http.Request) (*http.Response, error) {
@@ -244,7 +245,7 @@ func (client CertificatesClient) DeleteCertificateSender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCertificateResponder handles the response to the DeleteCertificate request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) DeleteCertificateResponder(resp *http.Response) (result SetObject, err error) {
@@ -258,7 +259,7 @@ func (client CertificatesClient) DeleteCertificateResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCsr sends the delete csr request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate signing request.
@@ -284,7 +285,7 @@ func (client CertificatesClient) DeleteCsr(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCsrPreparer prepares the DeleteCsr request.
 func (client CertificatesClient) DeleteCsrPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -306,7 +307,7 @@ func (client CertificatesClient) DeleteCsrPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCsrSender sends the DeleteCsr request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) DeleteCsrSender(req *http.Request) (*http.Response, error) {
@@ -314,7 +315,7 @@ func (client CertificatesClient) DeleteCsrSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // DeleteCsrResponder handles the response to the DeleteCsr request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) DeleteCsrResponder(resp *http.Response) (result SetObject, err error) {
@@ -328,7 +329,7 @@ func (client CertificatesClient) DeleteCsrResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificate sends the get certificate request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate.
@@ -354,7 +355,7 @@ func (client CertificatesClient) GetCertificate(ctx context.Context, resourceGro
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificatePreparer prepares the GetCertificate request.
 func (client CertificatesClient) GetCertificatePreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -376,7 +377,7 @@ func (client CertificatesClient) GetCertificatePreparer(ctx context.Context, res
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificateSender sends the GetCertificate request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) GetCertificateSender(req *http.Request) (*http.Response, error) {
@@ -384,7 +385,7 @@ func (client CertificatesClient) GetCertificateSender(req *http.Request) (*http.
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificateResponder handles the response to the GetCertificate request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) GetCertificateResponder(resp *http.Response) (result Certificate, err error) {
@@ -398,7 +399,7 @@ func (client CertificatesClient) GetCertificateResponder(resp *http.Response) (r
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificates sends the get certificates request.
 //
 // resourceGroupName is name of the resource group
@@ -425,7 +426,7 @@ func (client CertificatesClient) GetCertificates(ctx context.Context, resourceGr
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificatesPreparer prepares the GetCertificates request.
 func (client CertificatesClient) GetCertificatesPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -446,7 +447,7 @@ func (client CertificatesClient) GetCertificatesPreparer(ctx context.Context, re
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificatesSender sends the GetCertificates request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) GetCertificatesSender(req *http.Request) (*http.Response, error) {
@@ -454,7 +455,7 @@ func (client CertificatesClient) GetCertificatesSender(req *http.Request) (*http
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificatesResponder handles the response to the GetCertificates request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) GetCertificatesResponder(resp *http.Response) (result CertificateCollection, err error) {
@@ -489,14 +490,14 @@ func (client CertificatesClient) getCertificatesNextResults(lastResults Certific
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCertificatesComplete enumerates all values, automatically crossing page boundaries as required.
 func (client CertificatesClient) GetCertificatesComplete(ctx context.Context, resourceGroupName string) (result CertificateCollectionIterator, err error) {
 	result.page, err = client.GetCertificates(ctx, resourceGroupName)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsr sends the get csr request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate.
@@ -522,7 +523,7 @@ func (client CertificatesClient) GetCsr(ctx context.Context, resourceGroupName s
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrPreparer prepares the GetCsr request.
 func (client CertificatesClient) GetCsrPreparer(ctx context.Context, resourceGroupName string, name string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -544,7 +545,7 @@ func (client CertificatesClient) GetCsrPreparer(ctx context.Context, resourceGro
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrSender sends the GetCsr request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) GetCsrSender(req *http.Request) (*http.Response, error) {
@@ -552,7 +553,7 @@ func (client CertificatesClient) GetCsrSender(req *http.Request) (*http.Response
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrResponder handles the response to the GetCsr request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) GetCsrResponder(resp *http.Response) (result Csr, err error) {
@@ -566,7 +567,7 @@ func (client CertificatesClient) GetCsrResponder(resp *http.Response) (result Cs
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrs sends the get csrs request.
 //
 // resourceGroupName is name of the resource group
@@ -592,7 +593,7 @@ func (client CertificatesClient) GetCsrs(ctx context.Context, resourceGroupName 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrsPreparer prepares the GetCsrs request.
 func (client CertificatesClient) GetCsrsPreparer(ctx context.Context, resourceGroupName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -613,7 +614,7 @@ func (client CertificatesClient) GetCsrsPreparer(ctx context.Context, resourceGr
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrsSender sends the GetCsrs request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) GetCsrsSender(req *http.Request) (*http.Response, error) {
@@ -621,7 +622,7 @@ func (client CertificatesClient) GetCsrsSender(req *http.Request) (*http.Respons
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // GetCsrsResponder handles the response to the GetCsrs request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) GetCsrsResponder(resp *http.Response) (result ListCsr, err error) {
@@ -635,7 +636,7 @@ func (client CertificatesClient) GetCsrsResponder(resp *http.Response) (result L
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCertificate sends the update certificate request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate. certificateEnvelope is details
@@ -662,7 +663,7 @@ func (client CertificatesClient) UpdateCertificate(ctx context.Context, resource
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCertificatePreparer prepares the UpdateCertificate request.
 func (client CertificatesClient) UpdateCertificatePreparer(ctx context.Context, resourceGroupName string, name string, certificateEnvelope Certificate) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -686,7 +687,7 @@ func (client CertificatesClient) UpdateCertificatePreparer(ctx context.Context, 
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCertificateSender sends the UpdateCertificate request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) UpdateCertificateSender(req *http.Request) (*http.Response, error) {
@@ -694,7 +695,7 @@ func (client CertificatesClient) UpdateCertificateSender(req *http.Request) (*ht
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCertificateResponder handles the response to the UpdateCertificate request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) UpdateCertificateResponder(resp *http.Response) (result Certificate, err error) {
@@ -708,7 +709,7 @@ func (client CertificatesClient) UpdateCertificateResponder(resp *http.Response)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCsr sends the update csr request.
 //
 // resourceGroupName is name of the resource group name is name of the certificate. csrEnvelope is details of
@@ -735,7 +736,7 @@ func (client CertificatesClient) UpdateCsr(ctx context.Context, resourceGroupNam
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCsrPreparer prepares the UpdateCsr request.
 func (client CertificatesClient) UpdateCsrPreparer(ctx context.Context, resourceGroupName string, name string, csrEnvelope Csr) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -759,7 +760,7 @@ func (client CertificatesClient) UpdateCsrPreparer(ctx context.Context, resource
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCsrSender sends the UpdateCsr request. The method will close the
 // http.Response Body if it receives an error.
 func (client CertificatesClient) UpdateCsrSender(req *http.Request) (*http.Response, error) {
@@ -767,7 +768,7 @@ func (client CertificatesClient) UpdateCsrSender(req *http.Request) (*http.Respo
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/web/mgmt/2015-08-preview/web instead.
 // UpdateCsrResponder handles the response to the UpdateCsr request. The method always
 // closes the http.Response Body.
 func (client CertificatesClient) UpdateCsrResponder(resp *http.Response) (result Csr, err error) {

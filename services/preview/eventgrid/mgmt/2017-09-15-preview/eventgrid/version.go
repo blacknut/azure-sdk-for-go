@@ -1,6 +1,6 @@
 package eventgrid
 
-import "github.com/Azure/azure-sdk-for-go/version"
+import "github.com/blacknut/azure-sdk-for-go/version"
 
 // Copyright (c) Microsoft and contributors.  All rights reserved.
 //

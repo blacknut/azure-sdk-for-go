@@ -19,31 +19,32 @@ package policy
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DefinitionsClient is the to manage and control access to your resources, you can define customized policies and
 // assign them at a scope.
 type DefinitionsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // NewDefinitionsClient creates an instance of the DefinitionsClient client.
 func NewDefinitionsClient(subscriptionID string) DefinitionsClient {
 	return NewDefinitionsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // NewDefinitionsClientWithBaseURI creates an instance of the DefinitionsClient client.
 func NewDefinitionsClientWithBaseURI(baseURI string, subscriptionID string) DefinitionsClient {
 	return DefinitionsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdate creates or updates a policy definition.
 //
 // policyDefinitionName is the name of the policy definition to create. parameters is the policy definition
@@ -70,7 +71,7 @@ func (client DefinitionsClient) CreateOrUpdate(ctx context.Context, policyDefini
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client DefinitionsClient) CreateOrUpdatePreparer(ctx context.Context, policyDefinitionName string, parameters Definition) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -93,7 +94,7 @@ func (client DefinitionsClient) CreateOrUpdatePreparer(ctx context.Context, poli
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) CreateOrUpdateSender(req *http.Request) (*http.Response, error) {
@@ -101,7 +102,7 @@ func (client DefinitionsClient) CreateOrUpdateSender(req *http.Request) (*http.R
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) CreateOrUpdateResponder(resp *http.Response) (result Definition, err error) {
@@ -115,7 +116,7 @@ func (client DefinitionsClient) CreateOrUpdateResponder(resp *http.Response) (re
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdateAtManagementGroup creates or updates a policy definition at management group level.
 //
 // policyDefinitionName is the name of the policy definition to create. parameters is the policy definition
@@ -142,7 +143,7 @@ func (client DefinitionsClient) CreateOrUpdateAtManagementGroup(ctx context.Cont
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdateAtManagementGroupPreparer prepares the CreateOrUpdateAtManagementGroup request.
 func (client DefinitionsClient) CreateOrUpdateAtManagementGroupPreparer(ctx context.Context, policyDefinitionName string, parameters Definition, managementGroupID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -165,7 +166,7 @@ func (client DefinitionsClient) CreateOrUpdateAtManagementGroupPreparer(ctx cont
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdateAtManagementGroupSender sends the CreateOrUpdateAtManagementGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) CreateOrUpdateAtManagementGroupSender(req *http.Request) (*http.Response, error) {
@@ -173,7 +174,7 @@ func (client DefinitionsClient) CreateOrUpdateAtManagementGroupSender(req *http.
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // CreateOrUpdateAtManagementGroupResponder handles the response to the CreateOrUpdateAtManagementGroup request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) CreateOrUpdateAtManagementGroupResponder(resp *http.Response) (result Definition, err error) {
@@ -187,7 +188,7 @@ func (client DefinitionsClient) CreateOrUpdateAtManagementGroupResponder(resp *h
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // Delete deletes a policy definition.
 //
 // policyDefinitionName is the name of the policy definition to delete.
@@ -213,7 +214,7 @@ func (client DefinitionsClient) Delete(ctx context.Context, policyDefinitionName
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeletePreparer prepares the Delete request.
 func (client DefinitionsClient) DeletePreparer(ctx context.Context, policyDefinitionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -234,7 +235,7 @@ func (client DefinitionsClient) DeletePreparer(ctx context.Context, policyDefini
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeleteSender sends the Delete request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) DeleteSender(req *http.Request) (*http.Response, error) {
@@ -242,7 +243,7 @@ func (client DefinitionsClient) DeleteSender(req *http.Request) (*http.Response,
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeleteResponder handles the response to the Delete request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) DeleteResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -255,7 +256,7 @@ func (client DefinitionsClient) DeleteResponder(resp *http.Response) (result aut
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeleteAtManagementGroup deletes a policy definition at management group level.
 //
 // policyDefinitionName is the name of the policy definition to delete. managementGroupID is the ID of the
@@ -282,7 +283,7 @@ func (client DefinitionsClient) DeleteAtManagementGroup(ctx context.Context, pol
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeleteAtManagementGroupPreparer prepares the DeleteAtManagementGroup request.
 func (client DefinitionsClient) DeleteAtManagementGroupPreparer(ctx context.Context, policyDefinitionName string, managementGroupID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -303,7 +304,7 @@ func (client DefinitionsClient) DeleteAtManagementGroupPreparer(ctx context.Cont
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeleteAtManagementGroupSender sends the DeleteAtManagementGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) DeleteAtManagementGroupSender(req *http.Request) (*http.Response, error) {
@@ -311,7 +312,7 @@ func (client DefinitionsClient) DeleteAtManagementGroupSender(req *http.Request)
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // DeleteAtManagementGroupResponder handles the response to the DeleteAtManagementGroup request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) DeleteAtManagementGroupResponder(resp *http.Response) (result autorest.Response, err error) {
@@ -324,7 +325,7 @@ func (client DefinitionsClient) DeleteAtManagementGroupResponder(resp *http.Resp
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // Get gets the policy definition.
 //
 // policyDefinitionName is the name of the policy definition to get.
@@ -350,7 +351,7 @@ func (client DefinitionsClient) Get(ctx context.Context, policyDefinitionName st
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetPreparer prepares the Get request.
 func (client DefinitionsClient) GetPreparer(ctx context.Context, policyDefinitionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -371,7 +372,7 @@ func (client DefinitionsClient) GetPreparer(ctx context.Context, policyDefinitio
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -379,7 +380,7 @@ func (client DefinitionsClient) GetSender(req *http.Request) (*http.Response, er
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) GetResponder(resp *http.Response) (result Definition, err error) {
@@ -393,7 +394,7 @@ func (client DefinitionsClient) GetResponder(resp *http.Response) (result Defini
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetAtManagementGroup gets the policy definition at management group level.
 //
 // policyDefinitionName is the name of the policy definition to get. managementGroupID is the ID of the management
@@ -420,7 +421,7 @@ func (client DefinitionsClient) GetAtManagementGroup(ctx context.Context, policy
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetAtManagementGroupPreparer prepares the GetAtManagementGroup request.
 func (client DefinitionsClient) GetAtManagementGroupPreparer(ctx context.Context, policyDefinitionName string, managementGroupID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -441,7 +442,7 @@ func (client DefinitionsClient) GetAtManagementGroupPreparer(ctx context.Context
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetAtManagementGroupSender sends the GetAtManagementGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) GetAtManagementGroupSender(req *http.Request) (*http.Response, error) {
@@ -449,7 +450,7 @@ func (client DefinitionsClient) GetAtManagementGroupSender(req *http.Request) (*
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetAtManagementGroupResponder handles the response to the GetAtManagementGroup request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) GetAtManagementGroupResponder(resp *http.Response) (result Definition, err error) {
@@ -463,7 +464,7 @@ func (client DefinitionsClient) GetAtManagementGroupResponder(resp *http.Respons
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetBuiltIn gets the built in policy definition.
 //
 // policyDefinitionName is the name of the built in policy definition to get.
@@ -489,7 +490,7 @@ func (client DefinitionsClient) GetBuiltIn(ctx context.Context, policyDefinition
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetBuiltInPreparer prepares the GetBuiltIn request.
 func (client DefinitionsClient) GetBuiltInPreparer(ctx context.Context, policyDefinitionName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -509,7 +510,7 @@ func (client DefinitionsClient) GetBuiltInPreparer(ctx context.Context, policyDe
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetBuiltInSender sends the GetBuiltIn request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) GetBuiltInSender(req *http.Request) (*http.Response, error) {
@@ -517,7 +518,7 @@ func (client DefinitionsClient) GetBuiltInSender(req *http.Request) (*http.Respo
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // GetBuiltInResponder handles the response to the GetBuiltIn request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) GetBuiltInResponder(resp *http.Response) (result Definition, err error) {
@@ -531,7 +532,7 @@ func (client DefinitionsClient) GetBuiltInResponder(resp *http.Response) (result
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // List gets all the policy definitions for a subscription.
 func (client DefinitionsClient) List(ctx context.Context) (result DefinitionListResultPage, err error) {
 	result.fn = client.listNextResults
@@ -556,7 +557,7 @@ func (client DefinitionsClient) List(ctx context.Context) (result DefinitionList
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListPreparer prepares the List request.
 func (client DefinitionsClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -576,7 +577,7 @@ func (client DefinitionsClient) ListPreparer(ctx context.Context) (*http.Request
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -584,7 +585,7 @@ func (client DefinitionsClient) ListSender(req *http.Request) (*http.Response, e
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) ListResponder(resp *http.Response) (result DefinitionListResult, err error) {
@@ -619,14 +620,14 @@ func (client DefinitionsClient) listNextResults(lastResults DefinitionListResult
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client DefinitionsClient) ListComplete(ctx context.Context) (result DefinitionListResultIterator, err error) {
 	result.page, err = client.List(ctx)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListBuiltIn gets all the built in policy definitions.
 func (client DefinitionsClient) ListBuiltIn(ctx context.Context) (result DefinitionListResultPage, err error) {
 	result.fn = client.listBuiltInNextResults
@@ -651,7 +652,7 @@ func (client DefinitionsClient) ListBuiltIn(ctx context.Context) (result Definit
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListBuiltInPreparer prepares the ListBuiltIn request.
 func (client DefinitionsClient) ListBuiltInPreparer(ctx context.Context) (*http.Request, error) {
 	const APIVersion = "2016-12-01"
@@ -667,7 +668,7 @@ func (client DefinitionsClient) ListBuiltInPreparer(ctx context.Context) (*http.
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListBuiltInSender sends the ListBuiltIn request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) ListBuiltInSender(req *http.Request) (*http.Response, error) {
@@ -675,7 +676,7 @@ func (client DefinitionsClient) ListBuiltInSender(req *http.Request) (*http.Resp
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListBuiltInResponder handles the response to the ListBuiltIn request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) ListBuiltInResponder(resp *http.Response) (result DefinitionListResult, err error) {
@@ -710,14 +711,14 @@ func (client DefinitionsClient) listBuiltInNextResults(lastResults DefinitionLis
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListBuiltInComplete enumerates all values, automatically crossing page boundaries as required.
 func (client DefinitionsClient) ListBuiltInComplete(ctx context.Context) (result DefinitionListResultIterator, err error) {
 	result.page, err = client.ListBuiltIn(ctx)
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListByManagementGroup gets all the policy definitions for a subscription at management group level.
 //
 // managementGroupID is the ID of the management group.
@@ -744,7 +745,7 @@ func (client DefinitionsClient) ListByManagementGroup(ctx context.Context, manag
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListByManagementGroupPreparer prepares the ListByManagementGroup request.
 func (client DefinitionsClient) ListByManagementGroupPreparer(ctx context.Context, managementGroupID string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -764,7 +765,7 @@ func (client DefinitionsClient) ListByManagementGroupPreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListByManagementGroupSender sends the ListByManagementGroup request. The method will close the
 // http.Response Body if it receives an error.
 func (client DefinitionsClient) ListByManagementGroupSender(req *http.Request) (*http.Response, error) {
@@ -772,7 +773,7 @@ func (client DefinitionsClient) ListByManagementGroupSender(req *http.Request) (
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListByManagementGroupResponder handles the response to the ListByManagementGroup request. The method always
 // closes the http.Response Body.
 func (client DefinitionsClient) ListByManagementGroupResponder(resp *http.Response) (result DefinitionListResult, err error) {
@@ -807,7 +808,7 @@ func (client DefinitionsClient) listByManagementGroupNextResults(lastResults Def
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/resources/mgmt/2017-06-01-preview/policy instead.
 // ListByManagementGroupComplete enumerates all values, automatically crossing page boundaries as required.
 func (client DefinitionsClient) ListByManagementGroupComplete(ctx context.Context, managementGroupID string) (result DefinitionListResultIterator, err error) {
 	result.page, err = client.ListByManagementGroup(ctx, managementGroupID)

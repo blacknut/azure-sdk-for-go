@@ -19,13 +19,14 @@ package sql
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/validation"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // BackupLongTermRetentionVaultsClient is the the Azure SQL Database management API provides a RESTful set of web
 // services that interact with Azure SQL Database services to manage your databases. The API enables you to create,
 // retrieve, update, and delete databases.
@@ -33,20 +34,20 @@ type BackupLongTermRetentionVaultsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // NewBackupLongTermRetentionVaultsClient creates an instance of the BackupLongTermRetentionVaultsClient client.
 func NewBackupLongTermRetentionVaultsClient(subscriptionID string) BackupLongTermRetentionVaultsClient {
 	return NewBackupLongTermRetentionVaultsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // NewBackupLongTermRetentionVaultsClientWithBaseURI creates an instance of the BackupLongTermRetentionVaultsClient
 // client.
 func NewBackupLongTermRetentionVaultsClientWithBaseURI(baseURI string, subscriptionID string) BackupLongTermRetentionVaultsClient {
 	return BackupLongTermRetentionVaultsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdate updates a server backup long term retention vault
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -75,7 +76,7 @@ func (client BackupLongTermRetentionVaultsClient) CreateOrUpdate(ctx context.Con
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdatePreparer prepares the CreateOrUpdate request.
 func (client BackupLongTermRetentionVaultsClient) CreateOrUpdatePreparer(ctx context.Context, resourceGroupName string, serverName string, parameters BackupLongTermRetentionVault) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -100,7 +101,7 @@ func (client BackupLongTermRetentionVaultsClient) CreateOrUpdatePreparer(ctx con
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdateSender sends the CreateOrUpdate request. The method will close the
 // http.Response Body if it receives an error.
 func (client BackupLongTermRetentionVaultsClient) CreateOrUpdateSender(req *http.Request) (future BackupLongTermRetentionVaultsCreateOrUpdateFuture, err error) {
@@ -116,7 +117,7 @@ func (client BackupLongTermRetentionVaultsClient) CreateOrUpdateSender(req *http
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // CreateOrUpdateResponder handles the response to the CreateOrUpdate request. The method always
 // closes the http.Response Body.
 func (client BackupLongTermRetentionVaultsClient) CreateOrUpdateResponder(resp *http.Response) (result BackupLongTermRetentionVault, err error) {
@@ -130,7 +131,7 @@ func (client BackupLongTermRetentionVaultsClient) CreateOrUpdateResponder(resp *
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // Get gets a server backup long term retention vault
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -157,7 +158,7 @@ func (client BackupLongTermRetentionVaultsClient) Get(ctx context.Context, resou
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // GetPreparer prepares the Get request.
 func (client BackupLongTermRetentionVaultsClient) GetPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -180,7 +181,7 @@ func (client BackupLongTermRetentionVaultsClient) GetPreparer(ctx context.Contex
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // GetSender sends the Get request. The method will close the
 // http.Response Body if it receives an error.
 func (client BackupLongTermRetentionVaultsClient) GetSender(req *http.Request) (*http.Response, error) {
@@ -188,7 +189,7 @@ func (client BackupLongTermRetentionVaultsClient) GetSender(req *http.Request) (
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // GetResponder handles the response to the Get request. The method always
 // closes the http.Response Body.
 func (client BackupLongTermRetentionVaultsClient) GetResponder(resp *http.Response) (result BackupLongTermRetentionVault, err error) {
@@ -202,7 +203,7 @@ func (client BackupLongTermRetentionVaultsClient) GetResponder(resp *http.Respon
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServer gets server backup long term retention vaults in a server
 //
 // resourceGroupName is the name of the resource group that contains the resource. You can obtain this value from
@@ -229,7 +230,7 @@ func (client BackupLongTermRetentionVaultsClient) ListByServer(ctx context.Conte
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerPreparer prepares the ListByServer request.
 func (client BackupLongTermRetentionVaultsClient) ListByServerPreparer(ctx context.Context, resourceGroupName string, serverName string) (*http.Request, error) {
 	pathParameters := map[string]interface{}{
@@ -251,7 +252,7 @@ func (client BackupLongTermRetentionVaultsClient) ListByServerPreparer(ctx conte
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerSender sends the ListByServer request. The method will close the
 // http.Response Body if it receives an error.
 func (client BackupLongTermRetentionVaultsClient) ListByServerSender(req *http.Request) (*http.Response, error) {
@@ -259,7 +260,7 @@ func (client BackupLongTermRetentionVaultsClient) ListByServerSender(req *http.R
 		azure.DoRetryWithRegistration(client.Client))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/sql/mgmt/2017-03-01-preview/sql instead.
 // ListByServerResponder handles the response to the ListByServer request. The method always
 // closes the http.Response Body.
 func (client BackupLongTermRetentionVaultsClient) ListByServerResponder(resp *http.Response) (result BackupLongTermRetentionVaultListResult, err error) {

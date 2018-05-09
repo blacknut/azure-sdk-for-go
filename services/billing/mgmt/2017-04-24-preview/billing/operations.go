@@ -19,12 +19,13 @@ package billing
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
-	"net/http"
 )
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // OperationsClient is the billing client provides access to billing resources for Azure Web-Direct subscriptions.
 // Other subscription types which were not purchased directly through the Azure web portal are not supported through
 // this preview API.
@@ -32,19 +33,19 @@ type OperationsClient struct {
 	BaseClient
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // NewOperationsClient creates an instance of the OperationsClient client.
 func NewOperationsClient(subscriptionID string) OperationsClient {
 	return NewOperationsClientWithBaseURI(DefaultBaseURI, subscriptionID)
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // NewOperationsClientWithBaseURI creates an instance of the OperationsClient client.
 func NewOperationsClientWithBaseURI(baseURI string, subscriptionID string) OperationsClient {
 	return OperationsClient{NewWithBaseURI(baseURI, subscriptionID)}
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // List lists all of the available billing REST API operations.
 func (client OperationsClient) List(ctx context.Context) (result OperationListResultPage, err error) {
 	result.fn = client.listNextResults
@@ -69,7 +70,7 @@ func (client OperationsClient) List(ctx context.Context) (result OperationListRe
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // ListPreparer prepares the List request.
 func (client OperationsClient) ListPreparer(ctx context.Context) (*http.Request, error) {
 	const APIVersion = "2017-04-24-preview"
@@ -85,7 +86,7 @@ func (client OperationsClient) ListPreparer(ctx context.Context) (*http.Request,
 	return preparer.Prepare((&http.Request{}).WithContext(ctx))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // ListSender sends the List request. The method will close the
 // http.Response Body if it receives an error.
 func (client OperationsClient) ListSender(req *http.Request) (*http.Response, error) {
@@ -93,7 +94,7 @@ func (client OperationsClient) ListSender(req *http.Request) (*http.Response, er
 		autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // ListResponder handles the response to the List request. The method always
 // closes the http.Response Body.
 func (client OperationsClient) ListResponder(resp *http.Response) (result OperationListResult, err error) {
@@ -128,7 +129,7 @@ func (client OperationsClient) listNextResults(lastResults OperationListResult) 
 	return
 }
 
-// Deprecated: Please use package github.com/Azure/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
+// Deprecated: Please use package github.com/blacknut/azure-sdk-for-go/services/preview/billing/mgmt/2017-04-24-preview/billing instead.
 // ListComplete enumerates all values, automatically crossing page boundaries as required.
 func (client OperationsClient) ListComplete(ctx context.Context) (result OperationListResultIterator, err error) {
 	result.page, err = client.List(ctx)
