@@ -111,7 +111,10 @@ func (sg SecurityGroupClient) GetNetworkSecurityGroup(name string) (SecurityGrou
 func (sg SecurityGroupClient) ListNetworkSecurityGroups() (SecurityGroupList, error) {
 	var securityGroups SecurityGroupList
 
+	fmt.Println("here")
+	fmt.Println(listSecurityGroupsURL)
 	response, err := sg.client.SendAzureGetRequest(listSecurityGroupsURL)
+	fmt.Println("ok, then")
 	if err != nil {
 		return securityGroups, err
 	}
