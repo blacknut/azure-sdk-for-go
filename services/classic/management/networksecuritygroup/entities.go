@@ -45,7 +45,7 @@ type SecurityGroupRequest struct {
 //
 // https://msdn.microsoft.com/en-us/library/azure/dn913821.aspx
 type SecurityGroupResponse struct {
-	XMLName  xml.Name `xml:"http://schemas.microsoft.com/windowsazure NetworkSecurityGroup"`
+	XMLName  xml.Name `xml:"http://schemas.microsoft.com/windowsazure NetworkSecurityGroups"`
 	Name     string
 	Label    string             `xml:",omitempty"`
 	Location string             `xml:",omitempty"`
