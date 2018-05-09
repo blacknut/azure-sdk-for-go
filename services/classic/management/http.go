@@ -126,6 +126,14 @@ func (client client) sendRequest(httpClient *http.Client, url, requestType, cont
 	absURI := client.createAzureRequestURI(url)
 
 	for {
+
+		fmt.Println("====================")
+
+		fmt.Println(absURI)
+		fmt.Println(requestType)
+		fmt.Println(contentType)
+		fmt.Println(data)
+
 		request, reqErr := client.createAzureRequest(absURI, requestType, contentType, data)
 		if reqErr != nil {
 			return nil, reqErr
